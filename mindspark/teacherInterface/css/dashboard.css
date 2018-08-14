@@ -1,0 +1,249 @@
+
+.dashboard {
+	max-width: 1070px !important;
+}
+
+.intro-launch {
+	width: 24px;
+	height: 24px;
+	background-image: url("../images/Help-button.png");
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	float: left;
+}
+
+.dashboard-report-title {
+	text-align: center;
+	padding-bottom: 20px;
+	font-size: 16px;
+	clear: both;
+	padding-top: 20px;
+	font-weight: bold;
+}
+
+.chart-heading {
+	font-size: 14px !important;
+}
+
+.chart-label {
+	transform:rotate(-20deg);
+	font-size:8pt;
+	text-align:center;
+	color:black;padding:2px;
+
+} 
+
+.dashboard-loading {
+	background-image: url("../images/fetching_data.gif");
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	margin-top: 40px;
+	padding-top: 30px;
+	text-align: center;
+}
+
+.donut-container {
+	width:220px !important;
+}
+
+.dashboard-top-row {
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.dashboard-bottom-row {
+	clear: both; 
+	width: 90%; 
+	height: 120px;
+	border: 2px solid black;
+	box-sizing: border-box;
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+
+.impact-summary-element {
+	margin-left: 20px;
+}
+
+.impact-summary-icon {
+	float: left;
+	width:65px;
+	height: 65px;
+}
+
+.topic-progress-scale {
+width:420px;
+height: 50px;
+background-image: url("../images/topic-progress-scale-label-400.png");
+}
+
+.impact-summary-title {
+	clear: both;
+	padding-top: 5px;
+	font-weight: bold;
+	color: #218F00;
+}
+
+.impact-summary-values {
+	float:left; 
+	margin-top:15px; 
+	margin-left:5px;
+}
+
+.impact-summary-icon-container {
+	float: left;
+	width: 20%;
+	padding-left: 5%;
+}
+
+.topic-progress-chart {
+	width: 400px;
+	margin-left:10px;
+}
+
+.pagebreak { 
+	page-break-before: always; 
+}
+
+#zeroUsageTable_thead tr>th {
+padding: 10px;
+text-align: center;
+border-style: solid;
+border-width: 1px;
+border-color: black;  
+}
+
+#zeroUsageTable_tbody	tr>td {
+	text-align: center;  
+	padding: 6px; 
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+}
+
+#topicReportTable_thead tr>th {
+padding: 10px;
+text-align: center;
+border-style: solid;
+border-width: 1px;
+border-color: black;  
+}
+
+#topicReportTable_tbody tr>td {
+		text-align: center;  
+		padding: 6px; 
+		border-style: solid;
+		border-width: 1px;
+		border-color: black;
+}
+
+#accuracyReportTable_thead tr>th {
+	padding: 10px;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;  
+}
+
+#accuracyReportTable_tbody tr>td {
+		text-align: center;  
+		padding: 6px; 
+		border-style: solid;
+		border-width: 1px;
+		border-color: black;
+}
+
+#higherLevelTable_thead tr>th {
+	padding: 10px;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;  
+}
+
+#higherLevelTable_tbody tr>td {
+		text-align: center;  
+		padding: 6px; 
+		border-style: solid;
+		border-width: 1px;
+		border-color: black;
+}
+
+.canvas-image {
+	display: none;
+	}
+
+.base2 {
+	display: block;
+	}
+
+@media print {
+	body > div:not(#container) {
+		display: none !important;
+	}
+
+	#dashboardReportTitle_span {
+		font-size: 24px;
+	}
+
+	#headerBar {
+		display: none !important;
+	}	
+
+	#frmTeacherReport {
+		display: none !important;
+	}	
+
+	#topicProgressContainer {
+		display: block !important;
+		clear: both !important;
+	}
+
+	#dashboardBottomRow {
+		width: 960px !important;
+	}
+
+	.base2 {
+		display: none !important;
+	}
+
+	.canvas-image {
+		display: block !important;
+	}
+
+	#container {
+		border: none;
+	}
+
+	.great {
+		background-color: #afffaf;
+	}
+
+	.good {
+		background-color: #cfe6f9;
+	}
+
+	.average {
+		background-color: #fce88f;
+	}
+
+	.low {
+		background-color: #fc8b80;
+	}
+
+	.zero {
+		background-color: #999;
+	}
+
+	.notEnoughUsage {
+		background-color: #999;
+	}
+
+
+}
+
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}

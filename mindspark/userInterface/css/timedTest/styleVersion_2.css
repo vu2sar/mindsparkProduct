@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'Eraser';
+    src: url('../../fonts/chalkdustextended/erasdust-webfont.eot');
+    src: url('../../fonts/chalkdustextended/erasdust-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/chalkdustextended/erasdust-webfont.woff') format('woff'),
+         url('../../fonts/chalkdustextended/erasdust-webfont.ttf') format('truetype'),
+         url('../../fonts/chalkdustextended/erasdust-webfont.svg#EraserDustRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	
+}
+#outerDiv {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-size:32px;
+	font-family:"Eraser" !important;
+	color:#FFFFFF;
+	width:800px;
+	height:100%;
+	min-height:550px;
+	background-color:#01542b;
+	border:20px ridge #E4A151;
+}
+#clock {
+	background-image:url(../../assets/timedTest/clockV2.png);
+	width:200px;
+	height:200px;
+}
+#clockHand {
+	background-image:url(../../assets/timedTest/clockHand.png);
+	width:200px;
+	height:200px;
+}
+#boardLeftPart {
+	width:500px;
+	height:auto;
+	min-height:550px;
+	float:left;
+	padding-left:10px;
+}
+#boardRightPart {
+	width:290px;
+	height:auto;
+	min-height:550px;
+	float:right;
+	cursor:default;
+}
+.clear-both {
+   clear: both;
+}
+input[type="text"] {
+	font-size:32px;
+	font-family:"Eraser";
+	background-color: transparent;
+	color: white;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom:2px solid #FFF;
+	text-align:center;
+	outline:none;
+	width:75px;
+}
+#instructionDiv {
+	cursor:default;
+}
+#hintDiv {
+	font-size:24px;
+	cursor:default;
+}
+#displayResult {
+	width:470px;
+	height:auto;
+	min-height:450px;
+	float:left;
+	padding:20px;
+	text-align:center;
+	padding-top:100px;
+	cursor:default;
+	display:none;
+}
+#sparkieMsg {
+	font-size:22px;
+	color:#FFFFFF;
+}
+.timedTestRadio:before{
+	font-family: "Eraser"!important;
+}

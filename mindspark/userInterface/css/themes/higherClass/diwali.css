@@ -1,0 +1,53 @@
+body{	
+	background: url('../../../assets/rewards/themeDiwaliHigher/background.jpg');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: 100% 95%;
+}
+
+#topicProgressDiv {
+	background-color: transparent !important;
+}
+
+#leftInfo {
+	background-color: transparent !important;
+}
+
+#sideBar{
+	background-color: #646464;
+}
+
+#top_bar {
+width: 50%;
+border-bottom: 1px solid black;
+}
+
+#studentInfoLowerClass {
+border-bottom: 1px solid black;
+}
+
+#drawer4Icon {
+	background: url('../../../assets/rewards/themeDiwaliHigher/activities.png') no-repeat 0 0 !important;
+}
+
+#drawer3Icon {
+	background: url('../../../assets/rewards/themeDiwaliHigher/dashboard.png') no-repeat 0 0 !important;
+}
+
+#drawer2Icon {
+	background: url('../../../assets/rewards/themeDiwaliHigher/exam-corner.png') no-repeat 0 0 !important;
+}
+
+#drawer1Icon {
+	background: url('../../../assets/rewards/themeDiwaliHigher/home-button.png') no-repeat 0 0 !important;
+}
+
+#viewIcon{
+	background: url('../../../assets/rewards/themeDiwaliHigher/viewall.png') no-repeat 0 0 !important;
+}
+#worksheetIcon{
+	background: url('../../../assets/rewards/themeDiwaliHigher/worksheet.png') no-repeat 0 0 !important;
+}
+#ncertIcon{
+	background: url('../../../assets/rewards/themeDiwaliHigher/ncert.png') no-repeat 0 0 !important;
+}

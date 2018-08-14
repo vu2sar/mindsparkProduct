@@ -1,0 +1,133 @@
+#mainContainer{
+	width:800px;
+	margin:auto;
+	border:1px silver solid;
+	background-color:#FFFFCC;
+	height: 500px;
+}
+
+.comment:hover{
+	background-color: #eefebe;	
+}
+.comment{
+	border-radius: 2px;
+	border: 1px solid green;
+	background-color: #caffbd;
+	min-height: 24px;
+	padding: 1px;
+	word-break: break-word;
+	overflow-y: auto;
+}
+.comM, .comEbtn, .comSbtn, .comDbtn{
+	float: left; min-height: 20px;
+}
+.comM{
+	width: 350px;
+	
+}
+.comMO{
+	width: 400px;
+}
+.comSbtn{
+	background-image: url('../imgs/save.png');
+}
+.comDbtn{
+	background-image: url('../imgs/delete.png');
+}
+.comEbtn{
+	background-image: url('../imgs/edit.png');
+}
+.comEbtn, .comSbtn, .comDbtn{
+	width: 20px; height: 20px; margin: 1px; cursor: pointer;
+}
+.comEbtn:hover, .comSbtn:hover, .comDbtn:hover{
+	background-color: #ffb300
+}
+
+body, table, tr, td{
+	margin: 0px; 
+	font-family: Tahoma;
+	font-size: 13px;
+	overflow: hidden;
+	word-break: break-word;
+}
+
+.modal{
+	width: 100%;
+	/*min-height: 100%;*/
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	position: absolute;
+	background-color: #EFF79A;
+	text-align: center;
+}
+
+.centerCenter{
+	margin: 0px auto;
+	font-weight: bold;
+	margin-top: 225px;
+	font-size: 22px;	
+}
+
+.hilite{
+	background-color: #ffc6c6;
+}
+.nohilite{
+	background-color: transparent;
+}
+.hiliteOn{
+	color:#fff;
+	background-color:#8aba56;
+}
+
+#essayBodTD{
+	text-align: center;
+	position: relative;
+}
+
+.floatRight{
+	margin-right: 5px;
+	float: right;
+}
+
+#essayBody, .essayCont{
+	height: 400px;
+	position: relative;
+	width: 370px;
+	background-color: white;
+	margin: auto;
+	padding: 8px;
+	text-align: left;
+	margin-left:5px;
+	display: inline-block;
+	vertical-align: middle;
+	border-right: 1px solid grey;
+	word-break: break-word;
+	overflow-y:scroll;
+}
+
+
+.accordion h3 {
+    background-color: #cccccc;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -5px #333333;
+    cursor: pointer;
+    font-weight: normal;
+    padding: 5px;
+}
+
+#essaySpecificFB,#essayReport{
+	text-align: left;
+	background-color: white;
+	margin: auto;
+	padding: 8px;
+	z-index: 0;
+	width: 370px;
+	height: 400px;
+	vertical-align: middle;
+	display: inline-block;
+	overflow-y: scroll;
+	word-break: break-word;
+}

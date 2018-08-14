@@ -1,0 +1,7 @@
+@CHARSET "ISO-8859-1";
+#top_bar{
+	display:none !important;
+}
+#frmTimedTest #container #info_bar  #endSession{
+	display:none !important;
+}

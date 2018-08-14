@@ -1,0 +1,96 @@
+
+.icharb{
+	width:100%;
+	height:100%;
+	z-index:9000;
+	position: absolute;
+	pointer-events:none;
+	top:-100px;
+}
+body{
+		font-family: "Arial Unicode MS";
+	}
+	.var{
+		font-style: italic;
+		font-size: 1em;
+		font-family: serif;
+	}
+	.sup{
+		font-size:xx-small;
+		vertical-align:top;
+	}
+	.normal{
+		font-family: sans-serif;
+	}
+	.symB{
+		background-color:#c4c4c4;
+		cursor:pointer;
+		/*height:50px;*/
+		/*width:50px;*/
+		min-height:30px;
+		min-width:30px;
+		border-color:#303030;
+		font-size:14px;
+		font-weight:bold;
+		color:#000000;
+		text-align:center;
+		float:left;
+		position:relative;
+		margin:3px;
+		padding:3px;
+		border-radius: 4px;
+		vertical-align:middle;
+	}
+	.symB:hover{
+		background-color:#c0dcc0;
+	}
+	.altB{
+		background-color:#737373;
+		border-color:#303030;
+		border-style:dotted;
+	}
+	.pre {margin:0;padding:0;display:inline;}
+	.entB{
+		border-width:1px;
+		border-style:dashed;		
+		min-width:20px;
+		min-height:15px;
+		border-color:#303030;
+	}
+	.num{
+		padding:0px;
+		margin:0px;
+		border-spacing:0px;
+		color:#000;
+		text-align:center;
+		border-bottom:1px solid black;
+	}
+	.den{
+		padding:0px;
+		margin:0px;
+		border-spacing:0px;
+		color:#000;
+		text-align:center;
+		border-top:1px solid black;
+	}
+	.fraction{
+		display:inline-table;
+		vertical-align:middle;
+		border-spacing:3px 0px;
+	}
+	.eqB{
+		font-family: serif;
+	}
+	#imageTemp { position: absolute; top: 0px; left: 0px; z-index:150;
+		-webkit-touch-callout: none;
+    	-webkit-user-select: none;
+    	-khtml-user-select: none;
+    	-moz-user-select: none;
+    	-ms-user-select: none;
+    	user-select: none;
+	}
+	#textTemp{
+		position: absolute; z-index:200;
+		border-right:3px;
+		border:2px solid black;
+	}

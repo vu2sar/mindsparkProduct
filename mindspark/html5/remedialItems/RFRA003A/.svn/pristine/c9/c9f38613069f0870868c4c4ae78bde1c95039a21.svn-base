@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />	
+	<title> RFRA003A</title>	
+	<link href="../css/style.css" rel="stylesheet" type="text/css" />
+	<script src="../../../libs/jquery-1.7.1.min.js"></script>
+	<script src="../../../libs/jquery_ui.js"></script>
+	<script src="../../../libs/jquery_ui_touch.js"></script>
+	<script src="../../../libs/common.js"></script>
+	<script src="../../../libs/loadxmldoc.js"></script>
+	<script src="../../../libs/parameterPassing.js"></script>
+	<script src="../libs/script.js"></script>	
+	
+	<script>
+	var getParameters = getURLParameters();	
+	var languageXml = 'xml.xml';
+	$(function(){
+		interactiveObj = new questionInteractive();
+//		interactiveObj.init();  	
+		loadXML(languageXml, function() {interactiveObj.init();})  		
+	});
+	</script>	
+</head> 
+ <body onresize="containerResize();" onload="containerResize()">
+	<div id="container" >
+	</div>
+</body>
+</html>	

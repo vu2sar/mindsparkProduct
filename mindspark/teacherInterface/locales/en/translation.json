@@ -1,0 +1,35 @@
+{
+	"app": {
+		"name": "i18next"
+	},
+
+	"common" : {
+		"name"				: "Name ",
+		"class"				: "Class",
+		"submit"			: "Submit",
+		"cancel"			: "Cancel",
+		"done"				: "Done",
+		"correct"			: "Correct",
+		"progress"			: "Progress",
+		"sessionID"			: "Session ID ",
+		"continue"			: "Continue",
+		"whatsNew"			: "What's New",
+		"logout"			: "Logout",
+		"help"				: "Help",
+		"srno"				: "S. No",
+		"yes" 				: "YES",
+        "ok"                : "Ok",
+		"no"            	: "No",
+        "practiceReport"    : "Practice Report",
+        "welcome"           : "Welcome",
+		"copyright"			: "&copy; 2009-2017, Educational Initiatives Pvt. Ltd."
+	},
+	
+	"fixedSideBar" : {
+		"liveClass"			:"Live Class",
+		"activateTopic"		:"Activate Topic",
+		"resetPassword"		:"Reset Password",
+		"monthlyRevision"	:"Revision Session",
+		"commonWrongAnswers":"Common Wrong Answers"	
+	}
+}

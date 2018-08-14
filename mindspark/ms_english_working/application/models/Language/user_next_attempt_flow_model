@@ -1,0 +1,232 @@
+<?php
+
+Class contentflow_model extends MY_Model {
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->dbEnglish = $this->load->database('mindspark_english',TRUE);
+		$this->load->library('session');
+		$this->load->model('Language/passage_model','passage_model');
+		$this->load->model('Language/setquestiongivingflowarray_model','setquestiongivingflowarray_model');	
+		$this->load->model('Language/user_next_attempt_flow_model','user_next_attempt_flow_model');	
+		
+	}
+
+
+	//function to get User Specific Next Content Flow
+	public function nextContentOrderFlow(){
+		$userLastAttemptArr=$this->getCurrentAndPreviousContentType();
+	  	$contentFlowArr =  $this->getMaxContentOrders();
+	  	$currentContent=$this->session->userdata('currentContentType');
+	    	if($currentContent!="N/A"):
+	     		 if(count($userLastAttemptArr)>1):
+            			$newIndex=$this->getLastAtmptIndex($contentFlowArr,$userLastAttemptArr);
+           			if($newIndex):
+                     				$finalContentFlowArr=array_slice($contentFlowArr,$newIndex+2);
+                    				if(count($finalContentFlowArr)) :
+                      				$arrInit = array_slice($contentFlowArr, 0,array_search($userLastAttemptArr[1],$contentFlowArr)+1);
+                      				$finalContentFlowArr = array_merge($finalContentFlowArr,$arrInit);
+                    				else :
+                      				$finalContentFlowArr = $contentFlowArr;
+                     				endif;        
+            			else:
+                     				$index=array_search($userLastAttemptArr[1],$contentFlowArr)+1;
+                     				$finalContentFlowArr=array_slice($contentFlowArr,$index);
+                    				$arrInit = array_slice($contentFlowArr, 0,array_search($userLastAttemptArr[1],$contentFlowArr)+1);
+             				$finalContentFlowArr = array_merge($finalContentFlowArr,$arrInit);
+               		 	endif;
+	     		else:
+	        			$finalContentFlowArr=array_slice($contentFlowArr,array_search($userLastAttemptArr[1], $contentFlowArr)+1);
+	       			 $arrInit = array_slice($contentFlowArr, 0,array_search($userLastAttemptArr[1],$contentFlowArr)+1);
+	        			$finalContentFlowArr = array_merge($finalContentFlowArr,$arrInit);
+	     		endif;
+	   	else:
+
+	        		$finalContentFlowArr = $contentFlowArr;
+	  	endif;
+	   	 return $finalContentFlowArr;  
+	}
+
+	public function getCurrentAndPreviousContentType() {
+		$curQuestionType=$this->session->userdata('currentContentType');
+	 	if($curContentType == 'N/A' && $curContentType== 0)
+	 	{
+	 		array_push($userLastAttemptArr, 'N/A');
+        			array_push($userLastAttemptArr, 'N/A');
+	 	}
+	 	else
+	 	{
+			$passageTypeAttempt =$this->getUserLastAttmpt($userID);
+		           $userLastAttemptArr  = array();
+		           if(count($passageTypeAttempt)==2)
+		           {
+               			foreach ($passageTypeAttempt as $row)
+               			{              
+                    				 $valType= $this->user_next_attempt_flow_model->contentType($row['passageType']);
+                     				array_push($userLastAttemptArr, $valType);
+                			}
+                			$userLastAttemptArr=array_reverse($userLastAttemptArr);
+                			$tmpLastToLastAttempt=$userLastAttemptArr[0];
+                			$tmpLastAttempt=$userLastAttemptArr[1];
+               			if($curQuestionType=='passage')
+               			{
+			                     $userLastAttemptArr[0]=$tmpLastAttempt;
+			                     $getCurrentPassagetype = $this->passage_model->getCurrentPassagetype($this->session->userdata('refID'));
+			                     $valType= $this->user_next_attempt_flow_model->contentType($getCurrentPassagetype ->passageType);
+			                     $userLastAttemptArr[1]=$valType;
+               			}
+               			else if ($curQuestionType=='passage_ques') 
+               			{       
+                     				$refCodeDetails =$this->passage_model->getQcodePassageDetails($curRefID);
+                     				if($refCodeDetails['qcodePassageID']!=0)
+                     				{ 
+                           				$currentPassageID=$refCodeDetails['qcodePassageID'];
+                           				$checkPsgQuesAttempt=$this->setquestiongivingflowarray_model->userAttemptedPsgQues($currentPassageID,$userID);
+                           				if($checkPsgQuesAttempt)
+                           				{
+                                					$userLastAttemptArr[0]=$tmpLastToLastAttempt; 
+                           				}else
+                           				{
+                                					$userLastAttemptArr[0]=$tmpLastAttempt;              
+                           				}
+                           				if($curQuestionType=='Conversation')
+                           				{
+                                					$userLastAttemptArr[1]="C";
+                           				}
+                           				else if($curQuestionType=='Reading')
+                           				{
+                                					$userLastAttemptArr[1]="R";
+                           				}
+                     				}   
+                			}
+                			else if ($curContentType=='free_ques')
+                			{                                                
+                     				if($tmpLastAttempt=="F")
+                     				{
+                           				$userLastAttemptArr[0]=$tmpLastToLastAttempt;        
+                     				}
+                     				else
+                     				{
+                           				$userLastAttemptArr[0]=$tmpLastAttempt;
+                     				}
+                     				$userLastAttemptArr[1]="F";                               
+                			}                                              
+           		}
+           		else if(count($passageTypeAttempt)==1)
+           		{   
+                			$userLastAttemptArr  = array();
+               		 	array_push($userLastAttemptArr, 'NA');                            
+                			array_push($userLastAttemptArr,$this->user_next_attempt_flow_model->contentType($passageTypeAttempt[0]['passageType']));
+                			$tmpLastAttempt=$userLastAttemptArr[1];
+                			if($curContentType=='passage')
+                			{
+                     				$checkPsgQuesAttempt=$this->setquestiongivingflowarray_model->userAttemptedPsgQues($curRefID,$userID);
+                     				if($checkPsgQuesAttempt)
+                     				{
+                           				$userLastAttemptArr[0]='NA';    
+                           				$userLastAttemptArr[1]=$tmpLastAttempt;                      
+                     				}else{
+                          				$userLastAttemptArr[0]=$tmpLastAttempt;
+                           				$userLastAttemptArr[1]=$valType;                                 
+                      			}                                                      
+                			}
+                			else if ($curContentType=='passage_ques')
+                			{        
+                     				$refCodeDetails =$this->passage_model->getQcodePassageDetails($curRefID);
+                     				if($refCodeDetails['qcodePassageID']!=0)
+                     				{
+                          				$currentPassageID = $refCodeDetails['qcodePassageID'];
+                          				$checkPsgQuesAttempt=$this->setquestiongivingflowarray_model->userAttemptedPsgQues($currentPassageID,$userID);
+                           				if($checkPsgQuesAttempt)
+                           				{    
+                                					$userLastAttemptArr[0]='NA';    
+                                					$userLastAttemptArr[1]=$tmpLastAttempt;           
+                           				}
+                           				else
+                           				{
+                                					$userLastAttemptArr[0]=$tmpLastAttempt;
+                                					if($curQuestionType=='Conversation')
+                                					{
+                                     						$userLastAttemptArr[1]="C";
+                                					}
+                                					else if($curQuestionType=='Reading')
+                                					{
+                                     						$userLastAttemptArr[1]="R";
+                                					}//semicolon                                                                                              
+                           				}                                                                              
+                      			}                                                              
+                			}
+                			else if ($curContentType=='free_ques')
+                			{
+                     				$userLastAttemptArr[0]=$tmpLastAttempt;
+                     				$userLastAttemptArr[1]="F";                                                                      
+                			}//fine
+     			}
+     			else if(count($passageTypeAttempt)==0)
+     			{                                                              
+                                      		if($curContentType=="N/A")
+                                      		{
+	                                                   array_push($userLastAttemptArr, 'N/A');
+	                                                   array_push($userLastAttemptArr, 'N/A');
+                                      		}
+                                      		else
+                                      		{
+                                                   		array_push($userLastAttemptArr, 'NA');
+                                                   		if($curContentType=='passage' || $curContentType=='passage_ques')
+                                                   		{
+                                                                	if($curQuestionType=='Conversation')
+                                                                	{
+                                                                       		array_push($userLastAttemptArr, "C");
+                                                                	}
+                                                                	else if($curQuestionType=='Reading')
+                                                                	{
+                                                                  		array_push($userLastAttemptArr, "R");
+                                                                	}
+                                                                	else
+                                                                	{
+                                                                    		$getCurrentPassagetype = $this->getCurrentPassagetype($userInformation['refID']);
+                                                                    		$valType= $this->contentType($getCurrentPassagetype ->passageType);
+                                                                    		array_push($userLastAttemptArr, $valType);
+                                                                	}
+                                                   		}
+                                                   		else if ($curContentType=='free_ques')
+                                                   		{                                                    
+                                                                 		array_push($userLastAttemptArr, "F");
+                                                   		}
+                                      		}
+                         	}
+
+     		}
+     		return $userLastAttemptArr;
+	}
+
+	public function getUserLastAttmpt($userID){
+                	$querys = "SELECT b.passageTypeName as passageType FROM ".$this->questionAttemptClassTbl." a,questions b where a.qcode=b.qcode and a.userID='$userID' group by  b.passageID,b.passageTypeName order by MAX(a.attemptedDate) desc limit 2";
+                     $getLastAttemptByUser = $this->dbEnglish->query($querys);
+                     return $getLastAttemptByUser->result_array();
+  	}
+
+  	public function getLastAtmptIndex($contentFlowArr,$userLastAttemptArr){
+	           $value = array_keys($contentFlowArr,$userLastAttemptArr[1]);
+	           $new_value1 = $value[0]-1;
+	           if($new_value1<0):
+	              	$new_value1=sizeof($contentFlowArr)+$new_value1;
+	           endif;
+	           $new_value2 = $value[1]-1;
+	           $contentFlow1=$contentFlowArr[$new_value1];
+	           $contentFlow2=$contentFlowArr[$new_value2];
+	           if($contentFlow1==$userLastAttemptArr[0]) :
+	              	$newIndex= $new_value1;
+	           elseif($contentFlow2==$userLastAttemptArr[0]) :
+	              	$newIndex= $new_value2;
+	           endif;
+	           return $newIndex;
+	}
+
+
+
+
+
+
+}

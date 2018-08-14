@@ -1,0 +1,13 @@
+#reportIcon {
+	background: url('../../../../assets/rewards/themeBoy/changetopic.png') no-repeat -2px -1px;
+	background-color: #E6E6E6;
+}
+
+#questionTrailIcon {
+	background: url('../../../../assets/rewards/themeBoy/endsession.png') no-repeat 6px 2px;
+	background-color: #fff;
+}
+
+.circle11 {
+	border: 1px solid #F15942;
+}

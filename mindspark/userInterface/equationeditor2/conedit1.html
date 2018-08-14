@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>contentEditable</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<script>
+	function loaded(){
+		//document.designMode = 'On'; 		// Moz, Op, Saf
+		document.body.contentEditable = true;	// Op, IE, Saf
+		document.body.innerHTML="";
+		document.body.spellcheck = false;
+		document.body.focus();
+		document.addEventListener("paste", getPaste, false);
+		document.addEventListener("drop", getDrop, false);
+		try{
+			document.execCommand('enableInlineTableEditing',null,false);
+			document.execCommand('enableObjectResizing',null,false);
+		}catch(err){
+			
+		}
+		getCursor();
+	}
+	function getDrop(e){
+		/*var text = fracConvert(e.dataTransfer.getData("text/html"));
+		text=(text.indexOf("<body")>=0)?text.substring(text.indexOf("<body"),text.indexOf("</body>")+7):text;
+		//console.log("droppedText:"+text);document.execCommand("insertHTML", false, text);*/
+		e.preventDefault();return false;
+	}
+	var pasteObj=null;
+	function getPaste(e){
+		/*var pastedText=e.clipboardData.getData('text/html');
+		pastedText=(pastedText.indexOf("<body")>=0)?pastedText.substring(pastedText.indexOf("<body"),pastedText.indexOf("</body>")+7):pastedText;
+		//console.log("pastedText:"+pastedText);
+		pastedText=fracConvert(pastedText);pasteObj=e;document.execCommand("insertHTML", false, pastedText);*/
+		e.preventDefault();
+		return false;
+	}
+</script>
+<script src="jquery-1.7.2.min.js"></script>
+<!--<script src="http://rangy.googlecode.com/svn/trunk/dev/rangy-core.js"></script>-->
+<script src="rangy-core.js"></script>
+<!--<script src="http://rangy.googlecode.com/svn/trunk/dev/rangy-textrange.js"></script>-->
+<script src="rangy-textrange.js"></script>
+<script>
+var el_body=null;var el_demo=null;
+function setCursor(){
+	range.selectCharacters(document.body, selStartOffset, selEndOffset);
+	sel.setSingleRange(range);
+	setHighlight();
+}
+var el,userInput,sel,range,selEndOffset,selStartOffset;
+function getCursor(){
+	el = document.body;
+	userInput = el.textContent || el.innerText; 
+	sel = rangy.getSelection();
+	range = sel.getRangeAt(0);
+		// Get the text preceding the selection boundaries and then remove whitespace to get the character offsets
+	var rangePrecedingBoundary = range.cloneRange();
+		rangePrecedingBoundary.setStart(el, 0);
+	selEndOffset = rangePrecedingBoundary.text().length;
+		rangePrecedingBoundary.setEnd(range.startContainer, range.startOffset);
+	selStartOffset = rangePrecedingBoundary.text().length;
+		rangePrecedingBoundary.detach();
+	
+}
+function setHLite(){
+	var children=document.body.getElementsByTagName('*');
+	var s;
+	$('*').removeClass("highlight");
+	sel = rangy.getSelection();
+	if (sel.anchorNode){
+		s=(sel.anchorNode.parentNode.nodeName).toUpperCase();
+		if (s!="HTML" && s!="BODY" && s!="DIV" && s!="BR") $(sel.anchorNode.parentNode).addClass("highlight");
+	}
+	else{
+		document.body.focus();
+	}
+    jQuery('.keypad-popup').hide();
+}
+function setHighlight(){
+	var children=document.body.getElementsByTagName('*');
+	var s;
+	$('*').removeClass("highlight");
+	//if (n==1) sel = rangy.getSelection();
+	s=(sel.anchorNode.parentNode.nodeName).toUpperCase();
+	if (s!="HTML" && s!="BODY" && s!="DIV" && s!="BR") $(sel.anchorNode.parentNode).addClass("highlight");
+	//if (s!="HTML" && s!="BODY" && s!="DIV" && s!="BR") sel.anchorNode.parentNode.className=sel.anchorNode.parentNode.className+" highlight";
+}
+function inBetween(command,bool,value) {
+	var returnValue = null;
+	try{
+		returnValue = document.execCommand(command,bool,value);
+	}
+	catch(err){
+		//console.log('pasteHTML');
+		var dv=document.createElement('div');dv.innerHTML=value;var dvl=(dv.textContent || dv.innerText).length;
+		//getCursor();
+		range.pasteHtml(value);
+		selEndOffset+=dvl;selStartOffset=selEndOffset;setCursor();
+	}
+	if (returnValue) return returnValue;
+}
+	var re00 = /<[ib]{1}>|<\/[ib]{1}>|<img[^<]*?>|<\/img>|<span[^<]*?>|<\/span>|<p[^<]*?>|<\/p>|<font[^<]*?>|<\/font>/ig;
+	var re1a = /<sup[^>]*>/ig;
+	var re1b = /<sub[^>]*>/ig;
+	var re1c = /<\/sup>([ ]?)|<\/sub>([ ]?)/ig;
+	var re3 = /(^|[^a-zA-Z])([a-z])((?![a-zA-Z]))/g;
+	var re5 = /&nbsp;/ig;
+	var re5i = /[ ]{2}/g;
+	var re5e = /[ ]$/g;
+	var re6 = /([a-z]|span>)([0-9])((?![0-9]))/ig;
+	var re7 = /([a-z0-9>]+[^<])\/((?=[a-z0-9<]+))/ig;
+	
+	var re8 = /<pre[^<]*?>([^()]*)<\/pre>/ig;
+	var re9 = /\[tab\]/g;
+	var re00d = /<hr[^<]*?class="tab"[^<]*?>/ig //Match tabs. Replace with [$1]
+	var re07 = /(\[tab\])+/g; //Replace with <hr class="tab"/>
+	var re07a = /\[tab\] /g; //Replace with <hr class="tab"/>
+	var ref1 = /<table[^<]*?class="fraction[^<]*?><tbody[^<]*?><tr[^<]*?class="num[^<]*?><td[^<]*?class="num[^<]*?>/ig;
+	var ref2 = /<\/td><\/tr><tr[^<]*?class="den[^<]*?><td[^<]*?class="den[^<]*?>/ig;
+	var ref3 = /<\/td><\/tr><\/tbody><\/table>[ ]?/ig;
+	
+	var reBr = /<br[^<]*?>/ig;
+	var remJunk = /<head>[^]*?<\/head>/ig;
+	var remAll = /<[^<]+?>/g;
+	var remAllE = /<(?!br|body|\/body)[^<]+?>/ig;
+	//var remAllE = /<(?!table|tbody|tr|td|br|\/body|\/table|\/tbody|\/tr|\/td)[^<]+?>/ig;
+	var remAllH = /<(?=html|body|\/html|\/body)[^<]+?>|<xml>(.*)<\/xml>|<style>(.*)<\/style>/ig;
+	var remAllS = /<([^<]*?)style="[^<]*?"([^<]*?)>/ig;
+	var remFr = /<tbody[^<]*?><tr[^<]*?class="num[^<]*?><td[^<]*?class="num[^<]*?>\{([0-9a-zA-Z]*)\}<\/td><\/tr><\/tbody>|<tbody[^<]*?><tr[^<]*?class="den[^<]*?><td[^<]*?class="den[^<]*?>\/\{([0-9a-zA-Z]*)\}<\/td><\/tr><\/tbody>/ig;
+function fracConvert(fracStr)
+	{
+		var fracString=fracStr;
+		//console.log("strippedHTML:"+fracString);
+		var fracArr=new Array();
+		fracString = fracString.replace(remAllS, "<$1 $2>");
+		fracString = fracString.replace(remAllH, "");
+		fracString = fracString.replace(remJunk, "");
+		fracString = fracString.replace(re5," ");
+		fracString = fracString.replace(re00d, "[tab]");
+		fracString = fracString.replace(re00, "");
+		fracString = fracString.replace(re1a, "^(");
+		fracString = fracString.replace(re1b, "_(");
+		fracString = fracString.replace(re1c, ")");
+
+		fracString = fracString.replace(reBr, "<br>");
+		fracString = fracString.replace(remFr, "$1$2");
+		fracString = fracString.replace(remAllE, "");
+		//unrip
+		//fracString = fracString.replace(/`~\{\}~`/g, "<br>&nbsp;");
+		fracString=fracString.replace(/(^|[^a-z])([a-z])([0-9])/ig,"$1$2<sup>$3</sup>&nbsp;");
+		//fracString = fracString.replace(re8, "[tab]");
+		fracString=fracString.replace(/\^([a-z0-9]+)|\^\(([^()]*)\)/ig,"<sup>$1$2</sup>&nbsp;").replace(/\^([a-z0-9]+)|\^\(([^()]*)\)/ig,"<sup>$1$2</sup>&nbsp;");	
+		fracString=fracString.replace(/\_([a-z0-9]+)|\_\(([^()]*)\)/ig,"<sub>$1$2</sub>&nbsp;").replace(/\_([a-z0-9]+)|\_\(([^()]*)\)/ig,"<sub>$1$2</sub>&nbsp;");
+		
+		fracString = fracString.replace("\\","/");
+		fracString=fracString.replace(/\(([^()]+)\)\/\(([^()]+)\)|\(([^()]*)\)\/([a-z0-9]+)|([a-z0-9]+)\/\(([^()]*)\)|([a-z0-9]+)\/([a-z0-9]+)/ig,"<table border=\"0\" class=\"fraction\"><tbody><tr class=\"num\"><td class=\"num\">$1$3$5$7</td></tr><tr class=\"den\"><td class=\"den\">$2$4$6$8</td></tr></tbody></table>&nbsp;");
+
+		fracString=fracString.replace(/\{([^{}]+)\}\/\{([^{}]+)\}/ig,"<table border=\"0\" class=\"fraction\"><tbody><tr class=\"num\"><td class=\"num\">$1</td></tr><tr class=\"den\"><td class=\"den\">$2</td></tr></tbody></table>");
+		fracString=fracString.replace(/\{\}\/\{([^{}]+)\}/ig,"/$1");fracString=fracString.replace(/\{\}\/\{([^{}]+)\}/ig,"/$1").replace(/\{([^{}]+)\}\/\{\}/ig,"$1/").replace(/\{\}\/\{\}/ig,"");
+		fracString=fracString.replace(re07a, '<hr class="tab"/>&nbsp;');
+		fracString=fracString.replace(re07, '<hr class="tab"/>');
+		//console.log("after"+fracString);
+		fracString=fracString.replace(re3, '$1<span class="var">$2</span>');
+		fracString=fracString.replace(re5i, '&nbsp;&nbsp;');
+		fracString=fracString.replace(re5e, '&nbsp;');
+		
+		//fracString=fracString.replace(/<br><br>/ig,"<br>");
+		//fracString=fracString.replace(/<br>$/i,"<br><br>");
+		
+		//console.log("fracRet:"+fracString);
+		//fracRet=fracString.replace(re21, "$1<span>$2</span>$3");
+		var fracRet=fracString;
+		return fracRet;
+	}
+function replaceC()	{
+	try{getCursor();}catch(err){}
+	$('body td.num').each(function(index) {if ($(this).text()=="") $(this).html('{}'); else $(this).html('{'+$(this).html()+'}');});
+	$('body td.den').each(function(index) {if ($(this).text()=="") $(this).html('/{}'); else $(this).html('/{'+$(this).html()+'}');});
+	var content=$('body').html();//document.body.innerHTML;//alert(content.length+"\n"+content);
+
+	try{content1=fracConvert(content);}catch(err){}
+	el.innerHTML = content1;
+	try{setCursor();}catch(err){}
+	try{window.parent.setText(content1);}catch(err){}
+}
+</script>
+<link href="divst.css" rel="stylesheet" type="text/css">
+<style>
+	body{
+		font-family:serif;
+		min-height: 390px;
+	}
+	div#header {
+		top: 0;
+		position: absolute;
+		padding-left: 0;
+	}
+	span#cursor {
+		display: inline-block;
+		width: 2px;
+		background-color: #000000;
+	}
+</style>
+</head>
+<body onload="loaded();"></body>
+</html>

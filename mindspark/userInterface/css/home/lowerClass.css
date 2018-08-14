@@ -1,0 +1,818 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	/*min-width:1024px;*/
+}
+
+.handPointer {
+	cursor:pointer;
+}
+
+#leftInfo {
+	width:65%;
+	float:left;
+}
+
+#topicProgressDiv {
+	margin-left: 10%;
+	width: 85%;
+	height: 372px;
+	background: rgba(0,0,0,0.4);
+	-moz-border-radius: 0px 12px 12px 12px;
+	-webkit-border-radius: 0px 12px 12px 12px;
+	border-radius: 0px 12px 12px 12px;
+	padding: 15px 2%;
+}
+#inProgress {
+	width:200px;
+	background:rgba(0,0,0,0.4);
+	float:left;
+	height:64px;
+	margin-left:10%;
+	-moz-border-radius:13px 13px 0px 0px;
+	-webkit-border-radius:13px 0px 13px 0px;
+	border-radius:13px 13px 0px 0px;
+	padding-top:10px;
+}
+#kudosDiv.forLowerOnly{
+	margin-top: 10px;
+}
+#inProgressIcon {
+	background: url('../../assets/lowerClass/icon.boyreading.png') no-repeat 0px 0px;
+	width: 60px;
+	height: 50px;
+	background-size: contain;
+	margin-left:26px;
+	float: left;
+}
+#inProgressText {
+	font-size:24px;
+    text-align: center;
+    line-height: 60px;
+    color: #ffffff;
+}
+
+.topicProgressDiv {
+	background:rgba(255,255,255,0.99);
+	width: 31.6%;
+	float: left;
+	height: 157px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	overflow: hidden;
+	border: solid 1px #9b9b9b;
+	margin-top: 15px;
+	position: relative;
+}
+.topicProgressDiv:nth-child(1){
+	width: 99.8%;
+	height: 196px;
+	margin-top: 0px;
+}
+.topicProgressDiv:nth-child(1)::before {
+    content: "What's new today?";
+    padding: 10px 0px 2px 12px;
+    font-size: 18px;
+    line-height: 1.1;
+    color: #4a4a4a;
+    width: 100%;
+    display: block;
+    border-bottom: 2px solid rgba(151, 151, 151, 0.4);
+}
+.topicProgressDiv +.clear{
+	clear: none;
+    width: 1.9%;
+    height: 1px;
+    float: left;
+}
+.topicProgressDiv:nth-child(1) +.clear{
+	display: none;
+}
+
+.topicName {
+	border-bottom:1px solid #DCDCDC;
+	padding: 4px 6px;
+	font-size:18px;
+	max-height: 52px;
+    overflow: hidden;
+    color: #4a4a4a;
+    box-sizing: border-box;
+}
+.progressBar {
+	background:#F26722;
+	border:1px solid #FEE0BF;
+	color:#FFF;
+	/* width:90px; */
+	padding:7px;
+	position: absolute;
+	margin: 8px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	text-align:center;
+	font-size:18px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow: inset 0px 0px 3px;
+	-webkit-box-shadow: inset  0px 0px 3px;
+	box-shadow: inset  0px 0px 3px;
+	cursor:pointer;
+}
+.progressBar:hover {
+	color:#F3CB1B;
+}
+.progressBar:active {
+	color:#B6D267;
+}
+.topicProgressDiv:nth-child(1) .progressBar{
+	width: 27%;
+	left: auto;
+}
+.topicProgressGrad {
+	width:50%;
+	height:5px;
+	background:#B6D267;
+	float:left;
+}
+.topicProgressRemain {
+	width:50%;
+	height:5px;
+	background:#F3CB1B;
+	float:left;
+}
+.progressRun {
+	display   :block;
+	background:url(../../assets/sparkie.png) no-repeat 0 0;
+	width: 30px;
+	height: 40px;
+	margin-top: 5px;
+	margin-left:41%;
+	float:left;
+	display: none;
+}
+.progressPercent {
+	display   :none;
+	background:url(../../assets/lowerClass/icon.bluecloud.png) no-repeat 0 0;
+	width: 35px;
+	height: 24px;
+	padding-top: 7px;
+	margin-top:10px;
+	float:left;
+	text-align:center;
+	padding-left:3px;
+}
+
+#continueEmotText {
+	background: url(../../assets/lowerClass/button.continue.png) no-repeat 0 0;
+	width: 161px;
+	height: 44px;
+	font-size: 2.25em;
+	padding: 14px 0px 0px 22px;
+	color: #FFF;
+	margin-left: 40px;
+	margin-top: 0px;
+}
+
+#tooltipForPriority {
+    background-color: black;
+    color: #fff;
+    font-size: 14px;
+    left: 40px;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    width: 0;height: 0;
+    overflow: hidden;
+	display:none;
+}
+
+/*#continueEmotText {
+	border: 1px solid #F26722;
+	color: #F26722;
+	padding: 7px 15px 7px 15px;
+	float: left;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 2em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: inset 0px -3px 3px;
+	-webkit-box-shadow: inset 0px -3px 3px;
+	box-shadow: inset 0px -3px 3px;
+	cursor: pointer;
+	width: 104px;
+
+}*/
+/*#continueEmotText:hover {
+	-moz-box-shadow: inset 0px 0px 10px;
+	-webkit-box-shadow: inset  0px 0px 10px;
+	box-shadow: inset  0px 0px 10px;
+}*/
+#viewAllDivLowerClass {
+	background:#F26722;
+	border:1px solid #FEE0BF;
+	color:#FFF;
+	width:94px;
+	padding:7px;
+	float:right;
+	margin-right: -2%;
+	margin-top: 30px;
+	text-align:center;
+	font-size:18px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow: inset 0px 0px 3px;
+	-webkit-box-shadow: inset  0px 0px 3px;
+	box-shadow: inset  0px 0px 3px;
+	cursor:pointer;
+}
+#viewAllDivLowerClass:hover {
+	-moz-box-shadow: inset 0px 0px 10px;
+	-webkit-box-shadow: inset  0px 0px 10px;
+	box-shadow: inset  0px 0px 10px;
+}
+
+#viewActivitiesDivLowerClass {
+	background:#F26722;
+	border:1px solid #FEE0BF;
+	color:#FFF;
+	width:94px;
+	padding:7px;
+	float:right;
+	margin-right: 2%;
+	margin-top: 30px;
+	text-align:center;
+	font-size:18px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow: inset 0px 0px 3px;
+	-webkit-box-shadow: inset  0px 0px 3px;
+	box-shadow: inset  0px 0px 3px;
+	cursor:pointer;
+}
+#viewActivitiesDivLowerClass:hover {
+	-moz-box-shadow: inset 0px 0px 10px;
+	-webkit-box-shadow: inset  0px 0px 10px;
+	box-shadow: inset  0px 0px 10px;
+}
+
+
+#midInfo,#viewAllDiv,#ncertDiv,#activityDiv,#studentInfo,#lowerClassHide,#continueText {
+	display:none;
+}
+
+#activityDivLowerClass {
+	float:right;
+	margin-right:75%;
+	margin-top: 10px;
+	display: none;
+}
+
+#activityLowerClassEmote {
+	width:70px;
+	height:65px;
+	text-align:center;
+	-moz-border-radius:50px;
+	-webkit-border-radius:50px;
+	border-radius:50px;
+	/*background:#2f99cb;*/
+	background:#75BADD;
+	padding:5px;
+}
+#activityLowerClassText {
+	color: #FFF;
+	font-size: 1.2em;
+	width:70px;
+	height:40px;
+	text-align:center;
+	-moz-border-radius:50px;
+	-webkit-border-radius:50px;
+	border-radius:50px;
+	padding-top:25px;
+	background:#2f99cb;
+	-webkit-box-shadow: 0 30px 30px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+/*#activityLowerClassEmote {
+	background:url(../../assets/lowerClass/activities.png) no-repeat 0 0;
+	width:133px;
+	height:65px;
+	text-align:center;
+}
+#activityLowerClassText {
+	color: #000;
+	font-size: 1.2em;
+	padding-top: 49px;
+	-moz-box-shadow: inset 0px 0px 3px;
+	-webkit-box-shadow: inset 0px 0px 3px;
+	box-shadow: inset 0px 0px 3px;
+}*/
+#rightInfo {
+	float:left;
+	width:35%;
+}
+#leftLowerInfo{
+	height: 100px;
+}
+#commentText {
+	background:#F26722;
+	border:1px solid #FEE0BF;
+	color:#FFF;
+	width:145px;
+	padding:7px;
+	float:left;
+	margin-left:19%;
+	margin-top:40px;
+	text-align:center;
+	font-size:18px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow: inset 0px 0px 3px;
+	-webkit-box-shadow: inset  0px 0px 3px;
+	box-shadow: inset  0px 0px 3px;
+	cursor:pointer;
+}
+#commentText:hover {
+	-moz-box-shadow: inset 0px 0px 10px;
+	-webkit-box-shadow: inset  0px 0px 10px;
+	box-shadow: inset  0px 0px 10px;
+}
+#noticeBoardDiv {
+	background:rgba(22,65,31,0.8);
+	color:#FFFFFF;
+	width:189px;
+	height:216px;
+	padding:7px;
+	border : 2px solid #172b0f;
+	margin-top:20px;
+	margin-left:15%;
+	font-size:18px;
+	-moz-border-radius:30px;
+	-webkit-border-radius:30px;
+	border-radius:30px;
+	-moz-box-shadow: inset 0px 0px 3px;
+	-webkit-box-shadow: inset  0px 0px 3px;
+	box-shadow: inset  0px 0px 3px;
+	cursor:pointer;
+}
+#noticeBoardHeading {
+	text-align:center;
+}
+#noticeBoardDetails {
+	text-align:left;
+}
+#lowerClassIconDiv {
+	background: url(../../assets/lowerClass/groupofkids.png) no-repeat 0 0;
+	width: 200px;
+	height: 65px;
+	margin-left: -800px;
+	margin-top: 99px;
+	display:none;
+}
+
+#sparkieWonDiv {
+	float:right;
+	margin-right:19%;
+}
+
+#sparkieWonText {
+	color:#000;
+	font-size:14px;
+}
+#sparkieWon {
+	font-size:28px;
+	text-align:center;
+	text-shadow: 3px 3px 8px;;
+	color:#F3CB1B;
+}
+#container1 {
+	background:url(../../assets/lowerClass/schoolBackground.png) no-repeat 111% 238px;
+	width:100%;
+	margin-top:22px;
+}
+
+#copyright {
+	font-size: 1.2em;
+	margin: 5px;
+	margin-top: 0px;
+	float: left;
+}
+
+.progressContainer {
+	margin-left: 5%;
+	width: 65%;
+	display: none;
+}
+#continueButtonDiv {
+	background:url(../../assets/lowerClass/continue_icon.png) no-repeat;
+	width: 200px;
+	height: 63.5px;
+	float: left;
+	margin-left: 6%;
+	background-size: contain;
+	padding-bottom: 10px;
+}
+#bottom_bar {
+	background: #9ec956;
+	border-top: 1px solid;
+	width: 100%;
+	height: 24px;
+}
+#lastSessionText {
+	margin-left: 75px;
+	font-size: 1.3em;
+	margin-top: -5px;
+	padding-top:3px;
+}
+#backToOld {
+	float:right;
+	background-image:url(../../assets/switchback3.png);
+	height:20px;width:20px;
+	background-size:100% 100%;
+	cursor:pointer;
+}
+#helpMsg {
+	padding:10px;
+	color:yellow;
+	font-size:18px;
+	cursor:pointer
+}
+
+.aqadPrompt{
+	right: 25% !important;
+	top: 5px !important;
+}
+
+
+#home {
+	background: url('../../assets/icon.home.png') no-repeat 0 0 !important;
+	width: 50px !important;
+	height: 39px !important;
+	margin-right: 20px !important;
+	margin-top: 6px !important;
+	float: left !important;
+	background-size: 100% 100% !important;
+	moz-box-shadow: 0 0 10px #888 !important;
+	-webkit-box-shadow: 0 0 10px#888 !important;
+	box-shadow: 0 0 10px #888 !important;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+}
+
+.redCircleKudos{
+	width: 33px;
+	height: 22px;
+	margin-top: -16px;
+	margin-left: -20px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	padding-top: 11px;
+	font-size:0.9em;
+	color:#FFFFFF;
+	background-color:#FF0000;
+	-webkit-box-shadow: 1px 1px 3px rgba(50, 50, 50, 0.8);
+	-moz-box-shadow: 1px 1px 3px rgba(50, 50, 50, 0.8);
+	box-shadow:    1px 1px 3px rgba(50, 50, 50, 0.8);
+}
+
+#help{
+	margin-right: 5% !important;
+}
+.priorityNo {
+	float: left;
+	border: 1px solid;
+	padding: 3px;
+	border-radius: 20px;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	margin-left: 8px;
+	margin-top: 2px;
+	display: none;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.topicProgressDiv:nth-child(1) .priorityNo.forLowerOnly {
+	width: 168.3px;
+	height: 134px;
+	margin: 10px 12px;
+	border-radius: 6px;
+	background-color: #ffffff;
+	border: solid 1px rgba(151, 151, 151, 0.8);
+	display: block;
+}
+.topicName.topicNotStarted{
+	margin-top:32px;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	color: #4a4a4a;
+	border: solid 1px rgba(151, 151, 151, 0);
+}
+.topicProgressDiv:nth-child(1) .topicName {
+	margin-top:0;
+	padding-left: 0;
+	font-size: 18px;
+	text-align: left;
+	line-height: 1.1;
+	color: #4a4a4a;
+	font-weight: bold;
+	border: solid 1px rgba(151, 151, 151, 0);
+	width: 269px;
+}
+.topicStartMsg{
+	/* font-family: PTSans-Regular; */
+	font-size: 13px;
+	line-height: 1.2em;
+	color: #9b9b9b;
+	margin-top: 3px;
+}
+.topicCompletedTrophy{
+	float: left;
+    width: 45px;
+    height: 45px;
+    margin-left: 20px;
+    margin-right: 7.5px;
+    margin-top: -4px;
+    background-image: url(../../assets/topicCompletionCup.png);
+}
+.topicCompletedMsg{
+	font-size: 16px;
+	line-height: 1.3;
+	color: #4a4a4a;
+	text-align: center;
+	margin-top: 16px;
+}
+.topicCurrentStatusInfo{	
+	text-align: center;
+}
+.topicProgressDiv:nth-child(1) .topicCurrentStatusInfo{
+	text-align: left;
+}
+.forMidOnly {
+	display:none;
+}
+.topicInfoForLower{
+	/*margin-left: 199px;
+    margin-top: 10px;
+    position: absolute;*/
+}
+.topicProgressDiv:nth-child(1) .topicInfoForLower{
+	margin-left: 199px;
+    margin-top: 10px;
+    position: absolute;
+}
+@media (max-width: 1024px){
+	#container1 {
+		background:url(../../assets/lowerClass/schoolBackground.png) no-repeat -65% 238px;
+	}
+	#lowerClassIconDiv {
+		margin-left: 125px;
+	}
+	.aqadPrompt{
+		right: 31% !important;
+	}
+	#continueButtonDiv{
+		margin-left: 15%;
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.topicCompletedTrophy{
+		margin-left: 2px;
+		margin-right: -14px;
+	}
+	.kudosTd
+	{
+		width: 320px;
+	    margin: 10px;
+	    display: inline-block;
+	    float: left;
+	}
+	.kudoTitle
+	{
+		text-align: left;
+		vertical-align:top;
+		width:160px;
+	}
+	.message
+	{
+		color:black;
+		padding:10px;
+		padding-top:0px;
+		text-align:justify;
+		vertical-align:top;
+		height:110px;
+	}
+	.kudoMonthYearTbl
+	{
+		margin-top: 40px;
+		margin-left: 5px;
+		margin-bottom: 0px;
+		margin-right: 10px;
+		display: inline-block;
+	}
+	.kudoMonthYearTd
+	{
+		width: 330px;
+		font-size: 18px;
+		color: grey;
+	}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+	.kudosTd
+	{
+		width: 420px;
+	    margin: 10px;
+	    display: inline-block;
+	    float: left;
+	}
+	.kudoTitle
+	{
+		text-align: left;
+		vertical-align:top;
+		width:175px;
+	}
+	.message
+	{
+		color:black;
+		padding:10px;
+		padding-top:0px;
+		text-align:justify;
+		vertical-align:top;
+		height:110px;
+	}
+	.kudoMonthYearTbl
+	{
+		margin-top: 40px;
+		margin-left: 5px;
+		margin-bottom: 0px;
+		margin-right: 10px;
+		display: inline-block;
+	}
+	.kudoMonthYearTd
+	{
+		width: 430px;
+		font-size: 18px;
+		color: grey;
+	}
+	#kudo_body
+	{
+		margin-left: 10px !important;
+	}
+}
+@media only screen and (min-width: 1281px) and (max-width: 1680px) {
+	.kudosTd
+	{
+		width: 420px;
+	    margin: 10px;
+	    display: inline-block;
+	    float: left;
+	}
+	.kudoTitle
+	{
+		text-align: left;
+		vertical-align:top;
+		width:230px;
+	}	
+	.message
+	{
+		color:black;
+		padding:10px;
+		padding-top:0px;
+		text-align:justify;
+		vertical-align:top;
+		height:75px;
+	}
+	.kudoMonthYearTbl
+	{
+		margin-top: 40px;
+		margin-left: 35px;
+		margin-bottom: 0px;
+		margin-right: 10px;
+		display: inline-block;
+	}
+	.kudoMonthYearTd
+	{
+		width: 400px;
+		font-size: 18px;
+		color: grey;
+	}
+	#divKudos
+	{
+		margin-left: 25px;
+	}
+	#kudo_body
+	{
+		margin-left: -10px !important;
+	}
+}
+#KudoSummary
+{
+	font-family: Conv_HelveticaLTStd-Cond;
+	font-size: 14px;
+	color: #FFFFFF;
+	background-color: #B1DE5D;
+	padding: 2px 0px 0px 0px;
+	-moz-box-shadow: 1px 4px 5px 2px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 1px 4px 5px 2px rgba(0, 0, 0, 0.25);
+	box-shadow: 1px 4px 5px 2px rgba(0, 0, 0, 0.25);
+	table-layout: fixed;
+	height: 220px !important;
+}
+#Figurine
+{
+	vertical-align: top;
+	width: 15%;
+}
+
+.newProgressForLower{
+	width: 100px;
+    height: 2px;
+    background: rgba(151, 151, 151, 0.3);
+    border: solid 1px rgba(151, 151, 151, 0.3);
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+}
+.newProgressBar{
+    background: #f26722;
+    height: 2px;left: 0;
+    position: absolute;
+}
+.newProgressBubble{
+	background-color: #d9d9d9;
+	border: solid 1px #b4b4b4;
+	position: absolute;
+	width: 20px;height: 20px;border-radius: 20px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.newProgressBubble.filledBubble{
+	background-color: #f68d5a;
+	border: solid 1px #f26722;
+}
+.newProgressBubble.p20{left:-10px;top: -10px;}
+.newProgressBubble.p40{width: 14px;height: 14px;left:18px;top: -7px;}
+.newProgressBubble.p60{width: 14px;height: 14px;left:43px;top: -7px;}
+.newProgressBubble.p80{width: 14px;height: 14px;left:68px;top: -7px;}
+.newProgressBubble.p100{left: 90px;top: -10px;}
+#worksheetDiv {	
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;	
+	position: relative;
+}
+
+#viewWorksheetDivLowerClass {
+	background:#F26722;
+	border:1px solid #FEE0BF;
+	color:#FFF;
+	width:115px;
+	padding:7px;
+	float:right;
+	margin-right: 2%;
+	margin-top: 30px;
+	text-align:center;
+	font-size:18px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow: inset 0px 0px 3px;
+	-webkit-box-shadow: inset  0px 0px 3px;
+	box-shadow: inset  0px 0px 3px;
+	cursor:pointer;
+}
+
+
+.redCircleWorksheet{
+	position: absolute;
+	background-color: #FF0000;
+	width: 20px;
+	height: 20px;
+	color: white;
+	right: 0px;
+	line-height: 20px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-moz-border-radius: 10px;
+	text-align: center;
+	margin-right: -14px;
+	margin-top: -17px;
+	font-size: 14px;
+}

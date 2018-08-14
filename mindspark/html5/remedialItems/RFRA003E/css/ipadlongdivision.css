@@ -1,0 +1,780 @@
+@media only screen and (orientation: landscape) {
+  /* rules for iPad in landscape orientation */
+#smtable {
+    background-color: #ABDDFE;
+    height: 39%;
+    left: 50.5%;
+    position: absolute;
+    top: 57%;
+    width: 26%;
+    z-index: -1;
+    display: none;
+}
+#stbutton {
+    display: none;
+    font-family: "Times New Roman";
+    height: 10%;
+    left: 5%;
+    position: absolute;
+    top: 62%;
+    width: 28%;
+     background-color: #D9EDF9;
+         border: 1.5px solid gray;
+          border-radius: 5px 5px 5px 5px;
+}
+#stbutton:hover
+ {
+    border: 2px solid #66BCF1;
+}
+#statbutton {
+    display: none;
+    font-family: "Times New Roman";
+    height: 7%;
+    left: 5%;
+    position: absolute;
+    top: 60%;
+    width: 25%;
+       background-color: #D9EDF9;
+         border: 1.5px solid gray;
+          border-radius: 5px 5px 5px 5px;
+}
+#statbutton:hover
+ {
+    border: 2px solid #66BCF1;
+}
+#dynsttext {
+    font-family: "Comic Sans MS";
+    height: 25%;
+    left: 5%;
+    position: absolute;
+    top: 75%;
+    width: 80%;
+    font-weight: bold;
+}
+.stb {
+    border: 1px solid #515151;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+    font-weight:bold;
+}
+.txtstyle {
+    background-color: #66CDAA;
+    border: medium none;
+    font-family: "Times New Roman";
+    outline: medium none;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    
+}
+#tabledes {
+	background-color: #DEF2FE;
+    border: 1px solid black;
+    height: 65%;
+    left: 79%;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    width: 15%;
+}
+#desheading {
+    display: none;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    height: 100%;
+    top: 0.2%;
+    width: 100%;
+}
+.tabledivr {
+    font-weight: bolder;
+}
+#table {
+    left: 10%;
+    position: absolute;
+    top: 1%;
+}
+#deshedtext {
+    height: 7%;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+#inputboxes {
+	font-weight: bold;
+    height: 65%;
+    left: 10%;
+    position: absolute;
+    top: 30%;
+    width: 35%;
+    border: 2px solid black;
+}
+#directions {
+	font-weight: bold;
+	height: 65%;
+	left: 46%;
+	position: absolute;
+	top: 30%;
+	width: 32%;
+}
+
+#information {
+    font-weight: bold;
+    height: 20%;
+    left: 0;
+    position: absolute;
+    top: 1%;
+    width: 20%;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+}
+.inputs {
+    border: medium none;
+    font-family: "Times New Roman";
+    font-size: medium;
+    font-weight: bold;
+    height: 100%;
+    opacity: 0;
+    text-align: left;
+    visibility: hidden;
+    width: 55%;
+}
+
+.inputsfill {
+    border: medium none;
+    font-family: "Times New Roman";
+    font-size: 8px;
+    font-weight: bold;
+    height: 100%;
+    opacity: 0;
+    text-align: right;
+    visibility: hidden;
+    width: 35%;
+	
+}
+
+.td {
+    background-color: #87CEFA;
+    border: 1px solid;
+}
+#stlabel {
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    height: 18%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 95%;
+}
+#inputtable {
+    font-weight: bold;
+    height: 100%;
+    position: absolute;
+    table-layout: auto;
+    width: 100%;
+    border: none;
+}
+
+#headpart {
+    background-color: #BCF8FE;
+    border: 1px solid #115863;
+    border-radius: 10px 10px 10px 10px;
+    font-family: "Comic Sans MS";
+    font-weight:normal;
+    left: 33%;
+    overflow: visible;
+    position: absolute;
+    text-align: center;
+    text-overflow: ellipsis;
+    top: 0.9%;
+    width: 60%;
+    z-index: 5;
+         padding-top: 5px;  
+      padding-right: 3px;  
+      padding-bottom: 3px;  
+      padding-left: 3px;  
+}
+#bodypart {
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    left: 5%;
+    position: absolute;
+    top: 28%;
+    width: 95%;
+	height: 71%;    
+    overflow: auto;
+}
+#numbervalidate
+{
+	position: absolute;
+	width:10%;
+	height:10%;
+	outline:none;
+}
+.tagimage {
+    border-bottom: 5px solid transparent;
+    border-right: 90px solid #9DF7FB;
+    border-top: 30px solid transparent;
+    height: 0;
+    left: 10%;
+    position: absolute;
+    top: 2%;
+    width: 0;
+    z-index: 5;
+}
+#imgarrow {
+    height: 12%;
+    left: 10.2%;
+    position: absolute;
+    top: 1.4%;
+    width: 27%;
+    z-index: 5;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+}
+#question {
+	font-weight: bold;
+    left: 21%;
+    position: absolute;
+    top: 25%;
+}
+#arrowz {
+    display: none;
+    height: 6%;
+    left: 28%;
+    position: absolute;
+    top: 0;
+    width: 2.5%;
+}
+#mainright {
+    background-color: #C2F0F5;
+    border: 2px solid black;
+    font-family: sans-serif;
+    height: 65%;
+    left: 83%;
+    position: absolute;
+    top: 10%;
+    width: 11%;
+}
+#quotval {
+    display: none;
+    height: 3%;
+    left: 58.2%;
+    position: absolute;
+    top: 2%;
+    width: 7%;
+   text-align:center;
+    z-index: 4;
+     border-style: solid;
+  
+}
+
+#remval {
+    display: none;
+    height: 3%;
+    left: 84%;
+    position: absolute;
+    top: 2%;
+    width: 6%;
+   text-align:center;
+    z-index: 4;
+     border-style: solid;
+}
+#quotienttest {
+    display: none;
+   font-family: "Times New Roman";
+   
+    font-weight: bold;
+    left: 44%;
+    position: absolute;
+    top: 2%;
+}
+#remaintest {
+    display: none;
+    font-weight: bold;
+    left: 69%;
+    position: absolute;
+    top: 2%;
+}
+#downarrow {
+    display: none;
+    height: 9%;
+    left: 20%;
+    position: absolute;
+    top: 21%;
+    width: 1.5%;
+    
+}
+#tables {
+    display: block;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    height: 10%;
+    left: 18%;
+    position: absolute;
+    top: 0;
+    width: 74%;
+    text-decoration: underline;
+}
+                                    
+#button
+ {
+    background-color: #D9EDF9;
+    border: 1.5px solid gray;
+    border-radius: 5px 5px 5px 5px;
+    height:6%;
+    font-family: "Times New Roman";
+}
+#button:hover
+ {
+    border: 2px solid #66BCF1;
+}
+#quotans
+{
+	 height: 7.3%;
+    left: 57%;
+    position: absolute;
+    top: 0.75%;
+    width: 10.7%;
+	display:none;
+}
+	#remans
+	{
+	  height: 7.3%;
+    left: 83%;
+    position: absolute;
+    top: 0.75%;
+    width: 10%;
+	display:none;
+	}
+#quotimg {
+   position:absolute;
+   width:100%;
+   height:100%;
+   display:none;
+}
+#remimg {
+  position:absolute;
+   width:100%;
+   height:100%;
+}
+#firstlin {
+    background-color: red;
+    height: 0.7%;
+    left: 10.8%;
+    position: absolute;
+    top: 22%;
+    width: 5%;
+    display: none;
+}
+#secondlin {
+    background-color: red;
+    height: 0.7%;
+    left: 18%;
+    position: absolute;
+    top: 22%;
+    width: 5%;
+    display:none;
+}
+}
+@media only screen  and (orientation:portrait) {
+  /* rules for iPad in portrait orientation */
+
+#stbutton {
+    display: none;
+    font-family: "Times New Roman";
+    height: 7%;
+    left: 5%;
+    position: absolute;
+    top: 60%;
+    width: 25%;
+     background-color: #D9EDF9;
+         border: 1.5px solid gray;
+          border-radius: 5px 5px 5px 5px;
+}
+
+#stbutton:hover
+ {
+    border: 2px solid #66BCF1;
+}
+#statbutton {
+    display: none;
+    font-family: "Times New Roman";
+    height: 7%;
+    left: 5%;
+    position: absolute;
+    top: 60%;
+    width: 25%;
+       background-color: #D9EDF9;
+         border: 1.5px solid gray;
+          border-radius: 5px 5px 5px 5px;
+}
+
+#statbutton:hover
+ {
+    border: 2px solid #66BCF1;
+}
+
+#dynsttext {
+    font-family: "Comic Sans MS";
+    height: 25%;
+    left: 5%;
+    position: absolute;
+    top: 75%;
+    width: 80%;
+    font-weight: bold;
+}
+.stb {
+    border: 1px solid #515151;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+    font-weight:bold;
+}
+.txtstyle {
+    background-color: #66CDAA;
+    border: medium none;
+    font-family: "Times New Roman";
+    outline: medium none;
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+    
+}
+
+#desheading {
+    display: none;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    height: 100%;
+    top: 0.2%;
+    width: 100%;
+}
+
+.tabledivr {
+    font-weight: bolder;
+}
+#table {
+    left: 10%;
+    position: absolute;
+    top: 1%;
+}
+
+#deshedtext {
+    height: 7%;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+#tabledes {
+    background-color: #DEF2FE;
+    border: 1px solid black;
+    height: 45%;
+    left: 81%;
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    width: 18%;
+}
+
+#inputboxes {
+    font-weight: bold;
+    height: 45%;
+    left: 2%;
+    position: absolute;
+    top: 20%;
+    width: 50%;
+    border: 2px solid black;
+}
+#directions {
+    /* background-color: #87CEF1; */
+       background-color: #abddfe;
+    border: 2px solid black;
+    font-weight: bold;
+    height: 45%;
+    left: 54%;
+    position: absolute;
+    top: 20%;
+    width: 25%;
+}
+#smtable {
+    background-color: #ABDDFE;
+    height: 24%;
+    left: 54.3%;
+    position: absolute;
+    top: 40%;
+    width: 24.5%;
+    z-index: -1;
+    display: none;
+}
+
+#information {
+    font-weight: bold;
+    height: 20%;
+    left: 0;
+    position: absolute;
+    top: 1%;
+    width: 20%;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+}
+.inputs {
+    border: medium none;
+    font-family: "Times New Roman";
+    font-size: medium;
+    font-weight: bold;
+    height: 100%;
+    opacity: 0;
+    text-align: left;
+    visibility: hidden;
+    width: 55%;
+}
+
+.inputsfill {
+    border: medium none;
+    font-family: "Times New Roman";
+    font-size: medium;
+    font-weight: bold;
+    height: 100%;
+    opacity: 0;
+    text-align: center;
+    visibility: hidden;
+    width: 50%;
+}
+
+.td {
+    background-color: #87CEFA;
+    border: 1px solid;
+}
+#stlabel {
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    height: 18%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 95%;
+}
+#inputtable {
+    font-weight: bold;
+    height: 100%;
+    position: absolute;
+    table-layout: auto;
+    width: 100%;
+    border: none;
+}
+
+#headpart {
+    background-color: #BCF8FE;
+    border: 1px solid #115863;
+    border-radius: 10px 10px 10px 10px;
+    font-family: "Comic Sans MS";
+    left: 35%;
+     font-weight:normal;
+    overflow: visible;
+    position: absolute;
+    text-align: center;
+    text-overflow: ellipsis;
+    top: 0.8%;
+    width: 60%;
+    z-index: 5;
+         padding-top: 5px;  
+      padding-right: 3px;  
+      padding-bottom: 3px;  
+      padding-left: 3px;  
+}
+#bodypart {
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    left: 5%;
+    position: absolute;
+    top: 28%;
+    width: 95%;
+	height: 71%;    
+    overflow: auto;
+}
+#numbervalidate
+{
+	position: absolute;
+	width:10%;
+	height:10%;
+	outline:none;
+}
+.tagimage {
+    border-bottom: 5px solid transparent;
+    border-right: 90px solid #9DF7FB;
+    border-top: 30px solid transparent;
+    height: 0;
+    left: 10%;
+    position: absolute;
+    top: 2%;
+    width: 0;
+    z-index: 5;
+}
+#imgarrow {
+    height: 12%;
+    left: 10.4%;
+    position: absolute;
+    top: 1.95%;
+    width: 27.2%;
+    z-index: 6;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+}
+#question {
+    font-weight: bold;
+    left: 10%;
+    position: absolute;
+    top: 7%;
+}
+#arrowz {
+    display: none;
+    height: 6%;
+    left: 28%;
+    position: absolute;
+    top: 0;
+    width: 2.5%;
+}
+#mainright {
+    background-color: #C2F0F5;
+    border: 2px solid black;
+    font-family: sans-serif;
+    height: 45%;
+    left: 83%;
+    position: absolute;
+    top: 20%;
+    width: 15%;
+}
+#quotval {
+    display: none;
+    height: 3%;
+    left: 55%;
+    position: absolute;
+    top: 7%;
+    width: 9%;
+   text-align:center;
+    z-index: 4;
+    outline: none;
+   border-style: solid;
+}
+
+#remval {
+    display: none;
+    height: 3%;
+    left: 87%;
+    position: absolute;
+    top: 7%;
+    width: 7%;
+   text-align:center;
+    z-index: 4;
+    outline:none;
+     border-style: solid;
+}
+#quotienttest {
+    display: none;
+   font-family: "Times New Roman";
+    
+    font-weight: bold;
+    left: 38%;
+    position: absolute;
+    top: 7%;
+}
+#remaintest {
+    display: none;
+    font-weight: bold;
+    left: 69%;
+    position: absolute;
+    top: 7%;
+}
+#downarrow {
+    display: none;
+    height: 9%;
+    left: 25%;
+    position: absolute;
+    top: 27%;
+    width: 1.5%;
+    
+}
+#tables {
+    display: block;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    height: 10%;
+    left: 18%;
+    position: absolute;
+    top: 0;
+    width: 74%;
+    text-decoration: underline;
+}
+
+                                             
+#button
+ {
+    background-color: #D9EDF9;
+    border: 1.5px solid gray;
+    border-radius: 5px 5px 5px 5px;
+    height:20%;
+    font-family: "Times New Roman";
+}
+#button:hover
+ {
+    border: 2px solid #66BCF1;
+}
+#quotans
+{
+	 height: 6.2%;
+    left: 53.6%;
+    position: absolute;
+    top: 5.9%;
+    width: 13.9%;
+	display:none;
+}
+	#remans
+	{
+	  height: 6.2%;
+    left: 85.7%;
+    position: absolute;
+    top: 5.9%;
+    width: 12%;
+	display:none;
+	}
+#quotimg {
+   position:absolute;
+   width:100%;
+   height:100%;
+   display:none;
+}
+#remimg {
+  position:absolute;
+   width:100%;
+   height:100%;
+}
+#firstlin {
+    background-color: red;
+    height: 0.7%;
+    left: 10.8%;
+    position: absolute;
+    top: 22%;
+    width: 5%;
+    display: none;
+}
+#secondlin {
+    background-color: red;
+    height: 0.7%;
+    left: 18%;
+    position: absolute;
+    top: 22%;
+    width: 5%;
+    display:none;
+}
+
+}

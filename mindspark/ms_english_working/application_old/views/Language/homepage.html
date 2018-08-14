@@ -1,0 +1,34 @@
+<div id="home" class="none home_page moduleContainer">
+    <div id="skillometer" class="homepage alignLeft"></div>
+    <div id="quoteContainer" class="homepage">
+        <div id="quoteSparkie"></div>
+        <div id="quoteSparkieCount">
+            {{'SPARKIES : ' + sessionData.sparkies }}
+        </div>
+        <div id="quoteHeader">
+            Quote of the day:
+        </div>
+        <div id="quote">
+            {{sessionData.quoteObject.Quote}}
+        </div>
+        <div id="quoteAuthor">
+            {{'-' + sessionData.quoteObject.Author}}
+        </div>
+    </div>
+     
+    <!-- session Report -->
+    <h1 class='sessionH1 none'>Daily Report</h1>
+    <div id="homeReport" class="col-md-12 col-lg-offset-1 col-lg-10  none table-responsive accordion">
+        <h2 class='sessionH2 none'>Passages</h2>
+        <dl id="sessionReport" class="sessionReport homepage"></dl>
+    </div>
+    <div id="homeReportNCQ" class="col-md-12 col-lg-offset-1 col-lg-10 none table-responsive accordion">
+        <h2 class='sessionH2 none'>Non-passage Questions</h2>
+        <dl id="sessionReportNCQ" class="sessionReport homepage"></dl>
+    </div>
+    <div id="homeReportEssay" class="col-md-12 col-lg-offset-1 col-lg-10 none table-responsive accordion">
+        <h2 class='sessionH2 none'>Essays</h2>
+        <dl id="sessionReportEssay" class="sessionReport homepage"></dl>
+    </div>
+    <div id="essayLookbackContent" class="col-md-12 col-lg-10 hovers none"></div>
+</div>

@@ -1,0 +1,136 @@
+body{
+	background: #eadccc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #eadccc 60%, #ffffff 95%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#eadccc), color-stop(95%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #eadccc 60%,#ffffff 95%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #eadccc 60%,#ffffff 95%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #eadccc 60%,#ffffff 95%); /* IE10+ */
+	background: linear-gradient(to bottom,  #eadccc 60%,#ffffff 95%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eadccc', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+#gradientSparkie{
+	background: #676767 !important;
+}
+
+.afterSparkie{
+	background-color:#c2c9d2 !important;
+}
+
+#noticeBoardHeading {
+	color: #695527;
+}
+
+#helpMsg {
+	color: white;
+}
+
+#continueText{
+	color:#106A73;
+}
+
+
+#sparkieBulbDivText{
+	color:#106A73;
+}
+
+#continueButtonDiv{
+	color:#106A73;
+	border: 1px solid #106A73;
+}
+
+#lastSessionText{
+	color:#106A73;
+}
+
+#childNameDiv{
+	color:#616161;
+	font-weight:bold;
+}
+.class{
+	color:#616161;
+}
+#continueEmot {
+	background: url('../../../assets/rewards/themeBoy/continue_arrow.png') no-repeat 0px 0px;
+	width: 34px;
+}
+
+#noticeBoardDiv {
+	background: #BFA056;
+}
+
+#viewAllDiv {
+	background: #16a198;
+}
+
+##ncertDiv {
+	background: #16a198;
+}
+#activityDiv {
+	background: #16a198;
+}
+
+#viewAllEmote {
+	background: url('../../../assets/rewards/themeBoy/viewall.png') no-repeat 0 0;
+	width: 52px;
+	height: 48px;
+	margin-left: 6%;
+	margin-top: 3px;
+}
+
+#ncertEmote {
+	background: url('../../../assets/rewards/themeBoy/ncert.png') no-repeat 0 0;
+	width: 52px;
+	height: 48px;
+	margin-top: 3px;
+}
+#activityEmote {
+	background: url('../../../assets/rewards/themeBoy/activities.png') no-repeat 0 0;
+	width: 52px;
+	height: 48px;
+	margin-top: 3px;
+}
+
+#commentEmote {
+	background: url('../../../assets/rewards/themeBoy/comment.png') no-repeat 0 0;
+	width: 83px;
+	height: 74px;
+	margin-top:0px;
+}
+
+#commentDiv {
+	height: 77px;
+	background: #f3a255;
+}
+
+#commentRight {
+	margin-top: 22px;
+}
+
+.topicProgressDivFocus{
+	background-color: #fff;
+	-webkit-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+-moz-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+}
+
+.noticeBoardImage{
+	position: absolute;
+	right: 0px;
+	bottom:0;
+	background: url('../../../assets/rewards/themeBoy/noticeboard.png') no-repeat -3px -2px;
+	width: 75px;
+	height: 81px;
+}
+
+
+
+.topicName{
+	color:#106A73;
+}
+.studentDashboardTopicHeaderBg
+{
+	background-color: #eadccc !important;
+}

@@ -1,0 +1,106 @@
+
+#main_bar{
+	background :  url('../../../assets/rewards/sidebar_drawer_Pattern.png');
+}
+
+#gradientSparkie{
+	background: #676767 !important;
+}
+
+.afterSparkie{
+	background-color:#c2c9d2 !important;
+}
+
+.topicProgressInnerDiv{
+	background-color : #6E6F72;
+	border: 2px solid #666666;
+	-webkit-box-shadow: inset 1px 1px 9px rgba(50, 50, 50, 0.8);
+	-moz-box-shadow: inset 1px 1px 9px rgba(50, 50, 50, 0.8);
+	box-shadow: inset 1px 1px 9px rgba(50, 50, 50, 0.8);
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.topicName{
+	color:#FFFFFF;
+}
+
+.topicProgressDiv {	
+	border-bottom: 1px solid #6E6F72;
+}
+
+.buttonView {
+background-color: #D2D3D4;
+-webkit-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+-moz-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+color: #666666;
+}
+
+.buttonView1 {
+background-color: #D2D3D4;
+-webkit-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+-moz-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+color: #666666;
+}
+
+#viewAllDivLowerClass {
+	background-color:#6E6F72!important;
+	-webkit-box-shadow: inset 0px 0px 0px #acacac;
+	-moz-box-shadow: inset 0px 0px 0px #acacac;
+	box-shadow: inset 0px 0px 0px #acacac;
+}
+
+#continueText{
+	color:#666666;
+}
+
+#continueButtonDiv{
+	color:#666666;
+	border: 1px solid #666666;
+}
+
+#lastSessionText{
+	color:#fff;
+}
+
+#childNameDiv{
+	color:#fff;
+}
+.class{
+	color:#fff;
+}
+#continueEmot {
+	background: url('../../../assets/rewards/continue_arrow.png') no-repeat 0px 0px;
+	width: 34px;
+}
+
+#drawer5Icon {
+	background: url('../../../assets/rewards/rewards.png') no-repeat 0 0;
+}
+#drawer6Icon {
+	background: url('../../../assets/rewards/notification.png') no-repeat 0 0;
+}
+
+#drawer4{
+	color:#666666;
+	border-bottom: 2px solid #666666;
+}
+
+#drawer5{
+	color:#666666;
+	border-bottom: 2px solid #666666;
+}
+
+#drawer6{
+	color:#666666;
+}
+
+
+#rewardsText {
+border-bottom: 1px solid #999999;
+}
+
+

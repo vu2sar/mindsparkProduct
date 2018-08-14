@@ -1,0 +1,96 @@
+#glossaryDiv
+{
+	font-family: Helvetica,Arial,sans-serif !important;
+    font-size: 14px !important;
+	background-image:url(../../assets/glossaryBG.png);
+	display:none;
+	height:485px;
+	width:655px;
+	z-index:100;
+	position:fixed;
+}
+#glossaryContainer
+{
+	width:487px;
+	padding:4px 2px;
+	height:330px;
+	margin:23px 0px 0px 78px;
+}
+#glossaryClose
+{
+	background:url(../../assets/close.png) no-repeat;
+	height:12px;
+	width:12px;
+	float:right;
+	margin:-20px -15px 0px 0px;
+	cursor:pointer;
+}
+#leftGlossary
+{
+	float:left;
+	width:245px;
+}
+#glossaryTitle
+{
+	float:left;
+	height:50px;
+	width:180px;
+	margin:5px 0px 0px 5px;
+	font-size:medium;
+	font-weight:bold;
+}
+#glossaryImage
+{
+	float:right;
+	margin:10px 5px 5px 5px;
+	height:235px;
+	width:235px;
+	overflow:hidden;
+}
+#glossaryImage img
+{
+	margin:2px;
+}
+#rightGlossary
+{
+	float:left;
+	width:240px;
+}
+#glossaryBody
+{
+	margin:15px 2px 2px 2px;
+	height:280px;
+	overflow:auto;
+}
+#relatedGlossary, #relatedGlossary a
+{
+	height:23px;
+	line-height:25px;
+	color:#000000;
+}
+#overlay
+{
+	background:url(../../assets/transparent-black.png) repeat;
+	z-index:99;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.glossarySpan
+{
+	cursor:pointer;
+	border-bottom-width:thin;
+	border-bottom-style:dotted;
+}
+.questionMark
+{
+	font-size:x-small;
+	color:#000;
+	margin:0px 2px;
+	position:relative;
+	top:-2px;
+}
+.glossarySpan .glossarySpan,.glossarySpan .glossarySpan .glossarySpan,.glossarySpan .glossarySpan .glossarySpan .glossarySpan
+{
+	border:none !important;
+}

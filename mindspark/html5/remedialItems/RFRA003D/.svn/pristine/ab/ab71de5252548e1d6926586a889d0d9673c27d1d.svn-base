@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<application name="percentage">
+	<english>
+		<questions>
+		</questions>
+		<prompts>
+			<prompt name="text_1" text="Express the given number as a fraction in the lowest form." page="1" voice="" />
+			<prompt name="txt_2" text="Well done ! You can further reduce this by dividing both the numerator and denominator by the same number. Write #number# in its lowest form" page="1" voice="" />
+			<prompt name="txt_3" text="Now try to write" page="1" voice="" />
+			<prompt name="txt_4" text="Well done!" page="1" voice="" />
+			<prompt name="txt_5" text="as a mixed fraction." page="1" voice="" />
+			<prompt name="txt_6" text="tenths" page="1" voice="" />
+			<prompt name="txt_7" text="OK" page="1" voice="" />
+			<prompt name="txt_8" text=". Now try again!" page="1" voice="" />
+			<prompt name="txt_9" text="Think of" page="1" voice="" />
+			<prompt name="txt_10" text="as" page="1" voice="" />
+			<prompt name="txt_11" text="as a mixed fraction in its simplest form." page="1" voice="" />
+			<prompt name="txt_12" text="Now write " page="1" voice="" />
+			<prompt name="txt_13" text="in its lowest form." page="1" voice="" />
+			<prompt name="txt_14" text="can be further reduced." page="1" voice="" />
+			
+			<prompt name="txt_15" text="Well done ! You are correct, but this is not the lowest form.You can further reduce this by dividing both the numerator and denominator by the same number. Write " page="1" voice="" />
+
+			<prompt name="txt_16" text="Correct answer is" page="1" voice="" />
+			
+			<prompt name="txt_17" text="Dividing both " page="1" voice="" />
+			<prompt name="txt_18" text="and" page="1" voice="" />
+			<prompt name="txt_19" text="by" page="1" voice="" />
+			
+			
+			
+			<prompt name="txt_21" text="Please type your answer and press enter!" page="1" voice="" />
+			<prompt name="txt_22" text="Oops! That's incorrect! &lt;br&gt; We can find the reduced form of #number1# by &lt;br&gt; the method shown below. " page="1" voice="" />
+
+			<prompt name="txt_23" text="Tens" page="1" voice="" />
+			<prompt name="txt_24" text="Ones" page="1" voice="" />
+			<prompt name="txt_25" text="Tenths" page="1" voice="" />
+			<prompt name="txt_26" text="Hundredths" page="1" voice="" />
+			<prompt name="txt_27" text="We know, #num#" page="1" voice="" />
+			<prompt name="txt_28" text="So, #num2#" page="1" voice="" />
+			Oops that’s incorrect! The next few questions will help you!
+			<prompt name="txt_29" text="Oops that’s incorrect!&lt;br&gt; The next few questions will help you!" page="1" voice="" />
+			<prompt name="txt_30" text="Oops that’s incorrect!&lt;br&gt; One easy way to do it would be to write the denominator as #num3_1#!" page="1" voice="" />
+			<prompt name="txt_31" text="Let us simplify the problem." page="1" voice="" />
+			<prompt name="txt_32" text="The number has to be multipled by #num3_2# to find its equivalence." page="1" voice="" />
+			<prompt name="txt_33" text="#num3_3# is equivalent to #num3_4#. So #num3_3# = #num3_5# "  page="1" voice="" />
+			<prompt name="txt_34" text="Write as decimal:" page="1" voice="" />
+			<prompt name="txt_35" text="Both the denominator and the numerator should be multiplied by the same number." page="1" voice="" />
+			<prompt name="txt_36" text="Write the sum of #num4_1# and #num4_2# as a decimal." page="1" voice="" />
+			<prompt name="txt_37" text="Oops that’s incorrect!&lt;br&gt; One easy way to do it would be to write the denominator as #num4_11#!" page="1" voice="" />
+			<prompt name="txt_38" text="The answer should be a mixed fraction and so the whole number part cannot be 0. Try again!" page="1" voice="" />
+			<prompt name="txt_39" text="The answer cannot be 0. Try again!" page="1" voice="" />
+			<prompt name="txt_40" text="Write the given fraction as a decimal number." page="1" voice="" />
+			<prompt name="txt_41" text="is" page="1" voice="" />
+			<prompt name="txt_42" text="You are close but not correct! Check your answer once and try again!" page="1" voice="" />
+			<prompt name="txt_43" text="Oops that’s incorrect! The next few questions will help you!" page="1" voice="" />
+			<prompt name="txt_44" text="The end!" page="1" voice="" />
+			<prompt name="txt_45" text="is" page="1" voice="" />
+		</prompts>
+		<instructions>
+		</instructions>
+		<miscellaneous>
+		</miscellaneous>
+	</english>
+	<hindi>
+		<questions>
+		</questions>
+		<prompts>
+			<prompt name="text_1" text="????????? ?? ??? ??? ?? ??? ?? ??? ??? ??? ?? ????" page="1" voice="" />
+			<prompt name="text_2" text="Well done ! You can further reduce this by dividing both the numerator and denominator by the same number. Write #number# in its lowest form" page="1" voice="" />
+			<prompt name="txt_17" text="???? ????" page="1" voice="" />
+			
+
+		</prompts>
+		<instructions>
+		</instructions>
+		<miscellaneous>
+		</miscellaneous>
+	</hindi>
+	<gujarati>
+		<questions>
+		</questions>
+		<prompts>
+			<prompt name="text_1" text="Express the given number as a fraction in the lowest form" page="1" voice="" />
+			<prompt name="text_2" text="XXXX" page="1" voice="" />
+
+		</prompts>
+		<instructions>
+		</instructions>
+		<miscellaneous>
+		</miscellaneous>
+	</gujarati>
+</application>

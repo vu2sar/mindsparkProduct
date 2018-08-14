@@ -1,0 +1,154 @@
+body{	
+	background: url('../../../assets/rewards/themeGirl/BG_IMG.png');
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+#studentInfoLowerClass {
+	background-color: transparent !important;
+}
+
+#topicProgressDiv {
+	background-color: rgba(255,255,255,0.5);
+}
+
+#leftInfo {
+	background-color: rgba(255,255,255,0.5);
+}
+
+#main_bar{
+	background-color: #FFFFFF;
+}
+
+#top_bar {
+width: 50%;
+border-bottom: 1px solid black;
+}
+
+.buttonView {
+background-color: #fff;
+-webkit-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+-moz-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+border:2px solid #382659;
+color: #382659;
+}
+
+.buttonView1 {
+background-color: #fff;
+-webkit-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+-moz-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+border:2px solid #382659;
+color: #382659;
+}
+
+#ncertIcon {
+	background: url('../../../assets/rewards/themeGirl/ncert.png') no-repeat 0 0;
+}
+
+#viewIcon {
+	background: url('../../../assets/rewards/themeGirl/viewall.png') no-repeat 0 0;
+}
+
+
+#viewAllDivLowerClass {
+	background-color:#BADEE0 !important;
+}
+
+#continueText{
+	color:#382659;
+}
+
+#continueButtonDiv{
+	color:#382659;
+	border: 2px solid #382659;
+}
+
+#lastSessionText{
+	color:#fff;
+}
+
+#studentInfoLowerClass {
+	border-bottom: 1px solid black;
+}
+
+.topicProgressDiv {
+	border-bottom: 1px solid #F9AD58;
+}
+
+#themeImage{
+	background: url('../../../assets/rewards/themeGirl/scooterIMG.png');
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 31%;
+	position: absolute;
+	width:96%;
+	height:100%;
+	z-index: -1;
+}
+
+#sideBar{
+	background-color: #fff;
+	border-right: 1px solid red;
+	border-top: 1px solid red;
+}
+
+#info_bar{
+	background: url('../../../assets/rewards/themeGirl/lineIMG.png');
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 91%;
+}
+
+#continueEmot {
+	background: url('../../../assets/rewards/themeGirl/continue_arrow.png') no-repeat 0px 0px;
+	width: 34px;
+}
+
+#drawer5Icon {
+	background: url('../../../assets/rewards/themeGirl/rewards.png') no-repeat 0 0;
+}
+#drawer6Icon {
+	background: url('../../../assets/rewards/themeGirl/notification.png') no-repeat 0 0;
+}
+
+#drawer4{
+	color:#666666;
+	border-bottom: 2px solid #666666;
+}
+
+#drawer5{
+	color:#7FA76E;
+	border-bottom: 0px;
+}
+
+.arrow-a {
+	border-left: 4px solid #382659;
+}
+
+#correct_bar {
+	background-color: #382659;
+}
+
+#spnProgress1{
+	color :#382659;
+}
+
+.pieBackground {
+	background-color: #382659;
+}
+.sessionColor {
+	color: #07747E;
+}
+
+#drawer6{
+	color:#7FA76E;
+}
+
+
+#rewardsText {
+border-bottom: 1px solid #999999;
+}
+
+

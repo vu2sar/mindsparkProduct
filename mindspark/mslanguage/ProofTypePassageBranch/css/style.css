@@ -1,0 +1,654 @@
+/*_-------------------------------------------General--------------------------------------------------------------------------------------------_*/
+@font-face {
+	font-family: "Gotham-Book";
+	src: url('../../assets/fonts/Gotham-Book.eot');
+	src: local('Gotham-Book'), url('../../assets/fonts/Gotham-Book/Gotham-Book.eot?#iefix') format('embedded-opentype'), url('../../assets/fonts/Gotham-Book/Gotham-Book.woff') format('woff'), url('../../assets/fonts/Gotham-Book/Gotham-Book.ttf') format('truetype'), url('../../assets/fonts/Gotham-Book/Gotham-Book.svg#webfont') format('svg');
+}
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-family: "Gotham-Book";
+}
+
+body {
+	background: #FDFDFD;
+	text-align: center;
+}
+
+body,html{
+	height: 100%;
+	width: 100%;
+}
+
+body, input, textarea {
+	margin: 0px;
+	padding: 0px;
+}
+
+body, div, p, span {
+	line-height: 1.5;
+}
+
+input[type='button'], button {
+	margin: 6px;
+	background: #BDB69C;
+	border: 1px solid #333;
+	cursor: pointer;
+}
+
+p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+sup, sub {
+	font-size: 10px !important;
+}
+
+/*_-----------------------------------------------   Form Global  ----------------------------------------------------------------------------*/
+
+form label {
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+
+fieldset {
+	border: none;
+	border-radius: 3px;
+	background: #DDDDDD;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	transition: all 0.5s;
+	max-height: 1050px;
+	border: 1px dashed #333;
+	margin: 0px;
+	margin-top:-13px
+}
+
+fieldset.closed {
+	max-height: 42px;
+	overflow-x: hidden;
+	overflow: hidden;
+}
+
+fieldset legend {
+	cursor: pointer;
+	text-align: left;
+	background: #EAC03A;
+	padding: 0px 7px;
+	margin-left: 15px;
+	line-height: 26px;
+	transform: translate(0,50%);
+	border-radius: 0px 0px 4px 4px;
+	box-shadow: 0px 0px 2px 0px;
+	border-bottom: 1px solid white;
+}
+
+fieldset legend:active {
+	box-shadow: none;
+}
+
+form {
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+}
+
+.toggleFieldSets {
+	padding: 0;
+	margin: 0px;
+	width: 0px;
+	height: 0px !important;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 14px solid black;
+	border-bottom: none;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	background: none;
+	vertical-align: middle;
+	outline: none;
+	transform: rotate(180deg);
+	background: none;
+}
+
+.closed .toggleFieldSets {
+	transform: rotate(0deg);
+}
+
+.ui-autocomplete {
+	max-height: 100px;
+	overflow: auto;
+	text-align: left;
+}
+
+fieldset input, fieldset button, fieldset select {
+	border-radius: 4px;
+	min-height: 24px;
+}
+
+div#wrapper {
+	margin: 0px auto;
+	display: inline-block;
+	height: calc(100% - 90px);
+	display: flex;
+}
+
+#imageUploader {
+	position: initial;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*_-------------------------------------------Form-----------------------------------------------------------------------------------------------_*/
+
+#proofType input[type=text], #proofType textarea , #proofType select{
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #C9C9C9;
+	color: #545658;
+	padding: 3px;
+	width: 100%!important;
+}
+
+#go {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
+.toolWindow {
+    width: 20%;
+    float: left;
+}
+
+#workWindow {
+	float: left;
+	display: none;
+	text-align: center;
+	height: 100%;
+	width: 60%;
+}
+
+#proofType {
+    overflow: hidden;
+}
+
+#proofFrame {
+	height: 94px;
+}
+
+div#formButtonContainer {
+	top: 10px;
+	right: 0px;
+}
+
+.formElement {
+	text-align: left;
+	display: inline-block;
+	margin: 2px;
+	width: 100%;
+}
+
+.formElement > *:last-child {
+	width: 164px;
+	float: right;
+	margin-left: 4px;
+}
+
+#audioToUpload {
+	width: 100%;
+}
+
+.selected {
+	box-shadow: 0px 0px 12px 3px orange;
+}
+
+option.selected {
+	background-color: gray;
+}
+
+.boxes {
+	border: 0px solid black;
+}
+
+#audioContainer {
+    margin: 0px auto;
+    width: 400px;
+}
+
+#audioRefresh {
+	display: inline-block;
+}
+
+#audioRefresh.hidden {
+	display: none;
+}
+
+.fieldsetSpaceMaker {
+	height: 12px;
+	visibility: hidden;
+}
+
+#passageIntro {
+    resize: none;
+}
+
+/*_---------------------------------------------Toolbar Area-------------------------------------------------------------------------------------_*/
+
+#tools {
+	float: left;
+	height: auto;
+	width: auto;
+	display: none;
+}
+
+.header {
+	margin-left: 30px;
+	margin-right: 30px;
+}
+.elements {
+	display: inline-block;
+	margin: 4px auto;
+	cursor: pointer;
+}
+
+#projectImages {
+	border: 1px solid black;
+}
+
+.addedImages {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 3px solid gray;
+    position: relative;
+    cursor: pointer;
+}
+
+#submitForReviewButton{
+	padding: 0px;
+}
+
+.addedImages::after {
+  position: absolute;
+  background-color: rgb(255, 105, 105);
+  width: 15px;
+  height: 15px;
+  left: 100%;
+  top: -10px;
+  content: 'x';
+  border-radius: 50%;
+  padding: 0px;
+  line-height: 15px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+
+.addedImages: hover {
+	transform: scale(2);
+}
+
+.addedImages img {
+    width: 100%;
+    height: 100%;
+}
+
+#passageName{
+	text-align: left!important;
+}
+
+#submitForReview{
+	padding: 0px;
+}
+
+.imageEnclosers {
+	margin: 5px;
+	position: relative;
+	float: left;
+}
+
+#selectOptions {
+	display: none;
+}
+
+#leftAligned {
+	background-image: url("../assets/leftAligned.png");
+	background-repeat: no-repeat;
+	border: medium none;
+	display: inline-block;
+	height: 30px;
+	vertical-align: middle;
+	width: 26px;
+	margin-left: 20px;
+}
+
+#rightAligned {
+	background-image: url("../assets/rightAligned.png");
+	background-repeat: no-repeat;
+	border: medium none;
+	display: inline-block;
+	height: 30px;
+	vertical-align: middle;
+	width: 26px;
+	margin-left: 20px;
+}
+
+#verticalAligned {
+	background-image: url("../assets/verticalAligned.png");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	border: medium none;
+	display: inline-block;
+	height: 30px;
+	margin-left: 20px;
+	vertical-align: middle;
+	width: 60px;
+}
+
+#tools fieldset {
+	max-width: 300px;
+}
+
+#filesToUpload {
+	width: 100%;
+}
+
+#clearTaggingButton{
+	margin: 0px auto;
+	display: block;	
+}
+
+/*_---------------------------------------------Working Space Area--------------------------------------------------------------------------------_*/
+
+.verticalAligned {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.workingArea {
+	border: 1px solid #000000;
+	clear: both;
+	position: relative;
+	text-align: left;
+	background-color: white;
+	padding: 15px;
+	overflow-y: scroll;
+	font-size: 15px;
+	box-shadow: 0px 0px 1px black;
+	height: 100%;
+}
+
+.workingArea.verticalAlignment {
+	padding: 0px;
+	line-height: 600px;
+}
+
+.activeWorkingArea {
+	display: block;
+	background-size: 100% 100%;
+}
+
+.workingAreaHoverable:hover{
+	background-color: blue;
+}
+
+.verticalAligned {
+	border: none !important;
+}
+
+.ui-resizable-handle {
+	border: none !important;
+}
+
+label[for="dropOn"] {
+	display: none;
+}
+
+label[for="rightAnswer"] {
+	display: none;
+}
+
+label[for="containerIsFraction"] {
+	display: none;
+}
+
+#dropOn, #rightAnswer, #containerIsFraction {
+	display: none;
+}
+
+.resizeHandle {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 0px;
+	bottom: 0px;
+	display: none;
+	background-image: url(../assets/resize.png);
+}
+
+/*_---------------------------------------------Pop Up Forms--------------------------------------------------------------------------------_*/
+
+.formDialog {
+	display: none;
+	position: relative;
+}
+
+/*-----------------------------------------------Pane Selector Styles------------------------------------------------------------------------*/
+#paneButtons div {
+	background-color: #bfbfbf;
+	display: inline-block;
+	height: 22px;
+	min-width: 24px;
+	margin-left: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+#paneButtons {
+	display: inline-block;
+	width: auto;
+}
+
+#panesAddRemove {
+	width: 100px;
+	display: inline-block;
+}
+
+#paneBackground {
+	max-width: 240px;
+}
+
+#panesSelector {
+	border: 1px dashed #333;
+	content: 'Arrange Pages by dragging numbers';
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJElEQVQYV2MsrO35z0AA6CoKMTCOKsQVSqQFz7x58wgGOMgmAFroHIVA3Z27AAAAAElFTkSuQmCC);
+}
+
+/**********************************************jquery ui fixes**********************************************************************************/
+
+span.ui-button-icon-primary.ui-icon.ui-icon-closethick {
+	left: 0;
+	top: 0;
+}
+
+.ui-dialog {
+	z-index: 10;
+}
+
+/********************************************************miscellaneous***************************************************************************/
+
+.hidden{
+	display: none;
+}
+
+
+#hiddenDiv {
+	display: none;
+}
+
+.loader {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 10000;
+	display: none;
+	text-align: center;
+}
+
+.loaderImage {
+	position: absolute;
+	top: 50%;
+}
+
+span[data-file]{
+	background-color: rgba(0, 0, 255, 0.15);
+}
+
+.highlight{
+	border: 3px solid rgb(0,200,0);
+	box-shadow: 0px 0px 5px green;
+}
+
+#scoresSection{
+	font-size:12px;
+}
+
+.textHighlight {  
+    background-image: url("../assets/wiggle.png");
+    background-repeat: repeat-x;
+    background-position: center bottom;
+	background-color: yellow;
+}
+
+#misspelledWordsBox{
+	display: none;
+}
+
+.radioBtn{
+
+}
+
+#mW{
+	margin-left: auto;
+	margin-right:auto;	
+}
+
+.pure-table {
+    /* Remove spacing between table cells (from Normalize.css) */
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+}
+
+.pure-table caption {
+    color: #000;
+    font: italic 85%/1 arial, sans-serif;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.pure-table td,
+.pure-table th {
+    border-left: 1px solid #cbcbcb;/*  inner column border */
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible; /*to make ths where the title is really long work*/
+    padding: 0.5em 1em; /* cell padding */
+}
+
+/* Consider removing this next declaration block, as it causes problems when
+there's a rowspan on the first cell. Case added to the tests. issue#432 */
+.pure-table td:first-child,
+.pure-table th:first-child {
+    border-left-width: 0;
+}
+
+.pure-table thead {
+    background-color: #e0e0e0;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+/*
+striping:
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
+*/
+.pure-table td {
+    background-color: transparent;
+}
+.pure-table-odd td {
+    background-color: #f2f2f2;
+}
+
+/* nth-child selector for modern browsers */
+.pure-table-striped tr:nth-child(2n-1) td {
+    background-color: #f2f2f2;
+}
+
+/* BORDERED TABLES */
+.pure-table-bordered td {
+    border-bottom: 1px solid #cbcbcb;
+}
+.pure-table-bordered tbody > tr:last-child > td {
+    border-bottom-width: 0;
+}
+
+
+/* HORIZONTAL BORDERED TABLES */
+
+.pure-table-horizontal td,
+.pure-table-horizontal th {
+    border-width: 0 0 1px 0;
+    border-bottom: 1px solid #cbcbcb;
+}
+.pure-table-horizontal tbody > tr:last-child > td {
+    border-bottom-width: 0;
+}
+
+.mWBtn {
+color: black;
+border-radius: 4px;
+text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+background: #BDB69C; 
+width: 90px;
+height: 30px;
+margin-right: auto;
+margin-left: auto;
+}
+
+
+#spellCheck, #addToDictionary{
+border-radius: 4px;
+min-height: 24px;
+text-align:center;
+}
+
+.sp_err{
+	background-color:yellow;
+}
+
+.for_err{
+	background-color:cyan;
+}
+
+/*change*/
+#addToDictBtn{
+	/*margin-left:38%;*/
+}

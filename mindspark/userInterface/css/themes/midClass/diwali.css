@@ -1,0 +1,49 @@
+body{	
+	background: url('../../../assets/rewards/themeDiwali/Background.jpg') 0px 30px;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-size: 100%;
+}
+	
+	
+#viewAllEmote {
+	background: url('../../../assets/rewards/themeDiwali/dashboard.png') no-repeat 0px 4px;
+	width: 41px;
+	height: 45px;
+	margin-left: 6%;
+	margin-top: 3px;
+}
+#activityEmote {
+	background: url('../../../assets/rewards/themeDiwali/activities.png') no-repeat 0 2px;
+	width: 40px;
+height: 42px;
+	margin-top: 3px;
+}
+
+#commentEmote {
+	background: url('../../../assets/rewards/themeDiwali/comment-button.png') no-repeat 0 0;
+}
+
+#continueEmot {
+	background: url('../../../assets/rewards/themeDiwali/continue-button.png') no-repeat 0px 0px;
+	width: 34px;
+}
+.studentDashboardTopicHeaderBg
+{
+	background-color: #ffffff !important;
+}
+
+#ncertEmote {
+	background:url(../../../assets/rewards/themeDiwali/ncert.png) no-repeat 0 0 !important;
+}
+
+
+#worksheetEmote {
+	float: left;
+    background: url('../../../assets/rewards/themeDiwali/worksheet_icon_white.png') no-repeat 0 0 !important;
+    background-size: contain;
+    width: 40px;
+    height: 45px;
+    margin-left: 3%;
+    margin-top: 7px;
+}

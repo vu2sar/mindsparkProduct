@@ -1,0 +1,198 @@
+
+#sideBar{
+	width:30%;	
+}
+
+#container{
+	width:62.5%; margin-left: 37%;
+}
+
+#sideBar #home{
+	margin-top: 2%;
+}
+
+#triangle{
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	margin-top: 1.5%;
+	border-left: 6px solid black;
+	float: left;
+	margin-left:45%;margin-top: 10%;border-left: 6px solid white;
+}
+
+.classTabTriangle{
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	margin-top: 1.5%;
+	border-left: 6px solid black;
+	float: left;
+	border-left: 6px solid #22B573;
+	margin-right: 2%;
+}
+
+#classTriangle{
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	margin-top: 1.5%;
+	border-left: 6px solid black;
+	float: left;
+	margin-right: 1%;
+
+}
+
+.text{
+	/*border: 1px solid black;*/
+	height: 10px;
+	width:130px;
+	font-size: 1.4em;
+	padding-top: 0.8%;
+	margin-left: 3%;
+	cursor: pointer;
+	
+}
+
+.classTab{
+	/*margin-top: 1%;*/
+	height: 6.5%;
+	width: 5%;
+	border: 2px solid #22B573;
+	background-color: #22B573;
+	float: left;
+	overflow: hidden;
+	/*margin-right: 2%;*/
+	
+}
+
+#circle {
+	border-radius: 50%;
+	width: 55%;
+	height: 55%; 
+	margin-left: 15%;
+	margin-top: 15%;
+	border:2px solid white;
+	/* width and height can be anything, as long as they're equal */
+}
+
+#flip{
+	/*margin-top: 1%;*/
+	margin-left:2%;
+	width:98%;
+	height: 7%;
+	background-color: #E6E6E6;
+	margin-bottom: 2%;
+}
+#flipContent{
+	margin-top: 2%;
+	height: 0px;
+	background-color: #E6E6E6;
+	margin-left:2%;
+	width:98%;
+	margin-bottom: 2%;
+	overflow: hidden;
+	
+}
+
+#line{
+	margin-top: 2.3%;
+	border : 1px solid black;
+}
+
+
+
+#topicBox{
+	height:25%;
+	/*border : 1px solid black;*/
+	margin-top: 2.5%;
+	margin-left: 3%;
+	margin-right: 3%;
+	background-color: #FFFFFF;
+	overflow: hidden;
+	
+}
+
+#topicBoxDesc{
+	/*border : 1px solid black;*/
+	margin-top: 2%;
+	height:65%;
+	width: 60%;
+	margin-left: 2%;
+	float: left;
+}
+
+#clipFrame{
+	margin-top: 1.4%;
+	margin-right: 15%;
+	border-radius: 50%;
+	width: 8%;
+	height: 70%; 
+	
+	border:1px solid white;
+	float : right;
+	-webkit-box-shadow: inset 0px 1px 5px rgba(50, 50, 50, 0.8);
+	-moz-box-shadow: inset 0px 1px 5px rgba(50, 50, 50, 0.8);
+	box-shadow:      inset 0px 1px 5px rgba(50, 50, 50, 0.8);
+	
+}
+
+#innerClipFrame{
+	border-radius: 50%;
+	width: 90%;
+	height: 85%; 
+	margin-left: 4%;
+	margin-top: 5%;
+	border:1px solid white;
+	
+	-webkit-box-shadow: inset 0px 1px 5px rgba(50, 50, 50, 0.8);
+	-moz-box-shadow: inset 0px 1px 5px rgba(50, 50, 50, 0.8);
+	box-shadow:      inset 0px 1px 5px rgba(50, 50, 50, 0.8);
+}
+
+#topicBoxDescTopic{
+	/*border : 1px solid black;*/
+	margin-top: 1%;
+	height:40%;
+	width: 95%;
+	font-size: 15px;
+	
+	
+}
+
+#topicBoxDescInfo1{
+	/*border : 1px solid black;*/
+	margin-top: 2%;
+	height:38%;
+	width: 40%;
+	font-size: 15px;
+	float: left;
+}
+
+#topicBoxDescInfo2{
+	/*border : 1px solid black;*/
+	margin-top: 2%;
+	height:38%;
+	width: 40%;
+	font-size: 15px;
+	float: right;
+}
+
+
+
+
+@media (max-width: 1024px){
+		.text{
+			padding-top: 1.5%;
+		}
+		#flip{
+			height: 8%;
+		}
+		#circle{
+			width: 60%;
+			height: 60%;
+		}
+	}

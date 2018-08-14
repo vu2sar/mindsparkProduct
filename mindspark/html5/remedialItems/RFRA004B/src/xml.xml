@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<application name=" Basic Algebra">
+<english>
+	<questions>
+		<que name="mainQuestion1" text="John and Pam have a chocolate bar."/>
+		<que name="mainQuestion2" text="John wants to eat #johnFraction# of the bar."/>
+		<que name="mainQuestion3" text="Pam wants to eat #pamFraction# of the bar."/>
+		<que name="question_1" text="Into how many equal parts should they divide the bar into?"/><!--Blank has to be appended at the last of the question-->
+		<que name="question_2" text="How many pieces of the chocolate will John get?"/><!--Blank has to be appended at the last of the question-->
+		<que name="question_3" text="How many pieces of the chocolate will Pam get?"/><!--Blank has to be appended at the last of the question-->
+		<que name="question_4" text="What fraction of the chocolate will they eat together?"/><!--Blank has to be appended at the last of the question-->
+		<que name="question_5" text="What fraction of the chocolate was left uneaten?"/><!--Blank has to be appended at the last of the question-->
+		<que name="question_6" text="What is #johnFraction# + #pamFraction# ?"/><!--Blank has to be appended at the last of the question-->
+	</questions>
+	<prompts>
+		
+		<prompt name="prompt1" text=" Oops! That’s incorrect!&lt;br&gt;John should get #johnFraction# of the bar as shown.&lt;br&gt;Pam should get #pamFraction# of the bar as shown. &lt;br&gt;Think of another way to divide the bar.&lt;br&gt;"/>
+
+		<prompt name="prompt2" text=" Oops! That’s not correct!&lt;br&gt;Look at the animation carefully to understand the solution."/>
+
+		<prompt name="prompt3" text="Now write the number of pieces John and Pam should get in the blanks above."/>
+
+		<prompt name="prompt4" text="Check your answer!&lt;br&gt;See how many pieces make #totalFraction# in the bar?"/>
+
+		<prompt name="prompt5" text="John should get #johnPart# out of #totalParts# equal parts."/>
+
+		<prompt name="prompt6" text="Pam should get #pamPart# out of #totalParts# equal parts."/>
+		
+
+		<!-- If the number entered is > than 20 for first blank -->	
+		<prompt name="prompt7" text="Oops! That's too  many parts of a chocolate!&lt;br&gt;Try to give a smaller number!"/>
+		<!-- If the number entered is not whole number -->	
+		<prompt name="prompt8" text="Please enter the number of pieces in whole numbers only."/>
+
+		
+	
+		<!-- If the number entered is not fraction -->
+		<prompt name="prompt11" text="You have to enter the value in fractions."/>
+
+		<prompt name="prompt12" text="John and Pam ate #combinePart# out of #totalParts# equal parts of the chocolate.&lt;br&gt;What fraction of the chocolate did they eat?&lt;br&gt;Think again and write the answer in the blank."/>
+
+		<prompt name="prompt13" text="Oops that’s incorrect!&lt;br&gt;John and Pam ate #combinePart# out of #totalParts# equal parts of the chocolate.&lt;br&gt;They ate #combineFraction# of the chocolate."/>
+
+		<prompt name="prompt14" text="Oops that’s incorrect!&lt;br&gt;#leftOutPart# out of #totalParts# equal parts of the chocolate was left uneaten.&lt;br&gt;#leftOutFraction# of the chocolate was left uneaten."/>
+
+		<prompt name="prompt15" text="Oops that’s incorrect!&lt;br&gt;We know, John ate #johnFraction# and Pam ate #pamFraction# of a chocolate.&lt;br&gt;Together they ate #combineFraction# of the chocolate.&lt;br&gt;So, what is #johnFraction# + #pamFraction#?"/>
+
+		<prompt name="prompt16" text="Oops that’s incorrect!&lt;br&gt;We know, John ate #johnFraction# and Pam ate #pamFraction# of a chocolate.&lt;br&gt;Together they ate #combineFraction# of the chocolate.&lt;br&gt;So, #johnFraction# + #pamFraction# = #combineFraction#."/>
+
+		<prompt name="prompt17" text="Correct! Well done."/>
+
+		<prompt name="prompt18" text="Oops!&lt;br&gt;Have you given the correct number of pieces to John and Pam? &lt;br&gt;Look at the amount of chocolate they should get in the images given."/>
+
+		<prompt name="prompt19" text="Oops!&lt;br&gt;Have you given the correct number of pieces to John and Pam?&lt;br&gt;Look at the amount of chocolate they should get in the images given."/>
+
+		<prompt name="prompt20" text="That’s good!&lt;br&gt;You are quite close to the answer.&lt;br&gt;See the animation to understand the solution."/>
+
+		<prompt name="prompt9" text="Try again!"/>
+
+		<prompt name="prompt10" text="When the total number of parts of the chocolate is #totalParts#,&lt;br&gt;John will get #johnPart# #jPieceText# and &lt;br&gt;Pam will get #pamPart# #pPieceText#."/>
+
+		<prompt name="prompt21" text="Correct! Well done.&lt;br&gt;The reduced form of the fraction is &lt;br&gt;#correctPart# = #reducedPart#"/>
+		<prompt name="blank" text="Please enter the value!"/>
+
+		<prompt name="denominator" text="Please enter the value of denominator greater than 0."/>
+
+		
+	</prompts>
+	
+	<instructions>
+	</instructions>
+	
+	<miscellaneous>
+		<misc name="okButton" text="OK"/>
+		<misc name="next" text="Next"/>
+		<misc name="nextQuestion" text="Next"/>
+		<misc name="know" text="We know,"/>
+		<misc name="help" text="Press enter to proceed"/>
+		<misc name="john" text="John should get #johnFraction# of the bar."/>
+		<misc name="pam" text="Pam should get #pamFraction# of the bar."/>
+		
+		<misc name="animation1_1" text="Lets first divide the bar into #divideBar# big pieces."/>
+		<misc name="animation1_2" text="Divide each part into #fractionParts# more parts to get total #totalParts# equal parts."/>
+
+		<misc name="animation2_1" text="Amount eaten by John and Pam together."/>
+		<misc name="animation2_2" text="The total number of parts should be a &lt;font style='color:#FF8204'&gt;multiple&lt;/font&gt; of both #fractionDen1# and #fractionDen2#.&lt;br&gt;The &lt;font style='color:#FF8204'&gt;least common multiple&lt;/font&gt; of #fractionDen1# and #fractionDen2# is #totalParts#.&lt;br&gt;So, the number of parts should be #totalParts#."/>
+		<misc name="piece" text="piece"/>
+		<misc name="pieces" text="pieces"/>
+
+
+	</miscellaneous>
+</english>
+<hindi>
+	<questions>
+	</questions>
+	<prompts>
+		
+	</prompts>
+	
+	<instructions>
+	</instructions>
+	
+	<miscellaneous>
+	</miscellaneous>
+
+</hindi>
+<gujarati>
+	<questions>
+	</questions>
+	<prompts>
+		
+	</prompts>
+	
+	<instructions>
+	</instructions>
+	
+	<miscellaneous>
+	</miscellaneous>
+
+</gujarati>
+</application>

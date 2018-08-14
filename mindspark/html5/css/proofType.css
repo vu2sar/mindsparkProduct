@@ -1,0 +1,151 @@
+@font-face {
+	font-family: 'Comic Sans';
+	src: url('../../../../assets/comic.eot');
+	src: local('Comic Sans MS'),
+		url('../../../../assets/comic.eot?#iefix') format('embedded-opentype'),
+		url('../../../../assets/comic.woff') format('woff'),
+		url('../../../../assets/comic.ttf') format('truetype'),
+		url('../../../../assets/comic.svg#webfont') format('svg');
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*body sometimes has default non-zero margin*/
+body {
+	margin: 0;
+}
+/*ipad input elements has default non-zero padding*/
+input, select {
+	padding: 0;
+}
+/*subscript and superscript should be smaller*/
+sub, sup {
+	font-size: 75%;
+}
+table {
+	border-collapse: collapse;
+}
+/****************************************************/
+#container {
+	position: relative;
+	width: 800px;
+	height: 600px;
+	background-color: rgba(187, 209, 224, 1.0);
+	border: 1px solid black;
+	font: 15px 'Comic Sans';
+	line-height: 1.15;
+	-webkit-transform-origin: left top;
+	-moz-transform-origin: left top;
+	-ms-transform-origin: left top;
+	-o-transform-origin: left top;
+	transform-origin: left top;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	display: none;
+}
+#preLoaderContainer {
+	height: 80px;
+	width: 600px;
+	position: relative;
+	top: 250px;
+	margin: 0px auto;
+	text-align: center;
+}
+#preLoaderContainer span {
+	margin: 0px auto;
+}
+#loadingImage {
+	display: block;
+	margin: 0px auto;
+}
+#loading {
+	position: absolute;
+	top: 0;
+}
+#questionArea {
+	float: none !important;
+	padding: 5px;
+	background-color: rgba(187, 209, 224, 1.0);
+	display: inline-block;
+	vertical-align: middle;
+}
+#optionContainer {
+	position: relative;
+	right: 0;
+	float: none !important;
+	width: 29% !important;
+	height: auto !important;
+	padding: 15px 0;
+	border: 1px solid black;
+	background-color: rgba(235, 125, 65, 1.0);
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+}
+p {
+	margin: 9px 0;
+}
+input, select {
+	margin: 3px;
+	font: 15px 'Comic Sans';
+}
+.drop {
+	margin: 3px;
+	text-align: center;
+	display: inline-block;
+}
+.drop[value=""] {
+	width: 80px;
+	height: 24px;
+	border: 1px solid grey;
+	vertical-align: middle;
+}
+.drop[value]:not([value=""]) {
+	width: auto !important;
+	height: auto !important;
+	background-color: white;
+}
+.options,input,select {
+	line-height: normal !important;
+}
+.options {
+	width: auto !important;
+	height: auto !important;
+	padding: 0px 5px !important;
+	background-color: white;
+	cursor: pointer;
+}
+#optionContainer>.options {
+	border: 1px solid black;
+}
+#optionContainer>.options:not(.clones) {
+	position: relative;
+	margin: 5px;
+	width: auto !important;
+	height: auto !important;
+	display: inline-block;
+}
+#optionContainer>.options.selected {
+	border: none;
+	-webkit-box-shadow: 0px 0px 3px 2px blue;
+	-moz-box-shadow: 0px 0px 3px 2px blue;
+	-ms-box-shadow: 0px 0px 3px 2px blue;
+	-o-box-shadow: 0px 0px 3px 2px blue;
+	box-shadow: 0px 0px 3px 2px blue;
+}
+.drop>.options.clones {
+	position: initial !important;
+}
+.fractionBottom {
+	border-bottom: 1px solid black;
+}
+.correct {
+	box-shadow: 0px 0px 3px 2px green;
+}
+.wrong {
+	box-shadow: 0px 0px 3px 2px red;
+}

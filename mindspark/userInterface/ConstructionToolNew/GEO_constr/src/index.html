@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+		</title>
+		<meta name="" content="">
+		<link rel="stylesheet" type="text/css" href="../css/jquery.svg.css" >
+		<link rel="stylesheet" type="text/css" href="../css/jqx.base.css" >
+		<link rel="stylesheet" type="text/css" href="../css/Common.css" >
+		<script type="text/javascript" src="../libs/jquery.js"></script>
+		<script type="text/javascript" src="../libs/jquery_ui.js"></script>
+		<!--<script type="text/javascript" src="../libs/jquery_ui_touch.js"></script>-->
+		<script type="text/javascript" src="../libs/jquery.svg.js"></script>
+		<script type="text/javascript" src="../libs/jquery.svganim.js"></script>
+		<script type="text/javascript" src="../libs/svg.js?datetime=2016.08.22.12.45.17"></script>
+		<script type="text/javascript" src="../libs/svg.nodes.js?datetime=2016.08.22.12.45.17"></script>
+		<script type="text/javascript" src="../libs/sketchHelper.js??datetime=2016.09.23.18.41.19"></script>
+		<script type="text/javascript" src="../libs/Geometry.js??datetime=2016.09.23.18.41.19"></script>
+		<script type="text/javascript" src="../libs/drawcode.js??datetime=2016.09.23.18.41.19"></script>
+		<script type="text/javascript" src="../libs/path-data-polyfill.js"></script>
+		<style type="text/css">
+			*{box-sizing:border-box;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;}
+			.insControl{position: absolute;position: absolute;left: 0px;top: 0px;z-index: 10;width: 100%;height: 100%;padding: 8px;}
+			.prevButton,.nextButton{width:25px; height:25px; display:inline-block;border-radius: 15px;background: yellow;padding-top: 2px;}
+			.prevButton{float: left;padding-left: 3px;}.nextButton{float: right;padding-left: 7px;}
+			.prevButton div{width: 0; height: 0; border-top: 10px solid transparent;border-bottom: 10px solid transparent;border-right: 15px solid green;}
+			.nextButton div{width: 0; height: 0; border-top: 10px solid transparent;border-bottom: 10px solid transparent;border-left: 15px solid green;}
+			.error{border:2px solid red;}
+			input[type="text"]{text-align: center;}
+			.jqx-tooltip{pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none;}
+			svg{cursor: crosshair;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;}
+			input[type="color"]{width: 25px;height: 22px;}
+			#buttons{background-color: #5f80a0;position: absolute;width: 640px;top: 480px;left: 0px;z-index: 3;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;}
+			#geoShapeSel{height:20px;}
+			#geoShapeSel .button:not(.fullScreen){height:16px;line-height:14px;margin:2px 0;padding:0px 8px;border-radius: 12px;border-color: black;background-image: none;filter :none;color: black;}
+			#geoShapeSel .fullScreen {display: inline-block;margin-left: 20px;width: 18px;height: 18px;background-image: url("../assets/enterFullScreen.png"); background-size: 80%;background-repeat:no-repeat;background-position: center; background-color: #fff; vertical-align:middle;margin-bottom:1px;}
+			#canvasContainer{width: 640px;height:480px;margin: 0px;cursor: crosshair;position: relative;}
+			#instructions{background-color: rgba(245, 132, 57, 0.5);position: absolute;width: 640px;height: 20px;top: 480px;left: 0px;z-index: 2;text-align: center;color: white;padding: 3px;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;}
+			#toolHelp{position: absolute;top: 140px;right: -180px;z-index: 30;text-align: center;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;}
+			#toolHelp table{border: 0px;}
+			.toolHov{background-image: url("../assets/help.png");background-position-x: 0px;height: 200px;width: 20px;cursor: pointer;}
+			.toolHov:nth-child(1):hover{background-position-x: -1px;}
+			.toolHov:nth-child(3){background-position-x: -20px;display: none;}.toolHov:nth-child(3):hover{background-position-x: -19px;}
+			.toolDesc{border-radius: 5px;height: 200px; width: 180px;overflow:hidden;background-color: #4176b8;position: relative;}
+			/* #compass{pointer-events:none;transform-origin: 38% 99.2%; -ms-transform-origin: 38% 99.2%; -webkit-transform-origin: 38% 99.2%%; -moz-transform-origin: 38% 99.2%; -o-transform-origin: 38% 99.2%;} */
+			/* #compasspnH{pointer-events:none;transform-origin: 13.2% 0.1%; -ms-transform-origin: 13.2% 0.1%; -webkit-transform-origin: 13.2% 0.1%; -moz-transform-origin: 13.2% 0.1%; -o-transform-origin: 13.2% 0.1%;} */
+			#compassbob,#compasspt,#compasspn,#pHead,#pBody,#pTip{pointer-events:all;}
+			#compasspt{transform-origin: 100% 0%; -ms-transform-origin: 100% 0%; -webkit-transform-origin: 100% 0%; -moz-transform-origin: 100% 0%; -o-transform-origin: 100% 0%;}
+			.hLinks{color: white;background-color: darkslategrey;padding-left: 5px;padding-right: 5px;display: inline-block;height:20px;}
+			.hLinks:hover{color: yellow;}
+			.hLinks.sel{text-decoration: underline;background-color: brown;}
+			.hDivs{width:180px;border:1px solid white;height: 180px;display: inline-block; position: absolute;border-radius: 5px;}
+			#panDiv{position:absolute;height:100%;width:100%;cursor:move;-webkit-user-select:none;z-index:1000;top:0px;left:0px;}
+			.noButton{visibility: hidden;}
+			#tooltip{position: absolute;z-index:1000;display: inline-block;padding: 4px;border-radius: 4px;	background-color: white; color: grey;box-shadow: 0px 0px 1px 1px black;}
+			#tutorial{position: absolute;left: 640px;top:0;width: 640px;height: 500px;}
+			#modeSwitcher,#restore{position: absolute;right: 15px;top: 10px;border: 3px solid #7f7f7f;border-radius: 5px;background-color: #c3c3c3;padding: 6px;color:black;font-size: 12px;font-weight:700;text-transform: capitalize;cursor:pointer;}
+			#restore,#question{z-index: 100;display: none;}
+			#restore{background-color: #0ff;border-color: #080;}
+			#question{position: absolute;left: 0;top: 0;z-index: 10;width: 560px;text-align: left;color: #000;font-size: 16px;}
+		</style>
+	</head>
+	<body style="margin: 0px;overflow: hidden;" >
+		<div style="position:relative;margin: 0px;width: 640px;overflow: hidden;">
+			<div id="question"></div>
+			<div id="drawingPad" style="position: relative;width: 640px; height: 500px;overflow: hidden;">
+				<div id="canvasContainer">
+				</div>
+				<div id="instructions">
+				</div>
+				<div id="toolHelp">
+					<table><tr><td class="toolHov"></td><td class="toolDesc">
+						<a class="hLinks">Compass</a><a class="hLinks">Protractor</a><a class="hLinks">Ruler</a>
+						<div style="position: relative; left:0px;"><div class="hDivs" style="left: 0px;"><img src="../assets/cHelp.png"/></div>
+						<div class="hDivs" style="left: 180px;"><img src="../assets/pHelp.png"/></div>
+						<div class="hDivs" style="left: 360px;"><img src="../assets/rHelp.png"/></div></div>
+					</td><td class="toolHov"></td></tr></table>
+				</div>
+				<div id="buttons">
+					<input type="hidden" name="geoshape" id="geoshape" value="select">
+					<div id="geoShapeSel" class="shapeBtnsGeo">
+						<a class="button gray sol small point gBtnHold _selShapeGeo" style="background-color: #e9f29b;margin-right: 20px;" rel="point" title="Select to Mark Points">
+							Add Point
+						</a>					
+						<a class="button gray sol small arc gBtnHold _selShapeGeo" rel="arc" title="Select to Create Arc" style="visibility: hidden;display: none;">
+							Arc
+						</a>
+						<a class="button gray sol small _show-ruler" title="Show Ruler" style="background-color: #aedd94;">
+							Show Ruler
+						</a>
+						<a class="button gray sol small _hide-ruler" title="Hide Ruler" style="background-color: #aedd94;display: none;">
+							Hide Ruler
+						</a>
+						<a class="button gray sol small _show-compass" title="Show Compass" style="background-color: #aedd94;">
+							Show Compass
+						</a>
+						<a class="button gray sol small _hide-compass" title="Hide Compass" style="background-color: #aedd94;display: none;">
+							Hide Compass
+						</a>
+						<a class="button gray sol small _show-protractor" title="Show Protractor" style="background-color: #aedd94;">
+							Show Protractor
+						</a>
+						<a class="button gray sol small _hide-protractor" title="Hide Protractor" style="background-color: #aedd94;display: none;">
+							Hide Protractor
+						</a>
+						<a class="button gray sol small line gBtnHold _selShapeGeo" style="background-color: #ff8a84;margin-left: 20px;" rel="undo" title="Undo">
+							Undo
+						</a>
+						<a class="button gray sol small line gBtnHold _selShapeGeo" style="background-color: #ff8a84;" rel="redo" title="Redo">
+							Redo
+						</a>					
+						<a class="button gray sol small line gBtnHold _selShapeGeo" style="background-color: #ff8a84;" rel="clear" title="Clear">
+							Clear
+						</a>
+						<a class="fullScreen noButton" title="Full screen" style="" onclick="toggleFullscreen(event);"></a>
+						<a class="button gray sol small _pan-canvas" title="Move Sheet" style="">
+							Move Sheet
+						</a>
+						<a class="button gray sol small _fix-canvas" title="Fix Sheet" style="display: none;">
+							Fix Sheet
+						</a>
+					</div>
+				</div>
+				<div id="tooltip"></div>
+			</div>
+		</div>
+	</body>
+</html>

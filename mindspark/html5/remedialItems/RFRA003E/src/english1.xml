@@ -1,0 +1,626 @@
+<English>
+<Quotient> <p> <span>:    Quotient = </span> </p> </Quotient>
+<Remainder> <p> <span> Remainder = </span></p> </Remainder>
+<Question>
+	<p> <span>Solve </span></p> 
+</Question>
+
+<tables><span>TABLES</span></tables>
+<intro> <p><span>Please type the dividend in the correct position and press enter.</span> </p></intro>
+
+
+
+<dividend>
+ <incorrect1>
+ 	
+   <head> <p><span> Have you copied the number correctly?</span></p></head>
+   
+    <body><p> <span fontColor="black" underline="false" linebreak="false"  variable="false"> The number which is</span>
+	  <span fontColor="red" underline="false" linebreak="false"  variable="false"> to be divided</span> 
+	   <span fontColor="black" underline="false" linebreak="true"  variable="false"> is called the  DIVIDEND.</span> 
+	   
+	  <span fontColor="black" underline="false" linebreak="false"  variable="false">In </span>
+	<span fontColor="black" underline="false" linebreak="false"  variable="true">dividendvar</span>
+	<span fontColor="black" underline="false" linebreak="false"  variable="false"> ÷ </span>
+		<span fontColor="black" underline="false" linebreak="false"  variable="true">divisorvar</span>
+	<span fontColor="black" underline="false" linebreak="true"  variable="false">, which is the number &apos;to be divided&apos;?  </span>
+	   <span fontColor="black" underline="false" linebreak="true"  variable="false"> Write that number in the space provided. </span>
+	  <span fontColor="black" underline="false" linebreak="false"  variable="false"> <button onclick="procedue()">OK</button> </span> </p>
+   </body>
+ </incorrect1>
+ <incorrect2>
+  <head><p><span> Have you copied the number correctly?</span></p></head>
+   <body><p>
+   	<span fontColor="red" underline="false" linebreak="false"  variable="false"> Dividend</span> 
+   	<span fontColor="black" underline="false" linebreak="true"  variable="false"> is the number which is to be divided.</span>
+   	  <span fontColor="red" underline="true" linebreak="false"  variable="true">dividendvar</span> 
+   	<span fontColor="black" underline="false" linebreak="false"  variable="false"> ÷ </span>
+   		<span fontColor="black" underline="false" linebreak="false"  variable="true">divisorvar</span>
+   		<span fontColor="black" underline="false" linebreak="true"  variable="false">.</span>
+   	 <span fontColor="black" underline="false" linebreak="false"  variable="false"> <button onclick="procedue()">OK</button> </span>
+   	 </p></body>
+ </incorrect2>
+<incorrect3>
+  <head><p><span> Read explanation below!</span></p></head>
+   <body><p>
+   	<span fontColor="red" underline="false" linebreak="false"  variable="true"> dividendvar </span> 
+   	<span fontColor="black" underline="false" linebreak="false"  variable="false"> is the number </span> 
+   	<span fontColor="red" underline="true" linebreak="false"  variable="false">to be divided.</span>
+   	 <span fontColor="black" underline="false" linebreak="false"  variable="false"> Hence it is the</span>
+   	  <span fontColor="red" underline="false" linebreak="true"> Dividend. </span>
+   	   <span fontColor="black" underline="false" linebreak="true"> Let me enter this for you!</span>
+    <span fontColor="black" underline="false" linebreak="false"> <button onclick="procedue()">OK</button> </span>
+       </p>
+   </body>
+  </incorrect3>
+<correct><p><span> Now enter the divisor in the correct place and press enter.</span> </p></correct>
+<instruction><p><span> Write the correct number in the correct position.</span> </p></instruction> 
+</dividend>
+
+
+
+
+<divisor>
+<precorrect><p><span> Now enter the divisor in the correct place and press enter.</span> </p></precorrect>
+<incorrect1>
+	<head><p><span> Have you copied the number correctly?</span></p></head>
+	
+<body><p> <span fontColor="black" underline="false" linebreak="true" variable="false"> The DIVISOR is a number by which the dividend is to be divided.</span>
+<span fontColor="black" underline="false" linebreak="false" variable="false"> In </span>
+<span fontColor="black" underline="false" linebreak="false" variable="true">dividendvar</span>
+<span fontColor="black" underline="false" linebreak="false" variable="false"> ÷ </span>
+<span fontColor="black" underline="false" linebreak="false" variable="true">divisorvar</span>
+<span fontColor="black" underline="false" linebreak="false" variable="false">, which is the number by</span>
+ <span fontColor="red" underline="false" linebreak="true" variable="false"> which the dividend is to be divided?</span>
+ <span fontColor="black" underline="false" linebreak="true" variable="false"> Write that number in the space provided.</span>
+ <span fontColor="black" underline="false" linebreak="false" variable="false"> <button onclick="procedue()">OK</button> </span>
+ </p></body>
+</incorrect1>
+<incorrect2>
+<head> <p><span> Have you copied the number correctly? </span></p></head>
+<body><p>
+	<span fontColor="black" underline="false" linebreak="true" variable="false"> Divisor is the number by which the dividend is to be divided.</span>
+	<span fontColor="black" underline="false" linebreak="false" variable="true">dividendvar</span>
+		<span fontColor="black" underline="false" linebreak="false" variable="false"> ÷ </span>
+	<span fontColor="red"  underline="false" linebreak="true" variable="true">divisorvar</span>
+ <span fontColor="black" underline="false" linebreak="false" variable="false"> <button onclick="procedue()">OK</button></span>
+</p>
+</body>
+</incorrect2>
+<incorrect3>
+<head> <p><span> Read explanation below! </span></p></head>
+<body> <p>
+<span fontColor="red" underline="false" linebreak="false" variable="true">divisorvar</span>
+<span fontColor="black" underline="false" linebreak="false" variable="false"> is the number </span>
+<span fontColor="red" underline="true" linebreak="false" variable="false">by which</span>
+<span fontColor="black" underline="false" linebreak="false" variable="false"> </span>
+<span fontColor="black" underline="false" linebreak="false" variable="true">dividendvar</span> 
+<span fontColor="black" underline="false" linebreak="false" variable="false"> is to be </span>
+<span fontColor="red" underline="true" linebreak="false" variable="false">divided</span>
+ <span fontColor="black" underline="false" linebreak="false" variable="false">. Hence </span>
+ <span fontColor="blackit" underline="false" linebreak="false" variable="true">divisorvar</span>
+ <span fontColor="black" underline="false" linebreak="false" variable="false"> is the </span>
+ <span fontColor="blackit" underline="false" linebreak="true" variable="false">Divisor.</span>
+ <span fontColor="black" underline="false" linebreak="true" variable="false">  Let me enter this for you!</span>
+<span fontColor="black" underline="false" linebreak="false" variable="false"> <button onclick="procedue()">OK</button></span>
+</p></body>
+</incorrect3>
+<correct><p><span> Now start entering the value of the quotient. </span></p></correct>
+<instruction><p><span> Write the correct number in the correct position.</span></p></instruction> 
+</divisor>
+
+
+
+<quotientall>
+<precorrect><p><span> Now start entering the value of the quotient. </span></p></precorrect>
+	<twoinputs>
+		<head> <p><span> You need to enter only 1 digit at a time. Please try again!</span></p></head> 
+		</twoinputs>
+		<firstattempt>
+			<head><p><span>Read carefully!</span></p></head>
+			<body><p><firstpart><span fontColor="black" underline="false" linebreak="true" variable="false"> Hey! Are you entering the answer in the correct position?</span>
+			<span fontColor="black" underline="false" linebreak="true" variable="false">
+				<button onclick="buttonYes()"> Yes</button> 
+				<button onclick="buttonNo(1)"> No</button> 
+				<button onclick="buttonYes()"> Not Sure</button>
+				</span></firstpart>
+				<nexttext> <span fontColor="black" underline="false" linebreak="true" variable="false"> Check again! You are entering the answer in the wrong position.</span>
+				<span fontColor="black" underline="false" linebreak="true" variable="false"><button onclick="buttonNo(1)">OK</button></span>
+				</nexttext>
+			
+			</p></body>
+				<direction><span> Write the correct number in the correct position.</span></direction>
+		</firstattempt>
+		<secondattempt>
+			<head><p><span> Read carefully!</span></p></head>
+			<body><p><firstpart><span fontColor="black" underline="false" linebreak="true" variable="false"> Let us understand how we find the correct position for the first digit.</span></firstpart>
+	       <firstpart1>
+	        <span fontColor="black" underline="false" linebreak="false" variable="true">partofdividend</span>
+	         <span fontColor="black" underline="false" linebreak="false" variable="false"> &lt; </span>
+	         <span fontColor="black" underline="false" linebreak="false" variable="true">divisorvar</span>
+	         <span fontColor="black" underline="false" linebreak="true" variable="false">. So, we consider the next digit.</span>
+	        <span fontColor="black" underline="false" linebreak="true" variable="false"><button onclick="secondAttemptcontinue()">OK</button></span>
+	        </firstpart1>
+	        <aftercorrect> <span fontColor="black" underline="false" linebreak="false" variable="true">partofdividend</span>
+	         <span fontColor="black" underline="false" linebreak="false" variable="false"> &gt; </span>
+	          <span fontColor="black" underline="false" linebreak="false" variable="true">divisorvar</span>
+	           <span fontColor="black" underline="false" linebreak="true" variable="false">. So, we have to write the first digit here.</span>
+	           <span fontColor="black" underline="false" linebreak="true" variable="false"><button onclick="secondproced()">OK</button></span> 
+	        </aftercorrect>	
+	         <aftercorrectequal> <span fontColor="black" underline="false" linebreak="false" variable="true">partofdividend</span>
+	         <span fontColor="black" underline="false" linebreak="false" variable="false"> = </span>
+	          <span fontColor="black" underline="false" linebreak="false" variable="true">divisorvar</span>
+	           <span fontColor="black" underline="false" linebreak="true" variable="false">. So, we have to write the first digit here.</span>
+	           <span fontColor="black" underline="false" linebreak="true" variable="false"><button onclick="secondproced()">OK</button></span> 
+	        </aftercorrectequal>		
+			</p></body>
+			<direction><span> Now enter the quotient in the space provided!</span></direction>
+		</secondattempt>
+		
+		 <correct0><p><span> Correct! But you can avoid writing zeroes. Now enter the product</span></p></correct0>
+		 
+		 <correct><p><span> Now enter the product and press enter.</span></p></correct>
+</quotientall>
+
+
+
+
+<product>
+     <precorrect0><p><span> Correct! But you can avoid writing zeroes. Now enter the product</span></p></precorrect0>
+		 <precorrect><p><span> That is correct! Now enter the partial product and press enter.</span>
+		
+		 </p></precorrect>
+		 <precorrect1><p>
+		 <span> Now enter the product and press enter.</span>
+		 </p></precorrect1>
+	<incorrect1>
+	<head><p><span> Read carefully!</span></p></head>
+	
+<body><p> <span fontColor="red" underline="false" linebreak="false" variable="false">Multiply </span>
+<span fontColor="red" underline="false" linebreak="false" variable="true">divisorvar</span>
+<span fontColor="black" underline="false" linebreak="false" variable="false"> with </span>
+ <span fontColor="red" underline="false" linebreak="false" variable="true">quotientvar</span>
+ <span fontColor="black" underline="false" linebreak="false" variable="false"> and enter your</span>
+  <span fontColor="black" underline="false" linebreak="true" variable="false"> answer in the correct position.</span>
+ <span fontColor="black" underline="false" linebreak="false" variable="false"> <button onclick="procedue()">OK</button> </span>
+ </p></body>
+</incorrect1>
+<instruction><p><span> Write the correct number in the correct position.</span></p></instruction> 
+<incorrect2>
+<head> <p><span> Read carefully! </span></p></head>
+<body><p>
+	<span fontColor="black" underline="false" linebreak="false" variable="true">divisorvar</span>
+	<span fontColor="black" underline="false" linebreak="false" variable="false"> x </span>
+	<span fontColor="black" underline="false" linebreak="false" variable="true">quotientvar</span>
+	<span fontColor="black" underline="false" linebreak="false" variable="false"> = </span>
+	<span fontColor="black" underline="false" linebreak="true" variable="true">productvar</span>
+	<span fontColor="black" underline="false" linebreak="true" variable="false"><table></table></span>
+     <span fontColor="black" underline="false" linebreak="false" variable="false"> <button onclick="procedue()">OK</button></span>
+</p>
+</body>
+</incorrect2>
+<correct><p><span> Correct! Now enter the difference and press enter. </span></p></correct>
+
+</product>
+
+
+
+<difference>
+<precorrect><p><span> Correct! Now enter the difference and press enter. </span></p></precorrect>
+	<incorrect1>
+	<head><p><span> That is incorrect. Check the difference again.</span></p></head>
+	<body><p></p></body>
+</incorrect1>
+<incorrect2>
+<head> <p><span> Read carefully! </span></p></head>
+<body><p>
+	<span fontColor="red" underline="false" linebreak="false" variable="false"> Subtract </span>
+	<span fontColor="red" underline="false" linebreak="false" variable="true">productvar</span>
+	<span fontColor="black" underline="false" linebreak="false" variable="false"> from </span>
+	<span fontColor="red" underline="false" linebreak="false" variable="true">differencevar</span>
+	<span fontColor="black" underline="false" linebreak="true" variable="false">.</span>
+ <span fontColor="black" underline="false" linebreak="false" variable="false"> <button onclick="procedue()">OK</button></span>
+</p>
+</body>
+</incorrect2>
+<instruction><p><span> Write the correct number in the correct position.</span></p></instruction> 
+<incorrect3>
+<head> <p><span> Read carefully! </span></p></head>
+<body> <p>
+<span fontColor="black" underline="false" linebreak="false" variable="true">differencevar</span>
+<span fontColor="black" underline="false" linebreak="false" variable="false"> - </span>
+<span fontColor="black" underline="false" linebreak="false" variable="true">productvar</span>
+<span fontColor="black" underline="false" linebreak="false" variable="false"> = </span> 
+<span fontColor="black" underline="false" linebreak="false" variable="true">differencevar1</span>
+<span fontColor="black" underline="false" linebreak="true" variable="false">.</span>
+<span fontColor="black" underline="false" linebreak="false" variable="false"> <button onclick="procedue()">OK</button></span>
+</p></body>
+</incorrect3>
+<correct><p><span>  Now bring down the next digit of the dividend and press enter. </span></p></correct>
+<instruction><p><span> Now bring down the next digit of the dividend and press enter.</span></p></instruction> 
+</difference>
+
+
+<bringdown>
+<precorrect><p><span>  Now bring down the next digit of the dividend and press enter. </span></p></precorrect>
+<incorrect1>
+	<head><p><span> That is incorrect. Check again!</span></p></head>
+	<body><p></p></body>
+</incorrect1>
+<incorrect2>
+<head> <p><span> Read carefully! </span></p></head>
+<body><p>
+	
+	<span fontColor="black" underline="false" linebreak="true" variable="false"> Bring the next digit down.</span>
+	
+ <span fontColor="black" underline="false" linebreak="false" variable="false"> <button onclick="procedue()">OK</button></span>
+</p>
+</body>
+</incorrect2>
+<incorrect3>
+	<head><p><span> Write the correct number in the correct position.</span></p></head>
+	<body><p></p></body>
+</incorrect3>
+<instruction><p><span> Write the correct number in the correct position.</span></p></instruction> 
+<correct><p><span> Good! Now enter the next digit of the quotient and press enter.</span></p></correct>
+</bringdown>
+
+<carryZero>
+	<head> <p><span> Read carefully! </span></p></head>
+</carryZero>
+
+<quotient>	
+<precorrect><p><span> Good! Now enter the next digit of the quotient and press enter.</span></p></precorrect>
+	<correct><p><span> That is correct! Now enter the partial product and press enter.</span></p></correct>
+</quotient>
+
+
+
+
+
+<tablefield>
+	<incorrect1>
+		<head><p><span> Try answering the below question!</span></p></head>
+		<body><greater><p><span fontColor="black" underline="false" variable="false" linebreak="false"> Does </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">divisorvar</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="false">  divide </span> 
+			<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span> 
+			<span fontColor="black" underline="false" variable="false" linebreak="false"> only </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="true"> times?</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="false"><button onclick="explain()">Yes</button>
+		<button onclick="buttonNo(2)">No</button>
+		<button onclick="explain()">Not Sure</button>
+		</span>
+		</p></greater>
+		<smaller><p><span fontColor="black" underline="false" variable="false" linebreak="false"> Does </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">divisorvar</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="false">  divide </span> 
+			<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span> 
+			<span fontColor="black" underline="false" variable="false" linebreak="false">,  </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="true"> times?</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="false"><button onclick="explain()">Yes</button>
+		<button onclick="buttonNo(2)">No</button>
+		<button onclick="explain()">Not Sure</button>
+		</span>
+		</p></smaller>
+		</body>
+	</incorrect1>
+	<explanation>
+		<head><p><span> Multiply!</span></p></head>
+		<body><p><span fontColor="black" underline="false" variable="false" linebreak="false"> Let&apos;s multiply </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">divisorvar</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="false"> with </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="false"> and see if it works.</span>
+		</p></body>
+	</explanation>
+	<explanation>
+		<head><p><span> Read carefully!</span></p></head>
+		<body><p><span fontColor="black" underline="false" variable="false" linebreak="false"> Check your multiplication!</span></p></body>
+	</explanation>
+	<explanation>
+		<head><p><span> Read carefully!</span></p></head>
+		<body><p><span fontColor="black" underline="false" variable="false" linebreak="false"> Your product is still incorrect. Try multiplying again!</span></p></body>
+	</explanation>
+	<explanation>
+		<head><p><span> Read carefully!</span></p></head>
+		<body><p><span fontColor="black" underline="false" variable="false" linebreak="false"> That is not correct. Check your multiplication again!</span></p></body>
+	</explanation>
+	<explanation>
+		<head><p><span> Read carefully!</span></p></head>
+		<body><p><span fontColor="black" underline="false" variable="false" linebreak="false"> The correct answer is </span>
+		<span fontColor="black" underline="false" variable="false" linebreak="false"><button>OK</button></span>
+		</p></body>
+	</explanation>
+	<explanationextension>
+		
+	<lowerquotient>
+		<head><p><span> Answer the question!</span></p></head>
+		<body><p><span fontColor="black" underline="false" variable="true" linebreak="false">rtproduct</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="false"> &lt; </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span> 
+		<span fontColor="black" underline="false" variable="false" linebreak="false">. But are we sure that a number greater than </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="true"> will not work? Try a higher number.</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="true"><input></input></span>
+		<span fontColor="black" underline="false" variable="false" linebreak="true"><button onclick="validatehigher()">OK</button></span>
+		</p></body>
+		<withoutvalue>
+			<head><p><span> Please enter your answer in the space provided.</span></p></head>
+		</withoutvalue>
+		<value>
+			<body><p><span fontColor="black" underline="false" variable="false" linebreak="false"> We need to try with a number larger than </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true">.</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false"><button onclick="append(1)">OK</button></span>
+			</p></body>
+			<extension>
+				<body><p><span fontColor="black" underline="false" variable="false" linebreak="false"> Let&apos;s try with </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="true">. Click ok to continue</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false"><button onclick="extension(1)">OK</button> </span>
+				</p></body>
+			</extension>
+		</value>
+		<previousnumbers>
+			<body><p><span fontColor="black" underline="false" variable="false" linebreak="false"> You&apos;re already tried with </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span> 
+			<span fontColor="black" underline="false" variable="false" linebreak="true">. Which number would you like to try now?</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true"><input></input></span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false"><button onclick="validatehigher()">OK</button> </span>
+			</p></body>
+		</previousnumbers>
+		</lowerquotient>
+		
+	<higherquotient>
+		<head><p><span> Answer the question!</span></p></head>
+		<body>
+			<p><span fontColor="black" underline="false" variable="true" linebreak="false">rtproduct</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false"> &gt; </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span> 
+			<span fontColor="black" underline="false" variable="false" linebreak="false">. Therefore, </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true"> will not work. Which number would you like to try now?</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true"><input></input></span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true"><button onclick="validatelower()">OK</button></span>
+			</p>
+		</body>
+		<withoutvalue>
+			<head><p><span> Please enter your answer in the space provided.</span></p></head>
+		</withoutvalue>
+		
+		<value>
+			<body><p><span fontColor="black" underline="false" variable="false" linebreak="false"> We need to try with a number smaller than </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true">.</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false"><button onclick="append(2)">OK</button></span>
+			</p></body>
+			<extension>
+			<body><p><span fontColor="black" underline="false" variable="false" linebreak="false"> Let&apos;s try with </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true">.</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false"> Click ok to continue</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true">.</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false"><button onclick="extension(1)">OK</button> </span>
+			</p></body>
+			</extension>
+		</value>
+		<previousnumbers>
+			<body><p><span fontColor="black" underline="false" variable="false" linebreak="false"> You&apos;re already tried with </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span> 
+			<span fontColor="black" underline="false" variable="false" linebreak="true">. Which number would you like to try now?</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true"><input></input></span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false"><button onclick="validatelower()">OK</button> </span>
+			</p></body>
+		</previousnumbers>
+	</higherquotient>
+		
+	<lowerwithouthigher>
+		<head><p><span> Click OK after you have read the explanation!</span></p></head>
+		<body>
+			<p>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">rtproduct</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false"> &lt; </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false"> and </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">rtproduct</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false"> is close to </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false">. But we can&apos;t be sure about </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="true"> until we try with the next higher number.</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="true"><button onclick="extension(2)">OK</button></span>
+			</p>
+		</body>
+		<answer9>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">rtproduct</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false"> &lt; </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false"> and </span>
+			
+			<span fontColor="black" underline="false" variable="true" linebreak="false">rtproduct</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false"> is close to  </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false">.</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false">  So,</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true"> 9 will work. Click OK to proceed.</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true"><button onclick="endFirstQuotientDigit()">OK</button></span>
+		</answer9>
+	</lowerwithouthigher>
+	
+	<lowerwithouthigher1>
+		<head><p><span> Click OK after you have read the explanation!</span></p></head>
+		<body>
+			<p>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">rtproduct</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false"> &lt; </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false"> and </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">rtproduct</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false"> is close to </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false">. But we can&apos;t be sure about </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="true"> until we try with the next higher number.</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="true"><button onclick="extension(2)">OK</button></span>
+			</p>
+		</body>
+		<answers1>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">divisorvar</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false"> x </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false"> = </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">rtproduct</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false"> is same as  </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false">.</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false">  So, </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true"> will work. Click OK to proceed.</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true"><button onclick="endFirstQuotientDigit()">OK</button></span>
+		</answers1>
+	</lowerwithouthigher1>
+	
+	<lowerwithhigher>
+		<head><p><span> Click on OK after you have read the explanation</span></p></head>
+		<body>
+			<p>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">divisorvar</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false"> x </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false"> = </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">rtproduct</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false"> is larger than </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false">. # And </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">divisorvar</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false"> x </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue2</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="false"> = </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">rtproduct2</span> 
+				<span fontColor="black" underline="false" variable="false" linebreak="false"> is smaller than </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="true">.</span>
+				
+				<span fontColor="black" underline="false" variable="false" linebreak="false"> So, </span>
+				<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue2</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="true"> is the correct value of the next digit of the quotient.</span>
+				<span fontColor="black" underline="false" variable="false" linebreak="true"><button onclick="endFirstQuotientDigit()">OK</button></span>
+			</p>
+		</body>
+	</lowerwithhigher>
+		
+		<higherafterlower>
+			<head><p><span> Click on OK after you have read the explanation</span></p></head>
+			<body><p>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">divisorvar</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="false"> x </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue1</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="false"> = </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">rtproduct1</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="false"> is larger than </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="false">. # And </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">divisorvar</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="false"> x </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="false"> = </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">rtproduct</span> 
+		<span fontColor="black" underline="false" variable="false" linebreak="false"> is smaller than </span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">dividendpartvar</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="true">.</span>
+		
+		<span fontColor="black" underline="false" variable="false" linebreak="false"> So,</span>
+		<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="true"> is the correct value of the next digit of the quotient.</span>
+		<span fontColor="black" underline="false" variable="false" linebreak="true"><button onclick="endFirstQuotientDigit()">OK</button></span>
+		</p></body>
+		</higherafterlower>
+		<firstquotientdigitzero>
+			<body><p><span  fontColor="black" underline="false" linebreak="true"> You need not write a zero here. Click on OK to proceed!</span>
+			<span fontColor="red" underline="false" linebreak="false"><button onclick="firstquotientdigitzero()">OK</button> </span></p></body>
+		</firstquotientdigitzero>
+		
+		<extratextforlevelsix>
+			<body><p><span fontColor="black" underline="false" variable="false" linebreak="false"> You have already multipied </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">divisorvar</span> 
+			<span fontColor="black" underline="false" variable="false" linebreak="false"> with </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true">.</span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">divisorvar</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false"> x </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">inputvalue</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="false"> = </span>
+			<span fontColor="black" underline="false" variable="true" linebreak="false">rtproduct</span>
+			<span fontColor="black" underline="false" variable="false" linebreak="true">.</span>
+		</p></body> 
+		</extratextforlevelsix>
+	</explanationextension>
+
+</tablefield>
+
+	<quotient>
+		<insruction>
+			<span>Good! Now enter your final answer in the space provided above.</span>
+		</insruction>
+		<incorrect1>
+	<head><p><span variable="false"> Check your answer! Are you copying the quotient correctly?</span></p></head>
+	<body> <span fontColor="black" underline="false" linebreak="false"> <button onclick="unblock(1)">OK</button></span></body>
+</incorrect1>
+<incorrect2>
+	<head><p><span variable="false"> Check again!</span></p></head>
+	 <body><span fontColor="black" underline="false" linebreak="false"> <button onclick="unblock(1)">OK</button></span></body>
+</incorrect2>
+<incorrect3>
+	<head><p><span variable="false"> Incorrect! The quotient is </span>
+	<span variable="true">quotientfinal</span>
+	<span variable="false">. Now enter the remainder in the blank provided above.</span></p></head>
+	
+	 <body><span fontColor="black" underline="false" linebreak="false"> <button onclick="unblock(1)">OK</button></span></body>
+</incorrect3>
+<correct><head><p><span> Great! Now enter the remainder in the blank provided above.</span></p></head>
+ <body><span fontColor="black" underline="false" linebreak="false"> <button onclick="unblock(4)">OK</button></span></body>
+
+</correct>
+
+	</quotient>
+
+
+	
+	<remainder>
+		<incorrect1>
+	<head><p><span variable="false"> Check your answer! Are you copying the remainder correctly?</span></p></head>
+	 <body><span fontColor="black" underline="false" linebreak="false"> <button onclick="unblock(2)">OK</button></span></body>
+</incorrect1>
+<incorrect2>
+	<head><p><span variable="false"> Check again!</span></p></head>
+	 <body><span fontColor="black" underline="false" linebreak="false"> <button onclick="unblock(2)">OK</button></span></body>
+</incorrect2>
+<incorrect3>
+	<head><p><span variable="false"> You did not copy the remainder correctly. The remainder is </span>
+	<span variable="true">remaindervar</span>
+	<span variable="false">.</span></p></head>
+	<body> <span fontColor="black" underline="false" linebreak="false"> <button onclick="unblock(2)">OK</button></span></body>
+</incorrect3>
+<correct><head><p><span> Great!</span></p></head>
+<body> <span fontColor="black" underline="false" linebreak="false"> <button onclick="">OK</button></span></body>
+</correct>
+
+	</remainder>
+	
+	<correctStep>
+		<span>Which of the following would be the correct step to follow now.</span>
+		<span>Place the decimal point</span>
+		<span>Enter the next digit of quotient</span>
+		<span>You can put the decimal point after dividing the whole number part of the dividend.&lt;br&gt;Try again.</span>
+		<span>You should place the decimal point now, as #dividend# is smaller than #divisor# and hence you cannot divide.&lt;br&gt;Try again.</span>
+		<span>What digit can be placed here without changing the value of the dividend?</span>
+		<span>Now start entering the quotient.</span>
+		<span>Read carefully!</span>
+		<span>This is not the correct place for decimal point. Enter the next digit of the quotient.</span>
+		<span>This is the correct place for decimal point.</span>
+		<span>You should place the decimal point now, as the whole number part of the dividend is less then the divisor.</span>
+	</correctStep>
+</English>

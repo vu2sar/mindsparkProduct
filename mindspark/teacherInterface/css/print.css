@@ -1,0 +1,91 @@
+#header {
+    display: none;
+}
+
+#fixedSideBar {
+    display: none;
+}
+
+#topBar {
+    display: none;
+}
+
+#sideBar {
+    display: none;
+}
+
+#headerBar {
+    display: none;
+}
+
+#topicDetails {
+    display: none;
+}
+
+#generateTable {
+    display: none;
+}
+
+#pagingTable {
+    display: none;
+}
+
+#topicDetails {
+    display: none;
+}
+
+
+
+#print {
+    display: none;
+}
+
+#container{
+	width: 100%;
+	margin-left: 0%;
+	border-left: 0px solid rgb(250, 172, 27);
+}
+
+#getPrinted{
+	display: block;
+	width:100%;
+}
+
+#info{
+	display: block;	
+}
+#hrline{
+	display:none;
+}
+
+#pagingTableSection{
+	display:none;
+}
+
+table.tblContent {
+	display: block;
+    background      :   #C5C5C5;
+    padding         :   0px;
+    font-size		: 	15px;
+}
+
+table.tblContent tr th, table.tblContent tr td {
+	display: block;
+    border-width    :   1px;
+    border-style    :   solid;
+    border-color    :   white;
+    border-spacing  :   0px;
+    color           :   black;
+    font-weight     :   bold;
+}
+
+table.tblContent tr td {
+	display: block;
+    font-weight     :   normal;
+}
+
+.page-break  { display:block; page-break-after:always; }
+
+.printHeader {
+    display: block;
+}

@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.prevTextBx {
+	border: 1px solid #c4c4c4;
+	font-family:"Comic Sans MS", cursive;
+	font-size:16px;
+	text-align:center;
+    width: 90px;
+    height: 15px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: 0px 0px 8px #d9d9d9;
+    -moz-box-shadow: 0px 0px 8px #d9d9d9;
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+}
+
+#handImg {
+	display:none;
+}
+
+.borderBottom {
+	border-bottom:2px solid #000000;
+}
+.hiddenField {
+	display:none;
+}
+#alertPrompt {
+	display:none;
+	background-image: url(../assets/promptBG.png);
+	width: 450px;
+	height: 200px;
+	position: absolute;
+	margin-top: 250px;
+	margin-left: 200px;
+	z-index: 1000;
+}
+#promptMsg {
+	position: absolute;
+	margin-top: 50px;
+	margin-left: 20px;
+}
+.okBtn {
+	position: absolute;
+	border: 2px solid #405F8E;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color:#6CF;
+	cursor: pointer;
+	font-family: Comic Sans MS;
+    font-size: 20px;
+    color: black;
+	text-align: center;
+	margin-top: 160px;
+	margin-left: 190px;
+	width: 60px;
+}
+.textClassBlue {
+    box-shadow: 0px 0px 8px #0099FF !important;
+    -moz-box-shadow: 0px 0px 8px #0099FF !important;
+    -webkit-box-shadow: 0px 0px 8px #0099FF !important;
+}
+.textClassRed {
+    box-shadow: 0px 0px 8px #FF3366 !important;
+    -moz-box-shadow: 0px 0px 8px #FF3366 !important;
+    -webkit-box-shadow: 0px 0px 8px #FF3366 !important;
+}
+.textClassGreen {
+    box-shadow: 0px 0px 8px #009900 !important;
+    -moz-box-shadow: 0px 0px 8px #009900 !important;
+    -webkit-box-shadow: 0px 0px 8px #009900 !important;
+}
+#decimalPointDiv {
+	background-color:#EFEFEF;
+	border:1px solid #999999;
+	width:75px;
+	height:60px;
+	float:left;
+	padding:10px;
+	cursor:pointer;
+}
+
+#wholeNoPointDiv {
+	background-color:#EFEFEF;
+	border:1px solid #999999;
+	width:105px;
+	height:60px;
+	float:right;
+	padding:10px;
+	cursor:pointer;
+}
+.clearDiv {
+	clear:both;
+}
+#correctStep {
+	width:238px;
+	display:none;
+}
+#askUser {
+	display:none;
+}
+#showpoint {
+	position:absolute;
+	font-size:16px;
+}
+#decimalSpanDiv {
+	display:none;
+}
+#decimalWhole {
+	display:none;
+}
+#clickOkBtn {
+	background-color: #999999;
+	border: 1px solid #333333;
+	cursor: pointer;
+	height: 30px;
+	text-align: center;
+	width: 47px;
+}
+#divideNumber {
+	width:800px;
+	border:1px solid #000;
+}

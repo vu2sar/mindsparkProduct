@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application name="">
+
+<english>		
+	<questions>
+		<que name="q101" text="" page="page1" voice=""/>
+	</questions>
+
+	<prompts>
+		<prompt name="p100" text="Hi! Welcome to the CHOCO-WORLD! &lt;br&gt; Here, small pieces of chocolates are given by experts for tasting. &lt;br&gt; You and your friend are the experts today." page="page1" voice=""/>
+		<prompt name="p101" text="Write your name here." page="page1" voice=""/>
+		<prompt name="p102" text="Write your friend's name here." page="page1" voice=""/>
+		<prompt name="p103" text="Press enter after typing a name" page="page1" voice=""/>
+		<prompt name="p104" text="Next" page="page1" voice=""/>
+		<prompt name="p105" text="#name1#'s tray" page="page1" voice=""/>
+		<prompt name="p106" text="#name2#'s tray" page="page1" voice=""/>
+		<prompt name="p107" text="#name1# wants to have #frac1# of a chocolate. &lt;br&gt; #name2# wants to have #frac2# of an identical chocolate. &lt;br&gt; Which pair of chocolates will you choose for distribution? Click on it." page="" voice=""/>
+		<prompt name="p108" text="Well Done! &lt;br&gt; This pair has two identical chocolates. &lt;br&gt;One is divided into #part1# equal pieces &lt;br&gt; and the other is divided into #part2# equal pieces. Use this to serve #name1# and #name2#." page="page1" voice=""/>
+		<prompt name="p109" text="The two chocolates are not of same size. &lt;br&gt; You have to choose identical chocolates." page="page1" voice=""/>
+		<prompt name="p110" text="This pair has 2 identical chocolates. &lt;br&gt; One is divided into #part1# equal pieces and &lt;br&gt; the other is divided into #part2# equal pieces. &lt;br&gt; Use this to serve #name1# and #name2#. " page="page1" voice=""/>
+		<prompt name="p111" text="OK" page="page1" voice=""/>
+		<prompt name="p112" text="Click here to serve." page="page1" voice=""/>
+		<prompt name="p113" text="#name1# wants to have #frac1# of a chocolate. &lt;br&gt; #name2# wants to have #frac2# of an identical chocolate. &lt;br&gt; Serve it to yourself and your friend. &lt;br&gt; Click on highlighted chocolate pieces to serve!" page="page1" voice=""/>
+		<prompt name="p114" text="Click on highlighted chocolate pieces to serve!" page="page1" voice=""/>
+		<prompt name="p115" text="Hmm..you seem to be on the right track. &lt;br&gt; You have to give yourself #frac1# of the chocolate or #frac1Num# pieces out of #part1#. &lt;br&gt; You have to give your friend #frac2# of the chocolate or #frac2Num# pieces out of #part2#. &lt;br&gt; Try again! " page="page1" voice=""/>
+		<prompt name="p116" text="Good! Now you can enjoy your meal!" page="page1" voice=""/>
+		<prompt name="p117" text="Submit" page="page1" voice=""/>
+		<prompt name="p118" text="Who ate more chocolate?  " page="page1" voice=""/>
+		<prompt name="p119" text="Please select" page="page1" voice=""/>
+		<prompt name="p120" text="Choose the correct sign: #frac1# #dropDown2# #frac2#" page="page1" voice=""/>
+		<prompt name="p121" text="#name1# ate #frac1# of the chocolate, &lt;br&gt; #name2# ate #frac2# of an identical chocolate. &lt;br&gt; See the images of #frac1# and #frac2#. &lt;br&gt; Think and try again!" page="page1" voice=""/>
+		<prompt name="p122" text="Correct! Well done!" page="page1" voice=""/>
+		<prompt name="p123" text="Pick your avatar." page="page1" voice=""/>
+		<prompt name="p124" text="Pick your friend's avatar." page="page1" voice=""/>
+		<prompt name="p125" text="START" page="page1" voice=""/>
+		<prompt name="p126" text="One chocolate is not divided into equal pieces in this pair. You will not be able to give #name2# #frac2# if you choose this pair. Try again." page="page1" voice=""/>
+		<prompt name="p127" text="Reset" page="page1" voice=""/>
+		<prompt name="p128" text="Well done!" page="page1" voice=""/>
+		<prompt name="p129" text="Oops! Let me serve you." page="page1" voice=""/>	
+		<prompt name="p130" text="We first choose the pair of identical chocolates. &lt;br&gt;One chocolate is divided into #part1# equal pieces.&lt;br &gt; Other chocolate is divided into #part2# equal pieces." page="page1" voice=""/>	
+		<prompt name="p131" text="Then we give #frac1Num# out of #part1# equal pieces to #name1# &lt;br&gt; and #frac2Num# out of #part2# equal pieces to #name2#." page="page1" voice=""/> 
+		<prompt name="p132" text="#name1# wants to have #frac1# of a chocolate. &lt;br&gt; #name2# wants to have #frac2# of an identical chocolate." page="page1" voice=""/>
+		<prompt name="p133" text="#ateMore# ate more chocolate. &lt;br &gt; See the image." page="page1" voice=""/>
+		<prompt name="p134" text="#name1# ate #frac1# of a chocolate, &lt;br&gt; #name2# ate #frac2# of an identical chocolate. #name1# ate more than #name2#. &lt;br&gt; So, #frac1# &gt; #frac2# ." page="page1" voice=""/> 
+		<prompt name="p135" text="#name1# ate #frac1# of a chocolate, &lt;br&gt; #name2# ate #frac2# of an identical chocolate. #name1# ate less than #name2#. &lt;br&gt; So, #frac1# &lt; #frac2# ." page="page1" voice=""/> 
+		<prompt name="p136" text="Who ate more chocolate? #ateMore#" page="page1" voice=""/>
+		<prompt name="p137" text="Choose the correct sign: #frac1# #correctSign# #frac2#" page="page1" voice=""/>
+		<prompt name="p138" text="Whose chocolate is divided into smaller pieces ? #dropDown3#" page="page1" voice=""/>
+		<prompt name="p139" text="'s chocolate is divided into smaller pieces." page="page1" voice=""/>
+		<prompt name="p140" text="Whose chocolate is divided into more number of pieces? #dropDown4#" page="page1" voice=""/>
+		<prompt name="p141" text="'s chocolate is divided into more number of pieces." page="page1" voice=""/>
+		<prompt name="p142" text="Choose the correct statement. #dropDown5#" page="page1" voice=""/>
+		<prompt name="p143" text="When the number of pieces is greater, each piece is smaller." page="page1" voice=""/>
+		<prompt name="p144" text="When the number of pieces is less, each piece is smaller." page="page1" voice=""/>
+		<prompt name="p145" text="When the number of pieces is greater, each piece is larger." page="page1" voice=""/>
+		<prompt name="p146" text="Carefully compare #name1#'s and #name2#'s chocolates!" page="page1" voice=""/>
+		<prompt name="p147" text="Now think which is greater among these fractions. #q1Frac# #dropDown6# #q2Frac#" page1="page1" voice=""/>
+		<prompt name="p148" text="Oops! That's incorrect! &lt;br&gt; Let's go back to the chocolate factory and try this problem again!" page1="page1" voice=""/>
+		<prompt name="p149" text="Now compare these two fractions: #q1Frac# #dropDown7# #q2Frac#" page="page1" voice=""/>
+		<prompt name="p150" text="You have completed the activity." page="page1" voice=""/>
+		
+	</prompts>
+	
+	<instructions>
+		<instruction name="inst101" text="" page="page1" voice=""/>
+	</instructions>
+	
+	<miscellaneous>
+		<misc name="misc101" text="" page="page1" voice=""/>
+	</miscellaneous>
+	</english>
+
+<hindi>
+</hindi>
+
+<gujarati>
+</gujarati>
+
+</application>

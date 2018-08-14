@@ -1,0 +1,2 @@
+ SELECT a.fromMemberId, m.username AS fromMemberName, m.email, m.avatarFormat, a.time, a.data, a.type, a.postId, a.conversationId, a.read FROM `forum_activity` a LEFT JOIN `forum_member` m ON (m.memberId=a.fromMemberId) LEFT JOIN `forum_activity` prev ON (prev.conversationId=a.conversationId AND prev.activityId>a.activityId) WHERE (prev.activityId IS NULL) AND (a.memberId='1
+ ') AND (a.type IN ('post','groupChange','mention','privateAdd','updateAvailable','unapproved')) AND (a.read=0) ORDER BY a.time DESC

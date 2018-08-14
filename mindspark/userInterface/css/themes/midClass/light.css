@@ -1,0 +1,60 @@
+body{
+	background: #e8e8e8; /* Old browsers */
+	background: -moz-linear-gradient(top,  #e8e8e8 0%, #ffffff 75%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(75%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e8e8e8 0%,#ffffff 75%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e8e8e8 0%,#ffffff 75%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e8e8e8 0%,#ffffff 75%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e8e8e8 0%,#ffffff 75%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+#gradientSparkie{
+	background: #676767 !important;
+}
+
+.afterSparkie{
+	background-color:#c2c9d2 !important;
+}
+
+
+#continueText{
+	color:#666666;
+}
+
+#continueButtonDiv{
+	color:#666666;
+	border: 1px solid #666666;
+}
+
+#lastSessionText{
+	color:#666666;
+}
+
+#childNameDiv{
+	color:#666666;
+}
+.class{
+	color:#666666;
+}
+#continueEmot {
+	background: url('../../../assets/rewards/continue_arrow.png') no-repeat 0px 0px;
+	width: 34px;
+}
+
+.topicProgressDivFocus{
+	background-color: #bcbec0;
+
+}
+
+.topicName{
+	color:#616161;
+}
+
+.topicNameFocus{
+	color:#fff;
+}
+.studentDashboardTopicHeaderBg
+{
+	background-color: #f1f1f1 !important;
+}

@@ -1,0 +1,99 @@
+<li class="mpi_certificate" template-repeat="mpi_certificates as user_id: certificate">
+	<section class="front">
+		<header>
+			<img src="assets/mindspark_logo.png" alt="Mindspark" class="mindspark_logo"></img>
+		</header>
+		<section class="profile">
+			<img src="{{certificate.profile.picture || 'assets/avatar.png'}}" class="picture">
+			<div class="title">
+				<div>Performance</div>
+				<div>Report</div>
+			</div>
+			<div class="first_name">{{certificate.profile.first_name}}</div>
+			<div class="last_name">{{certificate.profile.last_name}}</div>
+			<div class="division">{{certificate.profile.class}} {{certificate.profile.section}}, {{certificate.profile.school_name}}</div>
+			<input type="hidden" name="student_userID" class="student_userID" value="{{certificate.profile.userID}}" />
+		</section>
+		<section class="overview">
+			<div class="report_period">
+				<div>
+					<span class="range_text">From</span>:
+					<span class="date">{{certificate.report.overview.from_month}}</span>
+				</div>
+				<div>
+					<span class="range_text">To</span>:
+					<span class="date">{{certificate.report.overview.to_month}}</span>
+				</div>
+			</div>
+			<div class="total_score">
+				{{certificate.report.overview.total_score}} / {{certificate.report.overview.maximum_score}}
+				<div class="note">*This is a weighted score</div>
+			</div>
+		</section>
+		<section class="performance">
+			<table>
+				<thead>
+					<tr class="columns">
+						<th class="weightage">Weight</th>
+						<th class="description">Parameters</th>
+						<th class="score">Weighted Scores</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="field" template-repeat="certificate.report.performance as field: summary">
+						<td class="weightage">{{summary.weightage}}%</td>
+						<td class="description">
+							<div class="name">{{$field}} (Score out of {{summary.out_of}})</div>
+							<div class="details">[{{summary.details}}]</div>
+						</td>
+						<td class="score">{{summary.score}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section class="score_guide">
+			<h3>Score Calculation</h3>
+			<ul>
+				<li class="field">
+					<span class="plus_sign">+</span>
+					<span class="formula">Weight of Accuracy <span class="multiplication_sign">X</span> Score of accuracy</span>
+					<span class="long_hyphen">-</span>
+					<span class="description">Accuracy is the percentage of questions attempted correctly. Minimum questions, as per school requirement, need to be attempted per week</span>
+				</li>
+				<li class="field">
+					<span class="plus_sign">+</span>
+					<span class="formula">Weight of Badges <span class="multiplication_sign">X</span> Score of Badges</span>
+					<span class="long_hyphen">-</span>
+					<span class="description">Badges are given monthly to students in Mindspark for exceptional performance. Each badge gives 10 points out of 100</span>
+				</li>
+				<li class="field">
+					<span class="plus_sign">+</span>
+					<span class="formula">Weight of Weekly Usage <span class="multiplication_sign">X</span> Score of Weekly Usage</span>
+					<span class="long_hyphen">-</span>
+					<span class="description">Weekly usage score is the percentage of weeks when usage exceeded the minimum weekly usage requirement</span>
+				</li>
+				<li class="field">
+					<span class="plus_sign">+</span>
+					<span class="formula">Weight of Topic Completion <span class="multiplication_sign">X</span> Score of Topic Completion</span>
+					<span class="long_hyphen">-</span>
+					<span class="description">Topic completion score is the percentage of topics where progress exceeded 75%, out of those activated by teacher in the report period</span>
+				</li>
+			</ul>
+		</section>
+		<footer class="flip_instruction">Flip over for detailed information</footer>
+	</section>
+	<section class="back">
+		<dl>
+			<dt class="query">What is a weighted score?</dt>
+			<dd class="response">Weighted score is calculated by "weighing" the score of each parameter and adding them up. For example if the weight of "Accuracy" is 40% and student scores 100, the score added will be 40%*100 = 40. Similar calculations will be done for other parameters and added to the weighted score</dd>
+			<dt class="query">Why do we use a weighted score?</dt>
+			<dd class="response">A student can have many achievements on Mindspark. Some may attempt questions accurately, some may complete all topics with diligence, and so on. We thus have more than one parameter on which a student's achievement needs to be judged. To provide a single score finally, all the individual parameter scores need to be weighted. These weights can be modified by the school</dd>
+			<dt class="query">What parameters have been chosen and why?</dt>
+			<dd class="response">Mindspark performance report seeks to measure the proficiency as well as diligence of the student. For measuring proficiency, two parameters - accuracy and badges earned has been chosen. For measuring diligence, two parameters - weekly usage and topic completion have been chosen.
+			<br>
+			<p class="score_formula">The weighted score is arrived at as (accuracy score x accuracy weight + badges score x badges weight + Topic completion score x Topic Completion weight + Weekly usage score x Weekly usage weight)</p></dd>
+			<dt class="query">How can I use this score?</dt>
+			<dd class="response">This score is indicative of the student's performance on Mindspark, the parameters where the student is doing relatively better and parameters which require improvement. Usage of this score by the school is as per discretion of the school.</dd>
+		</dl>
+	</section>
+</li>

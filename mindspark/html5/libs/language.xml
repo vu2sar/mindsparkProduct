@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<application>
+	<english>
+		<numerals>
+			<numeral name="1" text="1"/>		
+			<numeral name="2" text="2"/>		
+			<numeral name="3" text="3"/>		
+			<numeral name="4" text="4"/>		
+			<numeral name="5" text="5"/>		
+			<numeral name="6" text="6"/>		
+			<numeral name="7" text="7"/>		
+			<numeral name="8" text="8"/>		
+			<numeral name="9" text="9"/>		
+			<numeral name="0" text="0"/>		
+		</numerals>
+	</english>
+	<hindi>
+		<numerals>
+			<numeral name="1" text="१"/>		
+			<numeral name="2" text="२"/>		
+			<numeral name="3" text="३"/>		
+			<numeral name="4" text="४"/>		
+			<numeral name="5" text="५"/>		
+			<numeral name="6" text="६"/>		
+			<numeral name="7" text="७"/>		
+			<numeral name="8" text="८"/>		
+			<numeral name="9" text="९"/>		
+			<numeral name="0" text="०"/>		
+		</numerals>
+	</hindi>
+</application>

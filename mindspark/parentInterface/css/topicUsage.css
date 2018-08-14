@@ -1,0 +1,144 @@
+#home {
+	border-bottom: 1px solid #FAAC1B;
+}
+
+#container {
+	border-top: 1px solid #FAAC1B;
+	border-bottom: 1px solid #FAAC1B;
+	border-left: 1px solid #FAAC1B;
+}
+
+#headerBar{
+	width:92%;
+	border-bottom:1px solid #626161;
+	height: 50px;
+	margin-left: 40px;
+}
+
+#pageText{
+	font-size:1.4em;
+	height:30px;
+	margin-top:20px;
+	color:#626161;
+	margin-left:10px;
+	float:left;
+	font-weight:bold;
+}
+
+.arrow-black {
+	width: 0; 
+	height: 0;
+	margin-top:25px;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 6px solid #626161;
+	float:left;
+}
+.arrow-black1 {
+	width: 0; 
+	height: 0;
+	margin-top:25px;
+	margin-left:14%;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 6px solid #626161;
+	float:left;
+}
+
+#classText{
+	font-size:1.35em;
+	height:30px;
+	margin-top:20px;
+	color:#7E7E7E;
+	margin-left:10px;
+	float:left;
+	font-weight:bold;
+}
+
+
+
+
+#childDetails{
+	font-size:1.4em;
+	width:92%;
+	border-bottom:1px solid #626161;
+	padding-top:3px;
+	padding-bottom:23px;
+	color:#7E7E7E;
+	margin-left:40px;
+}
+
+
+
+
+.smallCircle{
+	width:10px;
+	height:10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+	border-radius: 5px;
+	background-color:white;
+	border:1px solid black;
+	float:left;
+	margin-left:-4px;
+	margin-top:-11px;
+}
+
+.heading{
+	font-size:1.4em;
+	margin-top:10px;
+	padding-bottom:10px;
+	margin-left:1%;
+	border-bottom :1px solid black;
+}
+
+.red{
+	background-color:#E75903;
+	width:12px;
+	height:12px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius:6px;
+	border-radius: 6px;
+	margin-top:-13px;
+}
+
+.textRed{
+	color:#E75903;
+	font-weight:bold;
+}
+
+.pointer{
+	cursor:pointer;
+}
+
+
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #000;
+	border-collapse: collapse;
+}
+.header {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #000;
+	background-color: #E6E6E6;
+	font-weight:bold;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #000;
+	background-color: #E6E6E6;
+}
+
+.gridtable{
+	background-color:#E6E6E6;
+	margin-left:40px;
+	width:92%;
+}
+

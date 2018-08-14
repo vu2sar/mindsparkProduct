@@ -1,0 +1,56 @@
+body{
+	background: #6d6e71; /* Old browsers */
+	background: -moz-linear-gradient(top,  #6d6e71 1%, #e8e8e8 75%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#6d6e71), color-stop(75%,#e8e8e8), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #6d6e71 1%,#e8e8e8 75%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #6d6e71 1%,#e8e8e8 75%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #6d6e71 1%,#e8e8e8 75%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #6d6e71 1%,#e8e8e8 75%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6e71', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	background-repeat: no-repeat;
+}
+
+#gradientSparkie{
+	background: #E8E8E7 !important;
+}
+
+.afterSparkie{
+	background-color:#c2c9d2 !important;
+}
+
+#continueText{
+	color:#fff;
+}
+
+#continueButtonDiv{
+	color:#fff;
+	border: 1px solid #fff;
+}
+
+#lastSessionText{
+	color:#fff;
+}
+
+#childNameDiv{
+	color:#fff;
+}
+.class{
+	color:#fff;
+}
+#continueEmot {
+	background: url('../../../assets/rewards/continue_arrow_white.png') no-repeat 0px 0px;
+	width: 34px;
+}
+
+.topicProgressDivFocus{
+	background-color: #58595B;
+
+}
+
+.topicNameFocus{
+	color:#fff;
+}
+.studentDashboardTopicHeaderBg
+{
+	background-color: #939496 !important;
+}

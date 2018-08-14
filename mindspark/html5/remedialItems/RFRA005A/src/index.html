@@ -1,0 +1,71 @@
+<!DOCTYPE HTML >
+<html>
+<head>
+<title> XYZ </title>
+<link rel="stylesheet" type="text/css" href="../css/css.css">
+<script type="text/javascript" src="../../../libs/loadxmldoc.js"></script>
+<script type="text/javascript" src="../../../libs/jquery.js"></script>
+<script type="text/javascript" src="../../../libs/jquery_ui.js"></script>
+<script type="text/javascript" src="../../../libs/jquery_ui_touch.js"></script>
+<script type="text/javascript" src="../../../libs/common.js"></script>
+<script type="text/javascript" src="../../../libs/jcanvas.min.js"></script>
+<script type="text/javascript" src="../libs/script.js"></script>
+<script type="text/javascript" src="../../../libs/parameterPassing.js"></script>
+<script type="text/javascript" src="../../../libs/PxLoader.js"></script>
+<script type="text/javascript" src="../../../libs/PxLoaderImage.js"></script>
+<script>
+    var getParameters = getURLParameters();
+    if(typeof getParameters['numberLanguage']=="undefined") numberLanguage = 'english'; else numberLanguage = getParameters['numberLanguage'];
+</script>
+</head>
+
+<body onresize="resize();" onload="resize();">
+	
+	<div id="PreLoader">
+		<span id="LoadingText">Loading...</span>
+		<img id="LoadingImg"  src="../../../assets/loader.gif" alt="loader">
+	</div>
+	 <div id="landingPage">
+		<div id="levelButtons"></div>
+	</div>
+	<div id="mainDiv">
+				
+		<div id="screenDiv1" class="screenDiv">
+			<div id="t1"></div>	
+			<div id="q1"></div>
+			<div id="avatarContainer">
+				<div id="avatar1" class="avatar" val="1"></div>
+				<div id="avatar2" class="avatar" val="2"></div>
+				<div id="avatar3" class="avatar" val="3"></div>
+				<div id="avatar4" class="avatar" val="4"></div>
+				<div id="avatar5" class="avatar" val="5"></div>
+				<div id="avatar6" class="avatar" val="6"></div>
+				<div id="avatar7" class="avatar" val="7"></div>
+				<div id="avatar8" class="avatar" val="8"></div>
+			</div>
+			<input id="n1" type="text" class="nameInput" maxlength=6></input>
+			<input id="n2" type="text" class="nameInput" maxlength=6></input>
+			<div id="start"></div>
+		</div>
+		
+		<div id="screenDiv2" class="screenDiv">		
+		</div>
+		
+		<div id="screenDiv3" class="screenDiv">
+		</div>
+		
+		<div id="screenDiv4" class="screenDiv">
+		</div>
+
+	</div>
+    <div id="screenModal">
+			<div class="promptContainer">
+	            <div id="sparkieIcon"></div>
+	            <div class="promptText"></div>
+	            <div class="button" id="OK">OK</div>
+	            
+	        </div>	
+		</div>
+	
+</body>
+</html>

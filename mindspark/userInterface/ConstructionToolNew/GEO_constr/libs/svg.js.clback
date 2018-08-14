@@ -1,0 +1,333 @@
+var Points=new Array();
+var compassState="off";
+var compPos={};
+var params = {};
+
+var pointb=1;// - (default value 1), 1 to make the Add Point button visible, 0 to remove it
+var compassb=1;// - (default value 1), 1 to make the Show Compass button visible, 0 to remove it
+var protractorb=1;// - (default value 1), 1 to make the Show Protractor button visible, 0 to remove it
+var rulerb=1;// - (default value 1), 1 to make the Show Ruler button visible, 0 to remove it
+var undob=1;// - (default value 1), 1 to make the Undo button visible, 0 to remove it
+var prString="POINT[Z,324,240];POINT[A,24,240];JOIN[A,Z];POINT[M,45,200];POINT[N,435,340];JOIN[M,N];INTERSECTLL[AZ,MN,R];ARC[A,4,-60,-90,arcP];ARC[M,4,-60,-90,arcQ];INTERSECTAA[arcQ,arcP,G]"// - (default value "POINT[Z,324,240];POINT[A,24,240];JOIN[A,Z];POINT[M,45,200];POINT[N,435,340];JOIN[M,N];INTERSECTLL[AZ,MN,R];ARC[A,4,-60,-90,arcP];ARC[M,4,-60,-90,arcQ];INTERSECTAA[arcQ,arcP,G]", Enter the urlencoded list of commands to make your construction, two commands separated by a semicolon. 
+var CommandsA = [];
+var reps=0;
+
+$(function(){
+	document.addEventListener("touchstart", touchHandler, true);
+    document.addEventListener("touchmove", touchHandler, true);
+    document.addEventListener("touchend", touchHandler, true);
+    document.addEventListener("touchcancel", touchHandler, true);
+	geometry.init();
+});
+
+function touchHandler(event)
+{
+    var touches = event.changedTouches,
+        first = touches[0],
+        type = "";
+         switch(event.type)
+    {
+        case "touchstart": type = "mousedown"; break;
+        case "touchmove":  type="mousemove"; break;        
+        case "touchend":   type="mouseup"; break;
+        case "touchcancel":   type="mouseup"; break;
+        default: return;
+    }
+
+             //initMouseEvent(type, canBubble, cancelable, view, clickCount, 
+    //           screenX, screenY, clientX, clientY, ctrlKey, 
+    //           altKey, shiftKey, metaKey, button, relatedTarget);
+	
+    var simulatedEvent = document.createEvent("MouseEvent");
+    simulatedEvent.initMouseEvent(type, true, true, window, 1, 
+                              first.screenX, first.screenY, 
+                              first.clientX, first.clientY, false, 
+                              false, false, false, 0/*left*/, null);
+
+    first.target.dispatchEvent(simulatedEvent);
+    //event.preventDefault();
+}
+
+var IntervalID = setInterval(delay, 1500);
+function delay(n){
+	if(reps == CommandsA.length){
+		clearInterval(IntervalID);	//When all reps done, the 500 ms intervals are not generated
+		reStartBtn._visible=true;
+	}
+	else{
+		parseP(CommandsA[reps]);
+		reps++;
+	}
+}
+
+function parseP(comString){
+	var pString=comString;
+
+	console.log("parsing....."+pString);
+	var l1=pString.indexOf("POINT[",0);
+	if (l1>=0){
+		//console.log("....found point at "+l1);
+		l1=l1+5;
+		var params1=pString.substring((l1+1),pString.indexOf("]",l1));
+		//var Mat=params1.match(",");console.log(Mat);
+		var pArray=params1.split(",");
+		//console.log (pArray);
+		//console.log(pArray.length);
+		if (pArray.length==1){
+			newPoint(pArray[0],$('#canvasBackground').attr('width')/2,$('#canvasBackground').attr('height')/2,1,1);
+		}else if (pArray.length==3){
+			newPoint(pArray[0],Number(pArray[1]),Number(pArray[2]),1,1);
+		}else if (pArray.length==4){
+			newPoint(pArray[0],Number(pArray[1]),Number(pArray[2]),Number(pArray[3]),1);
+		}else if (pArray.length==5){
+			newPoint(pArray[0],Number(pArray[1]),Number(pArray[2]),Number(pArray[3]),Number(pArray[4]));
+		}
+	}
+	
+	var l1=pString.indexOf("JOIN[",0);
+	if (l1>=0){
+		//console.log("....found join at "+l1);
+		l1=l1+4;
+		var params1=pString.substring((l1+1),pString.indexOf("]",l1));
+		//var Mat=params1.match(",");console.log(Mat);
+		var pArray=params1.split(",");
+		//console.log (pArray);
+		//console.log(pArray.length);
+		if (pArray.length==2){
+			p1=findA(pArray[0],"p")+1;
+			p2=findA(pArray[1],"p")+1;
+			namL=pArray[0]+pArray[1];
+		}else if(pArray.length==3){
+			p1=findA(pArray[0],"p")+1;
+			p2=findA(pArray[1],"p")+1;
+			namL=pArray[2];
+		}
+		//console.log(p1+"  "+p2+"  "+namL);
+		
+		drLP.xref=eval("P"+p1)._x;drLP.yref=eval("P"+p1)._y;drLP.namTL=namL;
+		//console.log(drLP._x+"   "+drLP._y);
+		difx=eval("P"+p2)._x-eval("P"+p1)._x;dify=eval("P"+p2)._y-eval("P"+p1)._y;
+		//console.log(difx+"  "+dify+"  "+namL);
+		_root.lineNum++;drLP.play();
+	}
+	
+	var l1=pString.indexOf("LINE[",0);
+	if (l1>=0){
+		//console.log("....found line at "+l1);
+		l1=l1+4;
+		var params1=pString.substring((l1+1),pString.indexOf("]",l1));
+		//var Mat=params1.match(",");console.log(Mat);
+		var pArray=params1.split(",");
+		//console.log (pArray);
+		//console.log(pArray.length);
+		if (pArray.length==3){
+			p1=findA(pArray[0],"p")+1;
+			dist=Number(pArray[1]);
+			angl=Number(pArray[2]);
+			namL="line"+p1;
+		}else if(pArray.length==4){
+			p1=findA(pArray[0],"p")+1;
+			dist=Number(pArray[1]);
+			angl=Number(pArray[2]);
+			namL=pArray[3];
+		}
+		//console.log(p1+"  "+dist+"  "+angl+"  "+namL);
+		
+		
+		drLP.xref=eval("P"+p1)._x;drLP.yref=eval("P"+p1)._y;drLP.namTL=namL;
+
+		difx=Math.sin((90-angl)*Math.PI/180)*dist*ScaleX;dify=-Math.cos((90-angl)*Math.PI/180)*dist*ScaleX;
+		//console.log(difx+"  "+dify+"  "+namL);
+		_root.lineNum++;drLP.play();
+	}
+	
+	l1=pString.indexOf("ARC[",0);//console.log(l1);
+	if (l1>=0){
+		//console.log("....found arc at "+l1);
+		l1=l1+3;
+		var params1=pString.substring((l1+1),pString.indexOf("]",l1));
+		//var Mat=params1.match(",");console.log(Mat);
+		var pArray=params1.split(",");
+		
+		//console.log (pArray);
+		//console.log(pArray.length);
+		if (pArray.length==2){
+			p1=findA(pArray[0],"p")+1;
+			
+			Sangl=0;
+			Tangl=360;
+			namL="circle"+pArray[0];
+		}else if (pArray.length==4){
+			p1=findA(pArray[0],"p")+1;
+			
+			Sangl=Number(pArray[2]);
+			Tangl=Number(pArray[3]);
+			namL="arc"+Math.round(Sangl)+Math.round(Tangl);
+		}else if(pArray.length==5){
+			p1=findA(pArray[0],"p")+1;
+			
+			Sangl=Number(pArray[2]);
+			Tangl=Number(pArray[3]);
+			namL=pArray[4];
+		}
+		if (!Number(pArray[1])){
+			p2=findA(pArray[1],"p")+1;
+			p2l=findA(pArray[1],"l");
+			p2a=findA(pArray[1],"a");
+			p2sp=pArray[1].split("-");p2s1=findA(p2sp[0],"p")+1;p2s2=findA(p2sp[1],"p")+1;
+			//console.log("p2sp.."+p2sp);console.log("p2s1.."+p2s1);console.log("p2s2.."+p2s2);
+			if (p2!=0){
+				difx=eval("P"+p2)._x-eval("P"+p1)._x;dify=eval("P"+p2)._y-eval("P"+p1)._y;
+				radi=Math.sqrt(difx*difx+dify*dify)/ScaleX;
+			}else if (p2l!=-1){
+				lins1=LineData[p2l];lk1=lins1.split(",");
+				difx=lk1[0]-lk1[2];dify=k1[1]-lk1[3];
+				radi=Math.sqrt(difx*difx+dify*dify)/ScaleX;
+			}else if (p2a!=-1){
+				lins1=ArcData[p2l];lk1=lins1.split(",");
+				radi=lk1[2];
+			}else if (p2sp.length>1){
+				difx=eval("P"+p2s1)._x-eval("P"+p2s2)._x;dify=eval("P"+p2s1)._y-eval("P"+p2s2)._y;
+				radi=Math.sqrt(difx*difx+dify*dify)/ScaleX;
+			}
+		}else{
+			radi=Number(pArray[1]);
+		}
+		//console.log("radi...."+radi);
+		drAP._x=eval("P"+p1)._x;drAP._y=eval("P"+p1)._y;
+		
+		drAP.Arc(radi,-Sangl,Tangl,namL);
+	}
+	
+	l1=pString.indexOf("INTERSECTLL[",0);//console.log(l1);
+	if (l1>=0){
+		//console.log("....found Intersect at "+l1);
+		l1=l1+11;
+		var params1=pString.substring((l1+1),pString.indexOf("]",l1));
+		//var Mat=params1.match(",");console.log(Mat);
+		var pArray=params1.split(",");
+		
+		//console.log (pArray);
+		//console.log(pArray.length);
+		var a1=new Object;		var a2=new Object;		var a3=new Object;		var a4=new Object;
+		var lk1;var lk2;
+		var showL=0;
+		if (pArray[pArray.length]=="-1" || pArray[pArray.length]=="-0"){
+			if (pArray[pArray.length]=="-1") showL=1;
+			else showL=0;
+			console.log(pArray.pop());
+		}else{
+			showL=1;
+		}
+		if (pArray.length<=3){
+			if (pArray.length==2){
+				pl1=findA(pArray[0],"l");
+				pl2=findA(pArray[1],"l");
+				lins1=LineData[pl1];lk1=lins1.split(",");
+				lins2=LineData[pl2];lk2=lins2.split(",");
+				
+				naml="pt"+p;
+			}else if (pArray.length==3){
+				pl1=findA(pArray[0],"l");//console.log(LineData);
+				pl2=findA(pArray[1],"l");//console.log(pl1+" ---- "+pl2);
+				lins1=LineData[pl1];lk1=lins1.split(",");//console.log(lins1+" ---- "+lk1);
+				lins2=LineData[pl2];lk2=lins2.split(",");//console.log(lins2+" ---- "+lk2);
+			
+				naml=pArray[2];
+			}
+			a1.x=lk1[0];a1.y=lk1[1];a2.x=lk1[2];a2.y=lk1[3];a3.x=lk2[0];a3.y=lk2[1];a4.x=lk2[2];a4.y=lk2[3];
+		}else {
+			if (pArray.length==4){
+				p1=findA(pArray[0],"p")+1;
+				p2=findA(pArray[1],"p")+1;
+				p3=findA(pArray[2],"p")+1;
+				p4=findA(pArray[3],"p")+1;
+				naml="pt"+p;
+			}else if (pArray.length==5){
+				p1=findA(pArray[0],"p")+1;
+				p2=findA(pArray[1],"p")+1;
+				p3=findA(pArray[2],"p")+1;
+				p4=findA(pArray[3],"p")+1;
+				naml=pArray[4];
+			}
+			a1.x=eval("P"+p1)._x;a1.y=eval("P"+p1)._y;			a2.x=eval("P"+p2)._x;a2.y=eval("P"+p2)._y;			a3.x=eval("P"+p3)._x;a3.y=eval("P"+p3)._y;			a4.x=eval("P"+p4)._x;a4.y=eval("P"+p4)._y;
+		}
+		
+		//console.log(("   "+p1v)+("   "+p2v)+("   "+p3v)+("   "+p4v));	
+		Intersect(a1,a2,a3,a4,naml,showL);	
+	}
+	
+	l1=pString.indexOf("INTERSECTLA[",0);//console.log(l1);
+	if (l1>=0){
+		//console.log("....found Intersect line-arc at"+l1);
+		l1=l1+11;
+		var params1=pString.substring((l1+1),pString.indexOf("]",l1));
+		//var Mat=params1.match(",");console.log(Mat);
+		var pArray=params1.split(",");
+		
+		//console.log (pArray);
+		//console.log(pArray.length);
+		var a1=new Object;		var a2=new Object;		
+		var a3=new Object;		var amin=new Object;		var amax=new Object;		
+		var a4;var a5;var a6;
+		var lk1;var lk2;
+		var showL=0;
+		if (pArray.length==4){ showL=pArray[3];console.log(pArray.pop());}
+		else if (pArray.length==3){ showL=1;}
+		if (pArray.length==3){
+			//if (pArray.length==3){
+				pl1=findA(pArray[0],"l");//console.log(LineData);
+				pl2=findA(pArray[1],"a");//console.log(pl1+" ---- "+pl2);
+				lins=LineData[pl1];lk1=lins.split(",");//console.log(lins+" ---- "+lk1);
+				arcs=ArcData[pl2];lk2=arcs.split(",");//console.log(arcs+" ---- "+lk2);
+			
+				naml=pArray[2];
+			//}
+			a1.x=Number(lk1[0]);a1.y=Number(lk1[1]);	a2.x=Number(lk1[2]);a2.y=Number(lk1[3]);	a3.x=Number(lk2[0]);a3.y=Number(lk2[1]);	
+			a4=lk2[2];a5=lk2[3];a6=lk2[4];
+		}
+		
+		//console.log(("   "+p1v)+("   "+p2v)+("   "+p3v)+("   "+p4v));	
+		Intersectla(a1,a2,a3,a4,a5,a6,naml,pl1,pl2,showL);	
+	}
+	
+	l1=pString.indexOf("INTERSECTAA[",0);//console.log(l1);
+	if (l1>=0){
+		//console.log("....found Intersect arc-arc at "+l1);
+		l1=l1+11;
+		var params1=pString.substring((l1+1),pString.indexOf("]",l1));
+		var pArray=params1.split(",");
+		//console.log (pArray);
+		//console.log(pArray.length);
+		var c1=new Object;var c2=new Object;var lk1=new Array();var lk2=new Array();
+		var P=new Object;
+		var showL=0;
+		if (pArray.length==4) {showL=pArray[3];console.log(pArray.pop());}
+		else if (pArray.length==3) {showL=1;}
+		if (pArray.length==3){
+				pl1=findA(pArray[0],"a");//console.log(LineData);
+				pl2=findA(pArray[1],"a");//console.log(pl1+" ---- "+pl2);
+				naml=pArray[2];
+				arc1=ArcData[pl1];lk1=arc1.split(",");//console.log(lk1+ "<>"+Number(lk1[0]));
+				arc2=ArcData[pl2];lk2=arc2.split(",");//console.log(lk2);
+				c1.x=Number(lk1[0]);				c1.y=Number(lk1[1]);				r1=Number(lk1[2])*ScaleX;
+				c2.x=Number(lk2[0]);				c2.y=Number(lk2[1]);				r2=Number(lk2[2])*ScaleX;
+				dist=Math.sqrt((c1.y-c2.y)*(c1.y-c2.y) + (c1.x-c2.x)*(c1.x-c2.x));
+				//console.log(dist+"    "+c1.x+"    "+c1.y+"    "+c2.x+"    "+c2.y);
+				if (dist>r1+r2) console.log("No Solutions  -the circles are separate");
+				if (dist<Math.abs(r1-r2)) console.log("No Solutions  -one circle is contained within the other");
+				if (dist==0) console.log("No Solutions  -cocentric circles");
+				if (dist<=(r1+r2)){
+					a = (r1*r1 - r2*r2 + dist*dist ) / (2*dist);
+					h = Math.sqrt(r1*r1 - a*a);
+					P.x=c1.x+a*(c2.x-c1.x)/dist;P.y=c1.y+a*(c2.y-c1.y)/dist;
+					if (dist==(r1+r2)){
+						plotP(P.x,P.y,naml,0,showL);
+					}else{
+						Intersectaa(c1,c2,P,pl1,pl2,naml,dist,h,showL);	
+					}
+					console.log("showL:"+showL);
+				}
+		}
+	}
+}

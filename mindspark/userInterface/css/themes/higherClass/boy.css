@@ -1,0 +1,151 @@
+body{	
+	background: url('../../../assets/rewards/themeBoy/BG_AllScreens.png');
+	background-color:#6D86A3;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+}
+
+#gradientSparkie{
+	background: #D2EBF0 !important;
+}
+
+.afterSparkie{
+	background-color:#c2c9d2 !important;
+}
+
+#topicProgressDiv {
+	background-color: rgba(0,0,0,0.3);
+}
+
+#leftInfo {
+	background-color: rgba(0,0,0,0.3);
+}
+
+#sideBar{
+	background-color: #646464;
+}
+
+#top_bar {
+width: 50%;
+border-bottom: 1px solid black;
+}
+
+.buttonView {
+background-color: #6E6F72;
+-webkit-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+-moz-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+}
+
+.buttonView1 {
+background-color: #6E6F72;
+-webkit-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+-moz-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+}
+
+#viewAllDivLowerClass {
+	background-color:#818285 !important;
+	-webkit-box-shadow: inset 0px 0px 0px #acacac;
+	-moz-box-shadow: inset 0px 0px 0px #acacac;
+	box-shadow: inset 0px 0px 0px #acacac;
+}
+
+#cssmenu .has-sub ul li a {
+	background-color: #FFF !important;
+}
+
+#continueText{
+	color:#D2D3D4;
+}
+
+#continueButtonDiv{
+	color:#D2D3D4;
+	border: 1px solid #D2D3D4;
+}
+
+#lastSessionText{
+	color:#fff;
+}
+
+#studentInfoLowerClass {
+	background-color: transparent;
+	border-bottom: 1px solid black;
+}
+
+#cssmenu a {
+	color: #D2D3D4;
+}
+
+#cssmenu > ul > li a {
+background-color: transparent !important;
+}
+
+#infoBarLeft {
+	color: #D2D3D4;
+}
+#continueEmot {
+	background: url('../../../assets/rewards/continue_arrow_gray.png') no-repeat 0px 0px;
+	width: 34px;
+}
+
+#drawer5Icon {
+	background: url('../../../assets/rewards/themeBoy/rewards.png') no-repeat 0 0;
+}
+#drawer6Icon {
+	background: url('../../../assets/rewards/themeBoy/notification.png') no-repeat 0 0;
+}
+
+#drawer4{
+	color:#fff;
+	border-bottom: 2px solid #fff;
+}
+
+#drawer5{
+	color:#7FA76E;
+	border-bottom: 0px;
+}
+
+#drawer6{
+	color:#7FA76E;
+}
+
+
+#topic_name {
+	color: #D2D3D4;
+}
+
+#session{
+	color: #D2D3D4;
+}
+
+#question_number{
+	color: #D2D3D4;
+}
+.arrow-a {
+	border-left: 4px solid #fff;
+}
+
+#correct_bar {
+	background-color: #F5E6C9;
+	color:#F15942;
+}
+
+#spnProgress1{
+	color :#F5E6C9;
+}
+
+.pieBackground {
+	background-color: #F15942;
+}
+.sessionColor {
+	color: #F15942;
+}
+
+
+
+#rewardsText {
+border-bottom: 1px solid #999999;
+}
+
+

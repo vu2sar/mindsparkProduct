@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application name="RFRA004C">
+<english>
+	<questions>
+		
+	</questions>
+	<prompts>
+		<prompt name="p101" text="Which of the following is equal to #question1# + #question2# ?" page="page1" voice=""/>
+		<prompt name="p102" text="Write the &lt;u&gt;equivalent fractions&lt;/u&gt; of #question1# and #question2# so that their denominators are the same." page="page1" voice=""/>
+		<prompt name="p103" text="Which of the following is equal to 1/5 + 1/10?" page="page1" voice=""/>
+		<prompt name="p104" text="#question1# = #input1#" page="page1" voice=""/>
+		<prompt name="p105" text="#question2# = #input2#" page="page1" voice=""/>
+		<prompt name="p106" text="#question1# = #input_1#" page="page1" voice=""/>
+		<prompt name="p107" text="#question2# = #input_2#" page="page1" voice=""/>
+		<prompt name="p108" text="#question1# = #ans1#" page="page1" voice=""/>
+		<prompt name="p109" text="#question2# = #ans2#" page="page1" voice=""/>
+		<prompt name="p110" text="Represent #question1# in the whole given by clicking on each part:" page="page1" voice=""/>
+		<prompt name="p111" text="Represent #question2# in the whole given by clicking on each part:" page="page1" voice=""/>
+		<prompt name="p112" text="Represent #selected# in the whole given by clicking on each part:" page="page1" voice=""/>
+		<prompt name="p113" text="Do you still think #question1# + #question2# = #selected# ?" page="page1" voice=""/>
+		
+		
+		
+		<prompt name="p201" text="Which of the following is equal to #question1# - #question2# ?" page="page1" voice=""/>
+		<prompt name="p202" text="Write the &lt;u&gt;equivalent fractions&lt;/u&gt; of #question1# and #question2# so that their denominators are the same." page="page1" voice=""/>
+		<prompt name="p203" text="Which of the following is equal to 1/5 + 1/10?" page="page1" voice=""/>
+		<prompt name="p204" text="#question1# = #input1#" page="page1" voice=""/>
+		<prompt name="p205" text="#question2# = #input2#" page="page1" voice=""/>
+		<prompt name="p206" text="#question1# = #input_1#" page="page1" voice=""/>
+		<prompt name="p207" text="#question2# = #input_2#" page="page1" voice=""/>
+		<prompt name="p208" text="#question1# = #ans1#" page="page1" voice=""/>
+		<prompt name="p209" text="#question2# = #ans2#" page="page1" voice=""/>
+		<prompt name="p210" text="Represent #question1# in the whole given by clicking on each part:" page="page1" voice=""/>
+		<prompt name="p211" text="Represent #question2# in the whole given by clicking on each part:" page="page1" voice=""/>
+		<prompt name="p212" text="Represent #selected# in the whole given by clicking on each part:" page="page1" voice=""/>
+		<prompt name="p213" text="Do you still think #question1# #sign# #question2# = #selected# ?" page="page1" voice=""/>
+		<prompt name="p214" text="#question1# #sign# #question2# is shown on the right.&lt;br&gt;Now compare #selected# and (#question1# + #question2#)." page="page1" voice=""/>
+		<prompt name="p215" text="They are found by multiplying the numerator and denominator of a fraction by the same number.&lt;br&gt; e.g. #fr1# = #fr2# = #fr3#. " page="page1" voice=""/>
+		
+	</prompts>
+		
+	
+	<instructions>
+		<instruction name="correct" text="Correct! Well done!" page="page1" voice=""/>
+		<instruction name="i101" text="Hmm..that's not correct! &lt;br&gt;The next few questions will help you solve the problem." page="page1" voice=""/>
+		<instruction name="i101a" text="Hmm..that's not correct!" page="page1" voice=""/>
+		<instruction name="i102" text="1/5 is 1 out of 5 equal parts!" page="page1" voice=""/>
+		<instruction name="i103" text="Try again!" page="page1" voice=""/>
+		<instruction name="i104" text="Hmm..the denominator is given for you.&lt;br&gt; Now try again!" page="page1" voice=""/>
+		<instruction name="i105" text="#question1# =#ans1#" page="page1" voice=""/>
+		<instruction name="i105a" text="#question2# =#ans2#" page="page1" voice=""/>
+		<instruction name="i105b" text="#question2# =#ans2#" page="page1" voice=""/>
+		<instruction name="i105c" text="#question1# #sign# #question2# = #ans1#" page="page1" voice=""/>
+		<instruction name="i105d" text="#question1# #sign# #question2# = #ans1# #sign# #ans2#" page="page1" voice=""/>	
+		<instruction name="i105e" text="#question1# #sign# #question2# = #ans1# #sign# #ans2# = #opt5#" page="page1" voice=""/>
+		<instruction name="i105f" text="#question1# =#exp1# =#ans1#" page="page1" voice=""/>
+		<instruction name="i105g" text="#question2# =#exp2# =#ans2#" page="page1" voice=""/>
+		<instruction name="i105h" text="#question2# =#ans2#" page="page1" voice=""/>
+		
+		<instruction name="i106" text="Now try the question again!" page="page1" voice=""/>
+		<instruction name="i107" text="See the explanation carefully." page="page1" voice=""/>
+		<instruction name="i108" text="Hmm..that's not correct!&lt;br&gt;Try the next activity to see why!" page="page1" voice=""/>
+		<instruction name="i109" text="2/15 is smaller than (1/5 + 1/10). &lt;br&gt;See the representations of the two fractions again.&lt;br&gt; OK to go back to the main question again!" page="page1" voice=""/>
+		<instruction name="i110" text="2/15 is smaller than (1/5 + 1/10).&lt;br&gt;See the representation of the two fractions again!&lt;br&gt;Press OK to go back to the main question again!" page="page1" voice=""/>
+		<instruction name="i111" text="Please give your answer in fractions. &lt;br&gt;Use '/' to write in fractions." page="page1" voice=""/>
+		<instruction name="i112" text="Make the denominator #deno# in both the fractions." page="page1" voice=""/> 
+		<instruction name="i112a" text="Make the denominator #deno# in both the fractions." page="page1" voice=""/>
+		<instruction name="i112c" text="Make the denominator #deno# in both the fractions." page="page1" voice=""/>
+		<instruction name="i113" text="#selected# is smaller than (#question1# + #question2#). &lt;br&gt;See the representations of the two fractions again! &lt;br&gt; Press OK to go back to the main question again!" page="page1" voice=""/>
+		<instruction name="i114" text="Please fill colour in the rectangle!!" page="page1" voice=""/>
+		<instruction name="i115" text="#question1# is #num1# out of #deno1# equal parts!&lt;br&gt;So we need to shade #num1# parts here." page="page1" voice=""/>
+		<instruction name="i115a" text="#question1# is #num1# out of #deno1# equal parts!&lt;br&gt;So we need to shade #num1# part here." page="page1" voice=""/>
+		<instruction name="i116" text="#question2# is #num2# out of #deno2# equal parts!&lt;br&gt;So we need to shade #num2# parts here." page="page1" voice=""/>
+		<instruction name="i116a" text="#question2# is #num2# out of #deno2# equal parts!&lt;br&gt;So we need to shade #num2# part here." page="page1" voice=""/>
+		<instruction name="i117" text="#selected# is #total1# out of #total2# equal parts!&lt;br&gt;So we need to shade #total1# parts here." page="page1" voice=""/>
+	
+	</instructions>
+		
+	<miscellaneous>
+		<misc name="next" text="Next" page="page1" voice=""/>
+		<misc name="ok" text="OK" page="page1" voice=""/>
+		<misc name="submit" text="Submit" page="page1" voice=""/>
+		<misc name="misc101" text="#opt1#" page="page1" voice=""/>
+		<misc name="misc102" text="#opt2#" page="page1" voice=""/>
+		<misc name="misc103" text="#opt3#" page="page1" voice=""/>
+		<misc name="misc104" text="#opt4#" page="page1" voice=""/>
+		<misc name="misc201" text="#opt1#" page="page1" voice=""/>
+		<misc name="misc202" text="#opt2#" page="page1" voice=""/>
+		<misc name="misc203" text="#opt3#" page="page1" voice=""/>
+		<misc name="misc204" text="#opt4#" page="page1" voice=""/>
+		<misc name="hint" text="Give me a hint!" page="page1" voice=""/>
+		<misc name="select" text="Please Select" page="page1" voice=""/>
+		<misc name="yes" text="Yes" page="page1" voice=""/>
+		<misc name="no" text="No" page="page1" voice=""/>
+		<misc name="notsure" text="Not sure" page="page1" voice=""/>
+		<misc name="replay" text="Replay" page="page1" voice=""/>
+		<misc name="enter" text="Press enter to submit the answer." page="page1" voice=""/>
+	
+	</miscellaneous>
+</english>
+<hindi>
+</hindi>
+<gujarati>
+<questions>
+
+</questions>
+<prompts>
+<prompt name="p101" text="નીચેનામાંથી #question1# + #question2# ને બરાબર શું છે?" page="page1" voice=""/>
+<prompt name="p102" text="#question1# અને #question2# ના &lt;u&gt; સમ અપૂર્ણાંક લખો.&lt;/u&gt; કે જેથી તેમના છેદ સરખા થાય." page="page1" voice=""/>
+<prompt name="p103" text="નીચેનામાંથી 1/5 + 1/10 ને બરાબર શું થાય?" page="page1" voice=""/>
+<prompt name="p104" text="#question1# = #input1#" page="page1" voice=""/>
+<prompt name="p105" text="#question2# = #input2#" page="page1" voice=""/>
+<prompt name="p106" text="#question1# = #input_1#" page="page1" voice=""/>
+<prompt name="p107" text="#question2# = #input_2#" page="page1" voice=""/>
+<prompt name="p108" text="#question1# = #ans1#" page="page1" voice=""/>
+<prompt name="p109" text="#question2# = #ans2#" page="page1" voice=""/>
+<prompt name="p110" text="દરેક ભાગ પર ક્લિક કરતા જઈ#question1# ને આખા ભાગમાં દર્શાવો:" page="page1" voice=""/>
+<prompt name="p111" text=" દરેક ભાગ પર ક્લિક કરતા જઈ #question2# ને આખા ભાગમાં દર્શાવો:" page="page1" voice=""/>
+<prompt name="p112" text=" દરેક ભાગ પર ક્લિક કરતા જઈ #selected# ને આખા ભાગમાં દર્શાવો:" page="page1" voice=""/>
+<prompt name="p113" text="શું તમે હજી માનો છો કે, #question1# + #question2# = #selected#?" page="page1" voice=""/>
+
+
+
+<prompt name="p201" text="નીચેનામાંથી #question1# - #question2# ને બરાબર શું છે?" page="page1" voice=""/>
+<prompt name="p202" text="#question1# અને #question2# &lt;u&gt; નો સમ અપૂર્ણાંક લખો&lt;/u&gt; કે જેથી તેમના છેદ સરખા થાય." page="page1" voice=""/>
+<prompt name="p203" text="નીચેનામાંથી 1/5 + 1/10 ને બરાબર શું થાય?" page="page1" voice=""/>
+<prompt name="p204" text="#question1# = #input1#" page="page1" voice=""/>
+<prompt name="p205" text="#question2# = #input2#" page="page1" voice=""/>
+<prompt name="p206" text="#question1# = #input_1#" page="page1" voice=""/>
+<prompt name="p207" text="#question2# = #input_2#" page="page1" voice=""/>
+<prompt name="p208" text="#question1# = #ans1#" page="page1" voice=""/>
+<prompt name="p209" text="#question2# = #ans2#" page="page1" voice=""/>
+<prompt name="p210" text=" દરેક ભાગ પર ક્લિક કરતા જઈ #question1# ને આખા ભાગમાં દર્શાવો:" page="page1" voice=""/>
+<prompt name="p211" text=" દરેક ભાગ પર ક્લિક કરતા જઈ #question2# ને આખા ભાગમાં દર્શાવો:" page="page1" voice=""/>
+<prompt name="p212" text=" દરેક ભાગ પર ક્લિક કરતા જઈ #selected# ને આખા ભાગમાં દર્શાવો:" page="page1" voice=""/>
+<prompt name="p213" text="શું તમે હજી માનો છો કે #question1# #sign# #question2# = #selected# ?" page="page1" voice=""/>
+<prompt name="p214" text="#question1# #sign# #question2# ને જમણી બાજુ બતાવેલ છે.&lt;br&gt; હવે,#selected# અને (#question1# + #question2#) ની સરખામણી કરો." page="page1" voice=""/>
+<prompt name="p215" text="અપૂર્ણાંકના અંશ અને છેદ બંનેને એક સરખી સંખ્યા વડે ગુણીને આ શોધી શકાય.&lt;br&gt; દા.ત. #fr1# = #fr2# = #fr3#. " page="page1" voice=""/>
+
+</prompts>
+
+
+<instructions>
+<instruction name="correct" text="સાચું! ખૂબ સરસ!" page="page1" voice=""/>
+<instruction name="i101" text="હમ્મ..આ સાચું નથી! &lt;br&gt;આગળના કેટલાક સવાલ આનો ઉકેલ શોધવામાં મદદ કરશે." page="page1" voice=""/>
+<instruction name="i101a" text=" હમ્મ..આ સાચું નથી!" page="page1" voice=""/>
+<instruction name="i102" text="1/5 એટલે 5 સરખા ભાગમાંથી 1 ભાગ!" page="page1" voice=""/>
+<instruction name="i103" text="ફરી કરો!" page="page1" voice=""/>
+<instruction name="i104" text=" હમ્મ..તમારા માટે છેદ આપેલ છે.&lt;br&gt; હવે ફરી કરો." page="page1" voice=""/>
+<instruction name="i105" text="#question1# =#ans1#" page="page1" voice=""/>
+<instruction name="i105a" text="#question2# =#ans2#" page="page1" voice=""/>
+<instruction name="i105b" text="#question2# =#ans2#" page="page1" voice=""/>
+<instruction name="i105c" text="#question1# #sign# #question2# = #ans1#" page="page1" voice=""/>
+<instruction name="i105d" text="#question1# #sign# #question2# = #ans1# #sign# #ans2#" page="page1" voice=""/> 
+<instruction name="i105e" text="#question1# #sign# #question2# = #ans1# #sign# #ans2# = #opt5#" page="page1" voice=""/>
+<instruction name="i105f" text="#question1# =#exp1# =#ans1#" page="page1" voice=""/>
+<instruction name="i105g" text="#question2# =#exp2# =#ans2#" page="page1" voice=""/>
+<instruction name="i105h" text="#question2# =#ans2#" page="page1" voice=""/>
+
+<instruction name="i106" text="હવે ફરીથી સવાલ કરો!" page="page1" voice=""/>
+<instruction name="i107" text="સમજૂતીને ધ્યાનથી જુઓ." page="page1" voice=""/>
+<instruction name="i108" text=" હમ્મ..આ સાચું નથી!&lt;br&gt; શા માટે નથી તે જોવા આગળની પ્રવૃત્તિ કરો!" page="page1" voice=""/>
+<instruction name="i109" text="2/15 એ (1/5 + 1/10) કરતાં નાની સંખ્યા છે. &lt;br&gt; બંને અપૂર્ણાંકની રજૂઆતને ફરીથી જુઓ.&lt;br&gt; મૂળ સવાલ પર ફરી જવા ઓકે દબાવો!" page="page1" voice=""/>
+<instruction name="i110" text="2/15 એ (1/5 + 1/10) કરતાં નાની સંખ્યા છે.&lt;br&gt; બંને અપૂર્ણાંકની રજૂઆતને ફરીથી જુઓ!&lt;br&gt; મૂળ સવાલ પર ફરી જવા ઓકે દબાવો!" page="page1" voice=""/>
+<instruction name="i111" text="તમારો જવાબ અપૂર્ણાંકમાં આપો. &lt;br&gt; અપૂર્ણાંકમાં લખવા માટે  '/' નો ઉપયોગ કરો." page="page1" voice=""/>
+<instruction name="i112" text="બંને અપૂર્ણાંકમાં છેદમાં #deno# લાવો." page="page1" voice=""/> 
+<instruction name="i112a" text="બંને અપૂર્ણાંકમાં છેદમાં #deno# લાવો." page="page1" voice=""/>
+<instruction name="i112c" text=" બંને અપૂર્ણાંકમાં છેદમાં #deno# લાવો." page="page1" voice=""/>
+<instruction name="i113" text="#selected# એ  (#question1# + #question2#) કરતાં નાની સંખ્યા છે.&lt;br&gt; બંને અપૂર્ણાંકની રજૂઆતને ફરીથી જુઓ! &lt;br&gt; મૂળ સવાલ પર ફરી જવા ઓકે દબાવો!" page="page1" voice=""/>
+<instruction name="i114" text="લંબચોરસમાં રંગ ભરો!" page="page1" voice=""/>
+<instruction name="i115" text="#question1# એટલે #deno1# સરખા ભાગમાંથી #num1# ભાગ!&lt;br&gt; તેથી આપણે અહીં #num1# ભાગને ઘાટો/રંગીન કરવો પડે." page="page1" voice=""/>
+<instruction name="i115a" text="#question1# એટલે #deno1# સરખા ભાગમાંથી #num1# ભાગ!&lt;br&gt; તેથી આપણે અહીં #num1# ભાગને ઘાટો/રંગીન કરવો પડે." page="page1" voice=""/>
+<instruction name="i116" text="#question2# એટલે #deno2# સરખા ભાગમાંથી #num2# ભાગ!&lt;br&gt;તેથી આપણે અહીં #num2# ભાગને ઘાટો/રંગીન કરવો પડે." page="page1" voice=""/>
+<instruction name="i116a" text="#question2# એટલે #deno2# સરખા ભાગમાંથી #num2# ભાગ!&lt;br&gt; તેથી આપણે અહીં #num2# ભાગને ઘાટો/રંગીન કરવો પડે." page="page1" voice=""/>
+<instruction name="i117" text="#selected# એટલે #total2# સરખા ભાગમાંથી #total1# ભાગ!&lt;br&gt; તેથી આપણે અહીં #total1# ભાગને ઘાટો/રંગીન કરવો પડે." page="page1" voice=""/>
+
+</instructions>
+
+<miscellaneous>
+<misc name="next" text="આગળ" page="page1" voice=""/>
+<misc name="ok" text="ઓકે" page="page1" voice=""/>
+<misc name="submit" text="જમા કરો" page="page1" voice=""/>
+<misc name="misc101" text="#opt1#" page="page1" voice=""/>
+<misc name="misc102" text="#opt2#" page="page1" voice=""/>
+<misc name="misc103" text="#opt3#" page="page1" voice=""/>
+<misc name="misc104" text="#opt4#" page="page1" voice=""/>
+<misc name="misc201" text="#opt1#" page="page1" voice=""/>
+<misc name="misc202" text="#opt2#" page="page1" voice=""/>
+<misc name="misc203" text="#opt3#" page="page1" voice=""/>
+<misc name="misc204" text="#opt4#" page="page1" voice=""/>
+<misc name="hint" text="મને hint આપો!" page="page1" voice=""/>
+<misc name="select" text="પસંદ કરો" page="page1" voice=""/>
+<misc name="yes" text="હા" page="page1" voice=""/>
+<misc name="no" text="ના" page="page1" voice=""/>
+<misc name="notsure" text="ચોક્કસ નહીં" page="page1" voice=""/>
+<misc name="replay" text="ફરી રમો" page="page1" voice=""/>
+<misc name="enter" text="જવાબ લખ્યા પછી enter દબાવો." page="page1" voice=""/>
+
+</miscellaneous>
+
+</gujarati>
+</application>

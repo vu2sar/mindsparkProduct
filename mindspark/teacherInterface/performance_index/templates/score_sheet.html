@@ -1,0 +1,45 @@
+<table border="1" cellpadding="0" cellspacing="0">
+	<thead>
+		<tr style="text-align: center; font-weight: bold;">
+			<td style="background-color: #f8cbad;">Student Details</td>
+			<td style="background-color: #f8cbad;" colspan="2">Proficieny</td>
+			<td style="background-color: #f8cbad;" colspan="2">Discipline</td>
+			<td style="background-color: #f8cbad;"></td>
+		</tr>
+		<tr style="text-align: center; font-weight: bold;">
+			<td style="background-color: #f8cbad;">Student Name</td>
+			<td style="background-color: #f8cbad;">Accuracy</td>
+			<td style="background-color: #f8cbad;">Badges</td>
+			<td style="background-color: #f8cbad;">Consistency</td>
+			<td style="background-color: #f8cbad;">Topic Coverage</td>
+			<td style="background-color: #f8cbad;">MPI Score</td>
+		</tr>
+		<tr style="color: green; text-align: center; font-size: 0.8em; font-weight: bold;">
+			<td style="background-color: #f8cbad;"></td>
+			<td style="background-color: #f8cbad;">(Correct Q attempted/Total Q attempted)</td>
+			<td style="background-color: #f8cbad;">(Monthly Badges in Chosen Time Period)</td>
+			<td style="background-color: #f8cbad;">(No. of weeks as % of weeks in chosen time period)</td>
+			<td style="background-color: #f8cbad;">(% of Topics Completed of the total topics attempted)</td>
+			<td style="background-color: #f8cbad; vertical-align: middle;">Out of 100</td>
+		</tr>
+		<tr style="color: green; text-align: center; font-size: 0.8em; font-weight: bold;">
+			<td style="background-color: #f8cbad;"></td>
+			<td style="background-color: #f8cbad;">({{mpi.settings.weightages['Accuracy'] || 0}}% Weightage)</td>
+			<td style="background-color: #f8cbad;">({{mpi.settings.weightages['Badges'] || 0}}% Weightage)</td>
+			<td style="background-color: #f8cbad;">({{mpi.settings.weightages['Weekly Usage Score'] || 0}}% Weightage)</td>
+			<td style="background-color: #f8cbad;">({{mpi.settings.weightages['Topic Completion'] || 0}}% Weightage)</td>
+			<td style="background-color: #f8cbad;"></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="background-color: #d0d9db; width: 140px;">{{certificate.profile.first_name}} {{certificate.profile.last_name}}</td>
+			<td style="background-color: #d0d9db; text-align: right; width: 190px;">{{certificate.report.performance['Accuracy'] ? certificate.report.performance['Accuracy'].score : ''}}</td>
+			<td style="background-color: #d0d9db; text-align: right; width: 190px;">{{certificate.report.performance['Badges'] ? certificate.report.performance['Badges'].score : ''}}</td>
+			<td style="background-color: #d0d9db; text-align: right; width: 220px;">{{certificate.report.performance['Weekly Usage Score'] ? certificate.report.performance['Weekly Usage Score'].score : ''}}</td>
+			<td style="background-color: #d0d9db; text-align: right; width: 220px;">{{certificate.report.performance['Topic Completion'] ? certificate.report.performance['Topic Completion'].score : ''}}</td>
+			<td style="background-color: #d0d9db; text-align: right; width: 90px;">{{certificate.report.overview.total_score}}</td>
+			<input type="hidden" name="student_userID" class="student_userID" value="{{certificate.profile.userID}}" />
+		</tr>
+	</tbody>
+</table>

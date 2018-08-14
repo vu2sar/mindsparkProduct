@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'ChaparralPro-Regular';
+  src: url('ChaparralPro-Regular.eot?#iefix') format('embedded-opentype'),  url('ChaparralPro-Regular.otf')  format('opentype'),
+	     url('ChaparralPro-Regular.woff') format('woff'), url('ChaparralPro-Regular.ttf')  format('truetype'), url('ChaparralPro-Regular.svg#ChaparralPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

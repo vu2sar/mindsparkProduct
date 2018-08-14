@@ -1,0 +1,18 @@
+CREATE TABLE `api_session_extend` (
+	`id` INT(10) NOT NULL AUTO_INCREMENT,
+	`session_id` INT(10) NOT NULL DEFAULT '0',
+	`access_token` VARCHAR(50) NULL DEFAULT NULL,
+	`userID` MEDIUMINT(9) NULL DEFAULT NULL,
+	`lat` FLOAT NOT NULL DEFAULT '0',
+	`long` FLOAT NOT NULL DEFAULT '0',
+	`device_token` VARCHAR(250) NULL DEFAULT NULL,
+	`device_id` VARCHAR(150) NULL DEFAULT NULL,
+	`device_details` TEXT NOT NULL,
+	`device_type` VARCHAR(30) NOT NULL DEFAULT '',
+	`insert_time` DATETIME NULL DEFAULT NULL,
+	`last_modified_time` DATETIME NULL DEFAULT NULL,
+	PRIMARY KEY (`id`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;

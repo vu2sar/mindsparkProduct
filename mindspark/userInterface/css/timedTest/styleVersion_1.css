@@ -1,0 +1,11 @@
+#clock {
+	background-image:url(../../assets/clockV1.png);
+	width:70px;
+	height:70px;
+	margin-top: -87px;
+}
+#clockHand {
+	background-image:url(../../assets/clockHandV1.png);
+	width:70px;
+	height:70px;
+}

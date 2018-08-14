@@ -1,0 +1,332 @@
+#home {
+	border-bottom: 1px solid #E75903;
+}
+
+#container {
+	border-top: 1px solid #E75903;
+	border-bottom: 1px solid #E75903;
+	border-left: 1px solid #E75903;
+}
+
+#headerBar{
+	width:92%;
+	border-bottom:1px solid #626161;
+	height: 50px;
+margin-left: 40px;
+}
+
+.arrow-black {
+	width: 0; 
+	height: 0;
+	margin-top:25px;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 6px solid #626161;
+	float:left;
+}
+
+.arrow-black1 {
+	width: 0; 
+	height: 0;
+	margin-top:25px;
+	margin-left:14%;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 6px solid #626161;
+	float:left;
+}
+
+.pageText {
+	color: #e75903;
+	margin-left:20px;
+}
+
+.pageTitle {
+	margin-left: 20px;
+}
+
+#topicPageLink{
+	/*height: 30px;
+	width: 25%;*/
+	border-left: 1px solid #FAAC1B;
+	/*padding-top: 10px;*/
+	float: right;
+	font-weight: bold;
+	/*position: absolute;
+	margin-top: -113px;
+	margin-left: 70%;*/
+}
+
+hr {
+    display: block;
+    -webkit-margin-before: 0.1em;
+    -webkit-margin-after: 0.1em;
+}
+
+.resetPassword2{
+	background: url('../assets/common/resetpassword2.png') no-repeat -2px -2px;
+	width: 25px;
+	height: 25px;
+	margin-left:40px;
+	float:left;
+}
+
+
+#pageText{
+	font-size:1.4em;
+	height:30px;
+	margin-top:20px;
+	color:#626161;
+	margin-left:10px;
+	float:left;
+	font-weight:bold;
+}
+
+#classText{
+	font-size:1.35em;
+	height:30px;
+	margin-top:20px;
+	color:#7E7E7E;
+	margin-left:10px;
+	float:left;
+	font-weight:bold;
+}
+
+#trailContainer{
+	min-height:530px;
+	overflow-y:auto;
+	width:100%;
+}
+#questionContainer{
+	background-color:#E6E6E6;
+	margin-left:40px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	width:95%;
+}
+
+#childDetails{
+	font-size:1.3em;
+	width:92%;
+	border-bottom:1px solid #626161;
+	padding-top:3px;
+	padding-bottom:3px;
+	color:#7E7E7E;
+	margin-left:40px;
+}
+
+
+#pagingTable{
+	position:relative;
+	font-size:1.4em;
+	width:95%;
+	border-bottom:1px solid #626161;
+	padding-top:3px;
+	padding-bottom:3px;
+	font-weight:bold;
+	color:#626161;
+	margin-left:40px;
+}
+
+
+#pagingCircleLeft,#pagingCircleRight {
+	border: 1px solid #000;
+	-moz-border-radius: 20px;
+	-webkit-border-radius:20px;
+	border-radius: 20px;
+	width: 25px;
+	height: 25px;
+	float: right;
+	font-size: 1.2em;
+	text-align: center;
+	margin-top:5px;
+	cursor: pointer;
+}
+.pagingNos {
+	float: right;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	text-align: center;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+#pagingDiv{
+	margin-top:-10px;
+}
+
+
+.desk_block{
+	margin-left:5%;
+	font-size:1.2em;
+	color:#626161;
+}
+.question{
+	font-size:1.3em;
+	margin-left:1%;
+	background-color:white;
+	margin-right:1%;
+	-webkit-box-shadow: 0px 3px 2px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    0px 3px 2px rgba(50, 50, 50, 0.2);
+	box-shadow:         0px 3px 2px rgba(50, 50, 50, 0.2);
+	border-bottom:1px solid black;
+	margin-top:30px;
+	padding: 18px;
+}
+
+
+.option{
+	width: 25px;
+	font-weight:bold;
+	height: 25px;
+	color:black;
+	font-weight:bold;
+	float:left;
+}
+
+.optionCorrect{
+	color:orange;
+}
+
+.optionIncorrect{
+	background-color:#E75903;
+	color:white;
+}
+
+.title{
+	
+	padding-top:2px;
+	padding-right:10px;
+}
+
+.title1{
+	float: left;
+	padding-left:10%;
+	padding-right:10px;
+}
+
+.title2{
+	float: left;
+	padding-right:10px;
+}
+
+.block_header{
+	margin-top:20px;
+}
+
+.correctMark{
+	float:right;
+	background: url('../assets/studentTrail/response_correct.png') no-repeat 0 -1px;
+	width: 32px;
+	height: 31px;
+	margin:5px;
+}
+
+.smallCircle{
+	width:10px;
+	height:10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+	border-radius: 5px;
+	background-color:white;
+	border:1px solid black;
+	float:left;
+	margin-left:-4px;
+	margin-top:-11px;
+}
+
+.red{
+	background-color:#E75903;
+	width:12px;
+	height:12px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius:6px;
+	border-radius: 6px;
+	margin-top:-13px;
+}
+
+.textRed{
+	color:#E75903;
+	font-weight:bold;
+}
+
+.pointer{
+	cursor:pointer;
+}
+
+#download{
+	font-size:0.8em;
+	float: right;
+	margin-right:30px;
+	margin-top:5px;
+}
+
+#downloadImage{
+	float: right;
+	margin-right:5px;
+	background: url('../assets/common/doMindspark.png') no-repeat -1px -1px;
+	width: 26px;
+	height: 26px;
+}
+
+
+.setPosition{
+	width: 160px;
+	margin-left: 25px;
+	margin-top: 5px;
+}
+
+#setHeight{
+	height:30px;
+}
+
+.buttons{
+	
+	background-color: #2f99cb;
+	width: 90px;
+	height: 30px;
+	color: #FFFFFF;
+	font-size: 15px;
+	
+	
+}
+
+#container{
+	
+	/*font-size: 16px;*/
+}
+
+.contentTab{
+	padding-left: 15px;
+}
+
+.SelectTab{
+	padding-left:1%;
+}
+
+.cwa_ques{
+	margin-left: 4%;
+	float:left;
+}
+.ques_no {
+	margin-top:2%;
+	margin-left: 2%;
+	float:left;
+	border: 1px solid;
+	border-radius: 25px;
+	width: 25px;
+	height: 22px;
+	text-align: center;
+	padding-top: 4px;
+}
+
+@media (max-width: 1024px){
+	.setPosition {
+		width: 135px;
+		font-size: 0.8em;
+		margin-left: 18px;
+		margin-top: 8px;
+	}
+}
+

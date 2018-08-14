@@ -1,0 +1,481 @@
+html,body,div,p,span,canvas
+{
+	margin:0;
+	padding:0;
+}
+
+@font-face {
+	font-family:"Comic Sans MS";
+	font-size:16pt;
+	font-family:"Comic Sans MS";
+	src: url('../../../assets/comic.eot');
+    src: url('../../../assets/comic.eot?#iefix') format('embedded-opentype'),
+         url('../../../assets/comic.woff') format('woff'),
+         url('../../../assets/comic.ttf') format('truetype'),
+         url('../../../assets/comic.svg#webfont') format('svg');
+
+}
+
+::-webkit-scrollbar{width: 11px;} 
+::-webkit-scrollbar-track {	background-color:white; -webkit-box-shadow: inset 0 2px 6px rgba(0,0,0,0.3); -webkit-border-radius:0px; } 
+::-webkit-scrollbar-thumb{	background-color: silver; 	border-radius: 0px;} 
+::-webkit-scrollbar-thumb:vertical:hover{	background-color:grey;  }
+::-webkit-scrollbar-corner{	background-color: black;} 
+
+body 
+{	
+	background-repeat:no-repeat;
+	font-family:"Times New Roman";
+	font-size:14px;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none; 
+	overflow:hidden;
+}
+
+#loader 
+{
+	color:#FFFFFF;
+	width:800px;
+	height:600px;
+	background:#000000;
+}
+
+.textbox1
+{
+	
+}
+
+.ans
+{
+	
+}
+
+.greenBorder
+{
+	border:1px solid black;
+	-webkit-box-shadow:0px 0px 10px #088A08,0px 0px 10px #088A08,0px 0px 10px #088A08,0px 0px 10px #088A08 !important;
+	-moz-box-shadow:0px 0px 10px #088A08,0px 0px 10px #088A08,0px 0px 10px #088A08,0px 0px 10px #088A08 !important;
+	-ms-box-shadow:0px 0px 10px #088A08,0px 0px 10px #088A08,0px 0px 10px #088A08,0px 0px 10px #088A08 !important;
+	-o-box-shadow:0px 0px 10px #088A08,0px 0px 10px #088A08,0px 0px 10px #088A08,0px 0px 10px #088A08 !important;
+	box-shadow:0px 0px 10px #088A08,0px 0px 10px #088A08,0px 0px 10px #088A08,0px 0px 10px #088A08 !important;
+}
+
+.blueBorder
+{
+	border:1px solid black;
+	-webkit-box-shadow:0px 0px 10px #0080FF,0px 0px 10px #0080FF,0px 0px 10px #0080FF,0px 0px 10px #0080FF !important;
+	-moz-box-shadow:0px 0px 10px #0080FF,0px 0px 10px #0080FF,0px 0px 10px #0080FF,0px 0px 10px #0080FF !important;
+	-ms-box-shadow:0px 0px 10px #0080FF,0px 0px 10px #0080FF,0px 0px 10px #0080FF,0px 0px 10px #0080FF !important;
+	-o-box-shadow:0px 0px 10px #0080FF,0px 0px 10px #0080FF,0px 0px 10px #0080FF,0px 0px 10px #0080FF !important;
+	box-shadow:0px 0px 10px #0080FF,0px 0px 10px #0080FF,0px 0px 10px #0080FF,0px 0px 10px #0080FF !important;
+}
+
+.redBorder
+{
+	border:1px solid black;
+	-webkit-box-shadow:0px 0px 10px #FF0000,0px 0px 10px #FF0000,0px 0px 10px #FF0000,0px 0px 10px #FF0000 !important;
+	-moz-box-shadow:0px 0px 10px #FF0000,0px 0px 10px #FF0000,0px 0px 10px #FF0000,0px 0px 10px #FF0000 !important;
+	-ms-box-shadow:0px 0px 10px #FF0000,0px 0px 10px #FF0000,0px 0px 10px #FF0000,0px 0px 10px #FF0000 !important;
+	-o-box-shadow:0px 0px 10px #FF0000,0px 0px 10px #FF0000,0px 0px 10px #FF0000,0px 0px 10px #FF0000 !important;
+	box-shadow:0px 0px 10px #FF0000,0px 0px 10px #FF0000,0px 0px 10px #FF0000,0px 0px 10px #FF0000 !important;
+}
+
+#loader img {
+	margin-top:40%;
+}
+
+.green
+{
+	box-shadow:0px 0px 10px #00ff00,0px 0px 10px #00ff00,0px 0px 10px #00ff00,0px 0px 10px #00ff00;
+}
+
+#content
+{
+	overflow:auto;
+}
+
+#container 
+{ 
+	width:800px;
+	height:600px;
+	overflow:hidden;
+	-webkit-transform:scale(1);
+	-webkit-transform-origin : left top;
+	-moz-transform :scale(1);
+	-moz-transform-origin : left top;
+	-ms-transform :scale(1);
+	-ms-transform-origin : left top;
+	-o-transform :scale(1);
+	-o-transform-origin : left top;
+	transform :scale(1);
+	transform-origin : left top;
+}
+
+#loader 
+{
+	color:#FFFFFF;
+	width:800px;
+	height:600px;
+	background:#000000;
+}
+
+#loader img 
+{
+	margin-top:40%;
+}
+
+.background
+{
+	background-image:url(../assets/background.png);
+	width:800px;
+	height:600px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+#inst1
+{
+	position:relative;
+	margin-left:40px;
+	margin-top:20px;
+	font-size:13pt;
+	font-family:"Comic Sans MS";
+}
+
+.fraction1 
+{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top:40px;
+  float:left;
+}
+
+.fraction3
+{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin-left:0px;
+  margin-right:2px;
+  margin-top:40px;
+  float:left;
+  margin-left:0px;
+  height:50px;
+}
+
+.frac1
+{
+  line-height: 100%;
+  padding:2px; 	
+  margin-left:40px;
+  width:20px;
+  height:20px;
+  font-size:16pt;
+}
+.numerator1
+{
+  border-bottom:1px solid;
+  padding-bottom:5px;
+}
+
+.fraction2 
+{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 2px;
+  margin-top:49px;
+  float:left;
+  width:40px;
+}
+
+.fraction4
+{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 2px;
+  margin-top:48px;
+  width:52px; 
+  height:44px;
+}
+
+.frac2
+{
+  line-height: 100%;
+  padding:2px; 	
+  margin-left:15px;
+  width:20px;
+  height:15px;
+  font-size:15pt;
+}
+.numerator2
+{
+  width:50px;
+  border-bottom:1px solid;
+  margin-left:0px;
+}
+
+#equals
+{
+	position:relative;
+	margin-top:55px;
+	font-size:15pt;
+	margin-left:5px;
+	float:left;
+}
+
+#txt
+{
+	position:relative;
+	width:51px;
+	height:21px;
+	top:-12px;
+	margin-left:-3px;
+	text-align:center;
+	border:1px solid black;
+}
+.optionButtons
+{
+}
+
+.optionParent
+{
+
+}
+
+.txt1
+{
+	position:relative;
+	width:51px;
+	top:-12px;
+	margin-left:-2px;
+	text-align:center;
+	border:1px solid black;
+}
+
+#text
+{
+	position:relative;
+	margin-left:40px;
+	margin-top:150px;
+	font-family:"Comic Sans MS";
+}
+
+.optionButtons
+{
+	margin-left:30px;
+	border:5px solid black;
+	width:25px;
+}
+
+#correctText
+{
+	position:absolute;
+	top:185px;
+	left:45px;
+	height:20px;
+	width:430px;
+	font-family:"Comic Sans MS";
+	font-size:13pt;
+}
+
+#next
+{
+	margin-top:425px;
+	margin-left:590px;
+	font-family:"Comic Sans MS";
+	font-size:15pt;
+	width:80px;
+	text-align:center;
+	height:30px;
+	vertical-align:center;
+	color:black;
+	border-radius:3px;
+	padding:1px;
+	border:1px solid #0489B1;
+	cursor:pointer;
+	background-color:#A9F5F2;
+}
+
+#next:hover
+{
+	margin-top:425px;
+	margin-left:590px;
+	font-family:"Comic Sans MS";
+	font-size:15pt;
+	width:80px;
+	text-align:center;
+	height:30px;
+	vertical-align:center;
+	color:black;
+	border-radius:3px;
+	padding:1px;
+	border:1px solid #0489B1;
+	background: -webkit-linear-gradient(top, #FFF, #A9F5F2);
+	background: -moz-linear-gradient(top, #FFF, #A9F5F2);
+	background: -ms-linear-gradient(top, #FFF, #A9F5F2);
+	background: -o-linear-gradient(top, #FFF, #A9F5F2);
+	cursor:pointer;
+}
+
+#tbl
+{
+	position:relative;
+	margin-top:150px;
+	margin-left:50px;
+	color:#01A9DB;
+	font-size:13pt;
+	font-family:"Comic Sans MS";
+	display:none;
+}
+
+.john
+{
+	position:absolute;
+	top:153px;
+	color:#01A9DB;
+	left:700px;
+	font-size:13pt;
+	font-family:"Comic Sans MS";
+	display:none;
+}
+
+.pam
+{
+	position:absolute;
+	top:205px;
+	color:#01A9DB;
+	left:700px;
+	font-size:13pt;
+	font-family:"Comic Sans MS";
+	display:none;
+}
+
+#ans
+{
+	margin-left:5px;
+	position:relative;
+	width:51px;
+	text-align:center;
+	font-size:12pt;
+}
+
+.fraction 
+{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.frac 
+{
+  line-height: 100%;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.hand
+{
+	position:absolute;
+	left:165px;
+	top:80px;
+	display:none;
+}
+
+.hand img
+{
+	width:40px;
+	height:20px;
+}
+
+.numerator 
+{
+	border-bottom:1px solid;
+}
+
+.promptContainer 
+{
+    color:#000;
+    background-color:#A9F5F2;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    padding:5px;
+    border:#000 thin solid;
+    position:fixed;
+    top:100px;
+    left:160px;
+	border:1px solid #00CCFF;
+	cursor:pointer;
+	font-family:"Comic Sans MS";
+	z-index:200;
+	text-align:center;
+}
+
+.promptText
+{
+	position:relative;
+	float:left;
+	margin-top:15px;
+	margin-left:0px;
+	text-align:left;
+}
+
+#sparkieIcon 
+{
+    background-image:url(../assets/sparkie.png);
+    background-size:100% 100%;
+    height:50px;
+    width:30px;
+    float:left;
+    margin:5px 20px 20px 5px;
+}
+
+.button 
+{
+    color:#000000;
+    background-color:#F7F7F7;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    height:24px;
+    text-align:center;
+    width:50px;
+    line-height:20px;
+    font-size:18px;
+    padding:2px;
+    margin-top:0px;
+	border:1px solid #00CCFF;
+	font-size:11pt;
+	vertical-align:center;
+	padding-bottom:5px;
+	cursor:pointer;
+}
+
+
+.level2background
+{
+	height:530px;
+	width:650px;
+	position:absolute;
+	top:55px;
+	left:50px;
+	overflow-y:auto;
+	font-family:Comic Sans MS;
+}
+
+input[type="text"]
+{
+    -webkit-appearance: none;
+}

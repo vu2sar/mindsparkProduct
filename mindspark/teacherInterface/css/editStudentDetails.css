@@ -1,0 +1,107 @@
+#home {
+	border-bottom: 1px solid #3198CA;
+}
+
+#container {
+	border-top: 1px solid #3198CA;
+	border-bottom: 1px solid #3198CA;
+	border-left: 1px solid #3198CA;
+}
+
+#headerBar{
+	width:92%;
+	border-bottom:1px solid #626161;
+	height: 50px;
+	margin-left: 40px;
+}
+
+.arrow-black {
+	width: 0; 
+	height: 0;
+	margin-top:25px;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 6px solid #626161;
+	float:left;
+}
+
+#pageText{
+	font-size:1.4em;
+	height:30px;
+	margin-top:20px;
+	color:#626161;
+	margin-left:10px;
+	float:left;
+	font-weight:bold;
+}
+
+
+#topicDetails{
+	font-size:1.2em;
+	width:92%;
+	border-bottom:1px solid #626161;
+	padding-top:3px;
+	padding-bottom:3px;
+	color:#626161;
+	margin-left:40px;
+}
+
+#trailContainer{
+	min-height:530px;
+	overflow-y:auto;
+	width:100%;
+}
+
+#btnGenerate{
+	width:100px;
+	color:#626161;
+}
+
+
+table.gridtable {
+	color:#333333;
+	border-color: #FFFFFF;
+	border-collapse: collapse;
+}
+table.gridtable th {
+	border-color: #FFFFFF;
+	background-color: #E6E6E6;
+	font-weight:bold;
+}
+table.gridtable td {
+	border-color: #FFFFFF;
+	background-color: #E6E6E6;
+}
+
+.gridtable{
+	background-color:#E6E6E6;
+	font-size:14px;
+}
+
+.classTabTriangle {
+width: 0;
+height: 0;
+border-top: 8px solid transparent;
+border-bottom: 8px solid transparent;
+margin-top: -0.5%;
+border-left: 6px solid black;
+float: left;
+border-left: 8px solid #626161;
+margin-right: 2%;
+}
+
+.classTab {
+position: absolute;
+height: 30px;
+width: 46px;
+border: 2px solid #626161;
+background-color: #626161;
+float: left;
+overflow: hidden;
+margin-top: -10px;
+margin-left: -50px;
+}
+
+.noData{
+	display:none;
+}

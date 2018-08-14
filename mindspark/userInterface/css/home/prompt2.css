@@ -1,0 +1,191 @@
+
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-Light';
+	src: url('../../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.eot');
+	src: local('?'), url('../../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.woff') format('woff'), url('../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.ttf') format('truetype'), url('../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-Cond';
+	src: url('../../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.eot');
+	src: local('?'), url('../../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.woff') format('woff'), url('../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.ttf') format('truetype'), url('../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-BoldCond';
+	src: url('../../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.eot');
+	src: local('?'), url('../../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.woff') format('woff'), url('../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.ttf') format('truetype'), url('../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-Blk';
+	src: url('../../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.eot');
+	src: local('?'), url('../../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.woff') format('woff'), url('../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.ttf') format('truetype'), url('../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-Roman';
+	src: url('../../fonts/HelveticaLTStd-Roman/fonts/HelveticaLTStd-Roman.eot');
+	src: local('?'), url('../../fonts/HelveticaLTStd-Roman/fonts/HelveticaLTStd-Roman.woff') format('woff'), url('../fonts/HelveticaLTStd-Roman/fonts/HelveticaLTStd-Roman.ttf') format('truetype'), url('../fonts/HelveticaLTStd-Roman/fonts/HelveticaLTStd-Roman.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+#image{
+	background-image:url('../../assets/rewards/BG_updates.png');
+	height: 723px;
+	width: 744px;
+	position: relative;
+	left: 26%;
+	-webkit-transform:scale(0.75);
+	-webkit-transform-origin : left top;
+	-moz-transform :scale(0.75);
+	-moz-transform-origin : left top;
+	-ms-transform :scale(0.75);
+	-ms-transform-origin : left top;
+	-o-transform :scale(0.75);
+	-o-transform-origin : left top;
+	transform :scale(0.75);
+	transform-origin : left top;
+}
+
+#prompt{
+	   /* Do not display it on entry */
+   /*display: none; */
+ 
+    /* Display it on the layer with index 1001.
+       Make sure this is the highest z-index value
+       used by layers on that page */
+    z-index:1001;
+     
+    /* make it cover the whole screen */
+    position: absolute; 
+    top: 0%; 
+    left: 0%; 
+    width: 103%; 
+    height: 100%; 
+ 	
+    /* make it white but fully transparent */
+    /*background-color: white; 
+    opacity:.00; 
+    filter: alpha(opacity=00); */
+	
+	/*For transperancy*/
+	background-color: rgba(0,0,0,0.5);
+	
+}
+
+#close_rewards{
+	background-image:url('../../assets/rewards/close.png');
+	height: 35px;
+	width: 35px;
+	top: -23px;
+	left: 719px;
+	position: relative;
+	cursor:pointer;
+}
+
+#sparkie{
+	background-image:url('../../assets/rewards/L.01_info.png');
+	width:60px;
+	height:72px;
+	top: 95px;
+	left: 23px;
+	position: relative;
+	background-repeat: no-repeat;
+}
+#sparkie_center{
+	background-image:url('../../assets/rewards/L.01_info.png');
+	width:60px;
+	height:72px;
+	width:60px;
+	height:72px;
+	position: relative;
+	background-repeat: no-repeat;
+	left: 500px;
+	top: 48px;
+}
+
+#congrats{
+	color:#ed1c24;
+	font-size:1.5em;
+	font-family: 'Conv_HelveticaLTStd-Light';
+	position: relative;
+	top: 64px;
+	left: 103px;
+
+}
+#congrats_name{
+	color:#ed1c24;
+	font-size:1.5em;
+	font-family: 'Conv_HelveticaLTStd-Light';
+	position:relative;
+	top: 68px;
+	left: 120px;
+}
+
+#desc{
+	color:#ed1c24;
+	font-size:1.4em;
+	font-family: 'Conv_HelveticaLTStd-Light';
+	position:relative;
+	top: 57px;
+	left: 302px;
+}
+
+#sparkie_no{
+	font-size:1.2em;
+	font-family: 'Conv_HelveticaLTStd-Light';
+	position:relative;
+	top: -28px;
+	left: 573px;
+	color: #666666;
+	font-weight:bold;
+}
+
+.info{
+	color:#666666;
+	font-size:1.25em;
+	font-family: 'Conv_HelveticaLTStd-Light';
+	position:relative;
+	float:left;
+	left:100px;
+	top:28px;
+	width:80%
+	
+}
+
+.value{
+	color:#666666;
+	font-size:1.25em;
+	font-family: 'Conv_HelveticaLTStd-Light';
+	position:relative;
+	
+	top:28px;
+}
+
+.line{
+	width: 661px;
+height: 1.1px;
+background-color: #666666;
+margin-left: 40px;
+margin-top: 37px;
+}
+
+@media (max-width: 1024px){
+
+#prompt{
+	height:160%;
+	 width: 105%; 
+	 overflow-y:auto;
+}
+}

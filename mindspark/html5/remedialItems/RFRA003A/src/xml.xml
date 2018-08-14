@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application name="label">
+
+<english>
+	<questions>
+	</questions>
+	<prompts>
+		<prompt name="message1" text="Express the given number as a decimal." page="page1" voice=""/>
+		<prompt name="message2" text="Please type your answer and press enter!" page="page1" voice=""/>
+		<prompt name="message3" text="Well done!" page="page1"/>
+		<prompt name="message4" text="Now try again!" page="page1"/>
+		<prompt name="message5" text="OK" page="page1"/>
+		<prompt name="message6" text="Tens" page="page1"/>
+		<prompt name="message7" text="Ones" page="page1"/>
+		<prompt name="message8" text="#unit#" page="page1"/>
+		<prompt name="message9" text="So, #frac# = #ans#" page="page1"/>
+		<prompt name="message11" text="#frac# is #no#  #unit#. " page="page1"/>
+		<prompt name="message12" text="We know, #frac# = #no# #unit#. " page="page1"/>
+		<prompt name="message13" text=" is #no# #unit#. " page="page1"/>
+		<prompt name="tenth" text="tenths" page="page1"/>
+		<prompt name="hundred" text="hundredths" page="page1"/>
+	</prompts>
+</english>
+
+<hindi>
+	<questions>
+	</questions>
+	<prompts>
+		
+	</prompts>
+</hindi>
+
+<gujarati>		
+<questions>
+</questions>
+<prompts>
+<prompt name="message1" text="દશાંશ અપૂર્ણાંકમાં લખો." page="page1" voice=""/>
+<prompt name="message2" text="તમારો જવાબ લખો અને enter દબાવો." page="page1" voice=""/>
+<prompt name="message3" text="ખૂબ સરસ!" page="page1"/>
+<prompt name="message4" text="ફરી પ્રયત્ન કરો!" page="page1"/>
+<prompt name="message5" text="ઓકે" page="page1"/>
+<prompt name="message6" text="દશક" page="page1"/>
+<prompt name="message7" text="એકમ" page="page1"/>
+<prompt name="message8" text="#unit#" page="page1"/>
+<prompt name="message9" text="તેથી, #frac# = #ans#" page="page1"/>
+<prompt name="message11" text="#frac# = #no# #unit#. " page="page1"/>
+<prompt name="message12" text="આપણે જાણીએ છીએ કે, #frac# = #no# #unit#. " page="page1"/>
+<prompt name="message13" text=" = #no# #unit#. " page="page1"/>
+<prompt name="tenth" text="દશાંશ" page="page1"/>
+<prompt name="hundred" text=" શતાંશ" page="page1"/>
+</prompts>
+
+</gujarati>
+
+</application>

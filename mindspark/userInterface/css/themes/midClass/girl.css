@@ -1,0 +1,115 @@
+body{
+	background: #d3ebf0; /* Old browsers */
+	background: -moz-linear-gradient(top,  #d3ebf0 60%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#d3ebf0), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #d3ebf0 60%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #d3ebf0 60%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #d3ebf0 60%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #d3ebf0 60%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3ebf0', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	}
+	
+	
+	#gradientSparkie{
+	background: #E8E8E7 !important;
+}
+
+.afterSparkie{
+	background-color:#c2c9d2 !important;
+}
+
+#continueText{
+	color:#533B2F;
+}
+
+#continueButtonDiv{
+	color:#30A3B3;
+	border: 1px solid #E75683;
+}
+
+#lastSessionText{
+	color:#533B2F;
+}
+
+#sparkieBulbDivText{
+	color:#30A3B3;
+}
+
+#noticeBoardHeading {
+	color: #533B2F;
+}
+
+#helpMsg {
+	color: black;
+}
+
+#childNameDiv{
+	color:#533B2F;
+	font-weight:bold;
+}
+.class{
+	color:#533B2F;
+}
+#continueEmot {
+	background: url('../../../assets/rewards/themeGirl/continue_arrow_blue.png') no-repeat 0px 0px;
+	width: 34px;
+}
+
+#noticeBoardDiv {
+	background: #C7E9F0;
+}
+
+#viewAllDiv {
+	background: #30A3B3;
+}
+
+##ncertDiv {
+	background: #30A3B3;
+}
+#activityDiv {
+	background: #30A3B3;
+}
+
+#viewAllEmote {
+	background: url('../../../assets/rewards/themeGirl/viewallGirl.png') no-repeat 0 0;
+	width: 52px;
+	height: 48px;
+	margin-left: 6%;
+	margin-top: 3px;
+}
+
+#ncertEmote {
+	background: url('../../../assets/rewards/themeGirl/ncertGirl.png') no-repeat 0 0;
+	width: 52px;
+	height: 48px;
+	margin-top: 3px;
+}
+#activityEmote {
+	background: url('../../../assets/rewards/themeGirl/activitiesGirl.png') no-repeat 0 0;
+	width: 52px;
+	height: 48px;
+	margin-top: 3px;
+}
+
+#commentEmote {
+	background: url('../../../assets/rewards/themeGirl/commentGirl.png') no-repeat 0 0;
+}
+
+#commentDiv {
+	background: #30A3B3;
+}
+
+.topicProgressDivFocus{
+	background-color: #fff;
+	-webkit-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+-moz-box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+box-shadow: inset 0px 1px 8px rgba(50, 50, 50, 0.8);
+}
+
+.topicName{
+	color:#30A3B3;
+}
+.studentDashboardTopicHeaderBg
+{
+	background-color: #d3ebf0 !important;
+}

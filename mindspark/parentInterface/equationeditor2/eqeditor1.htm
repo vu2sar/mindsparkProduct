@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+		</title>
+		<link href="divst.css" rel="stylesheet" type="text/css">
+		<style>
+		body{
+			margin:0px;
+			overflow: hidden;
+			width:714px;
+			height:406px;
+		}
+		</style>
+	</head>
+	<body onload="init1();loadDoc();">
+		<div style="width:710px;height:404px;position:relative;background-color:white;">
+			<div id="holder" style="border-style:dotted;border-color:#aaaaaa;width:600px;height:400px;position:relative;">
+				<div id="in1" title="" class="eqB" name="in1" style="height:400px;width:600px;position:absolute;z-index:110;">
+					<iframe id="test" onfocusout="resetKeys();" src="conedit.html" width="100%" height="100%">
+					</iframe>
+				</div>
+				<canvas id="sk1" class="scP" width="600" height="400" style="position:absolute;z-index:120;">
+					<p>
+						Your browser doesn't support canvas.
+					</p>
+				</canvas>
+				<img id="savedIm" src="test.png" style="display:none;border:1px dashed brown;position:absolute;z-index:130;min-width:60px;min-height:40px;top:360px;left:540px;" />
+			</div>
+			<div id="buttonPanel" style="width:100px;height:400px;position:absolute;left:606px;top:2px;text-align:center;border:2px solid black;">
+				<table style="width:100px;">
+					<tr>
+						<td style="text-align:center;">
+							<div class="symB" id="categB0" title=" Type " onclick="changeIcons(0);">
+								<img width="30" src="T.jpg"/>
+							</div>
+						</td>
+						<td style="text-align:center;">
+							<div class="symB" id="categB1" title=" Draw " onclick="changeIcons(1);">
+								<img width="30" src="D.jpg"/>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th style="border:2px dashed green;text-align:center;font-size:13px;" colspan="2">
+							Tools
+						</th>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<table id="tools1" style="width:100%;">
+								<tr>
+									<td style="text-align:center;">
+										<div class="symB" id="tools11a" name="toolb" title=" Pencil " onclick="changeIcons('11a');">
+											<img width="27" src="pencil.png"/>
+										</div>
+									</td>
+									<td style="text-align:center;">
+										<div class="symB" id="tools11b" name="toolb" title=" Line " onclick="changeIcons('11b');">
+											<img width="27" src="line.png"/>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align:center;">
+										<div class="symB" id="tools11c" name="toolb" title=" Rectangle " onclick="changeIcons('11c');">
+											<img width="27" src="rectangle.png"/>
+										</div>
+									</td>
+									<td style="text-align:center;">
+										<div class="symB" id="tools11d" name="toolb" title=" Circle " onclick="changeIcons('11d');">
+											<img width="27" src="circle.png"/>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align:center;">
+										<div class="symB" id="tools11e" name="toolb" title=" Triangle " onclick="changeIcons('11e');">
+											<img width="27" src="triangle.png"/>
+										</div>
+									</td>
+									<td style="text-align:center;">
+										<div class="symB" id="tools11f" name="toolb" title=" Eraser " onclick="changeIcons('11f');">
+											<img width="27" src="eraser.png"/>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align:center;">
+										<div class="symB" id="tools11g" name="toolb" title=" Clear Rectangle " onclick="changeIcons('11g');">
+											<img width="27" src="clearrect.png"/>
+										</div>
+									</td>
+									<td style="text-align:center;">
+										<div class="symB" id="tools11h" name="toolb" title=" Clear All " onclick="changeIcons('11h');">
+											<img width="27" src="clearall.png"/>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align:center;">
+										<div class="symB" id="tools11i" name="toolb" title=" Stroke Colour ">
+											<select onchange="changeCanvProp('color',colorpicker.value);this.style.backgroundColor=colorpicker.value;" name="colorpicker" id="colorpicker" style="width:27px;height:25px;background-color:#000000;">
+												<option value="#FFFF00" title="Yellow" style="background-color:#FFFF00;">
+													&nbsp;
+												</option>
+												<option value="#FF00FF" title="Magenta" style="background-color:#FF00FF;">
+													&nbsp;
+												</option>
+												<option value="#00FFFF" title="Cyan" style="background-color:#00FFFF;">
+													&nbsp;
+												</option>
+												<option value="#FF0000" title="Red" style="background-color:#FF0000;">
+													&nbsp;
+												</option>
+												<option value="#00FF00" title="Green" style="background-color:#00FF00;">
+													&nbsp;
+												</option>
+												<option value="#0000FF" title="Blue" style="background-color:#0000FF;">
+													&nbsp;
+												</option>
+												<option value="#000000" title="Black" style="background-color:#000000;">
+													&nbsp;
+												</option>
+											</select>
+											<!--
+										<input type="color" id="colorpicker" name="colorpicker" style="width:24px;" onchange="changeCanvProp('color',colorpicker.value);"/>
+										-->
+									</div>
+									</td>
+										<td style="text-align:center;">
+											<div class="symB" id="tools11l" name="toolb" title=" Text " onclick="changeIcons('11l');">
+										<img width="27" src="text.png"/>
+									</div>
+								</td>
+								</tr>
+									<tr>
+										<td style="text-align:center;" colspan="2">
+											<div class="symB" id="tools11k" name="toolb" title=" Stroke Width ">
+											<span id="stroke" style="font:12px arial;">
+											Stroke Width
+											</span>
+											<br>
+											<input type="range" min="1" max="5" value="1" style="width:70px;height:25px;" onchange="changeCanvProp('thick',this.value);"/>
+											<br>
+											<span id="strokeH" style="font:12px arial;">
+											1
+										</span>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</td>
+					</tr>
+						<tr>
+							<td colspan="2">
+								<table id="tools0" style="width:100%;">
+									<tr>
+										<td style="text-align:center;">
+										<div class="symB" id="tools01a" name="toolb" title=" Alt+1 " onclick="changeIcons('01a');">
+										&#176;
+									</div>
+									</td>
+										<td style="text-align:center;">
+										<div class="symB" id="tools01b" name="toolb" title=" Alt+2 " onclick="changeIcons('01b');">
+										&#8730;
+									</div>
+								</td>
+								</tr>
+									<tr>
+										<td style="text-align:center;">
+										<div class="symB" id="tools01c" name="toolb" title=" Alt+3 " onclick="changeIcons('01c');">
+										&#177;
+									</div>
+									</td>
+										<td style="text-align:center;">
+										<div class="symB" id="tools01d" name="toolb" title=" Alt+4 " onclick="changeIcons('01d');">
+										&#215;
+									</div>
+								</td>
+								</tr>
+									<tr>
+										<td style="text-align:center;">
+										<div class="symB" id="tools01e" name="toolb" title=" Alt+5 " onclick="changeIcons('01e');">
+										&#247;
+									</div>
+									</td>
+										<td style="text-align:center;">
+										<div class="symB" id="tools01f" name="toolb" title=" Alt+6 " onclick="changeIcons('01f');">
+										&#8756;
+									</div>
+								</td>
+								</tr>
+									<tr>
+										<td style="text-align:center;">
+										<div class="symB" id="tools01g" name="toolb" title=" Alt+7 " onclick="changeIcons('01g');">
+										&#8805;
+									</div>
+									</td>
+										<td style="text-align:center;">
+										<div class="symB" id="tools01h" name="toolb" title=" Alt+8 " onclick="changeIcons('01h');">
+										&#8804;
+									</div>
+								</td>
+								</tr>
+									<tr>
+										<td style="text-align:center;">
+										<div class="symB" id="tools01i" name="toolb" title=" Alt+9 " onclick="changeIcons('01i');">
+										&#8736;
+									</div>
+									</td>
+										<td style="text-align:center;">
+										<div class="symB" id="tools01j" name="toolb" title=" Alt+0 " onclick="changeIcons('01j');">
+										&#960;
+									</div>
+								</td>
+								</tr>
+									<tr>
+										<td style="text-align:center;" cellpadding="0" cellspacing="0">
+											<div class="symB" id="tools01k" name="toolb" title=" 1/2 " onclick="changeIcons('01k');">
+												<table border="" class="fraction">
+													<tr>
+														<td class="num1">
+														<div class="entB">
+														1
+													</div>
+												</td>
+												</tr>
+													<tr>
+														<td class="den1">
+														<div class="entB">
+														2
+													</div>
+												</td>
+											</tr>
+										</table>
+									</div>
+									</td>
+										<td cellpadding="0" cellspacing="0">
+											<table cellpadding="0" cellspacing="0" border="0" >
+												<tr>
+													<td>
+														<div class="symB" title=" Ctrl+Up " id="tools01l" name="toolb" onclick="changeIcons('01l');">
+															x
+														<sup>
+														1
+													</sup>
+												</div>
+											</td>
+											</tr>
+												<tr>
+													<td>
+														<div class="symB" title=" Ctrl+Down " id="tools01m" name="toolb" onclick="changeIcons('01m');">
+															x
+														<sub>
+														1
+													</sub>
+												</div>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+		<script type="text/javascript" src="divst.js">
+		</script>
+		<script type="text/javascript" src="script.js">
+	</script>
+</body>
+</html>

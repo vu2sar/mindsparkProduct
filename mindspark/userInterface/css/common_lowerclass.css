@@ -1,0 +1,370 @@
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-Light';
+	src: url('../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.eot');
+	src: local('☺'), url('../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.woff') format('woff'), url('../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.ttf') format('truetype'), url('../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-Cond';
+	src: url('../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.eot');
+	src: local('☺'), url('../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.woff') format('woff'), url('../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.ttf') format('truetype'), url('../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-BoldCond';
+	src: url('../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.eot');
+	src: local('☺'), url('../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.woff') format('woff'), url('../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.ttf') format('truetype'), url('../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-Blk';
+	src: url('../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.eot');
+	src: local('☺'), url('../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.woff') format('woff'), url('../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.ttf') format('truetype'), url('../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body
+{
+	font-family: 'Conv_HelveticaLTStd-Cond';
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	font-size:12px;
+	width:100%;
+	height:100%;
+	outline:none;
+	overflow-y:hidden;
+}
+
+#top_bar {
+ height    :45px;
+ width     :100%;
+ border-bottom:2px ridge #C5C5C5;
+ background:#FFF;
+}
+
+.jspDrag
+{
+	background: #c1c2c0;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.jspArrow
+{
+	background: #878985;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+
+.jspArrow.jspDisabled
+{
+	cursor: default;
+	background: #878985;
+}
+
+.logo {
+ display   :block;
+ background:url(../assets/logo_header.png) no-repeat 0 0;
+ float     :left;
+ margin-left:2%;
+ width     :170px;
+ height    :29px;
+ margin-top:5px;
+ background-size: 100% 100%;
+}
+
+.logout {
+	display: block;
+	float:left;
+	background: url('../assets/lowerClass/Logout.png') no-repeat 0px 0px;
+	width: 33px;
+	height: 31px;
+	margin-top: 4px;
+	margin-right: 2px;
+}
+
+.logout:active {
+	background: url('../assets/lowerClass/Logout.png') no-repeat 0px -39px;
+	width: 34px;
+	height: 33px;
+}
+.logoutText {
+	float:left;
+	margin-top:12px;
+}
+#logout {
+	float: right;	
+	margin-right: 3%;
+}
+
+.whatsNew {
+	display   :block;
+	float     :left;
+	margin-right  :2px;
+	background: url('../assets/lowerClass/whatsnew.png') no-repeat 0px 0px;
+	width: 47px;
+	height: 33px;
+	margin-top:4px;
+}
+
+.whatsNew:active {
+	background: url('../assets/lowerClass/whatsnew.png') no-repeat 0px -39px;
+	width: 47px;
+	height: 34px;
+}
+.whatsNewText {
+	margin-top:18px;
+	float:left;
+}
+#whatsNew {
+	float:right;
+	margin-right: 3%;
+}
+.help {
+	display   :block;
+	float     :left;
+	margin-right  :2px;
+	background: url('../assets/lowerClass/help.png') no-repeat 0px 0px;
+	width: 43px;
+	height: 32px;
+	margin-top:4px;
+}
+
+.help:active {
+	background: url('../assets/lowerClass/help.png') no-repeat 0px -39px;
+	width: 44px;
+	height: 33px;
+}
+.helpText {
+	float:left;
+	margin-top:18px;
+}
+#help {
+	float:right;
+	margin-right: 3%;
+}
+
+#container{
+	width:100%;
+	overflow-x: hidden;
+	background-color:#b2d562;
+}
+
+#pointed {
+    position: relative;
+    margin: 0 auto;
+	margin-top:5px;
+    width: 45px;
+    height: 3px;
+    background-color: grey;
+}
+#pointed:after,
+#pointed::after {
+    position: absolute;
+    top: -100%;
+    left: 100%;
+    margin-left: -60%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: solid 6px grey;
+    border-left: solid 6px transparent;
+    border-right: solid 6px transparent;
+}
+
+#bottom_bar{
+	bottom:0px;
+	width:100%;
+}
+
+#copyright{
+	font-size:1.2em;
+	margin:5px;
+}
+
+.button {
+	position: absolute;
+	background-color:#f26722;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	color:#ffffff;
+	font-size:1.7em;
+	margin-left:85%;
+	bottom:7px;
+	padding:6px 24px;
+	text-decoration:none;
+	cursor:pointer;
+}.button:active {
+	/*position:relative;*/
+        position: absolute;
+	/*top:4px;*/
+        bottom: 4px;
+        
+}
+.clear {
+	clear:both;
+}
+
+.forHigherOnly {
+	display:none;
+}
+#blankWhiteSpace {
+	border:0px;
+	height:70px;
+	width:200px;
+	float:left;
+	background:#FFF;
+}
+.red {
+	color:#3193ba;
+}
+
+/*for dropdown*/
+#nameIcon {
+	background: url(../assets/lowerClass/icon.student.png) no-repeat 0 0;
+	width: 26px;
+	height: 26px;
+	float: left;
+}
+
+#cssmenu ul,
+#cssmenu li,
+#cssmenu span,
+#cssmenu a {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#cssmenu:after,
+#cssmenu ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#cssmenu a {
+  color: #39A9E0;
+  font-size: 14px;
+  display: inline-block;
+  text-align: left;
+  text-decoration: none;
+}
+#cssmenu ul {
+  list-style: none;
+}
+#cssmenu > ul > li {
+  float: left;
+}
+
+#cssmenu > ul > li a {
+	background:#FFF;
+	line-height: 28px;
+	filter: none;
+}
+
+#cssmenu .has-sub:hover ul {
+  display: block;
+}
+#cssmenu .has-sub ul {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: -1px;
+  min-width: 100%;
+  text-align: left;
+  /* IE7 */
+
+  *width: 100%;
+}
+#cssmenu .has-sub ul li {
+  text-align: left;
+}
+#cssmenu .has-sub ul li a {
+	border: 1px solid #DCDCDC;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 0 2px inset;
+	display: block;
+	top:-2px;
+	line-height: 120%;
+	padding: 9px 15px;
+	text-align: left;
+	/*left:70%;*/
+	min-width:130px;
+}
+
+#cssmenu .has-sub ul li a:hover {
+	border: 1px solid #DCDCDC;
+	box-shadow: 0 0 5px inset;
+}
+#studentInfoLowerClass {
+	font-family: 'Conv_HelveticaLTStd-Blk';
+	height:48px;
+	float:left;
+	margin-left:10%;
+}
+#infoBarLeft {
+	font-size:14px;
+	color:#39A9E0;
+	float:left;
+	font-weight:bold;
+}
+.blue {
+	color:#3193ba;
+	font-size:16px;
+}
+.black {
+	color:#000;
+	font-size:16px;
+	font-weight:bold;
+}
+.yellowBackground {
+	background:#FAD210;
+	padding-top:0px;
+}
+a {
+	text-decoration:none;
+	color:inherit;
+}
+.textUppercase {
+	text-transform:uppercase;
+}
+
+#smallContainer2,#smallContainer3,#smallContainer4,#smallContainer5,#smallContainer6,#smallContainer7,#smallContainer8,#smallContainer9 {
+	display:none;
+}
+.labelText {
+    font-weight: bold;
+    font-size: 12px;
+}
+/*for dropdown*/
+
+@media (max-width: 1024px){
+	.button{
+		margin-left:78%;
+	}
+         .option {
+		margin-left: 20px;
+	}
+	.optionText {
+		margin-top: 8px;
+		width: 300px;
+	}
+}
+@media screen and (orientation:portrait){
+ .button{
+ 	bottom:25px;
+	margin-left:78%;
+ }
+}

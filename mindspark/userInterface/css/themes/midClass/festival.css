@@ -1,0 +1,144 @@
+body{	
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b1d8f5+0,bee4f8+25,c8eefb+46,e1ffff+70,e1ffff+70,ffffff+78,ffffff+78,fdffff+93,ffffff+93 */
+background: #b1d8f5; /* Old browsers */
+background: -moz-linear-gradient(top,  #b1d8f5 0%, #bee4f8 25%, #c8eefb 46%, #e1ffff 70%, #e1ffff 70%, #ffffff 78%, #ffffff 78%, #fdffff 93%, #ffffff 93%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #b1d8f5 0%,#bee4f8 25%,#c8eefb 46%,#e1ffff 70%,#e1ffff 70%,#ffffff 78%,#ffffff 78%,#fdffff 93%,#ffffff 93%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #b1d8f5 0%,#bee4f8 25%,#c8eefb 46%,#e1ffff 70%,#e1ffff 70%,#ffffff 78%,#ffffff 78%,#fdffff 93%,#ffffff 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1d8f5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+ageTransform.Microsoft.gradient( startColorstr='#b1d8f5', endColorstr='#fdffff',GradientType=0 ); /* IE6-9 */
+
+}
+
+#top_bar{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff7c00+0,ff7f04+32,ff7f04+32,ffb76b+76,ffb76b+100,ff7c00+100,ff7c00+100,ffa73d+100 */
+background: #ff7c00; /* Old browsers */
+background: -moz-linear-gradient(left,  #ff7c00 0%, #ff7f04 32%, #ff7f04 32%, #ffb76b 76%, #ffb76b 100%, #ff7c00 100%, #ff7c00 100%, #ffa73d 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #ff7c00 0%,#ff7f04 32%,#ff7f04 32%,#ffb76b 76%,#ffb76b 100%,#ff7c00 100%,#ff7c00 100%,#ffa73d 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #ff7c00 0%,#ff7f04 32%,#ff7f04 32%,#ffb76b 76%,#ffb76b 100%,#ff7c00 100%,#ff7c00 100%,#ffa73d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7c00', endColorstr='#ffa73d',GradientType=1 ); /* IE6-9 */
+
+box-shadow:none!important;
+}
+#sparkieInfoDivText{
+	background:#e75903;
+}
+.buttonDashboard{
+	background:#9ec956;
+
+}
+
+#continueEmot {
+	background: url('../../../assets/rewards/themeRepublicDay/tri-color.jpg') no-repeat -3px 5px !important;
+	width: 34px !important;
+}	
+#viewAllDiv{
+	background:#e75903;
+}
+#viewAllDiv:hover{
+	background:#9ec956;
+}
+#viewAllEmote {
+	background: url('../../../assets/rewards/themeRepublicDay/chakra.png') no-repeat 0px 4px !important;
+	width: 41px !important;
+	height: 45px !important;
+	margin-left: 6% !important;
+	margin-top: 3px !important;
+}
+#activityEmote {
+	background: url('../../../assets/rewards/themeRepublicDay/emblem.png') no-repeat 0 2px !important;
+	width: 40px !important;
+	height: 50px !important;
+	margin-top: 1px !important;
+}
+#ncertEmote {
+	background: url('../../../assets/rewards/themeRepublicDay/tri-color.jpg') no-repeat 0 2px !important;
+    width: 53px !important;
+    height: 56px !important;
+    margin-top: 12px !important;
+}
+
+#commentDiv{
+	background:#e75903;
+}
+#commentDiv:hover{
+	background:#9ec956;
+}
+#activityDiv:hover{
+	background:#e75903;
+}
+#commentEmote {
+	background: url('../../../assets/rewards/themeRepublicDay/swachBharat.png') no-repeat 0 0 !important;
+	 width: 85px !important;
+     height: 56px !important;
+    margin-top: -7px !important;
+}
+
+#commentRight{
+	margin-left: 0% !important;
+}
+.progressBar:hover{
+	background:#e75903;
+
+}
+#noticeBoardDiv{
+	background : rgba(153, 153, 153, 0.37);
+}
+
+#allFeeds,#myFeeds{
+	background:white;
+}
+.aqadBlink{
+	background:url(../../../assets/Interface-icion-2.png)!important;
+}
+#noticeBoardDiv{
+	background:none!important;
+}
+
+
+#container1{
+	
+background-image: url(../../../assets/rewards/themeRepublicDay/plane.gif), url(../../../assets/rewards/themeRepublicDay/cloudBack.png), url(../../../assets/rewards/themeRepublicDay/grass.png),url(../../../assets/rewards/themeRepublicDay/cloudFront.png);
+background-repeat: no-repeat,no-repeat,repeat-x,no-repeat;
+background-position: 600px 150px, 200px 80px, 700px 420px,400px 40px;
+/*height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+width: 100%;*/
+z-index:1;
+-webkit-animation: snow 20s linear infinite;
+-moz-animation: snow 20s linear infinite;
+-ms-animation: snow 20s linear infinite;
+animation: snow 20s linear infinite;
+}
+@keyframes snow {
+ 0% {background-position: 0px 200px, 1000px 80px, 1000px 100%, 800px 40px ;}
+ 25% {background-position: 200px 250px, 700px 80px, 700px 100%, 700px 40px;}
+ 50% {background-position: 300px 200px, 400px 80px, 500px 100%, 500px 40px;}
+ 75% {background-position: 600px 150px, 200px 80px, 200px 100%,400px 40px;}
+ 100% {background-position: 1200px 200px, 0px 80px, 0px 100%, 100px 40px;}
+}
+@-moz-keyframes snow {
+ 0% {background-position: 0px 200px, 1000px 80px, 1000px 420px, 800px 40px ;}
+ 25% {background-position: 200px 250px, 700px 80px, 700px 420px, 700px 40px;}
+ 50% {background-position: 300px 200px, 400px 80px, 500px 420px, 500px 40px;}
+ 75% {background-position: 600px 150px, 200px 80px, 200px 420px,400px 40px;}
+ 100% {background-position: 1200px 200px, 0px 80px, 0px 100%, 100px 40px;}
+}
+
+ @-webkit-keyframes snow  {
+ 0% {background-position: 0px 200px, 1000px 80px, 1000px 420px, 800px 40px ;}
+ 25% {background-position: 200px 250px, 700px 80px, 700px 420px, 700px 40px;}
+ 50% {background-position: 300px 200px, 400px 80px, 500px 420px, 500px 40px;}
+ 75% {background-position: 600px 150px, 200px 80px, 200px 420px,400px 40px;}
+ 100% {background-position: 1200px 200px, 0px 80px, 0px 100%, 100px 40px;}
+}
+ @-ms-keyframes snow {
+ 0% {background-position: 0px 200px, 1000px 80px, 1000px 420px, 800px 40px ;}
+ 25% {background-position: 200px 250px, 700px 80px, 700px 420px, 700px 40px;}
+ 50% {background-position: 300px 200px, 400px 80px, 500px 420px, 500px 40px;}
+ 75% {background-position: 600px 150px, 200px 80px, 200px 420px,400px 40px;}
+ 100% {background-position: 1200px 200px, 0px 80px, 0px 100%, 100px 40px;}
+
+}
+
+

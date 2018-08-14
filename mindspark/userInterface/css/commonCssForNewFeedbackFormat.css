@@ -1,0 +1,62 @@
+.optionSecondCol
+{
+	padding-left: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#previewTable td input[type='radio']
+{
+	margin-right: 8px;
+}
+#gridTable ,#gridTable tr
+{
+	border: 1px solid #d3d8d3;
+	border-left: 0px;
+	border-right: 0px;
+	border-collapse: collapse;
+}
+#scaleTable td input[type="radio"]
+{
+	margin: 0px;
+}
+#scaleTable td,#gridTable td
+{
+	padding: 5px;
+}
+.options
+{
+	margin-right: 5px;
+}
+#gridTable td.radio
+{
+	text-align: center;
+}
+#scaleTable
+{
+	border: 1px solid #d3d8d3;
+	border-left: 0px;
+	border-right: 0px;
+}
+#feedBackHeader
+{
+	font-size: 20px;
+	text-align: center;
+}
+.helpText
+{
+	font-size: 13px;
+    font-style: italic;
+    color: grey;
+    float:none;
+}
+textarea
+{
+	resize: both;
+	width: 700px;
+	height: 100px;
+	border: 1px solid #E52E00;
+}
+.valueForScale,.radioForScale
+{
+	text-align: center;
+}

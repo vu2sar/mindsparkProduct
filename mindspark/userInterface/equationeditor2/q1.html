@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html><head>
+<title>Mindspark Question</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="question_files/ques_style.css" rel="stylesheet" type="text/css">
+
+<script language="javascript" src="question_files/prototype.js"></script>
+<script type="text/javascript" src="question_files/decrypt.js"></script>
+<script type="text/javascript" src="question_files/niftyplayer.js"></script>
+<script type="text/javascript" src="question_files/script_ajax.js"></script>
+
+
+<!--<script type="text/javascript" src="question_files/load.js"></script>
+<script src="question_files/jsMath-easy-load.js"></script>
+<script src="question_files/autoload.js"></script>
+-->
+
+<script>
+function editQues()
+{
+	document.quesform.action = "external/add_edit_question.php?totalQuesInCluster=&qno=21&type=";
+	document.quesform.submit();
+}
+</script>
+
+</head><body leftmargin="0" topmargin="0" onload="makeQuestionVisible();init();checkRefresh();" onkeydown="if (event.keyCode==8) {event.keyCode=0; return event.keyCode }" onunload="JavaScript:prepareForRefresh();" class="content" marginheight="0" marginwidth="0">
+<form name="quesform" id="quesform" method="post" autocomplete="off">
+<input name="imageflag" id="imageflag" value="0" type="hidden">
+<div class="top_bar" id="pnlHeader">
+	<div class="logo"></div>
+	<div id="sparkie1" name="sparkie1" class="sparkie_bar"></div>
+	<div id="pnlButton" class="buttons">
+			<a href="javascript:submit_exam()" class="signout"></a>
+	        <a href="javascript:switchTopic()" class="changetopic"></a>
+
+
+	</div>
+</div>
+<div class="nav_cont_separ"></div>
+<div class="content">
+	<div class="info_bar">
+			<div class="topic_text">
+				<strong>Topic</strong>: Editor Test&nbsp;&nbsp;&nbsp;&nbsp;<strong>Class</strong>: 5, 6, 7, 8, 9</div>
+
+	</div>
+<br><br><br>
+<input type="hidden" id="page" value="q1"/>
+<!-- Display Answer        -->
+<div id="dlgAnswer" style="display: none; margin-bottom: 30px;">
+	<div id="dlgAnswer_inner" align="center">
+	<table style="border: 1px dashed rgb(0, 0, 0);" align="center" border="0" cellspacing="0" width="70%">
+		<tbody><tr id="hd">
+			<td align="left"><div id="tl" class="tl fontHigherClass"></div></td>
+		</tr>
+		<tr>
+			<td align="left"><div id="displayanswer" class="quesDetails fontHigherClass"></div></td>
+		</tr>
+		<tr>
+			<td align="center">
+				<div style="display: none; width: 100%; text-align: center;" id="pnlConfirmAnswer" class="quesDetails" align="center">
+					   	<strong>Confirm answer:</strong>
+					   	<input name="iqsanswer" id="rdIQSRight" value="correct" type="radio">Correct
+					   	<input name="iqsanswer" value="Wrong" id="rdIQSWrong" type="radio">Wrong
+					  	<br>
+				</div>
+				<input class="next_question" value="" id="btnNextQues" style="display: none;" onclick="closeSession=false;handleClose();" type="button">&nbsp;&nbsp;&nbsp;
+			</td>
+		</tr>
+	</tbody></table>
+	<br>
+	</div>
+</div>
+<div id="pnlNext" style="display: none; margin-bottom: 30px;" align="center">
+	</div>
+<!-- End -->
+
+
+<div name="ques" id="pnlQuestion" style="position:relative;">
+	<div id="pnlBuddy" class="buddy " align="right"></div>
+	<div class="question1">
+		<div class="question_text">
+      		<table border="0" cellpadding="3" cellspacing="1" width="100%">
+          		<tbody><tr>
+              		<td align="left" valign="top" width="3%">
+               			<p class="fontHigherClass" align="left"></p><div id="q1" name="q1" align="center">1</div>
+          				<br><br>
+			  			          				<p></p>
+          	  		</td>
+		            <td align="left" valign="top">
+		          		<p></p><div class="quesDetails"><div>
+						<input type="hidden" id="eqQ" value="" />
+						Express the equation: 
+						<br />
+						<i>y</i> - 2 = 0 
+						
+						<br/><br/>
+
+						in the form A<i>x</i> + B<i>y</i> + C = 0:<br/>
+						(You may use the editor below to show steps.)
+						</div>
+						<iframe src="eqeditor1.htm" width="714" height="406" id="eqeditor" style="margin:0px;border:0px"></iframe>
+						<br>
+						A = <input type="text" name="answer" id="b1"/>
+						B = <input type="text" name="answer" id="b2"/>
+						C = <input type="text" name="answer" id="b3"/>
+						</div>
+						</td>
+          		</tr>
+      		</tbody></table>
+			<span id="val1"></span>
+<textarea id="in2" rows="10" cols="30" style="display:none;"></textarea>&nbsp;<textarea id="in3" rows="10" cols="30" style="display:none;"></textarea>
+     			 <div style="width: 100%;" align="center">
+			 	<input class="submit" value="" name="btnSubmit" id="btnSubmit" onclick="submitAnswer();" style="margin-top: 25px;" type="button">
+			 				 </div>
+		<br>
+		</div>
+	</div>
+</div>
+<!--</div>-->
+
+<div id="pnlLoading" style="display: none;">
+	<div class="quesDetails" align="center"><br><br><p>Loading, please wait...<br><img src="question_files/loading1.gif"></p></div>
+</div>
+
+
+	<input name="groupID" id="groupID" value="" type="hidden">
+	<input name="qcode" id="qcode" value="1" type="hidden">
+	<input name="correctAnswer" id="correctAnswer" value="0|1|-2" type="hidden">
+	<input name="mode" id="mode" value="vetting" type="hidden">
+	<input name="quesType" id="quesType" value="Blank" type="hidden">
+	<input name="editorUse" id="editorUse" value="1" type="hidden">
+	<input name="secsTaken" id="secsTaken" value="" type="hidden">
+	<input name="result" id="result" value="" type="hidden">
+	<input name="qno" id="qno" value="21" type="hidden">
+	<input name="clusterCode" id="clusterCode" value="ARE006" type="hidden">
+	<input name="refresh" id="refresh" value="0" type="hidden">
+	<input name="endTime" id="endTime" type="hidden">
+	<input name="topicSwitch" id="topicSwitch" value="" type="hidden">
+	<input name="quesVoiceOver" id="quesVoiceOver" value="" type="hidden">
+	<input name="ansVoiceOver" id="ansVoiceOver" value="" type="hidden">
+	<input name="dropdownAns" id="dropdownAns" value="" type="hidden">
+	<input name="username" id="username" value="muntaquim" type="hidden">
+	<input name="type" id="type" value="" type="hidden">
+	<input name="sdl" id="sdl" value="7.00" type="hidden">
+	<input name="subcategory" id="subcategory" value="" type="hidden">
+	<input name="userResponse" id="userResponse" value="" type="hidden">
+
+
+<span id="dAnswer" style="display: none;">A=0; B=1; C=-2 </span>
+
+<br><br>
+
+<!-- End -->
+</div>
+</form>
+</body></html>

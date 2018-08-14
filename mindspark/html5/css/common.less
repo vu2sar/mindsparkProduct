@@ -1,0 +1,70 @@
+.origin-element(@x:0%,@y:0%) {
+	-webkit-transform-origin : @x @y;
+	-moz-transform-origin : @x @y;
+	-ms-transform-origin : @x @y;
+	-o-transform-origin : @x @y;
+	transform-origin : @x @y;
+}
+
+.scale-element(@x:1,@y:1) {
+	-webkit-transform:scale(@x,@y);
+	-moz-transform :scale(@x,@y);	
+	-ms-transform :scale(@x,@y);	
+	-o-transform :scale(@x,@y);	
+	transform :scale(@x,@y);
+}
+
+.rotate-element(@angle:0deg) {
+	-webkit-transform:rotate(@angle);
+	-ms-transform:rotate(@angle);
+	-o-transform:rotate(@angle);
+	-moz-transform:rotate(@angle);
+	transform:rotate(@angle);
+}
+
+.add-border-radius (@radius:0px) {
+	-ms-border-radius: @radius;
+	-o-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.add-linear-gradient (@topcolor:#000, @bottomcolor:#FFF) {
+	background-color: @topcolor;
+	background: -moz-linear-gradient(top , @topcolor 0%, @bottomcolor 100%);
+	background: -webkit-linear-gradient(top , @topcolor 0%, @bottomcolor 100%);
+	background: -o-linear-gradient(top , @topcolor 0%, @bottomcolor 100%);
+	background: -ms-linear-gradient(top , @topcolor 0%, @bottomcolor 100%);
+	background: linear-gradient(top , @topcolor 0%, @bottomcolor 100%);	
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{topcolor}', endColorstr='@{bottomcolor}');
+}
+
+.add-box-shadow(@x,@y,@h,@r,@g,@b,@opacity) {
+	-webkit-box-shadow: @x @y @h rgba(@r,@g,@b,@opacity);
+	-moz-box-shadow:  @x @y @h rgba(@r,@g,@b,@opacity);
+	box-shadow: @x @y @h rgba(@r,@g,@b,@opacity);
+}
+
+.buttonPressed(@top:1px,@left:1px) {
+	position:relative;
+	top:@top;
+	left:@left;
+	-webkit-box-shadow: 1px 2px 0.8px rgba(0,0,0,1);
+	-moz-box-shadow: 1px 2px 0.8px  rgba(0,0,0,1);
+	box-shadow: 1px 2px 0.8px  rgba(0,0,0,1);
+}
+
+.styleAnswer(@x,@y,@h,@r,@g,@b,@opacity)
+{
+	-webkit-box-shadow: @x @y @h rgba(@r,@g,@b,@opacity),@x @y @h rgba(@r,@g,@b,@opacity);
+	-moz-box-shadow:  @x @y @h rgba(@r,@g,@b,@opacity),@x @y @h rgba(@r,@g,@b,@opacity);
+	box-shadow: @x @y @h rgba(@r,@g,@b,@opacity),@x @y @h rgba(@r,@g,@b,@opacity);
+}
+
+.backColor(@red,@green,@blue,@opacity)
+{
+	background-color:rgba(@red,@green,@blue,@opacity);
+}
+
+

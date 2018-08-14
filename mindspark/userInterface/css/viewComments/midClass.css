@@ -1,0 +1,156 @@
+body {
+	min-width:1024px;	
+}
+
+#sparkieContainer{
+	display:none;
+}
+
+#info_bar{
+	position: relative;
+	height:140px;
+	width:100%;
+	-webkit-box-shadow: 0px 3px 2px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    0px 3px 2px rgba(50, 50, 50, 0.2);
+	box-shadow:         0px 3px 2px rgba(50, 50, 50, 0.2);
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+#topic{
+	width:60%;
+	height:98px;
+	float   :left;
+	margin-left:7%;
+	margin-top:15px;
+	 padding: 0px 2px 2px 3px;    
+   	border-width: 1px;
+   border-bottom-width:1px;
+   border-bottom-color:#e52e00;
+   border-bottom-style: solid;
+   border-left-width:8px;
+   border-left-color:#e52e00;
+   border-left-style: solid;
+}
+
+#homeIcon {
+	background: url('../../assets/Home_red.png') no-repeat 0 0;
+	width: 50px;
+	height: 43px;
+}
+#homeText{
+	font-family: 'Conv_HelveticaLTStd-BoldCond';
+	font-size:1.8em;
+	color:#e52e00;
+}
+
+#topicInfoContainer {
+	height:430px;
+	overflow-y:auto;
+}
+
+#topicBasicInfo {
+	margin-left:7%;
+}
+#commentInfo {
+	float: left;
+	margin-left: 5px;
+	color: #606062;
+	font-size: 1.2em;
+	margin-top: 10px;
+}
+.endSessionTbl {
+	text-align:center;
+	border-spacing:15px;
+ 	border-collapse:seperate;
+}
+
+.endSessionTbl td {
+	padding:3px;
+}
+
+.endSessionTbl tr:first-child td {
+	font-family: 'Conv_HelveticaLTStd-BoldCond';
+	background:#b2d460;
+	height:40px;
+	color:#000;
+	font-size:1.5em;
+}
+.endSessionTbl tr:first-child td:first-child + td {
+	background:#3ba7de;
+	width:25px;
+}
+.quesText {
+	font-family: 'Conv_HelveticaLTStd-Light';
+	font-size:1.3em;
+	padding-bottom:10px;
+	border-bottom:1px solid #e52e00;
+	text-align:left;
+}
+.comment {
+	font-size:1.3em;
+	padding:15px 0px 15px 0px;
+	border-bottom:1px solid #e52e00;
+	text-align:left;
+}
+.reComment {
+	font-size:1.3em;
+	padding:15px 0px 0px 0px;
+	text-align:left;
+}
+
+#commentBoxDiv {
+	margin-left:5%;
+}
+.commentDiv {
+	float:left;
+	margin-top:10px;
+}
+.submitBtn {
+	display:block;
+	height:51px;
+	border:1px solid #e52e00;
+	color:#e52e00;
+	text-align:center;
+	padding:10px;
+	margin-left:30px;
+	cursor:pointer;
+	margin-top:40px;
+	font-size:1.2em;
+}
+
+textarea {
+	resize:none;
+	border:1px solid;
+}
+.bottom {
+	border-bottom:1px solid #e52e00;
+}
+#dataTableDiv {
+	height:430px;
+	overflow-y:auto;
+}
+#continueBtn {
+	display: block;
+height: 35px;
+border: 1px solid #e52e00;
+color: #e52e00;
+text-align: center;
+padding: 10px;
+cursor: pointer;
+margin-top: 0px;
+font-size: 1.2em;
+clear: both;
+}
+.srnoText {
+	font-family: 'Conv_HelveticaLTStd-BoldCond';
+	color:#000000;
+	font-size:1.5em;
+}
+.commentText {
+	font-size:1.3em;
+}
+#backBtn {
+	font-size:2em;
+	padding:5px;
+}

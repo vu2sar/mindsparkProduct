@@ -1,0 +1,544 @@
+<?php
+    if(count($this->session->all_userdata() == 0)
+    {
+        redirect($this->config->item('login_url'));
+    }
+?>
+
+<!doctype html>
+<html lang="en" ng-app="englishInterface">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, , user-scalable=no, initial-scale=1,maximum-scale=1">
+
+        <title>Mindspark English</title>
+        <link type="text/css" href="theme/css/Language/jplayer.blue.monday.min.css" rel="stylesheet" />
+        <link type="text/css" href="theme/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="theme/css/Language/common/commonTemplate.css">
+        <link rel="stylesheet" href="theme/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="theme/css/Language/appTheme.css">
+        <link rel="stylesheet" href="theme/css/Language/jquery.jqplot.css">
+
+    </head>
+    <body ng-controller="mainControl" ng-cloak>
+        <button type="button" id="helper_autoplay" class="none"></button>
+        <!-- header -->
+        <div id="warning-orientation-message">
+            <div class="magic-div">
+            </div>
+            <div class="orientation-message">
+                Mindspark is best viewed and worked with in the landscape(horizontal) mode.<br>Please shift to landscape mode to proceed further.
+            </div>
+        </div>
+        <div class="english-content-wrapper">
+            <nav class="navbar">
+                <div class="container-fluid" id="headerContainer">
+                    <div id="branding" class="navbar-header">
+                        <button id="sidebarToggle" onclick="sidebarToggle()" class="merge"><span class="icon-dash"> </span><span class="icon-dash"> </span><span class="icon-dash"> </span></button>
+                        <a class="branding" href="#"> <img src="theme/img/Language/logo-02.png"> </a>
+                    </div>
+
+                    <div id="userBin">
+                        <div id="userGreet">
+                            {{'Hi ' + sessionData.childName + '!'}}
+                        </div>
+                        <div id="profileImage" back-img="{{sessionData.profileImage}}"></div>
+                        
+                        <div id="mainTimer" style="display:none;" title="Here's how long you've been Mindspark-ing!">
+                            <span id="mainHour">-</span>:<span id="mainMin">-</span> <span id="mainSec" class="none">-</span>
+                        </div>
+                    </div>
+
+                    <div id="userButtons" class="pull-right">
+                        <button class="merge" id="commentButton" onclick="showCommentPanel()"><span class="glyphicon glyphicon-comment"  > </span></button>
+                        <button class="merge" id="helpButton"  onclick="showInstructions()"><span class="glyphicon glyphicon-question-sign"> </span></button>
+                        <button class="merge" id="sessionReportButton" onclick="showSessionReport()"><span class="glyphicon glyphicon-report"> </span></button>
+                        <button class="merge" id="logOutButton" onclick="beforelogOut()"><span class="glyphicon glyphicon-log-out" > </span></button>
+                    </div>
+                </div>
+            </nav>
+            <!--  Header ends here. -->
+            <!-- Create a rating div for rating plugin. -->
+            <div class="col-md-6 col-lg-5 rating-feedback none">
+                <div class="rating-heading"></div>
+                <div class="rating">
+                    <!-- Sample Html to create a star for rating. -->
+                    <!-- <i class="icon-star icon-3"></i> -->
+                </div>
+                <div id="custom-popover" class="col-md-10 col-lg-8 none">
+                    <div class="arrow"></div>
+                    <div id="popover"></div>
+                </div>
+            </div>
+            <!-- End of rating plugin. -->
+            <div id="contentContainer">
+                <!-- sidebar -->
+                <div id="sidebar">
+                    <ul class="sidebar-nav">
+                        <li ng-repeat="sidebarItem in sidebarItems" onclick="onSidebarItemClick(event)" id="sbi_{{sidebarItem.optionName.replace(' ','_') | lowercase}}">
+                            <a> <span back-img="{{'theme/img/Language/sidebarIcon' + sidebarItem.icon + '.png'}}"> </span> {{sidebarItem.optionName}} </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sparkie part is not show currently -->
+                <div id="mainContentContainer" class="container-fluid">
+                <div id="teacher_home" class="none teacher_home moduleContainer" style="background:white">
+                        <div id="" class="col-md-12 col-lg-offset-1 col-lg-10  none table-responsive accordion">
+                            <div class="row">
+                                <div class="form-inline col-md-6 col-lg-offset-3" >
+                                    <label>Grade: </label>
+                                    <select class="form-control vcenter" id="th_grade_select">
+                                        <option value=''>select</option>
+                                    </select>
+                                    <label>Section: </label>
+                                    <select class="form-control vcenter" id="th_section_select">
+                                        <option value=''>select</option>
+                                    </select>
+                                    <button type="button" id="th_go" class="btn btn-primary" style="font-size:1em !important">GO</button>
+                                 </div>
+                            </div>
+                            <div class="row col-md-12 none">
+                                <div class="col-md-4 col-md-offset-2">
+                                    <div class="row" style='margin-bottom:44px'>
+                                        <h2>Accuracy</h2>
+                                    </div>
+                                    <div class="row">
+                                        <div id="overall_accuracy" style="margin-top: 20px; margin-left: 20px; width: 300px; height: 300px; position: relative;" class="jqplot-target"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div id="overall_accuracy_note"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-md-offset-2">
+                                    <div class="row">
+                                        <h2>Skill-Wise data</h2>
+                                        <lable style="font-size:medium">Usage</lable>
+                                        <div class="wrapper" style="display:inline-table;vertical-align:bottom">
+                                          <input type="checkbox" class="toggle" name="toggle" id="skill_report_toggle" checked>
+                                          <label for="skill_report_toggle"></label>
+                                        </div>
+                                        <lable style="font-size:medium">Accuracy</lable>
+
+                                    </div>
+                                    <div class="row">
+                                        <div id="skill_usage" style="margin-top: 20px; margin-left: 20px; width: 300px; height: 300px; position: relative;" class="jqplot-target"></div>
+                                        <div id="skill_accuracy" style="margin-top: 20px; margin-left: 20px; width: 300px; height: 300px; position: relative;" class="jqplot-target"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- Teacher Reports Tab start here-->
+                <div id="teacher_reports" class="none teacher_home moduleContainer" style="background:white">
+                    <div class="none">Teacher Reports</div>
+                </div>
+                <!-- Teacher Reports Tab Ends here-->
+
+                <!-- MY Students Tab start here-->
+                <div id="teacher_my_students" class="none teacher_home moduleContainer" style="background:white">
+                    <div class="none">My Students</div>
+                </div>
+                <!-- MY Students Tab Ends here-->
+
+                <!-- Teacher DO Mindspark Tab start here-->
+                <div id="teacher_do_mindspark" class="none teacher_home moduleContainer" style="background:white">
+                    <div class="none">DO Mindspark</div>
+                </div>
+                <!-- Teacher DO Mindspark Reports Tab Ends here-->
+
+                <!-- Teacher Settings Tab start here-->
+                <div id="teacher_settings" class="none teacher_home moduleContainer" style="background:white">
+                    <div class="none">Teacher Settings</div>
+                </div>
+                <!-- Teacher Settings Tab Ends here-->
+                <div id="mainContentContainer" class="container-fluid">
+                    <div id="home" class="none home_page moduleContainer">
+                        <div id="skillometer" class="homepage alignLeft"></div>
+                        <div id="quoteContainer" class="homepage">
+                            <div id="quoteSparkie"></div>
+                            <div id="quoteSparkieCount">
+                                {{'SPARKIES : ' + sessionData.sparkies }}
+                            </div>
+                            <div id="quoteHeader">
+                                Quote of the day:
+                            </div>
+                            <div id="quote">
+                                {{sessionData.quoteObject.Quote}}
+                            </div>
+                            <div id="quoteAuthor">
+                                {{'-' + sessionData.quoteObject.Author}}
+                            </div>
+                        </div>
+                         
+                        <!-- session Report -->
+                        <h1 class='sessionH1 none'>Daily Report</h1>
+                        <div id="homeReport" class="col-md-12 col-lg-offset-1 col-lg-10  none table-responsive accordion">
+                            <h2 class='sessionH2 none'>Passages</h2>
+                            <dl id="sessionReport" class="sessionReport homepage"></dl>
+                        </div>
+                        <div id="homeReportNCQ" class="col-md-12 col-lg-offset-1 col-lg-10 none table-responsive accordion">
+                            <h2 class='sessionH2 none'>Non-passage Questions</h2>
+                            <dl id="sessionReportNCQ" class="sessionReport homepage"></dl>
+                        </div>
+                        <div id="homeReportEssay" class="col-md-12 col-lg-offset-1 col-lg-10 none table-responsive accordion">
+                            <h2 class='sessionH2 none'>Essays</h2>
+                            <dl id="sessionReportEssay" class="sessionReport homepage"></dl>
+                        </div>
+                        <div id="essayLookbackContent" class="col-md-12 col-lg-10 hovers none"></div>
+                    </div>
+
+                    <div id="activitySelector" class="the_grounds none moduleContainer">
+                        <div ng-repeat="(key,data) in activityData" class="gameIconContainer col-md-2">
+                            <div class="activityThumbnail" id="gameButton-{{data.igreDesc}}" data-key="{{data.igreid}}">
+                                <div class="gameIcon" back-img="{{'../theme/img/Language/activityThumbnails/' + data.igreDesc + '.png'}}">
+                                </div>
+                                <button class="merge gameName">
+                                    {{data.igreDesc.split('_').join(' ')}}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="diagnosticTestContainer" class="row none">
+                        <div id="diagnosticProgressPanel" class="col-lg-12">
+                            <button id="scrollLeftProgress" class="none"></button>
+                            <div id="progressPanelBubblesContainer"></div>
+                            <button id="scrollRightProgress" class="none"></button>
+                            <div id="innerBubblesHolder"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- essay Writer Tables -->
+                    <div class="row none essay_writer moduleContainer">
+                        <button class="btn-primary" onclick="showEssaysToAttempt(event)"> Start New Essay </button>
+                        <div class="tableContainer none" id="essaysToAttempt"> 
+                            <h4 ng-show="essaysPendingYes">Choose a topic</h4>
+                            <h4 ng-show="essaysPendingNo" class="essaysPending">No more essay topics to attempt</h4>
+                            <ul class="list-group">
+                                <li ng-repeat="essay in essays" class="list-group-item newEssay" data-id="{{essay.essayID}}">
+                                    {{essay.essayTitle}}
+                                </li> 
+                                <li ng-hide="essays.length" class="list-group-item newEssay none"> No essays in this list!</li>
+                            </ul>
+                        </div>
+                        <div class="tableContainer" id="incompleteEssays">
+                            <h4>Incomplete Essays</h4>
+                            <ul class="list-group">
+                                <li ng-repeat="essayIncomplete in incompleteEssays" class="list-group-item essaySummay" data-id="{{essayIncomplete.id}}" essay-id="{{essayIncomplete.essayId}}">
+                                    {{essayIncomplete.name}}
+                                </li>
+                                <li ng-hide="incompleteEssays.length" class="list-group-item emptyEntry"> No essays in this list!</li>
+                            </ul>
+                         </div>
+                         <div class="tableContainer" id="completeEssays">
+                             <h4>Recently Completed Essays</h4>
+                             <ul class="list-group">
+                                <li ng-repeat="completeEssay in completeEssays" class="list-group-item essaySummay" data-id="{{completeEssay.id}}" essay-id="{{completeEssay.essayId}}">
+                                    {{completeEssay.name}}
+                                </li>
+                                <li ng-hide="completeEssays.length" class="list-group-item emptyEntry"> No essays in this list!</li>
+                            </ul>
+                         </div>
+                         <div class="tableContainer" id="gradedEssays">
+                             <h4>Graded Essays</h4>
+                             <ul class="list-group">
+                                <li ng-repeat="gradedEssay in gradedEssays" class="list-group-item essaySummay" data-id="{{gradedEssay.id}}" essay-id="{{gradedEssay.essayId}}">
+                                    {{gradedEssay.name}}
+                                </li>
+                                <li ng-hide="gradedEssays.length" class="list-group-item emptyEntry"> No essays in this list!</li>
+                            </ul>
+                         </div>
+                         <button id="startEssay" class="none btn-primary"> Start Essay </button>
+                    </div>
+                    <div class="row none gameContainers moduleContainer">
+                        <iframe id="gameFrame" width="800px" height="600px" frameborder="0" scrolling="no" class=""></iframe>
+                        
+                        <button id="gameExitButton" class="btn-primary none"> <i class="fa fa-times fa-6"></i> </button>
+                        <button id="gamePassageNext" class="none btn-primary">Exit <i class="fa fa-caret-right"></i></button>
+                    </div>
+                    <div class="row none gradedEssayContainer moduleContainer">
+                        <iframe id="essayFeedback" width="800" height="500" ></iframe>
+                    </div>
+                    <div class="row the_classroom none appContainers moduleContainer">
+                        <div class ="none leftRock"></div>
+                        <div class ="none rightRock"></div>
+                        <div class ="none characterArrow"></div>
+                        <div id="arrow" class="none"></div>
+                        <div id="arrowText" class="none"></div>
+
+                        <!-- question Component-->
+                        <div id="backwardNavigationContainer" class="col-md-2 question">
+                            <div id="queNum"></div>
+                            <button id="leftButton" class="navigationButtons none"> ◀ </button><br>
+                            <img id="flagger" src="theme/img/Language/flaggingFlag.png" onclick="flagQuestion()" class="none"/><br>
+                            <div id="legendContainer" class="none">
+                                <span> Legend: </span>
+                                <table id="legendTable">
+                                    <tbody>
+                                        <tr>
+                                            <td>P:</td><td>Passage</td>
+                                        </tr>
+                                        <tr>
+                                            <td>L:</td><td>Listening Exercise</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Q:</td><td>Question</td>
+                                        </tr>
+                                        <tr>
+                                            <td>W:</td><td>Writing Exercise</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td>Not Attempted</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td>Current Position</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td><td>Marked for later</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <span> (click yellow flag to mark) </span>
+                            </div>
+                        </div>
+
+                        <div id="passageQuestionsContainer" class="col-md-8 question">
+                            <div id="questionContainer"  class="none"></div>
+                            <div id="audioContainer" class="none"></div>
+                            <div id="passageContainer" class="none"></div>
+                            <!-- essay Component-->
+                            <div id="essayContainer" class="none">
+                                <div id="essayTopic"></div>
+                                <div>
+                                    <textarea id="essay" value="" rows="17" spellcheck="false"> </textarea><div class="textAreaAfter">[ Words entered: 0 ]</div>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                        
+                        <div id="forwardNavigationContainer" class="col-md-2 question">
+                            <button id="saveEssay" class="none btn-primary" onclick="saveEssay()"> Save </button>
+                            <button id="submitEssay" class="none btn-primary" onclick="saveEssay(1)"> Submit </button>
+                            <figure id='lookBackFigure' class='none'>
+                                <img id="lookback" src="theme/img/Language/lookback.png" onclick="showLookBack()">
+                                <figcaption></figcaption>
+                            </figure>
+                            <button id="gameExitButton" class="btn-primary none"> Exit </button>
+                            <button id="passageNext" class="none btn-primary">Next <i class="fa fa-caret-right"></i></button>
+                            <button id="questionSubmitButton" class="none btn-primary"> Submit </button> 
+                            <button id="rightButton" class="navigationButtons none btn-primary"> <i class="fa fa-caret-right"></i> </button>
+                        </div>
+                    </div>
+                    
+                    <div class="teacher_report moduleContainer row none" ng-controller="teacherReportController">
+                        <h1 id="">Usage Report</h1>
+                        
+                        <div class="form-group" >
+                            <label for="usageReportGrade"> Select Grade: </label>
+                            <select class="form-control" id="usageReportGrade">
+                                <option>select</option>
+                                <option ng-repeat="grade in grades" value="{{grade}}"> {{grade}}</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label> Show Data For:</label>
+                            <select id="userReportFor" class="form-control" ng-click="checkMode()">
+                                <option ng-repeat="key in showData" value="{{key.split('|')[1]}}"> {{key.split('|')[0]}}</option>
+                            </select>
+                            <div ng-show="dateMode">
+                                <div class="ll-skin-siena" id="usageReportStartDate">Start Date</div>
+                                <div class="ll-skin-siena" id="usageReportEndDate">End Date</div>
+                            </div> 
+                        </div>
+                        
+                        <div class="form-group">
+                            <button class="btn-primary" ng-click="getReport()">Submit</button>
+                            <button class="btn-primary" ng-click="getReport(1)">View All Students</button>
+                        </div>
+
+                        <h5 ng-show="dateAvailable">Data from {{reportStartDate}} to {{reportEndDate}}</h5>
+
+                        <div ng-show="less30MinText" class="exceptionReport">These students spent less than 30 minutes on Mindspark {{lessMinDateModeText}}</div>
+                        <table ng-show="canShowLess30Min" class="table exceptionReportTable" id="less30MinTable">
+                            <thead>
+                                <tr>
+                                    <th> Name </th>
+                                    <th> Class/Section </th>
+                                    <th> Time Spent<br>(mins) </th>
+                                    <th> Last Logged In On </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="row in less30MinData">
+                                    <td> {{row.childName}}</td>
+                                    <td> {{row.childClass + ' ' + row.childSection}}</td>
+                                    <td> {{row.timeSpentByUser|number:1}} </td>
+                                    <td> {{row.lastLoggedInDate}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div ng-show="more90MinText" class="exceptionReport">These students spent more than 90 minutes on Mindspark {{moreMinDateModeText}}</div>
+                        <table ng-show="canShowMore90Min" class="table exceptionReportTable" id="more90MinTable">
+                            <thead>
+                                <tr>
+                                    <th> Name </th>
+                                    <th> Class/Section </th>
+                                    <th> Time Spent<br>(mins) </th>
+                                    <th> Last Logged In On </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="row in more90MinData">
+                                    <td> {{row.childName}}</td>
+                                    <td> {{row.childClass + ' ' + row.childSection}}</td>
+                                    <td> {{row.timeSpentByUser|number:1}} </td>
+                                    <td> {{row.lastLoggedInDate}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div ng-show="lowAccuracyText" class="exceptionReport">These students have attempted questions with low accuracy (<20%)</div>
+                        <table ng-show="canShowLowAccuracy" class="table exceptionReportTable" id="lowAccuracyTable">
+                            <thead>
+                                <tr>
+                                    <th> Name </th>
+                                    <th> Class/Section </th>
+                                    <th> Accuracy </th>
+                                    <th> Number of questions attempted </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="row in lowAccuracyData">
+                                    <td> {{row.childName}}</td>
+                                    <td> {{row.childClass + ' ' + row.childSection}}</td>
+                                    <td> {{row.accuracy|number:1}} %</td>
+                                    <td> {{row.totalQues}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div ng-show="highAccuracyText" class="exceptionReport">These students have attempted questions with high accuracy (>80%)</div>
+                        <table ng-show="canShowHighAccuracy" class="table exceptionReportTable" id="highAccuracyTable">
+                            <thead>
+                                <tr>
+                                    <th> Name </th>
+                                    <th> Class/Section </th>
+                                    <th> Accuracy </th>
+                                    <th> Number of questions attempted </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="row in highAccuracyData">
+                                    <td> {{row.childName}}</td>
+                                    <td> {{row.childClass + ' ' + row.childSection}}</td>
+                                    <td> {{row.accuracy|number:1}}</td>
+                                    <td> {{row.totalQues}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div ng-show="notLoggedInText" class="exceptionReport">These students have not logged in {{notLoggedDateModeText}} ({{notLoggedInStartDate}} to {{notLoggedInEndDate}})</div>
+                        <table ng-show="canShowNotLoggedIn" class="table exceptionReportTable" id="notLoggedInTable">
+                            <thead>
+                                <tr>
+                                    <th> Name </th>
+                                    <th> Class/Section </th>
+                                    <th> Last Logged In On </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="row in notLoggedData">
+                                    <td> {{row.childName}}</td>
+                                    <td> {{row.childClass + ' ' + row.childSection}}</td>
+                                    <td> {{row.lastLoggedInDate}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div ng-show="usageReportText" class="exceptionReport">Class Data Usage</div>
+                        <div ng-show="noReport" class="noReport">No Data available for this selection</div>
+                        <table ng-show="canShowReport" class="table" id="usageReportTable">
+                            <thead>
+                                <tr>
+                                    <th> Name </th>
+                                    <th> Class </th>
+                                    <th width="15%"> Time Spent<br>(mins) </th>
+                                    <th> Accuracy </th>
+                                    <th> Content Attempted </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="row in reportData">
+                                    <td> {{row.childName}}</td>
+                                    <td> {{row.childClass + ' ' + row.childSection}}</td>
+                                    <td> {{row.timeTaken|number:1}}</td>
+                                    <td> {{row.accuracy|number:1}} %</td>
+                                    <td> {{row.contentAttempted}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- ********************************** -->
+            </div>
+
+            <!-- hoverable items that appear over almost everything-->
+            <div id='loader' class="dots-loader"></div>
+            <div id="commentPanel" class="none prompts">
+                <div class="prompt-heading">
+                    <div class="heading">
+                    </div>
+                    <button class="close-prompt" prompt-close='#commentPanel'>
+                        <i class="fa fa-close"></i>
+                    </button>
+                </div>
+                <textarea id="comment" value="" rows=8 placeholder="enter comment here"> </textarea>
+                <button id='submitButton' onclick="submitComment()"> Submit </button>
+            </div>
+            <div id="instructions" class="none hovers">
+                <div id="instructionsContainer">
+                    <img src="theme/img/Language/instructions.jpg">
+                </div>
+            </div>
+            <div id="lookbackContent" class="hovers none"></div>
+            <div id="toast" class="hovers  none"> </div>
+            <div id="audioLookback" class="hovers none">
+                
+            </div>
+            <div id="modalBlocker" onclick="hideHovers()" class="ui-widget-overlay"></div>
+            <div id="prompt" class="none"></div>
+        </div>
+
+        <!-- will need later for feedback
+        <iframe id="feedbackForm" class="none hovers" src="../application/views/Language/feedback.html" width="400" height="415"> </iframe>
+        <button id="feedbackClose" class="closeButton" onclick="feedbackClose()"> x </button>-->
+
+        <script type="text/javascript" src="theme/js/jquery-1.11.1.min.js" aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/jquery-ui.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/angular.min.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/Language/helpers.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/Language/skillometer.js"  aysnc="true"></script>
+<!-- 
+        <script type="text/javascript" src="theme/js/Language/sessionReport.js"  aysnc="true"></script>
+ -->
+        <script type="text/javascript" src="theme/js/Language/passage.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/Language/question.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/Language/templates/match.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/Language/audio.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/Language/app.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/Language/rating.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/jquery.jplayer.min.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/jquery_ui_touch.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/jquery.jqplot.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/jqplot.pieRenderer.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/jqplot.barRenderer.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/jqplot.categoryAxisRenderer.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/jqplot.pointLabels.js"  aysnc="true"></script>
+        <script type="text/javascript" src="theme/js/Language/teacher_interface.js"  aysnc="true"></script>
+        
+    </body>
+</html>

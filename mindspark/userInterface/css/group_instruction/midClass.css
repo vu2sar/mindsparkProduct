@@ -1,0 +1,294 @@
+body {
+	min-width:1024px;	
+}
+
+#sparkieContainer{
+	display:none;
+}
+
+#info_bar{
+	position: relative;
+	height:140px;
+	width:100%;
+	-webkit-box-shadow: 0px 3px 2px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    0px 3px 2px rgba(50, 50, 50, 0.2);
+	box-shadow:         0px 3px 2px rgba(50, 50, 50, 0.2);
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+#session {
+	margin-left:7%;
+	padding-top:5px;
+	float:left;
+	font-size:1.2em;
+}
+#duration {
+	margin-left:7%;
+	padding-top:5px;
+	float:left;
+	font-size:1.2em;
+}
+#sparkieInfo {
+	margin-right:33%;
+	padding-top:5px;
+	float:right;
+	font-size:1.2em;
+} 
+
+#topic{
+	width:60%;
+	height:98px;
+	float   :left;
+	margin-left:7%;
+	margin-top:15px;
+	 padding: 0px 2px 2px 3px;    
+   	border-width: 1px;
+   border-bottom-width:1px;
+   border-bottom-color:#e52e00;
+   border-bottom-style: solid;
+   border-left-width:8px;
+   border-left-color:#e52e00;
+   border-left-style: solid;
+}
+
+#home{
+	
+}
+#homeIcon {
+	background: url('../../assets/Home_red.png') no-repeat 0 0;
+	width: 50px;
+	height: 43px;
+	cursor:pointer;
+}
+#homeText{
+	font-size:1.8em;
+	color:#e52e00;
+	cursor:pointer;
+	font-family: 'Conv_HelveticaLTStd-BoldCond';
+}
+
+.icon_text{
+	position: relative;
+	font-size:1em;
+	width: 45px;
+	text-align:center;
+	margin-top:35px;
+}
+#endSession{
+	background: url('../../assets/EndSession.png') no-repeat 0 -82px;
+	width: 36px;
+	height: 31px;
+	margin-right:-190px;
+	float: right;
+	margin-top:50px;
+}
+
+.icon_text1{
+	position: relative;
+	font-size:1.8em;
+	width:178px;
+	text-align:center;
+	margin-top:45px;
+	color:#e52e00;
+}
+
+#topic_name{
+	font-size:1.8em;
+	width:50%;
+	color:#606062;
+	float:left;
+	margin-left:8%;
+	margin-top:20px;
+}
+
+#totalQuestion{
+	padding-top:10px;
+	float: left;
+}
+
+#challengeQues,#totalQuestionCorrect{
+	padding-top:10px;
+	float: right;
+}
+#totalQuestionCorrect {
+	margin-right:5%;
+}
+#totalQuestionText,#totalQuestionCorrectText,#challengeQuesText,#challengeQuesAttemptedText,#challengeQuesCorrectText {
+	font-size:1.25em;
+	color:#606062;
+}
+#totalQuestionDigit,#totalQuestionCorrectDigit,#challengeQuesAttemptedDigit,#challengeQuesCorrectDigit {
+	font-size:1.25em;
+	color:#e52e00;
+}
+
+#activitiesContainer{
+	overflow-y: scroll;
+	width:100%;
+	height: 415px;
+}
+
+#clickText{
+	font-size:1.25em;
+	color:#000000;
+	margin-left:7%;
+	margin-top:10px;
+}
+
+
+#studentInfo {
+	float:right;
+	width:30%;
+}
+#studentInfoLower {
+	width:90%;
+	height:73px;
+}
+
+#childNameDiv {
+	float:right;
+	margin-right: 10%;
+}
+
+#prevReport {
+	float:right;
+	font-size:1.25em;
+	text-align:center;
+	cursor:pointer;
+}
+#prevReportText {
+	width:80px;
+	text-align:center;
+	padding-top:10px;
+}
+#prevReportImote {
+	background:url(../../assets/endSession/previousreport.png) no-repeat 0 0;
+	width:24px;
+	height:20px;
+	margin-left:25px;
+}
+
+#prevReportUl {
+    position: relative;
+    margin: 0 auto;
+	margin-top:5px;
+    width: 45px;
+    height: 3px;
+    background-color: grey;
+}
+#prevReportUl:after,
+#prevReportUl::after {
+    position: absolute;
+    top: -100%;
+    left: 100%;
+    margin-left: -60%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: solid 6px grey;
+    border-left: solid 6px transparent;
+    border-right: solid 6px transparent;
+}
+
+#viewComment {
+	float:right;
+	margin-right:50px;
+	font-size:1.25em;
+	cursor:pointer;
+}
+#viewCommentText {
+	width:80px;
+	text-align:center;
+}
+
+#viewCommentImote {
+	background:url(../../assets/endSession/viewcomments.png) no-repeat 0 0;
+	width:30px;
+	height:30px;
+	margin-left:25px;
+}
+
+#viewCommentUl {
+    position: relative;
+    margin: 0 auto;
+	margin-top:5px;
+    width: 68px;
+    height: 3px;
+    background-color: grey;
+}
+#viewCommentUl:after,
+#viewCommentUl::after {
+    position: absolute;
+    top: -100%;
+    left: 100%;
+    margin-left: -60%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: solid 6px grey;
+    border-left: solid 6px transparent;
+    border-right: solid 6px transparent;
+}
+
+#groupInstructionDivMain {
+	font-size: 2em;
+    padding: 30px 0 0;
+    text-align: center;
+}
+
+#headingDiv {
+	color:#606062;
+	font-size:2em;
+	text-align:center;
+}
+
+.endSessionTbl {
+	font-size:2em;
+	text-align:center;
+	border-spacing:15px;
+ 	border-collapse:seperate;
+}
+
+.endSessionTbl td {
+	padding:3px;
+}
+
+.endSessionTbl tr:first-child td:first-child {
+	background:#fbd212;
+	width:130px;
+}
+.endSessionTbl tr:first-child td:first-child + td {
+	background:#e75903;
+	width:25px;
+}
+.endSessionTbl tr:first-child td:first-child + td + td {
+	background:#9ec956;
+	width:280px;
+}
+.endSessionTbl tr:first-child td:first-child + td + td + td {
+	background:#2f99cb;
+	width:25px;
+}
+.wrongAnsIcon {
+	background: url(../../assets/endSession/result.png) no-repeat 0 0;
+	width: 15px;
+	height: 20px;
+}
+.correctAnsIcon {
+	background: url(../../assets/endSession/result.png) no-repeat 0 -20px;
+	width: 15px;
+	height: 20px;
+}
+.timdTestDispDiv,.activityDispDiv {
+	background:#c3d3ed;	
+	padding-left:9%;
+	padding-right:1%;
+	text-align:left;
+}
+.timdTestLevel,.activityLevel {
+	float:left;
+}
+.timdTestTimeTaken,.activityTimeTaken {
+	float:right;
+}

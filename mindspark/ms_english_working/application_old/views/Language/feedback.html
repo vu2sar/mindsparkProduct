@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>Feedback</title>
+		<link rel="stylesheet" href="../../../theme/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../../theme/css/Language/feedback.css">
+		<script type="text/javascript" src="../../../theme/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="../../../theme/js/Language/constants.js"></script>
+	</head>
+	
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 feedbackFormContainer">
+						<div class="row">
+							<div id="firstDiv" class="col-md-12">Thank you for completing the test! We would love to have your feedback.</div>							
+						</div>
+						<div class="row">
+							<div class="col-sm-6" style="display: inline-block">Did you like the test?</div> <label class="col-sm-3">  <input type="radio" name="like" value="Yes" id="likeYes"> Yes </label> <label class="col-sm-3"> <input type="radio" name="like" value="No" id="likeNo"> No</label>
+						</div>
+						<div> How difficult did you find the test? </div>
+						<div class="difficultyContainer">
+							<label> Easy </label>
+							<span>
+								<img id="star1" class="stars" src="../../../theme/img/Language/star.png">
+								<img id="star2" class="stars" src="../../../theme/img/Language/star.png">
+								<img id="star3" class="stars" src="../../../theme/img/Language/star.png">
+								<img id="star4" class="stars" src="../../../theme/img/Language/star.png">
+								<img id="star5" class="stars" src="../../../theme/img/Language/star.png">
+							</span>
+							<label> Difficult </label>
+						</div>
+						
+						<div class="row">
+							<label class="col-md-3"> comments </label>
+							<textarea id="comments" class="col-md-8"> </textarea>
+						</div>
+						<div class="row text-center">
+							<button id="submit" class="btn btn-primary" onclick="submitFeedback()">Submit</button>
+						</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			window.onload = initialize;
+			user = {};
+			
+			function initialize(){
+				$('.stars').bind('click', function(){
+					$('.stars').removeClass('active');
+					$(this).addClass('active');
+				});
+				
+				$.ajax({
+					url: controllerPath + 'diagnosticTest/getUserInfo',
+					success: function(data){
+						varData = JSON.parse(data);
+						user.id = varData.userID;
+					}
+				});
+			}
+			
+			function submitFeedback(){
+				var feedback = {};
+				if($('#likeYes')[0].checked){
+					feedback['1'] = 'Yes'; 
+				}
+				else if($('#likeNo')[0].checked){
+					feedback['1'] = 'No'; 
+				}
+				
+				var activeElement = $('.active')[0];
+				if(activeElement){
+					feedback['2'] = $('.active')[0].id.substring(4); 
+				}
+				feedback['3']= $('#comments').val().trim();
+
+				if(feedback['1'] == undefined){
+					alert('Please choose if you liked the test or not.');
+					return;
+				}
+				if(feedback['2'] == undefined){
+					alert('Please rate the difficulty.');
+					return;
+				}
+				
+				postData = {};
+				postData.userID = user.id;
+				postData.feedback = feedback;
+								
+				$.ajax({
+					type: 'POST',
+					url: controllerPath + 'diagnosticTest/saveUserFeedback',
+					data: postData
+				}).done(function(data){
+					if(window.parent)
+					window.parent.location.assign('../../../../ms_english/');
+				});
+			}
+		</script>
+	</body>
+</html>

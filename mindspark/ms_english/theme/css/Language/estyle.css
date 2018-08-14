@@ -1,0 +1,407 @@
+		#mainContainer{
+			width:900px;margin:auto;border:1px silver solid;background-color:#FFFFCC;
+		}
+		.fqGroup{
+			margin: auto;
+			width: 600px;
+			border: 1px solid silver;
+		}
+		.fqGroup p{
+			font-size: 15px;
+			margin: 2px;
+			font-weight: bold;
+			background-color: #fb884a;
+			border-top: 8px solid silver;
+		}
+		#faqBox{
+			overflow-y: scroll;
+		}
+		.timerBox{
+			width: 130px;
+			border:2px solid #f23100;
+			background-color: #f86627; 
+			border-radius: 3px;
+			color: #ffffff;
+			font-weight: bold;
+			text-align: center;
+		}
+		.rect{
+			height: 26px; width: 156px;
+			border: 2px solid #1A412F;border-radius: 5px;
+			background-color: #45ba86;
+			color: #000000; position: absolute;
+			text-align: center;
+		}
+		.rectUn{
+			background-color: #ffffff;
+		}
+		.arrow{
+			height:30px; width:40px;
+			background-image: url('../../img/imgs/arr.png');position: absolute;
+		}
+		.scBtn0{
+			background-image: url('../../img/imgs/edit.png');
+			background-repeat: no-repeat;
+			background-size: 15px 15px;
+			background-position-x: 2px;
+			cursor: pointer;
+		}
+		.scBtn1{
+			background-image: url('../../img/imgs/view.png');
+			background-repeat: no-repeat;
+			background-size: 15px 15px;
+			background-position-x: 2px;
+			cursor: pointer;
+		}
+		.comT{
+			width: 100%;
+		}
+		.overlay{
+			display: none;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			opacity: 0.5;
+			background-color: rgb(0,0,0);
+			z-index: 1001;
+		}
+		.statusbar{
+			display: none;
+		}
+		.scBtnC{
+			background-image: url('../../img/imgs/save.png');
+			background-repeat: no-repeat;
+			background-size: 15px 15px;
+			background-position-x: 2px;
+			cursor: pointer;
+		}
+		/*td{
+			text-align: center;
+		}*/
+		.tab {
+			border-top-left-radius: 25px;
+			border-top-right-radius: 25px;
+			background-color: rgb(165, 203, 241);
+			border-bottom:2px solid rgb(11, 37, 119);
+			cursor: pointer;
+		}
+		.selectedTab{
+			background-color:#0280fd;
+			border:2px solid  rgb(11, 37, 119);
+			border-bottom:0px solid  rgb(11, 37, 119);
+			color: white;
+		}
+		.box{
+			border: 2px solid rgb(11, 37, 119);
+			border-top: 0px solid rgb(11, 37, 119);
+			width: 100%;
+			display: none;
+		}
+		.showBox{
+			display: block;
+		}
+		.boxDiv{
+			height: 500px;
+			overflow-y: scroll;
+		}
+		#addCommentbtn{
+			position: absolute;
+			z-index: 100;
+			height:30px;
+			left: 0px;top: 0px;
+			display: none;
+		}
+		.toplinks{
+			text-decoration: none;
+			color: #364150;
+			font-size: 13px;
+			font-family: Tahoma;
+		} 
+		.toplinks:hover{
+			background-color: white;
+		} 
+		.comment:hover{
+			background-color: #eefebe;	
+		}
+		.comment{
+			border-radius: 2px;
+			border: 1px solid green;
+			background-color: #caffbd;
+			min-height: 24px;
+			padding: 1px;
+			overflow-y: auto;
+		}
+		.comM, .comEbtn, .comSbtn, .comDbtn{
+			float: left; min-height: 20px;
+		}
+		.comM{
+			width: 350px;
+		}
+		.comMO{
+			width: 400px;
+		}
+		.comSbtn{
+			background-image: url('../../img/imgs/save.png');
+		}
+		.comDbtn{
+			background-image: url('../../img/imgs/delete.png');
+		}
+		.comEbtn{
+			background-image: url('../../img/imgs/edit.png');
+		}
+		.comEbtn, .comSbtn, .comDbtn{
+			width: 20px; height: 20px; margin: 1px; cursor: pointer;
+		}
+		.comEbtn:hover, .comSbtn:hover, .comDbtn:hover{
+			background-color: #ffb300
+		}
+		body{
+			background-color: #3A231A;
+		}
+		body, table, tr, td{
+			margin: 0px; 
+			font-family: Tahoma;
+			font-size: 13px;
+		}
+		#dash{
+			margin: 0px;
+			z-index: 2;
+		}
+		.essayList{
+			border-radius: 5px;
+			border: 4px solid #5f6269;
+			margin: 5px;
+		}
+		.listHeader{
+			background-color: #ab8654;
+			color: white;
+			font-weight: bolder;
+			padding: 3px;
+		}
+		#newEssaybtn,#addNewStudent,#addNewEval{
+			text-align: center;
+			width: 220px;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 20px;
+			background-color: #eff;
+			background-image: -webkit-gradient(linear, left top, left bottom, from(#eff), to(#999)); /* Chrome, Safari 4+ */
+			background-image: -webkit-linear-gradient(top, #eff, #999); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+			background-image:    -moz-linear-gradient(top, #eff, #999); /* Firefox 3.6-15 */
+			background-image:      -o-linear-gradient(top, #eff, #999); /* Opera 11.10-12.00 */
+			background-image:         linear-gradient(to bottom, #eff, #999); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+			padding: 5px;
+			border-radius: 3px;
+			border: 1px solid black;
+			cursor: pointer;
+		}
+		#newEssaybtn:hover,#addNewStudent:hover,#addNewEval:hover{
+			background-color: #aaf;
+			background-image: -webkit-gradient(linear, left top, left bottom, from(#aaf), to(#999)); /* Chrome, Safari 4+ */
+			background-image: -webkit-linear-gradient(top, #aaf, #999); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+			background-image:    -moz-linear-gradient(top, #aaf, #999); /* Firefox 3.6-15 */
+			background-image:      -o-linear-gradient(top, #aaf, #999); /* Opera 11.10-12.00 */
+			background-image:         linear-gradient(to bottom, #aaf, #999); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+		}
+		.essayItems{
+			/*min-height: 150px;*/
+			max-height: 400px;
+			/*overflow-y: scroll;*/
+			overflow-x: hidden;
+			border-radius: 2px;
+		}
+		.essayItem{
+			margin: 5px;
+			border-radius: 2px;
+			border: 2px solid transparent;
+			background-color: #a8b386;
+		}
+		.essayItem:hover{
+			border: 2px solid #4d2e11;
+		}
+		.essayLinks{
+			margin-right: 5px;
+			float: right;
+			cursor: pointer;
+		}
+		.essayLinks:hover{
+			color:white;
+		}
+		.essayTitle{
+			margin-left: 2px;
+			font-weight: bold;
+			cursor: pointer;
+			text-decoration: underline;
+		}
+		.essayTitle:hover{
+			color:white;
+		}
+		.essayContent{
+			margin-left: 2px;
+			font-family: Calibri;
+		}
+		.modal{
+			width: 100%;
+			/*min-height: 100%;*/
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			position: absolute;
+			background-color: #EFF79A;
+		}
+		.hilite{
+			background-color: #ffc6c6;
+		}
+		.nohilite{
+			background-color: transparent;
+		}
+		.hiliteOn{
+			color:#fff;
+    		background-color:#8aba56;
+		}
+		#essayBodTD{
+			text-align: center;
+			position: relative;
+			overflow-x: hidden;
+		}
+		.dragbar{
+			background-color:black;
+		 	height: 6px;
+		  	cursor: row-resize;
+			float: left;
+		}
+		.floatRight{
+			margin-right: 5px;
+			float: right;
+		}
+		#essayBody, .essayCont{
+			height: 100%;
+			position: relative;
+			width: 870px;
+			background-color: white;
+			border: 2px solid black;
+			margin: auto;
+			padding: 8px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			float: left;
+			text-align: left;
+		}
+		#essaySpecificFB,#essayReport{
+			text-align: left;
+			height: 50%;
+			width: 870px;
+			background-color: white;
+			border: 2px solid black;
+			margin: auto;
+			padding: 4px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			float: left;
+			z-index: 0;
+			position: relative;
+		}
+		#ofb,#sfb{
+			text-align: left;
+			height: 26px;
+			width: 428px;
+			background-color: white;
+			border-left: 2px solid black;
+			border-right: 2px solid black;
+			margin: auto;
+			padding: 0px;
+			float: left;
+			z-index: 10;
+			position: relative;
+		}
+		#ofb{
+			background-image: url('../../img/imgs/ofb.png');
+		}
+		#sfb{
+			background-image: url('../../img/imgs/sfb.png');
+			border-top: 2px solid black;
+		}
+		#essaySpecificFB{
+			border-bottom: 0px;
+			border-top: 0px;
+		}
+		#essayReport{
+			border-top: 0px;
+		}
+		#header{
+			height:100px;
+		}
+		#header td{
+			border-bottom:1px maroon solid;
+		}
+		.radioCell{
+			width:35px;
+			height: 35px;
+			text-align: center;
+		}
+		#rubricBox{
+			position: absolute;
+			right: -450px;
+			top: 0px;
+			background-color: #D8DFD5;
+			z-index: 2000;
+			width: 450px;
+			height: 100%;
+		}
+		#rubricBox td{
+			font-size: 13px;
+		}
+		#rubricBox th{
+			font-size: 13px;
+		}
+		#showRub{
+			position: absolute;
+			left: -45px;
+			top: 0px;
+			background-color: #b0a54f;
+			text-align: center;
+			border-radius: 4px;
+			padding: 2px;
+			cursor: pointer;
+			width: 38px;
+			font-weight: bold;
+			border: 2px #FDFFFF solid;
+		}
+		#hideRub{
+			width: 80px;
+			text-align: center;
+			margin-left: auto;
+			background-color: #b0a54f;
+			border-radius: 4px;
+			padding: 2px;cursor: pointer;
+		}
+		#rubricBox input[type=radio] {
+		    display:none; 
+		    margin:10px;
+		}
+		input[type=radio] + label {
+		    display:inline-block;
+			width: 33px;height:33px;
+		    background-color: #e7e7e7;
+		    border-color: #ddd;
+			background-image: url('../../img/imgs/tick.png');
+			background-position-x: 0px;
+		}
+		input[type=radio]:checked + label { 
+		   background-image: url('../../img/imgs/tick.png');
+		   background-color:#d0d0d0;
+		   background-position-x: -37px;
+		}
+		#rubricbox tr:nth-child(even) {background: #CCC}
+		#rubricbox tr:nth-child(even) label{background-position-y: -37px;}
+		#rubricbox tr:nth-child(odd) {background: #FFF}
+		.sEssayList td{
+			text-align: center;
+		}
+		.sp_err{
+			/*background-color:pink;*/
+		}

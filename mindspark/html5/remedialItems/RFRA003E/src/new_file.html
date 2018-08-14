@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+		window.onload = addListeners;
+		
+		function addListeners(){
+		    document.getElementById('dxy').addEventListener('mousedown', mouseDown, false);
+		    window.addEventListener('mouseup', mouseUp, false);
+		}
+		
+		function mouseUp()
+		{
+		    window.removeEventListener('mousemove', divMove, true);
+		}
+		
+		function mouseDown(e){
+		  window.addEventListener('mousemove', divMove, true);
+		}
+		
+		function divMove(e){
+		  var div = document.getElementById('dxy');
+		  div.style.position = 'absolute';
+		  div.style.top = e.clientY + 'px';
+		  div.style.left = e.clientX + 'px';
+		  alert(e.clientX);
+		}</script>
+	</head>
+	<body>
+		<div id="dxy" style="background-color:blue;height:20px;width:20px;"></div>
+		
+	</body>
+</html>

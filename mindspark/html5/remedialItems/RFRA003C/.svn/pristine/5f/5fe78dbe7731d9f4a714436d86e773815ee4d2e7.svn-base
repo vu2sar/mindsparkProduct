@@ -1,0 +1,1589 @@
+var interactiveObj;
+var completed;
+var levelWiseTimeTaken;
+var levelWiseScore;		// scores to be recorded separately for all 4 types of questions. Pipe seprated.  10 points for correct at 1st attempt and 5 at 2nd attempt
+var levelWiseAttempted;
+var levelWiseStatus;
+
+var correctAnswerCount=0;
+var html;
+var html1;
+var html2;
+var number1=0;
+
+var c=0;
+var a=0;
+
+var correctQues_1_flag=0;
+var correctQues_2_flag=0;
+var correctQues_3_flag=0;
+var correctQues_4_flag=0;
+
+var correctQues_2_flagVisible=0;
+var correctQues_3_flagVisible=0;
+
+var notInLowestFormFlag=0;
+var attempt3_C_NLF=0;
+var notInLowestFormAgain_Flag=0;
+var notInLowestFormFinal_Flag=0;
+
+var attemp_Ques3=0;
+var timer;
+var timer2;
+
+// Variables for Question 2//
+
+var correct_firstAttemptQ2=0;
+var correct_secondAttemptQ2=0;
+var correct_thirdAttemptQ2=0;
+
+var Incorrect_firstAttemptQ2=0;
+var Incorrect_secondAttemptQ2=0;
+
+// Variables for Question 3//
+
+// Variables for Question 3//
+
+var correct_firstAttempt=0;
+var correct_secondAttempt=0;
+var correct_thirdAttempt=0;
+var Incorrect_firstAttempt=0;
+var Incorrect_secondAttempt=0;
+var Incorrect_thirdAttempt=0;
+
+var Q3_correct_LF_A1=0;
+var Q3_correct_LF_A2=0;
+var Q3_correct_LF_A3=0;
+
+var Q3_Incorrect_A1=0;
+var Q3_Incorrect_A2=0;
+var Q3_Incorrect_A3=0;
+
+// Variables for Question 3//
+
+// Variables for Question 4//
+var Incorrect_firstAttemptQ4=0;
+var Incorrect_secondAttemptQ4=0;
+var Incorrect_thirdAttemptQ4=0;
+
+var correct_firstAttemptQ4=0;
+var correct_secondAttemptQ4=0;
+var correct_thirdAttemptQ4=0;
+var notInLowestFormFlagQ4=0;
+var attemp_Ques4=0;
+
+var Q4_correct_LF_A1=0;
+var Q4_correct_LF_A2=0;
+var Q4_correct_LF_A3=0;
+
+var Q4_Incorrect_A1=0;
+var Q4_Incorrect_A2=0;
+var Q4_Incorrect_A3=0;
+
+
+// Variables for Question 4//
+
+// Variables for Question 1//
+var Incorrect_firstAttemptQ1=0;
+var Incorrect_secondAttemptQ1=0;
+// Variables for Question 1//
+
+//------varibales to get the stats-----//
+
+var AdditionalQues=new Array();
+var Ques=new Array();
+var GenerateQ5=0;
+var GenerateQ6=0;
+ 
+var Question5_Visible=0;
+var attemp_Ques5=0;
+
+var Q5_correct_LF_A1=0;
+var Q5_correct_LF_A2=0;
+var Q5_correct_LF_A3=0;
+
+var Q5_Incorrect_A1=0;
+var Q5_Incorrect_A2=0;
+var Q5_Incorrect_A3=0;
+
+var notInLowestFormQ5=0;
+var called1=0;
+var called2=0;
+var called3=0;
+var called4=0;
+//-----------------------------------//
+
+function questionInteractive()
+{
+    this.number_1=0;
+    this.answer="";
+    this.answer2="";
+    this.answer3="";
+    this.answer4="";
+
+    this.attemptQues_1=0;
+    this.attemptQues_2=0;
+    this.attemptQues_3=0;
+    this.attemptQues_4=0;
+    this.local=0;
+
+    this.correctAnswer=0;
+    this.correctAnswer2=0;
+    this.correctAnswer3=0;
+    this.correctAnswer4=0;
+
+    this.x=0;
+    this.y=0;
+    this.magic=0;
+    this.i=0;
+
+    this.answer_3_num=0;
+    this.answer_3_denom=0;
+    this.divisibleBy=0;
+    
+    this.number_Add_1=0;
+    this.number_Add_2=0;
+    this.number_Add_3=0;
+    this.number_Add_4=0;
+    
+    this.fifth=0;
+    this.correctAnswer5=0;
+
+    if(typeof getParameters['noOfLevels']=="undefined" || parseInt(getParameters['noOfLevels'])!=3)
+    {
+        this.parameterNotSetFlag=1;
+
+        alert("Set noOfLevels to 3");
+        $("#container").html("<h2><center>Parameter noOfLevels Not Set</center></h2>");
+        return;
+    }
+    else this.noOfLevels =getParameters['noOfLevels'];
+}
+
+questionInteractive.prototype.init=function()
+{
+    loadBody=setTimeout("interactiveObj.loadBody();",1000);
+}
+
+questionInteractive.prototype.randomNumberGeneratorType_1=function()
+{
+    interactiveObj.number1=parseInt(Math.floor((Math.random()*9)+1));     // TYPE 1 Numbers
+
+    if(interactiveObj.number1 % 2==0 || interactiveObj.number1 % 5==0 || interactiveObj.number1 % 3==0)
+    {
+        interactiveObj.randomNumberGeneratorType_1();
+    }
+    else
+    {
+        interactiveObj.number1=parseFloat("0."+interactiveObj.number1);
+
+    }
+}
+questionInteractive.prototype.randomNumberGeneratorType_2=function()
+{
+    interactiveObj.number2=parseInt(Math.floor((Math.random()*87)+11));     // TYPE 1 Numbers
+
+    if(interactiveObj.number2%2==0 || interactiveObj.number2%5==0 || interactiveObj.number2%3==0 || interactiveObj.number2%11==0)
+    {
+        interactiveObj.randomNumberGeneratorType_2();
+    }
+    else
+    {
+        interactiveObj.number2=parseFloat("0."+interactiveObj.number2);
+
+    }
+}
+questionInteractive.prototype.randomNumberGeneratorType_3=function()
+{
+    interactiveObj.number3=parseInt(Math.floor((Math.random()*9)+1));     // TYPE 1 Numbers
+
+    if(interactiveObj.number3%2!=0)
+    {
+        interactiveObj.randomNumberGeneratorType_3();
+    }
+    else
+    {
+        interactiveObj.number3=(parseFloat("0."+interactiveObj.number3));
+
+
+    }
+}
+questionInteractive.prototype.randomNumberGeneratorType_4=function()
+{
+    interactiveObj.number4=parseInt(Math.floor((Math.random()*88)+11));    // TYPE 1 Numbers
+    console.log("num generated="+interactiveObj.number4)
+
+    if(interactiveObj.number4%2==0 || interactiveObj.number4%5==0 || interactiveObj.number4==56 ||interactiveObj.number4==58)
+    {
+        interactiveObj.number4=("0."+interactiveObj.number4);
+    }
+    else
+    {
+        interactiveObj.randomNumberGeneratorType_4();
+    }
+    console.log("number 4="+interactiveObj.number4);
+}
+
+
+questionInteractive.prototype.randomNumber_Add_1=function()
+{
+    console.log("Called Type 1");
+    interactiveObj.number_1=parseInt(Math.floor((Math.random()*8)+1));     // TYPE 1 Numbers
+
+    if(interactiveObj.number_1==2 || interactiveObj.number_1==4 || interactiveObj.number_1==6|| interactiveObj.number_1==8|| interactiveObj.number_1==9 || interactiveObj.number_1==interactiveObj.number1)
+    {
+        interactiveObj.randomNumber_Add_1();	
+	  		
+    }
+    else
+    {
+        interactiveObj.number_1=parseFloat("0."+interactiveObj.number_1);
+
+    }
+}
+
+questionInteractive.prototype.randomNumber_Add_2=function()
+{
+    console.log("Called Type 2");
+    interactiveObj.number_2=parseInt(Math.floor((Math.random()*87)+11));     // TYPE 1 Numbers
+
+    if(interactiveObj.number_2%2==0 || interactiveObj.number_2%5==0 || interactiveObj.number_2%3==0 || interactiveObj.number_2%11==0)
+    {
+        interactiveObj.randomNumber_Add_2();
+    }
+    else
+    {
+        
+        interactiveObj.number_2=parseFloat("0."+interactiveObj.number_2);
+    }
+}
+
+questionInteractive.prototype.randomNumber_Add_3=function()
+{
+    console.log("Called Type 3");
+    interactiveObj.number_3=parseInt(Math.floor((Math.random()*9)+1));     // TYPE 1 Numbers
+
+    if(interactiveObj.number_3%2!=0)
+    {
+        interactiveObj.randomNumber_Add_3();
+    }
+    else
+    {
+        interactiveObj.number_3=(parseFloat("0."+interactiveObj.number_3));
+    }
+}
+
+questionInteractive.prototype.randomNumber_Add_4=function()
+{
+    console.log("Called Type 4");
+    interactiveObj.number_4=parseInt(Math.floor((Math.random()*88)+11));    // TYPE 1 Numbers
+
+    if(interactiveObj.number_4%2==0 || interactiveObj.number_4%5==0 || interactiveObj.number_4!=56 || interactiveObj.number_4!=58 || interactiveObj.number_4!=interactiveObj.number4)
+    {
+        //console.log("Before="+interactiveObj.number_4);
+        interactiveObj.number_4=("0."+interactiveObj.number_4);
+    }
+    else
+    {
+        interactiveObj.randomNumber_Add_4();
+    }
+}
+questionInteractive.prototype.loadBody=function()
+{
+
+    html="";
+    interactiveObj.randomNumberGeneratorType_1();
+    interactiveObj.randomNumberGeneratorType_2();
+    interactiveObj.randomNumberGeneratorType_3();
+    interactiveObj.randomNumberGeneratorType_4();
+
+    html+='<div id="base">';
+    html+='<div id="background"></div>';
+    html+='<div id="header">'+promptArr['text_1']+'</div>';
+    html+='</div>';
+
+    interactiveObj.loadQuestions();   // calls the function that loads the question
+
+    $("#container").html(html);
+}
+questionInteractive.prototype.loadQuestions=function()
+{
+    html="";
+
+
+    html+='<div id="base">';
+    html+='<div id="background"></div>';
+    html+='<div id="header">'+promptArr['text_1']+'</div>';
+
+    html+='<div id="firstQuestion">';
+    html+='<div id="firstQuestion_1">'+interactiveObj.number1+'</div>';
+    html+='<input id="answer1"></input>';
+    html+='<div id="fractionAnswer1"></div>';
+    html+='<button id="button_1" type="button" name="" value="" class="css3button" onclick=interactiveObj.checkAnswer("one");>Check it</button>';
+    html+='</div>';
+
+    html+='<div id="secondQuestion">';
+    html+='<div id="secondQuestion_2">'+interactiveObj.number2+'</div>'
+    html+='<input id="answer2"></input>';
+    html+='<div id="fractionAnswer2"></div>';
+    html+='<button id="button_2" type="button" name="" value="" class="css3button" onclick=interactiveObj.checkAnswer("two");>Check it</button>';
+    html+='</div>';
+
+    html+='<div id="thirdQuestion">';
+    html+='<div id="thirdQuestion_3">'+interactiveObj.number3+'</div>'
+    html+='<input id="answer3"></input>';
+    html+='<div id="fractionAnswer3"></div>';
+    html+='<div id="FractionDivided"></div>';
+    html+='<button id="button_3" type="button" name="" value="" class="css3button" onclick=interactiveObj.checkAnswer("three");>Check it</button>';
+    html+='</div>';
+
+
+    html+='<div id="fourthQuestion">';
+    html+='<div id="fourthQuestion_4">'+interactiveObj.number4+'</div>'
+    html+='<input id="answer4"></input>';
+    html+='<div id="fractionAnswer4"></div>';
+    html+='<div id="FractionDivided4"></div>';
+    html+='<button id="button_4" type="button" name="" value="" class="css3button" onclick=interactiveObj.checkAnswer("four");>Check it</button>';
+    html+='</div>';
+    
+   
+   
+    html+='<div id="fifthQuestion"></div>';
+  
+    
+    html+='<div id="sixthQuestion">';
+    /* html+='<div id="sixthQuestion_6">'+interactiveObj.number4+'</div>'
+    html+='<input id="answer6"></input>';
+    html+='<div id="fractionAnswer6"></div>';
+    html+='<div id="FractionDivided6"></div>';
+    html+='<button id="button_6" type="button" name="" value="" class="css3button" onclick=interactiveObj.checkAnswer("six");>Check it</button>';   */
+    html+='</div>';
+ 
+
+    html+='<div id="prompts"></div>';
+
+
+    html+='</div>';
+
+    $("#container").html(html);
+    //------------------setting the visibility of other questions----------------------//
+    if(correctQues_1_flag==1)
+    {
+        $("#showAns2").css('visibility','hidden');
+        $("#message2").css('visibility','hidden');
+        $("#wellDone2").css('visibility','hidden');
+
+        $("#firstQuestion").css('visibility','visible');
+        $("#button_1").css('visibility','hidden');
+        $("#answer1").hide();
+        $("#fractionAnswer1").css('visibility','visible');
+        $('#fractionAnswer1').append('<div class="fraction"><div class="frac numerator">'+interactiveObj.correctAnswer*10+'</div><div class="frac">10</div></div>');
+    }
+    if(correctQues_2_flagVisible==1)
+    {
+
+        $("#showAns2").css('visibility','hidden');
+        $("#message2").css('visibility','hidden');
+        $("#wellDone2").css('visibility','hidden');
+
+        $("#firstQuestion").css('visibility','visible');
+        $("#secondQuestion").css('visibility','visible');    // ------Setting question 1 visible and and disabling the properties-----------//
+
+    }
+    if(correctQues_2_flag==1)
+    {
+
+        $("#button_2").css('visibility','hidden');
+
+        $("#showAns2").css('visibility','hidden');
+        $("#message2").css('visibility','hidden');
+        $("#wellDone2").css('visibility','hidden');
+
+        $("#firstQuestion").css('visibility','visible');
+        $("#secondQuestion").css('visibility','visible');    // ------Setting question 1 visible and and disabling the properties-----------//
+
+
+        $("#answer2").hide();
+
+        $("#fractionAnswer2").css('visibility','visible');
+        $('#fractionAnswer2').append('<div class="fraction"><div class="frac numerator">'+interactiveObj.x*100+'</div><div class="frac">100</div></div>');
+
+    }
+    if(correctQues_3_flagVisible==1)
+    {
+        //alert("ques 3 flag visible true");
+        $("#thirdQuestion").css('visibility','visible');
+
+        if(notInLowestFormFlag==1 && attemp_Ques3==1 && correct_firstAttempt==1)
+        {
+            $("#FractionDivided").css('visibility','visible');
+            $('#FractionDivided').append('<div id="inputField"><input id="Input_num"></input><input id="Input_denom"></input></div>');
+
+            $("#answer3").hide();
+            $("#fractionAnswer3").css('visibility','visible');
+            $('#fractionAnswer3').append('<div class="fraction"><div class="frac numerator">'+interactiveObj.y*10+'</div><div class="frac">10</div></div>');
+            $("#button_3").css({
+                'position':'absolute',
+                'left':'235px'
+            });
+        }
+        if(notInLowestFormFlag==1 && attemp_Ques3==2  && correct_secondAttempt==1)
+        {
+            $("#button_3").css({
+                'position':'absolute',
+                'left':'235px'
+            });
+
+            $("#answer3").hide();
+            $("#fractionAnswer3").css('visibility','visible');
+            $('#fractionAnswer3').append('<div class="fraction"><div class="frac numerator">'+interactiveObj.y*10+'</div><div class="frac">10</div></div>');
+
+            $("#FractionDivided").css('visibility','visible');
+            $('#FractionDivided').append('<div id="inputField"><input id="Input_num"></input><input id="Input_denom"></input></div>');
+        }
+        if(notInLowestFormFlag==1 && attemp_Ques3==3 && correct_thirdAttempt==1)
+        {
+            $("#button_3").css({
+                'position':'absolute',
+                'left':'235px'
+            });
+            $("#button_3").css('visibility','hidden');
+
+            $("#answer3").hide();
+            $("#answer2").hide();
+
+            $("#fractionAnswer3").css('visibility','visible');
+
+            $('#fractionAnswer3').append('<div class="fraction"><div class="frac numerator">'+interactiveObj.y*10+'</div><div class="frac">10</div></div>');
+
+            $("#FractionDivided").css('visibility','visible');
+            $('#FractionDivided').append('<div id="inputField"><div class="fraction"><div class="frac numerator">'+interactiveObj.y*10+'</div><div class="frac">10</div></div></div>');
+        }
+        if(notInLowestFormFlag==0 && attemp_Ques3==1  && correct_firstAttempt==1)
+        {
+            $("#answer3").hide();
+            $("#fractionAnswer3").css('visibility','visible');
+            $('#fractionAnswer3').append('<div class="fraction"><div class="frac numerator">'+(interactiveObj.y*10)/2+'</div><div class="frac">5</div></div>');
+            $("#button_3").css({
+                'position':'absolute',
+                'left':'235px'
+            });
+            $("#button_3").css('visibility','hidden');
+        }
+        if(notInLowestFormFlag==0 && attemp_Ques3==2  && correct_secondAttempt==1)
+        {
+            $("#answer3").hide();
+            $("#fractionAnswer3").css('visibility','visible');
+            $('#fractionAnswer3').append('<div class="fraction"><div class="frac numerator">'+interactiveObj.y*10+'</div><div class="frac">10</div></div>');
+
+            $("#FractionDivided").css('visibility','visible');
+            $('#FractionDivided').append('<div id="inputField"><div class="fraction"><div class="frac numerator">'+(interactiveObj.y*10)/2+'</div><div class="frac">5</div></div></div>');
+
+
+            $("#button_3").css({
+                'position':'absolute',
+                'left':'235px'
+            });
+            $("#button_3").css('visibility','hidden');
+
+        }
+        if(notInLowestFormFlag==0 && attemp_Ques3==3  && correct_thirdAttempt==1)
+        {
+
+            $("#answer3").hide();
+            $("#fractionAnswer3").css('visibility','visible');
+            $('#fractionAnswer3').append('<div class="fraction"><div class="frac numerator">'+interactiveObj.y*10+'</div><div class="frac">10</div></div>');
+
+            $("#FractionDivided").css('visibility','visible');
+            $('#FractionDivided').append('<div id="inputField"><div class="fraction"><div class="frac numerator">'+(interactiveObj.y*10)/2+'</div><div class="frac">5</div></div></div>');
+
+
+            //$("#button_3").css({'position':'absolute','left':'235px'});
+            //$("#button_3").css('visibility','hidden');
+            $("#button_3").css('visibility','hidden');
+        }
+        if(Incorrect_firstAttempt==1 && attemp_Ques3==1)
+        {
+
+        }
+   
+        if(Incorrect_secondAttempt==1 && attemp_Ques3==2)
+        {
+
+            $("#button_3").css({
+                'position':'absolute',
+                'left':'235px'
+            });
+
+            $("#answer3").hide();
+            $("#fractionAnswer3").css('visibility','visible');
+            $('#fractionAnswer3').append('<div class="fraction"><div class="frac numerator">'+interactiveObj.y*10+'</div><div class="frac">10</div></div>');
+
+            $("#FractionDivided").css('visibility','visible');
+            $('#FractionDivided').append('<div id="inputField"><input id="Input_num"></input><input id="Input_denom"></input></div>');
+        }
+        if(Incorrect_thirdAttempt==1 && attemp_Ques3==3)
+        {
+            $("#button_3").css({
+                'position':'absolute',
+                'left':'235px'
+            });
+            $("#button_3").css('visibility','hidden');
+
+            $("#answer3").hide();
+            $("#answer2").hide();
+
+            $("#fractionAnswer3").css('visibility','visible');
+
+            $('#fractionAnswer3').append('<div class="fraction"><div class="frac numerator">'+interactiveObj.y*10+'</div><div class="frac">10</div></div>');
+
+            $("#FractionDivided").css('visibility','visible');
+            $('#FractionDivided').append('<div id="inputField"><div class="fraction"><div class="frac numerator">'+(interactiveObj.y*10)/interactiveObj.divisor+'</div><div class="frac">'+(10/interactiveObj.divisor)+'</div></div></div>');
+            
+            correctQues_4_flag=1;
+        }
+    }
+    if(correctQues_4_flag==1)    //------------------ QUESTION 4 VISIBILITY SETTINGS ------------- //
+    {
+        $("#fourthQuestion").css('visibility','visible');
+
+        if(notInLowestFormFlagQ4==1 && attemp_Ques4==1 && correct_firstAttemptQ4==1)
+        {
+            $("#FractionDivided4").css('visibility','visible');
+            $('#FractionDivided4').append('<div id="inputField"><input id="Input_num"></input><input id="Input_denom"></input></div>');
+
+            $("#answer4").hide();
+            $("#fractionAnswer4").css('visibility','visible');
+            $('#fractionAnswer4').append('<div class="fraction"><div class="frac numerator">'+parseInt(interactiveObj.xander[1])+'</div><div class="frac">100</div></div>');
+            $("#button_4").css({
+                'position':'absolute',
+                'left':'171px'
+            });
+        }
+        if(notInLowestFormFlagQ4==1 && attemp_Ques4==2  && correct_secondAttemptQ4==1)
+        {
+            alert("in this condition");
+
+            $("#button_4").css({
+                'position':'absolute',
+                'left':'235px'
+            });
+            $("#answer4").hide();
+            $("#fractionAnswer4").css('visibility','visible');
+            $('#fractionAnswer4').append('<div class="fraction"><div class="frac numerator">'+parseInt(interactiveObj.xander[1])+'</div><div class="frac">100</div></div>');
+
+            $("#FractionDivided4").css('visibility','visible');
+            $('#FractionDivided4').append('<div id="inputField"><input id="Input_num"></input><input id="Input_denom"></input></div>');
+        }
+        if(notInLowestFormFlagQ4==1 && attemp_Ques4==3 && correct_thirdAttemptQ4==1)
+        {
+            $("#button_4").css({
+                'position':'absolute',
+                'left':'235px'
+            });
+            $("#button_4").css('visibility','hidden');
+
+            $("#answer3").hide();
+            $("#answer2").hide();
+            $("#answer4").hide();
+
+            $("#fractionAnswer4").css('visibility','visible');
+            $('#fractionAnswer4').append('<div class="fraction"><div class="frac numerator">'+parseInt(interactiveObj.xander[1])+'</div><div class="frac">100</div></div>');
+
+            $("#FractionDivided4").css('visibility','visible');
+            $('#FractionDivided4').append('<div class="fraction"><div class="frac numerator">'+parseInt(interactiveObj.xander[1])/interactiveObj.divisibleBy+'</div><div class="frac">'+100/interactiveObj.divisibleBy+'</div></div>');
+        }
+        // WHEN ANSWER IS NOT IN LOWEST FORM
+        if(notInLowestFormFlagQ4==0 && attemp_Ques4==1  && correct_firstAttemptQ4==1)
+        {
+            $("#answer4").hide();
+            $("#button_4").css('visibility','hidden');
+            $("#fractionAnswer4").css('visibility','visible');
+            $('#fractionAnswer4').append('<div class="fraction"><div class="frac numerator">'+interactiveObj.a+'</div><div class="frac">'+parseInt(interactiveObj.answer_4[1])+'</div></div>');
+        }
+        if(notInLowestFormFlagQ4==0 && attemp_Ques4==2  && correct_secondAttemptQ4==1)
+        {
+            //alert("xxx");
+            $("#answer4").hide();
+            $("#button_4").css('visibility','hidden');
+            $("#fractionAnswer4").css('visibility','visible');
+            $('#fractionAnswer4').append('<div class="fraction"><div class="frac numerator">'+interactiveObj.number4*100+'</div><div class="frac">100</div></div>');
+            $("#FractionDivided4").css('visibility','visible');
+            $('#FractionDivided4').append('<div class="fraction"><div class="frac numerator">'+parseInt(interactiveObj.xander[1])/interactiveObj.divisibleBy+'</div><div class="frac">'+100/interactiveObj.divisibleBy+'</div></div>');
+        }
+        if(notInLowestFormFlagQ4==0 && attemp_Ques4==3  && correct_thirdAttemptQ4==1)
+        {
+            //alert("xxx");
+            $("#answer4").hide();
+            $("#button_4").css('visibility','hidden');
+            $("#fractionAnswer4").css('visibility','visible');
+            $('#fractionAnswer4').append('<div class="fraction"><div class="frac numerator">'+interactiveObj.number4*100+'</div><div class="frac">100</div></div>');
+            $("#FractionDivided4").css('visibility','visible');
+            $('#FractionDivided4').append('<div class="fraction"><div class="frac numerator">'+parseInt(interactiveObj.xander[1])/interactiveObj.divisibleBy+'</div><div class="frac">'+100/interactiveObj.divisibleBy+'</div></div>');
+        }
+        if(Incorrect_secondAttemptQ4==1 && attemp_Ques4==2)
+        {
+            $("#answer4").hide();
+            $("#button_4").css({
+                'position':'absolute',
+                'left':'235px'
+            });
+            $("#fractionAnswer4").css('visibility','visible');
+            $('#fractionAnswer4').append('<div class="fraction"><div class="frac numerator">'+interactiveObj.number4*100+'</div><div class="frac">100</div></div>');
+            $("#FractionDivided4").css('visibility','visible');
+            $('#FractionDivided4').append('<div id="inputField"><input id="Input_num"></input><input id="Input_denom"></input></div>');
+        }
+        if(Incorrect_thirdAttemptQ4==1 && attemp_Ques4==3)
+        {
+            $("#answer4").hide();
+            $("#button_4").hide();
+
+            $("#fractionAnswer4").css('visibility','visible');
+            $('#fractionAnswer4').append('<div class="fraction"><div class="frac numerator">'+interactiveObj.number4*100+'</div><div class="frac">100</div></div>');
+            $("#FractionDivided4").css('visibility','visible');
+            $('#FractionDivided4').append('<div class="fraction"><div class="frac numerator">'+parseInt(interactiveObj.xander[1])/interactiveObj.divisibleBy+'</div><div class="frac">'+100/interactiveObj.divisibleBy+'</div></div>');
+        }
+    }
+    if(Question5_Visible==1)
+    {
+        $("#fifthQuestion").css('visibility','visible');
+	
+        if(c==1)  
+        {
+            if(called1==1 || called2==1)		// true when child makes error only in type 1 or type 2 question
+            {
+                $("#fifthQuestion").append('<div id="firstQuestion_1">'+interactiveObj.fifth+'</div><input id="answer1"></input><div id="fractionAnswer1"></div><button id="button_1" type="button" name="" value="" class="css3button" onclick=interactiveObj.checkAnswer("five");>Check it</button>');  	 	
+            }
+            if(called3==1 || called4==1)		// true when child makes error only in type 1 or type 2 question
+            {
+                $("#fifthQuestion").append('<div id="fifthQuestion_5">'+interactiveObj.fifth+'</div><input id="answer5"></input><div id="fractionAnswer5"></div><div id="FractionDivided5"></div><button id="button_5" type="button" name="" value="" class="css3button" onclick=interactiveObj.checkAnswer("five");>Check it</button>');  	 	
+            }
+		 	
+        }
+    /*   if(called3==1 || called4==1)		// true when child makes error in type 3 or type 4 question
+			  {
+			 	 '<div id="fifthQuestion_2">'+interactiveObj.+'</div><input id="answer2"></input><div id="fractionAnswer2"></div><button id="button_2" type="button" name="" value="" class="css3button" onclick=interactiveObj.checkAnswer("two");>Check it</button>';
+			  }
+     		   */
+    }
+    
+}
+questionInteractive.prototype.checkAnswer=function(id)
+{
+    interactiveObj.question_Type=id;
+    //--getting the type of question answered by the user--//
+
+    if(interactiveObj.question_Type=="one")
+    {
+        interactiveObj.answer_1=$("#answer1").val().split("/");
+
+        interactiveObj.correctAnswer=interactiveObj.number1;
+
+        interactiveObj.x=interactiveObj.number1;
+
+        html+='<div id="message" class="correct"><div id="textCorrect1">'+interactiveObj.x+' is '+interactiveObj.x*10+' tens.<br/>Now Try Again</div><button onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        html+='<div id="showAns" class="correct"><div id="textCorrect2">'+interactiveObj.x+' = '+interactiveObj.x*10+'tens = '+interactiveObj.x*10+'/10.<br/></div><button onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        html+='<div id="wellDone" class="correct"><div id="textCorrect">Well Done<br/></div><button onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        interactiveObj.answer=parseFloat(parseInt(interactiveObj.answer_1[0])/parseInt(interactiveObj.answer_1[1]));
+        interactiveObj.attemptQues_1+=1;
+        interactiveObj.local=interactiveObj.answer;
+
+        //console.log("value of correct answer="+interactiveObj.correctAnswer);
+        //console.log("value of interactiveObj.x="+interactiveObj.x);
+
+        $("#container").html(html);
+
+    }
+    if(interactiveObj.question_Type=="two")
+    {
+        html2="";
+
+        interactiveObj.answer_2=$("#answer2").val().split("/");
+
+        interactiveObj.correctAnswer2=interactiveObj.number2;			// getting the actual correct answer
+        interactiveObj.x=interactiveObj.correctAnswer2;					// saving the actual answer in a local variable for prompt messages
+
+        html2+='<div id="message2" class="correct"><div id="textCorrect1">'+interactiveObj.x+' is '+interactiveObj.x*100+' tens.<br/>Now Try Again</div><button onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        html2+='<div id="showAns2" class="correct"><div id="textCorrect2">'+interactiveObj.x+' = '+interactiveObj.x*100+'tens = '+interactiveObj.x*100+'/100.<br/></div><button onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        html2+='<div id="wellDone2" class="correct"><div id="textCorrect">Well Done<br/></div><button onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        $("#prompts").html(html2);
+
+        interactiveObj.answer2=parseFloat(parseInt(interactiveObj.answer_2[0])/parseInt(interactiveObj.answer_2[1]));   // calculating the answer from user
+
+        interactiveObj.attemptQues_2+=1;
+        interactiveObj.local=interactiveObj.answer2;
+
+    }
+    if(interactiveObj.question_Type=="three")
+    {
+        html2="";
+        attemp_Ques3+=1;
+
+        // GETTING THE VALUES IN EACH ATTEMPT//
+
+        if(attemp_Ques3==1)     // IF THE USERS ANSWERS IS NOT IN LOWEST FORM
+        {
+            alert("in 1st attempt");
+
+            notInLowestFormFlag=0;
+
+            interactiveObj.answer_3=$("#answer3").val().split("/");
+            interactiveObj.correctAnswer3=interactiveObj.number3;
+            interactiveObj.answer3=parseFloat(parseInt(interactiveObj.answer_3[0])/parseInt(interactiveObj.answer_3[1]));  //getting the answer from user
+            interactiveObj.local=interactiveObj.answer3;
+            interactiveObj.y=interactiveObj.number3;
+
+            interactiveObj.hcf=interactiveObj.number3*10;
+            
+            for(interactiveObj.i=0;interactiveObj.i<=interactiveObj.hcf;interactiveObj.i++)     // gets the higest common factor
+            {
+                if(interactiveObj.hcf%interactiveObj.i==0 && 10%interactiveObj.i==0)
+                {
+                    interactiveObj.divisor=interactiveObj.i;
+                }
+            }
+
+            if(interactiveObj.local==interactiveObj.correctAnswer3)
+            {
+                if(interactiveObj.answer_3[0]%2==0 && interactiveObj.answer_3[1]%2==0)	// CHECKING IF THE USERS ANSWER IS IN LOWEST FO
+                {
+                    notInLowestFormFlag=1;
+                //alert("Flag set to 1==="+interactiveObj.answer_3[0]);
+                }
+
+            }
+        }
+
+        //if(notInLowestFormFlag==0 && attemp_Ques3==2)
+        if(attemp_Ques3==2)
+        {
+            alert("in 2nd attempt");
+
+            notInLowestFormFlag=0;
+
+            if(Incorrect_firstAttempt==1)
+            {
+                interactiveObj.answer_3=$("#answer3").val().split("/");
+                interactiveObj.local=parseFloat(parseInt(interactiveObj.answer_3[0])/parseInt(interactiveObj.answer_3[1]));
+                
+                //------------//
+                if(interactiveObj.local==interactiveObj.correctAnswer3)
+                {
+                    if(interactiveObj.answer_3[0]%2==0 && interactiveObj.answer_3[1]%2==0)	// CHECKING IF THE USERS ANSWER IS IN LOWEST FO
+                    {
+                        notInLowestFormFlag=1;
+                    //alert("Flag set to 1==="+interactiveObj.answer_3[0]);
+                    }
+                }
+            //------------//
+                
+            }
+
+            if(Incorrect_firstAttempt==0)
+            {
+                interactiveObj.answer_3_num=parseInt($("#Input_num").val());
+                interactiveObj.answer_3_denom=parseInt($("#Input_denom").val());
+                interactiveObj.local=interactiveObj.answer_3_num/interactiveObj.answer_3_denom;
+                //------------//
+                if(interactiveObj.local==interactiveObj.correctAnswer3)
+                {
+                    if(interactiveObj.answer_3_num%2==0 && interactiveObj.answer_3_denom%2==0)		// CHECKING IF THE USERS ANSWER IS IN LOWEST FORM
+                    {
+                        notInLowestFormFlag=1;
+                    //alert("Flag set to 1 in second attempt");
+                    }
+                }
+            //-----------//
+            }
+
+            interactiveObj.correctAnswer3=interactiveObj.number3;
+            interactiveObj.y=interactiveObj.number3;			//saving the correct answer in a locak variable for display on prompt
+      
+        }
+        //if(notInLowestFormFlag==0 && attemp_Ques3==3)
+        if(attemp_Ques3==3)
+        {
+            alert("in 3rd attempt");
+
+            notInLowestFormFlag=0;
+
+            interactiveObj.answer_3_num=parseInt($("#Input_num").val());
+            interactiveObj.answer_3_denom=parseInt($("#Input_denom").val());
+            interactiveObj.local=interactiveObj.answer_3_num/interactiveObj.answer_3_denom;
+
+            interactiveObj.correctAnswer3=interactiveObj.number3;
+
+
+
+            interactiveObj.y=interactiveObj.number3;			//saving the correct answer in a locak variable for display on prompt
+
+            if(interactiveObj.local==interactiveObj.correctAnswer3)
+            {
+                if(interactiveObj.answer_3_num%2==0 && interactiveObj.answer_3_denom%2==0)		// CHECKING IF THE USERS ANSWER IS IN LOWEST FORM
+                {
+                    notInLowestFormFlag=1;
+                //alert("Flag set to 1 in second attempt");
+                }
+            }
+        }
+
+
+        //-------------- CORRECT BUT NOT  IN LOWEST FORM PROMPTS----------------//
+        html2+='<div id="wellDone_NLF" class="correct"><div id="textCorrect">'+(promptArr['text_2']).replace("#number#",interactiveObj.number3*10+"/"+10)+'</div><button id="button_prompt1" onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+
+        html2+='<div id="wellDone_NLF_A" class="correct"><div id="textCorrect">It can Be Further Reduced. Try Again</div><button id="button_prompt3" onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        html2+='<div id="wellDone_NLF_Final" class="correct"><div id="textCorrect">Oops, that is incorrect !<br/> We can find the reduced form of '+interactiveObj.number3*10+'/ 10 by the method shown below<br/></div><div id="animation"></div><div id="animation2"></div><button id="button_prompt2" onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+        //-------------CORRECT BUT NOT IN LOWEST FORM PROMPTS----------------//
+
+
+        //-----------CORRECT AND IN LOWEST FORM PROMPTS-----------------//
+
+        html2+='<div id="wellDone_LF" class="correct"><div id="textCorrect">Well Done In Lowest Form<button id="button_prompt" onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        //-----------CORRECT AND IN LOWEST FORM PROMPTS-----------------//
+
+        //---------------INCORRECT ANSWER PROMPTS-----------------------//
+
+        html2+='<div id="message3" class="correct"><div id="textCorrect1">'+interactiveObj.y+' is '+interactiveObj.y*10+' tens.<br/>Now Try Again</div><button onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        html2+='<div id="showAns3" class="correct"><div id="textCorrect2">'+interactiveObj.y+' = '+interactiveObj.y*10+'tens = '+interactiveObj.y*10+'/10.<br/></div><button onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+
+        $("#prompts").html(html2);
+
+    }
+    if(interactiveObj.question_Type=="four")
+    {
+
+        html2="";
+        attemp_Ques4+=1;
+        notInLowestFormFlagQ4=0;
+        if(attemp_Ques4==1)
+        {
+            interactiveObj.answer_4=$("#answer4").val().split("/");
+            interactiveObj.correctAnswer4=interactiveObj.number4;
+            interactiveObj.answer4=parseFloat(parseInt(interactiveObj.answer_4[0])/parseInt(interactiveObj.answer_4[1]));// answer from user
+            interactiveObj.local=interactiveObj.answer4;
+            interactiveObj.z=interactiveObj.local;
+
+            interactiveObj.xander=interactiveObj.number4.split(".");
+
+
+
+            if((parseInt(interactiveObj.answer_4[0])%2==0 && parseInt(interactiveObj.answer_4[1])%2==0) || (parseInt(interactiveObj.answer_4[0])%5==0 && parseInt(interactiveObj.answer_4[1])%5==0))
+            {
+                notInLowestFormFlagQ4=1;
+            }
+
+            if(notInLowestFormFlagQ4==1)
+            {
+                // finding the highest common factor betwen numerator and denominator
+
+                for(interactiveObj.i=1;interactiveObj.i<=parseInt(interactiveObj.xander[1]);interactiveObj.i++)  // gets the HCF of Num/ Denom
+                {
+                    if((parseInt(interactiveObj.xander[1])%interactiveObj.i)==0 && (parseInt(100)%interactiveObj.i)==0)
+                    {
+                        interactiveObj.divisibleBy=interactiveObj.i;
+                    }//console.log("Divisible by="+interactiveObj.divisibleBy);
+                }
+            }
+            else
+            {
+                interactiveObj.divisibleBy=parseInt(interactiveObj.answer_4[1]);
+                interactiveObj.a=parseInt(interactiveObj.answer_4[0]);
+            }
+
+        }
+
+        if(attemp_Ques4==2)
+        {
+            notInLowestFormFlagQ4=0;
+
+            if(Incorrect_firstAttemptQ4==1)
+            {
+                interactiveObj.answer_4=$("#answer4").val().split("/");
+                interactiveObj.correctAnswer4=interactiveObj.number4;
+                interactiveObj.answer4=parseFloat(parseInt(interactiveObj.answer_4[0])/parseInt(interactiveObj.answer_4[1]));// answer from user
+                interactiveObj.local=interactiveObj.answer4;
+                interactiveObj.z=interactiveObj.local;
+
+                interactiveObj.xander=interactiveObj.number4.split(".");
+
+                if((parseInt(interactiveObj.answer_4[0])%2==0 && parseInt(interactiveObj.answer_4[1])%2==0) || (parseInt(interactiveObj.answer_4[0])%5==0 && parseInt(interactiveObj.answer_4[1])%5==0))
+                {
+                    notInLowestFormFlagQ4=1;
+                }
+
+            }
+            else
+            {
+                interactiveObj.answer_4_num=parseInt($("#Input_num").val());
+                interactiveObj.answer_4_denom=parseInt($("#Input_denom").val());
+                interactiveObj.local=interactiveObj.answer_4_num/interactiveObj.answer_4_denom;  // answer from user
+                interactiveObj.correctAnswer4=interactiveObj.number4;
+                interactiveObj.xander=interactiveObj.number4.split(".");
+                //checking for lowest form
+                if((parseInt(interactiveObj.answer_4_num)%2==0 && parseInt(interactiveObj.answer_4_denom)%2==0) || (parseInt(interactiveObj.answer_4_num)%5==0 && parseInt(interactiveObj.answer_4_denom)%5==0))
+                {
+                    notInLowestFormFlagQ4=1;
+                }
+            }
+            // finding the highest common factor
+
+            for(interactiveObj.i=1;interactiveObj.i<=parseInt(interactiveObj.xander[1]);interactiveObj.i++)  // gets the HCF of Num/ Denom
+            {
+                if((parseInt(interactiveObj.xander[1])%interactiveObj.i)==0 && (parseInt(100)%interactiveObj.i)==0)
+                {
+                    interactiveObj.divisibleBy=interactiveObj.i;
+                }//console.log("Divisible by="+interactiveObj.divisibleBy);
+            }
+
+        }
+
+        if(attemp_Ques4==3)
+        {
+            notInLowestFormFlagQ4=0;
+
+            interactiveObj.answer_4_num=parseInt($("#Input_num").val());
+            interactiveObj.answer_4_denom=parseInt($("#Input_denom").val());
+            interactiveObj.local=interactiveObj.answer_4_num/interactiveObj.answer_4_denom;  // answer from user
+
+            interactiveObj.correctAnswer4=interactiveObj.number4;
+
+            interactiveObj.xander=interactiveObj.number4.split(".");
+
+
+            //checking for lowest form
+            if((parseInt(interactiveObj.answer_4_num)%2==0 && parseInt(interactiveObj.answer_4_denom)%2==0) || (parseInt(interactiveObj.answer_4_num)%5==0 && parseInt(interactiveObj.answer_4_denom)%5==0))
+            {
+                notInLowestFormFlagQ4=1;
+            }
+
+            // finding the highest common factor
+
+            for(interactiveObj.i=1;interactiveObj.i<=parseInt(interactiveObj.xander[1]);interactiveObj.i++)  // gets the HCF of Num/ Denom
+            {
+                if((parseInt(interactiveObj.xander[1])%interactiveObj.i)==0 && (parseInt(100)%interactiveObj.i)==0)
+                {
+                    interactiveObj.divisibleBy=interactiveObj.i;
+                }//console.log("Divisible by="+interactiveObj.divisibleBy);
+            }
+        }
+        html2+='<div id="wellDone_NLF" class="correct"><div id="textCorrect">'+(promptArr['text_2']).replace("#number#",interactiveObj.number4*100+"/"+100)+'</div><button id="button_prompt1" onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        html2+='<div id="wellDone_NLF_A" class="correct"><div id="textCorrect">It can Be Further Reduced. Try Again</div><button id="button_prompt3" onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        html2+='<div id="showAns4" class="correct"><div id="textCorrect2">'+interactiveObj.number4+' = '+interactiveObj.number4*100+'tens = '+interactiveObj.number4*100+'/100.<br/></div><button onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        html2+='<div id="wellDone_NLF_Final" class="correct"><div id="textCorrect">Oops, that is incorrect !<br/> We can find the reduced form of '+interactiveObj.number3*10+'/ 10 by the method shown below<br/></div><div id="animation"></div><div id="animation2"></div><button id="button_prompt2" onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        //html2+='<div id="message4" class="correct"><div id="textCorrect1"><br/>Now Try Again</div><button onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+        html2+='<div id="message4" class="correct"><div id="textCorrect1">'+interactiveObj.number4+' is '+interactiveObj.number4*100+' tens.<br/>Now Try Again</div><button onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        html2+='<div id="wellDone_LF" class="correct"><div id="textCorrect">Well Done<button id="button_prompt" onclick=interactiveObj.loadQuestions(); class="css3button2">OK</button></div>';
+
+        $("#prompts").html(html2);
+    }
+    if(interactiveObj.question_Type=="five")
+    {
+
+        html2="";
+        attemp_Ques5+=1;
+        interactiveObj.answer_5=$("#answer5").val().split("/");
+	
+        interactiveObj.answer5=parseFloat(parseInt(interactiveObj.answer_5[0])/parseInt(interactiveObj.answer_5[1]));    // answer from user
+			
+        interactiveObj.local=interactiveObj.answer5;
+				
+        if(GenerateQ5==1)
+        {
+            interactiveObj.correctAnswer5=interactiveObj.number_1;
+            interactiveObj.xander=parseInt(interactiveObj.number_1*10);
+            interactiveObj.hcf=interactiveObj.number_1*10;
+	}
+
+       if(GenerateQ5==2)
+        {
+            interactiveObj.correctAnswer5=interactiveObj.number_2;
+            interactiveObj.xander=parseInt(interactiveObj.number_2*100);
+            interactiveObj.hcf=interactiveObj.number_1*100;
+        }
+        if(GenerateQ5==3)
+        {
+            interactiveObj.correctAnswer5=interactiveObj.number_3;
+            interactiveObj.xander=parseInt(interactiveObj.number_3*10);
+            interactiveObj.hcf=interactiveObj.number_1*10;
+            //checking for hcf
+			
+            //------------//
+            if(interactiveObj.local==interactiveObj.correctAnswer5)
+            {
+                if(interactiveObj.answer_5[0]%2==0 && interactiveObj.answer_5[1]%2==0)	// CHECKING IF THE USERS ANSWER IS IN LOWEST FO
+                {
+                    notInLowestFormFlagQ5=1;
+                //alert("Flag set to 1==="+interactiveObj.answer_3[0]);
+                }
+            }
+            //------------//
+			
+            if(notInLowestFormQ5==1)
+            {
+                for(interactiveObj.i=0;interactiveObj.i<=interactiveObj.hcf;interactiveObj.i++)     // gets the higest common factor
+                {
+                    if(interactiveObj.hcf%interactiveObj.i==0 && 10%interactiveObj.i==0)
+                    {
+                        interactiveObj.divisor=interactiveObj.i;
+                    }
+                }
+            }
+        }
+        if(GenerateQ5==4)
+        {
+            interactiveObj.correctAnswer5=interactiveObj.number_4;
+            interactiveObj.xander=parseInt(interactiveObj.number_4*100);
+            interactiveObj.hcf=interactiveObj.number_1*100;
+            //checking for hcf
+			
+            if((parseInt(interactiveObj.answer_5[0])%2==0 && parseInt(interactiveObj.answer_5[1])%2==0) || (parseInt(interactiveObj.answer_5[0])%5==0 && parseInt(interactiveObj.answer_5[1])%5==0))
+            {
+                notInLowestFormFlagQ5=1;
+            }
+			
+			
+            if(notInLowestFormQ5==1)
+            {
+                for(interactiveObj.i=0;interactiveObj.i<=interactiveObj.hcf;interactiveObj.i++)     // gets the higest common factor
+                {
+                    if(interactiveObj.hcf%interactiveObj.i==0 && 100%interactiveObj.i==0)
+                    {
+                        interactiveObj.divisor=interactiveObj.i;
+                    }
+                }
+            }
+        }
+    }
+    //-Comparing the answer and setting the visibilty of next question--//
+  
+ 
+
+    //-----------------------QUES NO 1----------------------------//
+
+    if(interactiveObj.question_Type=="one" && interactiveObj.local==interactiveObj.correctAnswer)
+    {
+        if(interactiveObj.attemptQues_1==1)
+        {
+            $("#wellDone").css('visibility','visible');
+            correctQues_1_flag=1;
+            correctQues_2_flagVisible=1;
+        }
+        if(interactiveObj.attemptQues_1==2)
+        {
+            $("#wellDone").css('visibility','visible');
+            correctQues_1_flag=1;
+            correctQues_2_flagVisible=1;
+        }
+    }
+    else if(interactiveObj.question_Type=="one" &&interactiveObj.local!=interactiveObj.correctAnswer && interactiveObj.attemptQues_1==1)
+    {
+        Incorrect_firstAttemptQ1=1;
+        alert("Enter HEre");
+        $("#message").css('visibility','visible');
+    }
+    else if(interactiveObj.question_Type=="one" &&interactiveObj.local!=interactiveObj.correctAnswer && interactiveObj.attemptQues_1==2)
+    {
+        Incorrect_secondAttemptQ1=1;
+
+        $("#showAns").css('visibility','visible');
+        correctQues_1_flag=1;
+        correctQues_2_flagVisible=1;
+    }
+    //---------------------------QUES NO 1 ENDS----------------------//
+    //------------------------QUES NO 2 --------------------------------//
+
+    if(interactiveObj.question_Type=="two" && interactiveObj.local==interactiveObj.correctAnswer2)
+    {
+        if(interactiveObj.question_Type=="two" &&interactiveObj.attemptQues_2==1)
+        {
+            //alert(1);
+            $("#prompts").css('visibility','visible');
+            $("#wellDone2").css('visibility','visible');
+            correct_firstAttemptQ2=1;
+
+            correctQues_1_flag=1;
+            correctQues_2_flagVisible=1;
+            correctQues_2_flag=1;
+            correctQues_3_flagVisible=1;
+        //correctQues_3_flag=1;
+
+        }
+        else if (interactiveObj.question_Type=="two" &&interactiveObj.attemptQues_2==2)
+        {
+            //alert(2);
+            correct_secondAttemptQ2=1;
+
+            $("#prompts").css('visibility','visible');
+            $("#wellDone2").css('visibility','visible');
+            correctQues_1_flag=1;
+            correctQues_2_flagVisible=1;
+            correctQues_2_flag=1;
+            correctQues_3_flagVisible=1;
+        //correctQues_3_flag=1;
+
+        }
+    }
+    else if(interactiveObj.question_Type=="two" && interactiveObj.local!=interactiveObj.correctAnswer2 && interactiveObj.attemptQues_2==1)
+    {
+        //alert(3);
+        Incorrect_firstAttemptQ2=1;
+
+        $("#prompts").css('visibility','visible');
+        $("#message2").css('visibility','visible');
+
+    }
+    else if(interactiveObj.question_Type=="two" && interactiveObj.local!=interactiveObj.correctAnswer2 && interactiveObj.attemptQues_2==2)
+    {
+        //alert(4);
+        Incorrect_secondAttemptQ2=1;
+
+        $("#prompts").css('visibility','visible');
+        $("#showAns2").css('visibility','visible');
+
+        correctQues_1_flag=1;
+        correctQues_2_flagVisible=1;
+        correctQues_2_flag=1;
+        correctQues_3_flagVisible=1;
+    }
+    //------------------------QUES NO 2  ENDS--------------------------------//
+    //------------------------------QUES 3--CHECKING COMPARING THE ANSWERS----------------//
+    if(interactiveObj.question_Type=="three")
+    {
+        if(attemp_Ques3==1)
+        {
+            if(interactiveObj.local==interactiveObj.correctAnswer3)
+            {
+                correct_firstAttempt=1;
+
+                if(notInLowestFormFlag==0)
+                {
+                    // alert("attempt 1  in lowest form");
+                    Q3_correct_LF_A1=1;
+
+                    correctQues_4_flag=1;		//sets the visibility of next question
+
+                    $("#wellDone_LF").css('visibility','visible');
+                    $("#button_3").css('visibility','hidden');
+
+                }
+                else
+                {
+                    // alert("attempt 1  No not  in lowest form");
+                    $("#wellDone_NLF").css('visibility','visible');
+                    $("#button_3").css('visibility','hidden');
+                }
+            }
+            else
+            {
+                // if the answer is wrong at 1st attempt
+
+                // alert("Wrong answer");
+                Incorrect_firstAttempt=1;
+
+                Q3_Incorrect_A1=1;
+
+                $("#message3").css('visibility','visible');
+                $("#button_3").css('visibility','hidden');
+            }
+        }
+        if(attemp_Ques3==2)
+        {
+            if(interactiveObj.local==interactiveObj.correctAnswer3)
+            {
+                correct_secondAttempt=1;
+                if(notInLowestFormFlag==0)
+                {
+                    correctQues_4_flag=1;
+                    Q3_correct_LF_A2=1;	//sets the visibility of next question
+
+                    // alert("attempt 2  in lowest form");
+                    $("#wellDone_LF").css('visibility','visible');
+                    $("#button_3").css('visibility','hidden');
+
+                }
+                else
+                {
+                    //  alert("attempt 2 not in lowest form");
+                    $("#button_3").css('visibility','hidden');
+                    $("#wellDone_NLF_A").css('visibility','visible');
+                }
+            }
+            else
+            {
+                // if the answer is wrong at 1st attempt
+                //alert("Wrong answer 2nd time");
+
+                Incorrect_secondAttempt=1;
+                Q3_Incorrect_A2=1;
+
+                $("#message3").css('visibility','hidden');
+                $("#showAns3").css('visibility','visible');
+                $("#button_3").css('visibility','hidden');
+            }
+        }
+
+        if(attemp_Ques3==3)
+        {
+            if(interactiveObj.local==interactiveObj.correctAnswer3)
+            {
+                correct_thirdAttempt=1;
+                if(notInLowestFormFlag==0)
+                {
+                    correctQues_4_flag=1;
+                    Q3_correct_LF_A3=1;		//sets the visibility of next question
+
+                    //alert("attempt 3  in lowest form");
+                    $("#wellDone_LF").css('visibility','visible');
+
+                    $("#button_3").css('visibility','hidden');
+
+                }
+                else
+                {
+                    correctQues_4_flag=1;
+                    //  alert("attempt 3 not in lowest form");
+
+                    $("#wellDone_NLF_A").css('visibility','hidden');
+                    $("#wellDone_NLF_Final").css('visibility','visible');
+                    $("#button_3").css('visibility','hidden');
+                    timer=setTimeout("interactiveObj.showAnimation();",1000);
+
+                }
+            }
+            else
+            {
+                // if the answer is wrong at 1st attempt
+                // alert("Wrong answer 3rd time");
+                Incorrect_thirdAttempt=1;
+                correctQues_4_flag==1;
+                alert("visibility of question 4 TRUE");
+                Q3_Incorrect_A3=1;
+
+                $("#message3").css('visibility','hidden');
+                $("#showAns3").css('visibility','hidden');
+
+                $("#wellDone_NLF_Final").css('visibility','visible');
+                $("#button_3").css('visibility','hidden');
+
+                timer=setTimeout("interactiveObj.showAnimation();",1000);
+            }
+        }
+    }
+
+    //----------------------------QUES 3 ENDS-----------------------------------//
+
+    //-------------QUESTION 4-----CHECKING AND COMPARING USER ANSWER--------------//
+
+    if(interactiveObj.question_Type=="four")
+    {
+        if(attemp_Ques4==1)
+        {
+            if(interactiveObj.local==interactiveObj.correctAnswer4)
+            {
+                correct_firstAttemptQ4=1;
+                if(notInLowestFormFlagQ4==0)		//  correct answer is in lowest form
+                {
+                    // alert("attempt 1  in lowest form");
+                    Q4_correct_LF_A1=1;
+
+                    $("#wellDone_LF").css('visibility','visible');
+                    $("#button_4").css('visibility','hidden');
+                    
+                    interactiveObj.getStats();
+                }
+                else				// correcr answer not in lowest form
+                {
+                    //  alert("attempt 1  No not  in lowest form");
+                    $("#wellDone_NLF").css('visibility','visible');
+                    $("#button_4").css('visibility','hidden');
+                }
+            }
+            else
+            {
+                // if the answer is wrong at 1st attempt
+                Q4_Incorrect_A1=1;
+                // alert("Wrong answer 1st attempt");
+                Incorrect_firstAttemptQ4=1;
+
+                $("#message4").css('visibility','visible');
+                $("#button_4").css('visibility','hidden');
+            }
+        }
+        if(attemp_Ques4==2)
+        {
+            if(interactiveObj.local==interactiveObj.correctAnswer4)
+            {
+                correct_secondAttemptQ4=1;
+                if(notInLowestFormFlagQ4==0)
+                {
+                    Q4_correct_LF_A2=1;
+                    // alert("attempt 2  in lowest form");
+                    $("#wellDone_LF").css('visibility','visible');
+                    $("#button_4").css('visibility','hidden');
+                       
+                    interactiveObj.getStats();
+                }
+                else
+                {
+                    //alert("attempt 2 not in lowest form");
+                    $("#button_4").css('visibility','hidden');
+                    $("#wellDone_NLF_A").css('visibility','visible');
+                }
+            }
+            else
+            {
+                // if the answer is wrong at 1st attempt
+                //alert("Wrong answer 2nd time");
+                Q4_Incorrect_A2=1;
+                Incorrect_secondAttemptQ4=1;
+
+                $("#message4").css('visibility','hidden');
+                $("#showAns4").css('visibility','visible');
+                $("#button_4").css('visibility','hidden');
+            }
+        }
+        if(attemp_Ques4==3)
+        {
+            if(interactiveObj.local==interactiveObj.correctAnswer4)
+            {
+                correct_thirdAttemptQ4=1;
+
+                if(notInLowestFormFlagQ4==0)
+                {
+                    Q4_correct_LF_A3=1;
+                    // alert("attempt 3  in lowest form");
+                    $("#wellDone_LF").css('visibility','visible');
+                    $("#button_4").css('visibility','hidden');
+                    
+                    interactiveObj.getStats();
+                }
+                else
+                {
+                    // alert("attempt 3 not in lowest form");
+
+                    $("#wellDone_NLF_A").css('visibility','hidden');
+
+                    $("#wellDone_NLF_Final").css('visibility','visible');
+
+                    $("#button_4").css('visibility','hidden');
+                    timer=setTimeout("interactiveObj.showAnimation();",1000);
+                }
+            }
+            else
+            {
+                // if the answer is wrong at 1st attempt
+                //alert("Wrong answer 3rd time");
+                Incorrect_thirdAttemptQ4=1;
+
+                Q4_Incorrect_A3=1;
+
+                $("#message4").css('visibility','hidden');
+                $("#showAns4").css('visibility','hidden');
+                 
+                $("#wellDone_NLF_Final").css('visibility','visible');
+                $("#button_4").css('visibility','hidden');
+
+                //timer=setTimeout("interactiveObj.showAnimation();",1000);
+      
+                interactiveObj.getStats();
+            }
+        }
+    }
+    //-------------Q4 ENDS---------------------//
+    //-------------Q5--------------------//
+    if(interactiveObj.question_Type=="five")
+    {
+        attemp_Ques5+=1;  
+	 
+        if(attemp_Ques5==1)
+        {
+            if(interactiveObj.local==interactiveObj.correctAnswer5)
+            {
+                correct_firstAttemptQ5=1;
+                if(notInLowestFormFlagQ5==0)		//  correct answer is in lowest form
+                {
+                    alert("attempt 1  in lowest form");
+                    Q5_correct_LF_A1=1;
+
+                    $("#wellDone_LF").css('visibility','visible');
+                    $("#button_4").css('visibility','hidden');
+
+                }
+                else				// correcr answer not in lowest form
+                {
+                    //  alert("attempt 1  No not  in lowest form");
+                    $("#wellDone_NLF").css('visibility','visible');
+                    $("#button_4").css('visibility','hidden');
+                }
+            }
+            else
+            {
+                // if the answer is wrong at 1st attempt
+                Q5_Incorrect_A1=1;
+                // alert("Wrong answer 1st attempt");
+                Incorrect_firstAttemptQ4=1;
+
+                $("#message4").css('visibility','visible');
+                $("#button_4").css('visibility','hidden');
+            }
+        }
+	
+    }
+
+
+//---------------Q5..........................//
+}
+questionInteractive.prototype.showAnimation=function()
+{
+    //alert("In show Animation");
+
+    $("#animation").css('visibility','visible');
+
+    $('#animation').append('<div id="actualNumber">'+interactiveObj.number3+'   =</div><div id="firstFraction"class="fraction"><div class="frac numerator">'+interactiveObj.y*10+'</div><div class="frac">10</div></div><div id="secondFraction" class="fraction"><div class="frac numerator">'+(interactiveObj.y*10)/interactiveObj.divisor+'</div><div class="frac">'+10/2+'</div></div><div id="text">Dividing both '+interactiveObj.number3*10+' and 10 by 2</div>');
+
+    $("#animation1").delay(100).animate({
+        'opacity':'1'
+    },500);
+
+    timer2=setTimeout("interactiveObj.secondAnimation();",1000);
+}
+questionInteractive.prototype.secondAnimation=function()
+{
+    $("#animation2").animate({
+        'opacity':'1'
+    },500);
+
+    $('#animation2').append('<div id="actualNumber2">'+interactiveObj.number3+'   =</div><div id="firstFraction2"class="fraction"><div class="frac numerator">'+interactiveObj.y*10+'</div><div class="frac">10</div></div><div id="strike_upper">&#8725;<span id="smallNum">'+(interactiveObj.y*10)/interactiveObj.divisor+'</span></div><div id="strike_lower">&#8725;<span id="smallDenom">'+10/interactiveObj.divisor+'</span></div><div id="secondFraction2" class="fraction"><div class="frac numerator">'+(interactiveObj.y*10)/interactiveObj.divisor+'</div><div class="frac">'+10/2+'</div></div><div id="assingment">=</div><div id="replayButton" class="replay" onclick=interactiveObj.Replay();></div>');
+    $("#firstFraction2").delay(1500).animate({
+        'opacity':'1'
+    },500);
+    $("#strike_upper").delay(2500).animate({
+        'opacity':'1'
+    },500);
+    $("#strike_lower").delay(3500).animate({
+        'opacity':'1'
+    },500);
+    $("#assingment").delay(4500).animate({
+        'opacity':'1'
+    },500);
+    $("#secondFraction2").delay(5500).animate({
+        'opacity':'1'
+    },500);
+    $("#replayButton").delay(6000).animate({
+        'opacity':'1'
+    },500);
+
+}
+questionInteractive.prototype.Replay=function()
+{
+    clearTimeout(timer2);
+    $("#animation2").html("");
+
+    interactiveObj.secondAnimation();
+
+}
+questionInteractive.prototype.getStats=function()
+{
+    //alert("hello getting stats");
+
+    AdditionalQues[0]=Incorrect_secondAttemptQ1;
+    AdditionalQues[1]=Incorrect_secondAttemptQ2;
+    AdditionalQues[2]=Q3_Incorrect_A3;
+    AdditionalQues[3]=Q4_Incorrect_A3;
+            
+    console.log("Final Stats="+AdditionalQues);
+         
+    for(interactiveObj.i=0;interactiveObj.i<4;interactiveObj.i++)
+    {
+        if(AdditionalQues[interactiveObj.i]==1)
+        {
+            alert("call type="+interactiveObj.i);
+            c+=1;
+            Ques[a]=parseInt(interactiveObj.i+1);
+            a++;
+        }                         
+    }                   
+    if(c==1)
+    {
+        GenerateQ5=Ques[0];  
+                      
+        Question5_Visible=1;
+        if(GenerateQ5==1)
+        {
+            interactiveObj.randomNumber_Add_1();
+            interactiveObj.fifth=interactiveObj.number_1;
+            called1=1;
+        }
+        if(GenerateQ5==2)
+        {
+            interactiveObj.randomNumber_Add_2();
+            interactiveObj.fifth=interactiveObj.number_2;
+            called2=1;
+        }
+        if(GenerateQ5==3)
+        {
+            interactiveObj.randomNumber_Add_3();
+            interactiveObj.fifth=interactiveObj.number_3;
+            called3=1;
+        }
+        if(GenerateQ5==4)
+        {
+            interactiveObj.randomNumber_Add_4();
+            interactiveObj.fifth=interactiveObj.number_4;
+            called4=1;
+        }
+    }
+  
+/* if(c>1)
+    {
+        GenerateQ5=Ques[0];
+        GenerateQ6=Ques[1];
+    }               
+    console.log("Generate Type="+GenerateQ5);
+    console.log("Generate Type="+GenerateQ6);
+      */           
+                 
+}
+function resize()
+{
+    if(window.innerHeight < $("#container").height()) {
+        scaleFactor = parseFloat(window.innerHeight/$("#container").height());
+    }
+    else if(window.innerWidth < $("#container").width()) {
+        scaleFactor = parseFloat(window.innerWidth/$("#container").width());
+    } else{
+        scaleFactor = 1 ;
+    }
+    $("#container").css({
+        "-webkit-transform": "scale("+scaleFactor+")"
+    });
+    $("#container").css({
+        "-moz-transform": "scale("+scaleFactor+")"
+    });
+    $("#container").css({
+        "-o-transform": "scale("+scaleFactor+")"
+    });
+    $("#container").css({
+        "-ms-transform": "scale("+scaleFactor+")"
+    });
+    $("#container").css({
+        "transform": "scale("+scaleFactor+")"
+    });
+}
+

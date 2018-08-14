@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<application name="label">
+<english>
+	<prompts>
+		<prompt name="div1" text="Choose the correct option:" />
+		<prompt name="CP" text= "Correct answer!" />
+		<prompt name="M1" text= "That is incorrect! &lt;br&gt; See if answering this question helps." />
+		<prompt name="if" text= "If" />
+		
+		<prompt name="P3msg" text="The rectangle below is #frac1# shaded. &lt;br&gt; #htmlx#  &lt;br&gt; Which of the following shows the same rectangle #frac2# shaded?" />
+		<prompt name="P3text1" text="#frac1# is #b# out of #n# equal parts.  #htmlx# " />
+		<prompt name="P3text2" text="#frac2# is #a# out of #m# equal parts  #htmlx# " />
+		<prompt name="P3text3" text="or #temp2# out of #n# equal parts." />
+		<prompt name="P11text" text="#frac2# is #number2# out of #number3# equal parts. &lt;br&gt;" />
+		<prompt name="P2text11" text= " The rectangle which is #frac1# shaded: #tmp1# " />
+		<prompt name="P2text12" text= "The rectangle which is #frac2# shaded:" />
+		<prompt name="P2text2" text= " Which rectangle is more shaded? " />
+		<prompt name="WP" text= " Oops! That's not correct!" />
+		<prompt name="ok" text= "OK" />
+		<prompt name="nextText" text="Next" />
+		<prompt name="isGreaterThan" text="is greater than" />
+		<prompt name="isLessThan" text="is less than" />
+		<prompt name="equals" text="equals" />
+		<prompt name="tryComparing" text="Try comparing #frac1# and #frac2#." />
+		<prompt name="select" text="Select" />
+		<prompt name="theEnd" text=" The End " />
+
+	</prompts>
+	
+</english>
+
+<hindi>
+	<prompts>
+	<prompt name="div1" text="Compare the fractions and choose the correct symbol:" />
+		<prompt name="CP" text= "Correct answer!" />
+		<prompt name="M1" text= "That is incorrect! See if answering this question helps." />
+		<prompt name="if" text= "If" />
+		<prompt name="P3msg" text="If #htmlx# represents #frac1# in a whole, which of the following represents #frac2# in the same whole" />
+		<prompt name="P3text1" text="#frac1# is #b# out of #n# equal parts  #htmlx# " />
+		<prompt name="P3text2" text="#frac2# is #a# out of #m# equal parts  #htmlx# " />
+		<prompt name="P3text3" text="or #temp2# out of #n# equal parts" />
+		<prompt name="P11text" text="Remember #frac2# is #number2# parts out of #number3# &lt;br&gt; Look at the figures carefully and try again" />
+		<prompt name="P2text1" text= " #frac1# of a rectangular bar is shaded as shown below. " />
+		<prompt name="P2text2" text= " Which rectangle is more shaded? " />
+		<prompt name="WP" text= " Oops! That's not correct! " />
+		<prompt name="ok" text= "Ok" />
+		<prompt name="nextText" text="Next" />
+	</prompts>
+</hindi>
+
+<gujarati>
+	<prompts>
+<prompt name="div1" text="Compare the fractions and choose the correct symbol:" />
+	<prompt name="div1" text="Compare the fractions and choose the correct symbol:" />
+		<prompt name="CP" text= "Correct answer!" />
+		<prompt name="M1" text= "That is incorrect! See if answering this question helps." />
+		<prompt name="if" text= "If" />
+		<prompt name="P3msg" text="If #htmlx# represents #frac1# in a whole, which of the following represents #frac2# in the same whole" />
+		<prompt name="P3text1" text="#frac1# is #b# out of #n# equal parts  #htmlx# " />
+		<prompt name="P3text2" text="#frac2# is #a# out of #m# equal parts  #htmlx# " />
+		<prompt name="P3text3" text="or #temp2# out of #n# equal parts" />
+		<prompt name="P11text" text="Remember #frac2# is #number2# parts out of #number3# &lt;br&gt; Look at the figures carefully and try again" />
+		<prompt name="P2text1" text= " #frac1# of a rectangular bar is shaded as shown below. " />
+		<prompt name="P2text2" text= " Which rectangle is more shaded? " />
+		<prompt name="WP" text= " Oops! That's not correct! " />
+		<prompt name="ok" text= "Ok" />
+		<prompt name="nextText" text="Next" />
+	</prompts>
+</gujarati>
+
+</application>

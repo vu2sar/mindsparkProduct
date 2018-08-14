@@ -1,0 +1,255 @@
+body {
+	min-width:1024px;	
+}
+
+#sparkieContainer{
+	display:none;
+}
+
+#info_bar{
+	position: relative;
+	height:140px;
+	width:100%;
+	-webkit-box-shadow: 0px 3px 2px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    0px 3px 2px rgba(50, 50, 50, 0.2);
+	box-shadow:         0px 3px 2px rgba(50, 50, 50, 0.2);
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+#topic{
+	width:60%;
+	height:98px;
+	float   :left;
+	margin-left:7%;
+	margin-top:15px;
+	 padding: 0px 2px 2px 3px;    
+   	border-width: 1px;
+   border-bottom-width:1px;
+   border-bottom-color:#e52e00;
+   border-bottom-style: solid;
+   border-left-width:8px;
+   border-left-color:#e52e00;
+   border-left-style: solid;
+}
+
+#homeIcon {
+	background: url('../../userInterface/assets/Home_red.png') no-repeat 0 0;
+	width: 50px;
+	height: 43px;
+}
+#homeText{
+	font-size:1.8em;
+	color:#e52e00;
+}
+
+#topicInfoContainer {
+	height:430px;
+	overflow-y:scroll;
+}
+
+#topicBasicInfo {
+	margin-left:7%;
+}
+
+#feedbackInfo {
+	float: left;
+	margin-left: 5px;
+	color: #606062;
+	font-size: 1.25em;
+	margin-top: 10px;
+}
+
+.feedbackInfo1 {
+	margin-left: 5px;
+	color: #606062;
+	font-size: 1.25em;
+	margin-top: 10px;
+}
+
+.feedbackImage1{
+	background: url('../../userInterface/assets/refeedbackform/2New.png') no-repeat 0 0;
+	width: 384px;
+	height: 184px;
+}
+
+.feedbackImage2{
+	background: url('../../userInterface/assets/refeedbackform/2Old.jpg') no-repeat 0 0;
+	width: 384px;
+	height: 184px;
+}
+
+.quesNo {
+	float:left;
+}
+.quesText {
+	float:left;
+	margin-left:1%;
+	max-width: 700px;
+}
+.quesOpt {
+	
+}
+.quesOpt {
+	margin-top:20px;
+	margin-left:2%;
+}
+.outerOption {
+	width:15px;
+	height:15px;
+	border:1px solid #E52E00;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	float:left;
+	margin-top:8px;
+}
+.innerOption {
+	width: 9px;
+	height: 9px;
+	background: #E52E00;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	border-radius: 10px;
+	margin-top: 3px;
+	margin-left: 3px;
+	display:none;
+}
+.radioBtn {
+	height:0px;
+	width:0px;
+	display:none;
+}
+.optText {
+	margin-left:30%;
+}
+
+#option1Imotion {
+	background:url(../../userInterface/assets/great.png) no-repeat 0 0;
+	width     :35px;
+	height    :35px;
+}
+#option2Imotion {
+	background:url(../../userInterface/assets/good.png) no-repeat 0 0;
+	width     :35px;
+	height    :35px;
+}
+#option3Imotion {
+	background:url(../../userInterface/assets/okay.png) no-repeat 0 0;
+	width     :35px;
+	height    :35px;
+}
+#option4Imotion {
+	background:url(../../userInterface/assets/notsogood.png) no-repeat 0 0;
+	width     :35px;
+	height    :35px;
+}
+#option5Imotion {
+	background:url(../../userInterface/assets/bad.png) no-repeat 0 0;
+	width     :35px;
+	height    :35px;
+}
+.quesopt1 {
+	width:100px;
+	float:left;	
+}
+.quesopt2,.quesopt3,.quesopt4,.quesopt5 {
+	width:100px;
+	margin-left:30px;
+	float:left;
+}
+.optTextQ2 {
+	float:left;
+	margin-left:1%;
+	margin-top:7px;
+}
+#ques2,#ques3 {
+	margin-top:50px;
+}
+#ques3Textarea {
+	width:700px;
+	height:100px;
+	resize:none;
+	border:1px solid #E52E00;
+}
+#feedbackFormMain {
+	overflow-y:auto;
+	font-size:1.25em;
+	color:#000;
+	margin-left:7%;
+	/*padding-top:30px;*/
+}
+
+#submitButtonDiv {
+	color: #FFF;
+	width: 150px;
+	height: 50px;
+	padding-top: 10px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	background-color: #e75903;
+	text-align: center;
+	font-size: 1.8em;
+	margin-top: 30px;
+	cursor: pointer;
+	margin-left: 45%;
+}
+#submitButtonDiv:hover {
+	background-color: #9ec956;
+}
+#submitButtonDiv:active {
+	background-color: #2f99cb;
+}
+
+.clear{
+	clear:both;
+}
+
+.submitUl {
+    position: relative;
+    margin: 0 auto;
+    width: 110px;
+    height: 3px;
+    background-color: #FFF;
+}
+.submitUl:after,
+.submitUl::after {
+    position: absolute;
+    top: -100%;
+    left: 100%;
+    margin-left: -60%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: solid 6px #FFF;
+    border-left: solid 6px transparent;
+    border-right: solid 6px transparent;
+}
+
+.staticTable{
+text-align: center;
+vertical-align: middle;
+border-collapse: collapse;
+}
+.rowBorder{
+border-bottom: 1px solid #ccc;
+}
+
+#alertteacherCount{
+	display : none;
+}
+#skipBtnDiv
+{
+	display: inline-block;
+	margin-left: 15px;
+}
+#submitButtonDiv1
+{
+	display: inline-block;
+	margin-left: 350px;
+}
+.button1
+{
+	cursor: pointer;
+}

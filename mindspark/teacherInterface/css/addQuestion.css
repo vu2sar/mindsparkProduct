@@ -1,0 +1,159 @@
+#home{
+	border-bottom: 1px solid #2f99cb;
+}
+
+#fixedSideBar{
+	min-height: 620px;
+}
+
+#container{
+	position: relative;
+	height: auto;
+	border-top:1px solid #2f99cb;
+	border-bottom:1px solid #2f99cb;
+	border-left:1px solid #2f99cb;
+	/* min-height: 1000px; */
+	/*overflow: auto; */
+}
+
+#innerContainer{
+	margin-top: 2%;
+	position: relative;
+	margin-left: 0%;
+	width:100%;
+	margin-left: 5%;
+	/*border:1px solid #2f99cb;*/
+}
+
+#containerHead{
+	font-size:1.3em;
+	margin-top: 1.5%;
+	border-bottom:1px solid #2f99cb;
+	padding-bottom: 1%;
+	display: block;
+	
+}
+
+#triangle{
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	margin-top: 0.3%;
+	float: left;
+	border-left: 6px solid black;
+	margin-right: 1.5%;
+}
+
+#containerBody{
+	font-size:1.3em;
+
+	margin-top: 1.5%;
+	display: block;
+	
+}	
+
+
+#instructs{
+	padding-top: 1%;
+}
+
+.dropdowns{
+	
+	width:20%;
+	
+}
+
+#quetbl{
+	margin-top: 2%;
+}
+
+#buttonSection{
+	
+	height: 50%;
+	
+}
+
+#button1{
+	float : left;
+	margin-right: 2%
+}
+
+.buttons{
+	margin-top: 4%;
+	background-color: #2f99cb;
+	width:20%;
+	min-height: 40px; 
+	color: #FFFFFF;
+	margin-bottom: 5px;
+	cursor: pointer;
+	
+}
+#containerBody2,#containerBody3
+{
+
+	float:left;
+	margin-left: 40px;
+    padding-bottom: 20px;
+    width: 92%;
+}
+#thanks,#thanks_edit
+{
+	background-color:#2f99cb;
+
+	color:#fff;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index: 99;
+	border: 1px solid #000;
+}	
+
+table.gridtable {
+    border-color: #ffffff;
+  	border:1px solid;
+    color: #333333;
+    font-family: verdana,arial,sans-serif;
+    font-size: 11px;
+    float:left;
+}
+table.gridtable td{
+	height:30px;
+
+}
+table .header {
+    background-color: #999;
+    
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px;
+    color:#fff;
+}
+table .header_row
+{
+background-color: #e6e6e6;
+	
+}
+.mcq_answer
+{
+border-style:solid;
+ border: solid 1px #CCBBAA; 
+ background:white; 
+ overflow:auto; 
+ height:40px; 
+ width:350px;
+
+}
+.intro-launch-help
+{
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/Help-button.png");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  float: left;
+  cursor: pointer;
+}
+#childDetails label:not(.textRed):hover {
+	color: #E75903;
+}

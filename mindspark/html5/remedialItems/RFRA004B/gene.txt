@@ -1,0 +1,164 @@
+public function generateQuestionValues():void
+			{
+				var xValue1:int;
+				var yValue1:int;
+				var xValue2:int;
+				var yValue2:int;
+				var n:int;
+				var tempStr:String;
+				var temp:int;
+				var flag:int = 1;
+				var maxPosAns:int = maxPosAnsAllowed;
+				var j:int = maxPosAns/2;
+								
+				if(queType == "type1")
+				{
+					var nArr:Array = new Array(2,3,4,5);
+					xValue1 = 1;
+					xValue2 = 1;
+					temp = Math.round(Math.random()*(nArr.length-1));
+					n = nArr[temp];
+					yValue1 = n;
+					yValue2 = 2*n;
+					xValue1 = Math.round(Math.random()*(n-2))+1;
+					xValue2 = Math.round(Math.random()*(n-2))+1;
+					
+					
+					while(((xValue1/yValue1)+(xValue2/yValue2) > 1) || superMathObj.getGCD(yValue1,xValue1) != 1 || superMathObj.getGCD(yValue2,xValue2)!=1)
+					{
+						xValue1 = Math.round(Math.random()*(n-2))+1;
+						xValue2 = Math.round(Math.random()*(n-2))+1;
+					}
+					
+					
+					tempStr = n.toString();
+					if(firstQuestCheck ==0)
+					{
+						for(var k:int=0; k<=(storeQuestions.length-1);k++)
+						{
+							if(tempStr == storeQuestions[k])
+							{
+								flag = 0;
+								generateQuestionValues();
+								break;
+							}
+						}
+					}
+				}
+				else if(queType=="type2")
+				{
+					var mArr2:Array = new Array(2,3,2);
+					nArr = new Array(3,4,5);
+					temp = Math.round(Math.random()*(mArr2.length-1));
+					yValue2 = mArr2[temp];
+					yValue1 = nArr[temp];
+					n = yValue1<yValue2?yValue1:yValue2;
+					xValue1 = Math.round(Math.random()*(n-2))+1;
+					xValue2 = Math.round(Math.random()*(n-2))+1;
+					
+					while(((xValue1/yValue1)+(xValue2/yValue2)> 1) || superMathObj.getGCD(yValue1,xValue1) != 1 || superMathObj.getGCD(yValue2,xValue2)!=1)
+					{
+						xValue1 = Math.round(Math.random()*(n-2))+1;
+						xValue2 = Math.round(Math.random()*(n-2))+1;
+					}
+					
+					tempStr = yValue1.toString()+"+"+yValue2.toString();
+					
+					if(firstQuestCheck ==0)
+					{
+						for(k=0; k<=(storeQuestions.length-1);k++)
+						{
+							if(tempStr == storeQuestions[k])
+							{
+								flag = 0;
+								generateQuestionValues();
+								break;
+							}
+						}
+					}
+				}
+				if(flag != 0)
+				{
+					JohnNum = xValue1;
+					JohnDeno = yValue1;
+					PamNum = xValue2;
+					PamDeno = yValue2;
+					
+					lcm = superMathObj.getLCM(JohnDeno,PamDeno);
+					ans = lcm;	
+					
+					divideJohn = (lcm/JohnDeno)*JohnNum;
+					dividePam = (lcm/PamDeno)*PamNum;
+					
+					
+					JohnPieceWord = divideJohn>1?"pieces":"piece";
+					PamPieceWord = dividePam>1?"pieces":"piece";
+					
+					totalPartAte = divideJohn+dividePam;
+					whatFractionLeft = ans-totalPartAte;
+					
+					numAns = divideJohn+dividePam;
+					
+					while(j*ans > maxPosAns)
+						j = j-1;
+					
+					while(j!=1)
+					{
+						possibleUserAns.push(j*ans);
+						j = j-1;
+					}
+									
+					shaded_partjohn = JohnNum;
+					total_divideJohn = JohnDeno;
+					shaded_partpam = PamNum;
+					total_dividepam = PamDeno;
+					
+					firstLineDeno = JohnDeno<PamDeno?JohnDeno:PamDeno;
+					if(firstLineDeno == JohnDeno)
+					{
+						firstLineName = "John";
+						secondLineName = "Pam";
+						secondLineDeno = ans/JohnDeno;
+					}
+					else
+					{
+						firstLineName = "Pam";
+						secondLineName = "John";
+						secondLineDeno = ans/PamDeno;
+					}
+					
+					test.text = "JohnNum="+JohnNum+" JohnDeno="+JohnDeno+" PamNum="+PamNum+" PamDeno="+PamDeno+"\n";				}
+					flag = 1;
+					
+					subQue11Label.text = "";
+					solnParentObj.addElement(subQue11Label);
+					divBoxArr = new Array();
+					labelOfMsgBox.addMsgInLabel(subQue11Label,divBoxArr,replaceDynamicText(instArr["i104"]),fmtQue);
+					subQue11Label.visible = false;
+					
+					subQue12Label.text = "";
+					solnParentObj.addElement(subQue12Label);
+					divBoxArr = new Array();
+					labelOfMsgBox.addMsgInLabel(subQue12Label,divBoxArr,replaceDynamicText(instArr["i105"]),fmtQue);
+					subQue12Label.visible = false;				
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+		public function getGCD(a:int,b:int):int {
+			if ((a < 0) || (b < 0)) {
+				return getGCD(Math.abs(a),Math.abs(b));
+			}
+			if (a < b) {
+				return getGCD(b,a);
+			}
+			if (b == 0) {
+				return a;
+			}
+			return getGCD(b, a%b);
+		}

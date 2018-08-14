@@ -1,0 +1,166 @@
+/* 
+ |   Document   : style
+ |   Created on : Dec 9, 2013, 12:23:19 PM
+ |   Author     : Kirti Kumar Nayak
+ |   Description: Styles for ajax file uploader.
+*/
+.container{
+    margin-top: 5px;
+    width: 100%;
+}
+.header{
+/*    background-color: rgba(86,61,124,.15);
+    font-weight: 700;
+    padding: 7px 0 7px 7px;
+	font-size:12px;*/
+}
+.border-row{
+    border: 1px solid #cccccc;
+    padding: 3px
+}
+.border-row:hover{
+    background-color: rgba(180,180,180,.15);
+}
+.name-space{
+    padding-top: 7px;
+    overflow: hidden;
+}
+.live-icon{
+    font-size: 20px;
+    padding-top: 5px;
+}
+.footer{
+    background-color: rgba(86,61,124,.15);
+    font-weight: 700;
+    padding: 7px 0 7px 7px;
+}
+.progress{margin: 5px 0; display: none}
+
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+}
+.fileUpload input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.pointer{
+	cursor: pointer;
+}
+.modal-dialog {
+    width: 450px !important;
+}
+
+/*  Tax Declaration Form    */
+
+#gradeMgmtForm{border: 1px solid #CCC; padding:5px;}
+#gradeMgmtForm .login-wrap{padding:5px 20px;}
+.form-signin{max-width: 450px; margin-top:0px !important;}
+#gradeMgmtForm .inputSmall{width:49%; display: inline;}
+#gradeMgmtForm .inputXSmall{width:24%; display: inline;}
+#gradeMgmtForm .note{font-size: 11px; color: #AAA;}
+#gradeMgmtForm .btn-login{
+    background: none repeat scroll 0 0 #FA4B6C !important;
+    box-shadow: 0 3px #DE3959 !important;
+}
+
+
+/*  Tax Declaration Form Common CSS   */
+
+#manageDeclarationForm{border: 1px solid #CCC; padding:5px;}
+#manageDeclarationForm .login-wrap{padding:5px 20px;}
+.form-signin{max-width: 100%; margin-top:0px !important;}
+
+.ui-datepicker a {  
+    text-decoration: none;  
+}
+.gradeRowA
+{
+    background: #ddddff;
+}
+.gradeRowB
+{
+    background: #dddddf;
+}
+
+.margin0{margin: 0 !important}
+
+.margin10{margin: 10px !important}
+
+.margin20{margin: 20px !important}
+
+.padding0{padding: 0px !important}
+
+.padding10{padding: 10px !important}
+
+.padding20{padding: 20px}
+
+.automargin { margin: 0 auto;}
+
+/*  Customize Calender to Auto Fill Dates   */
+/*  Common Date Picker CSS  */
+
+.ui-datepicker {  
+    width: 216px;  
+    height: auto;  
+    margin: 5px auto 0;  
+    font: 9pt Arial, sans-serif;  
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);  
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);  
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);  
+} 
+
+/*  To customize Auto Dropdown UL LI CSS    */    
+
+.ui-datepicker {  
+    width: 216px;  
+    height: auto;  
+    margin: 5px auto 0;  
+    font: 9pt Arial, sans-serif;  
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);  
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);  
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);  
+}
+/*  To customize Auto Dropdown UL LI CSS    */    
+
+.ui-autocomplete {
+    padding: 0;
+    list-style: none;
+    background-color: #fff;
+    width: 218px;
+    border: 1px solid #B0BECA;
+    max-height: 350px;
+    overflow-y: scroll;
+    z-index: 99999;
+    font-size: 13px;
+}
+.ui-autocomplete .ui-menu-item a {
+    border-top: 1px solid #B0BECA;
+    display: block;
+    padding: 4px 6px;
+    color: #353D44;
+    cursor: pointer;
+}
+.ui-autocomplete .ui-menu-item:first-child a {
+    border-top: none;
+}
+.ui-autocomplete .ui-menu-item a.ui-state-hover {
+    background-color: #D5E5F4;
+    color: #161A1C;
+}
+
+.panel-heading2 {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}

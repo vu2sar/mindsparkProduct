@@ -1,0 +1,63 @@
+<!DOCTYPE HTML >
+<html>
+<head> 
+<meta charset="UTF-8" />	
+<title>RFRA004C</title>
+<link rel="stylesheet" type="text/css" href="../css/css.css">
+<script type="text/javascript" src="../../../libs/loadxmldoc.js"></script>
+<script type="text/javascript" src="../../../libs/jquery.js"></script>
+<script type="text/javascript" src="../../../libs/jquery_ui.js"></script>
+<script type="text/javascript" src="../../../libs/jquery_ui_touch.js"></script>
+<script type="text/javascript" src="../../../libs/common.js"></script>
+<script type="text/javascript" src="../../../libs/parameterPassing.js"></script>
+<script type="text/javascript" src="../../../libs/PxLoader.js"></script>
+<script type="text/javascript" src="../../../libs/PxLoaderImage.js"></script>
+<script type="text/javascript" src="../../../libs/animate.js"></script>
+<script type="text/javascript" src="../libs/script.js"></script>
+
+      
+<script>
+    var getParameters = getURLParameters();
+    if(typeof getParameters['numberLanguage']=="undefined") numberLanguage = 'english'; else numberLanguage = getParameters['numberLanguage'];
+</script>
+</head>
+
+<body>
+	
+	<div id="PreLoader">
+		<span id="LoadingText">Loading...</span>
+		<img id="LoadingImg"  src="../../../assets/loader.gif" alt="loader">
+	</div>
+	 <div id="landingPage">
+	 	<div id="heading"></div>
+		<div id="levelButtons"></div>
+	</div>
+	<div id="container">
+		<div id="mainDiv">
+				
+			<div id="screenDiv1" class="screenDiv">
+			
+			</div>
+			<div id="screenDiv2" class="screenDiv">
+			
+			</div>
+			<div id="screenDiv3" class="screenDiv">
+			
+			</div>
+		
+	</div>
+		<div id="nexttext"></div>		
+		<div id="next" class="button"></div>		
+		<div id="screenModal">
+			<div id="blank"></div>
+			<div id="promp" class="promptContainer">
+				<div id="img1"></div>
+	            <div id="txt" class="promptText"><p class="triangle-right left"></p></div>
+	            <button class="button" id="OK" onclick="OK();"></button>
+	        </div>	
+			
+		</div>
+		
+	</div>
+</body>
+</html>

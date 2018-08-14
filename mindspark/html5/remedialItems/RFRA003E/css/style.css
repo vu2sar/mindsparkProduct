@@ -1,0 +1,539 @@
+@font-face {
+	font-family: "ComicSansMS";
+	src: url('../../../assets/comic.eot');
+	src: local('Comic Sans MS'), url('../../../assets/comic.eot?#iefix') format('embedded-opentype'), url('../../../assets/comic.woff') format('woff'), url('../../../assets/comic.ttf') format('truetype'), url('../../../assets/comic.svg#webfont') format('svg');
+}
+
+html, body, div, p, span {
+	margin: 0px;
+	border-collapse: collapse;
+}
+
+button {
+	padding: 0px;
+}
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background-repeat: no-repeat;
+	font-family: "ComicSansMs";
+	font-size: 16px;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	overflow: hidden;
+	margin: 0px;
+}
+
+input {
+	font-family: "ComicSansMS";
+	font-size: 16px;
+	border-radius: 0px;
+}
+input:disabled
+{
+	font-family: "ComicSansMS";
+	font-size: 16px;
+	background: white !important;
+	color:black !important;
+	-webkit-text-fill-color:#000;
+	-webkit-opacity:0.7;
+	border-radius: 0px;
+
+}
+
+#container {
+	position: absolute;
+	overflow: hidden;
+	width: 800px;
+	height: 600px;
+	-webkit-transform: scale(1);
+	-webkit-transform-origin: left top;
+	-moz-transform: scale(1);
+	-moz-transform-origin: left top;
+	-ms-transform: scale(1);
+	-ms-transform-origin: left top;
+	-o-transform: scale(1);
+	-o-transform-origin: left top;
+	transform: scale(1);
+	transform-origin: left top;
+	
+	text-align: center;
+}
+
+#loader {
+	position: absolute;
+	width: 800px;
+	height: 600px;
+	text-align: center;
+	color: white;
+	background: black;
+}
+
+#loading {
+	position: absolute;
+	font-size: 45px;
+	top: 215px;
+	left: 180px;
+}
+
+#preLoadedImage {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 225px;
+	left: 400px;
+}
+
+input {
+	border: 1px solid black;
+}
+
+#content {
+	display: none;
+	background-image: url('../assets/background.png');
+	width: 798px;
+	height: 600px;
+	border: 1px solid black;
+	border-radius: 10px;
+	text-align: left;
+}
+
+#start {
+	padding: 0px;
+	border: none;
+	outline: none;
+	top: 85%;
+	position: absolute;
+	font-size: 20px;
+	padding: 2%;
+	border-radius: 100%;
+	left: 81%;
+	box-shadow: 0px 0px 0px 3px white;
+	-webkit-box-shadow: 0px 0px 0px 3px white;
+	-moz-box-shadow: 0px 0px 0px 3px white;
+	-o-box-shadow: 0px 0px 0px 3px white;
+	-ms-box-shadow: 0px 0px 0px 3px white;
+	cursor: pointer;
+	background: cadetblue;
+	color: white;
+}
+
+#landingPage {
+	position: absolute;
+	display: none;
+	top: 0px;
+	left: 0px;
+	font-size: 69px;
+	height: 100%;
+	background: gray;
+	width: 100%;
+	text-align: center;
+}
+
+#title {
+	position: relative;
+	top: 40%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	color: white;
+}
+
+#quesMain {
+	position: absolute;
+	top: 120px;
+	left: 70px;
+}
+
+#ques1 {
+	position: relative;
+	top: -3px;
+	width: 60px;
+	height: 24px;
+	left: 10px;
+	text-align: center;
+}
+
+#ques2 {
+	position: relative;
+	width: 60px;
+	height: 24px;
+	text-align: center;
+}
+
+#promptContainer {
+	background-image: url("../assets/promptBG.png");
+	cursor: pointer;
+	display: none;
+	width: 450px;
+	height: 200px;
+	z-index: 6;
+	position: absolute;
+	top: 300px;
+	left: 250px;
+}
+
+#promptText {
+	position: relative;
+	top: 60px;
+	left: 20px;
+}
+
+#prompt_k {
+	cursor: pointer;
+	position: absolute;
+	top: 150px;
+	left: 200px;
+	width: 50px;
+	padding: 3px;
+}
+
+.red {
+	border: 2px solid red;
+}
+
+.green {
+	border: 2px solid green;
+}
+
+#incorrectPrompt {
+	display: none;
+	width: 550px;
+	height: 325px;
+	top: 200px;
+	left: 150px;
+	background-color: #7FFFD4;
+	border: 1px solid;
+	position: absolute;
+	padding-left: 5px;
+}
+
+.fraction {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.frac {
+	padding: 3px;
+	line-height: 100%;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+.numerator {
+	border-bottom: 1px solid;
+}
+
+#explaination1 {
+	position: absolute;
+	top: 90px;
+	left: 125px;
+}
+
+#explaination2 {
+	position: absolute;
+	top: 160px;
+	left: 125px;
+}
+
+#explaination3 {
+	position: absolute;
+	top: 233px;
+	left: 125px;
+}
+
+#button1 {
+	position: absolute;
+	bottom: 10px;
+	left: 220px;
+	padding: 5px 13px;
+	cursor: pointer;
+}
+
+#incorrectHint {
+	position: absolute;
+	padding: 8px;
+	top: 202px;
+	left: 65px;
+}
+
+.blue {
+	border: 2px solid blue;
+}
+
+#ques3 {
+	width: 60px;
+	height: 24px;
+	text-align: center;
+}
+
+#quesMainExp {
+	position: absolute;
+	display: none;
+	top: 305px;
+	left: 65px;
+}
+
+#ques4 {
+	position: relative;
+	width: 60px;
+	height: 24px;
+	left: 10px;
+	text-align: center;
+}
+
+.button {
+	min-width: 30%;
+}
+
+.inline {
+	display: inline-block;
+}
+
+#myTable {
+	width: 300px;
+	border-collapse: collapse;
+	table-layout: fixed;
+	vertical-align: top;
+	background-color: #ADD8E6;
+	height:390px;
+}
+
+td {
+	border: 1px solid;
+	
+	width: 24px !important;
+	padding: 0;
+	text-align: center;
+}
+
+#myTable input:disabled {
+	display: none;
+}
+
+.inputBox {
+	border: medium none;
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+
+
+
+.systemTextBox {
+	display: inline-block !important;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: none;
+	font-family: "ComicSansMS";
+	font-size: 16px;
+}
+
+.containsZero{
+	display: none !important;
+}
+
+.answeredInput {
+	display: inline-block !important;
+}
+
+#promptPanel {
+	width: 300px;
+	height: 392px;
+	border: 1px solid;
+	vertical-align: top;
+}
+
+#sparkie {
+	background: url("../assets/information.png") no-repeat;
+	width: 70px;
+	height: 100px;
+	background-size: cover;
+}
+
+#sparkiePromptBubble {
+	position: absolute;
+	width: 200px;
+	background: #36A7DE;
+	top: 0px;
+	left: 90px;
+	border-radius: 15px;
+	text-align: center;
+}
+
+#closeSparkie {
+	position: relative;
+	width: 50px;
+	background: #FAD011;
+	border: none;
+	font-family: "ComicSansMS";
+	font-weight: bold;
+	border: 1px solid;
+}
+
+#closeSparkie:hover {
+	border-radius: 360px;
+	-webkit-transition: 2s ease;
+	-moz-transition: 2s ease;
+	-ms-transition: 2s ease;
+	-o-transition: 2s ease;
+	transition: 2s ease;
+}
+
+#closeSparkie:focus {
+	border: 2px solid black;
+}
+
+#sparkiePrompt {
+	position: relative;
+	width: 100%;
+	height: 100px;
+}
+
+#bottomPanel {
+	padding: 10px;
+	text-align: center;
+}
+
+.optionButton {
+	position: relative;
+	width: 125px;
+	height: 80px;
+	font-family: "ComicSansMS";
+	display: inline-block;
+	vertical-align: middle;
+	
+
+}
+
+.screen {
+	text-align: left;
+}
+
+.hide {
+	display: none;
+}
+
+#placeDigit {
+	left: 5%;
+}
+
+/************/
+
+input {
+	text-align: center;
+	padding: 0px;
+}
+
+
+#divisionTable {
+	background: none repeat scroll 0 0 #FFFFFF;
+	left: 58px;
+	position: absolute;
+	top: 192px;
+	z-index: 5;
+}
+
+#multiplicationPanel {
+	border: 1px solid #000000;
+	height: 392px;
+	vertical-align: top;
+	width: 120px;
+	text-align: center;
+}
+
+#multiplicationHeader {
+	text-decoration: underline;
+	margin: 0px auto;
+}
+
+#multiplicationTables {
+	text-align: center;
+	margin: 0px auto;
+}
+
+#screen11 table {
+	border-collapse: collapse
+}
+
+#tablePanelButton {
+	border-radius: 5px;
+	margin: 10px;
+	width: 48px;
+}
+
+#tablePanelInput {
+	height: 25px;
+	margin: 12px;
+	width: 46px;
+}
+
+#tablePanelCheck {
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+}
+
+#anotherOneOfThoseOkButton {
+	border-radius: 7px;
+	display: block;
+	height: 26px;
+	margin: 5px;
+	width: 50px;
+}
+
+.smallCalcTable {
+	background: none repeat scroll 0 0 #ADD8E6;
+}
+
+#quotientPointer {
+	left: 106px;
+	position: absolute;
+	top: 5px;
+	display: none;
+}
+
+#endPage {
+    background: none repeat scroll 0 0 #ADD8E6;
+    color: #3A6EA5;
+    font-size: 55px;
+    height: 100%;
+    line-height: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#quotientCross {
+	display: none;
+	left: 72px;
+	position: absolute;
+	top: 24px;
+}
+
+#screen13 {
+    padding: 15px;
+}
+
+#screen13Button {
+    padding: 2px 5px;
+}
+
+.inp{
+	width: 100px !important;
+}

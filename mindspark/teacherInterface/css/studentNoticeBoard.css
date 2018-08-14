@@ -1,0 +1,114 @@
+#home{
+	border-bottom: 1px solid orange;
+}
+
+#sideBar #home{
+	margin-top: 30%;
+}
+
+#container{
+	/*position: relative;
+	width:72.5%;*/
+	min-height:475px;
+	/*margin-left:27%;*/
+	border-top:1px solid orange;
+	border-bottom:1px solid orange;
+	border-left:1px solid orange;
+}
+
+#innerContainer{
+	margin-top: 2%;
+	position: relative;
+	
+	width:95%;
+	height:14.3%;
+	margin-left: 5%;
+	/*border:1px solid orange;*/
+}
+
+#containerHead{
+	font-size:1.3em;
+	margin-top: 1.5%;
+
+	border-bottom:1px solid orange;
+	padding-bottom: 1%;
+	display: block;
+	
+}
+
+#triangle{
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	margin-top: 0.3%;
+	float: left;
+	border-left: 6px solid black;
+	margin-right: 1.5%;
+}
+
+#containerBody{
+	font-size:1.3em;
+
+	margin-top: 1.5%;
+	display: block;
+	height: 100%;
+}	
+
+
+
+#innerContent{
+	border-top: 1px solid black;
+	padding-top:5%;
+}
+
+#line{
+	border:1px solid black;
+	
+}
+
+#left{
+	margin-top: 2%;
+	position: relative;
+	margin-left: 5%;
+	font-size: 1.4em;
+	float: left;
+	
+}
+	
+.buttons{
+	
+	background-color: orange;
+	width: 30%;
+	height: 40px;
+	color: #FFFFFF;
+	font-size: 15px;
+	
+}
+
+#right{
+	margin-left: 55%;
+}
+	
+.blackboard_screen {
+        
+        width                   :       65%;
+        height                  :       330px;
+        margin-top              :       25px;
+        margin-left             :       0px;
+        border                  :       solid 2px #EEE;
+       
+        background              :       #EFEDED;
+        color                   :       black;
+        overflow                :       auto;
+		font-size				: 		1.4em;
+		
+
+}
+
+#cross {
+	color:red;
+	text-decoration:none;
+}
+
+

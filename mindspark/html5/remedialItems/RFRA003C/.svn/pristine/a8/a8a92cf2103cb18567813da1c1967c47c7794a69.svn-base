@@ -1,0 +1,1433 @@
+html,body,div,p,span,canvas{
+    margin:0;
+    padding:0;
+}
+@font-face {
+font-family:"Comic Sans MS";
+src:url("../../../assets/comic.ttf") format("truetype");
+}
+@charset "utf-8";
+*{
+font-family:Comic Sans MS;
+}
+
+body {	
+    background-repeat:no-repeat;
+    font-family:"Comic Sans MS";
+    font-size:14px;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none; 
+    overflow:hidden;
+}
+
+#container
+{
+    width: 800px;
+    height: 600px;
+    font-family: Comic Sans MS;
+    -webkit-transform-origin : left top;
+    -moz-transform :scale(1);
+    -moz-transform-origin : left top;
+    -ms-transform :scale(1);
+    -ms-transform-origin : left top;
+    -o-transform :scale(1);
+    -o-transform-origin : left top;
+    transform :scale(1);
+    transform-origin : left top;
+
+}
+#enterAnswer
+{
+position: absolute;
+width: 379px;
+height: 120px;
+top: 208px;
+left: 310px;
+background-color: #f90631;
+	visibility: hidden;
+}
+#blankEnter
+{
+	position: absolute;
+top: 18px;
+left: 29px;
+width: 350px;
+height: 100px;
+font-size: 20px;
+
+text-align: center;
+}
+#background
+{
+    background-image: url("../assets/background.png");
+    width: 800px;
+    height: 600px;
+}
+
+#header
+{
+    position: absolute;
+    top:10px;
+    top: 35px;
+    left: 42px;
+    font-family: Comic Sans MS;
+    font-size: 21px;	
+    font-weight: bold;
+}
+#firstQuestion
+{
+    position: absolute;
+    top: 83px;
+    left: 108px;
+    font-family: Comic Sans MS;
+    font-size: 18px;	
+	width: 200px;
+}
+#secondQuestion
+{
+    position: absolute;
+    top: 159px;
+    left: 108px;
+    font-family: Comic Sans MS;
+    font-size: 18px;	
+    visibility: hidden; 
+  width: 200px;
+
+}
+#thirdQuestion
+{
+    position: absolute;
+    top: 241px;
+    left: 108px;
+    font-family: Comic Sans MS;
+    font-size: 18px;	
+    visibility: hidden; 
+width: 254px;
+}
+#fourthQuestion
+{
+    position: absolute;
+    top: 328px;
+    left: 108px;
+    font-family: Comic Sans MS;
+    font-size: 18px;	
+    visibility: hidden; 
+}
+
+
+#firstQuestion_1
+{
+    position: absolute;
+    top: 10px;
+    left: -60px;
+    font-size: 21px;
+
+}
+#secondQuestion_2
+{
+    position: absolute;
+    top: 10px;
+    left: -70px;
+    font-size: 21px;
+
+}
+#thirdQuestion_3
+{
+    position: absolute;
+    top: 10px;
+    left: -60px;
+    font-size: 21px;
+
+}
+#fourthQuestion_4
+{
+    position: absolute;
+    top: 10px;
+    left: -70px;
+    font-size: 21px;
+
+}
+
+#fifthQuestion
+{
+    position: absolute;
+    top: 407px;
+    left: 108px;
+    font-family: Comic Sans MS;
+    font-size: 18px;	
+    visibility: hidden; 
+}
+#fifthQuestion_5
+{
+    position: absolute;
+    top: 10px;
+    left: -49px;
+    font-size: 21px;
+
+}
+
+#sixthQuestion
+{
+    	position: absolute;
+	top: 86px;
+	left: 415px;
+	font-family: Comic Sans MS;
+	font-size: 18px;
+	visibility: hidden;
+	width: 268px;
+	height: 53px;
+	
+}
+#sixthQuestion_1
+{
+    position: absolute;
+    top: 10px;
+    left: -62px;
+    font-size: 21px;
+
+}
+#seventhQuestion
+{
+    	position: absolute;
+	top: 178px;
+	left: 348px;
+	font-family: Comic Sans MS;
+	font-size: 18px;
+	visibility: hidden;
+	width: 323px;
+	height: 114px;
+
+}
+#seventhQuestion_6
+{
+    position: absolute;
+    top: 10px;
+    left: -49px;
+    font-size: 21px;
+
+}
+#answer7
+{
+position: absolute;
+top: -9px;
+left: 60px;
+}
+#button_7
+{
+	position: absolute;
+	top: -10px;
+	left: 155px;	
+	cursor: pointer;
+}
+#sixthQuestion_6
+{
+    position: absolute;
+    top: 10px;
+    left: -49px;
+    font-size: 21px;
+
+}
+
+
+
+
+input {
+    border:2px solid #dadada;
+    /*border-radius:7px;*/
+    font-size:20px;
+    padding:5px; 
+    width: 65px;
+    text-align: center;
+    z-index: 2000;
+
+}
+
+input:focus { 
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+
+}
+
+
+.correct_FirstAttempt
+{
+    outline:none;
+    border-color:#147300;
+    box-shadow:0 0 10px #147300;
+}
+
+.correct
+{
+
+    position: absolute;
+    /*top: 164px;
+    left: 310px;*/
+  
+ top: 54px;
+left: -38px;
+
+  width: 253px;
+height: 138px;
+    border-radius: 12px;
+    visibility: hidden;
+
+
+    background: #6db3f2; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #6db3f2 0%, #54a3ee 27%, #3690f0 66%, #1e69de 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#6db3f2), color-stop(27%,#54a3ee), color-stop(66%,#3690f0), color-stop(100%,#1e69de)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  #6db3f2 0%,#54a3ee 27%,#3690f0 66%,#1e69de 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  #6db3f2 0%,#54a3ee 27%,#3690f0 66%,#1e69de 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  #6db3f2 0%,#54a3ee 27%,#3690f0 66%,#1e69de 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  #6db3f2 0%,#54a3ee 27%,#3690f0 66%,#1e69de 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+
+}
+
+button.css3button {
+
+ cursor: pointer; 
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #050505;
+    padding: 10px 20px;
+    cursor: pointer;
+  left: 156px;
+    background: -moz-linear-gradient(
+        top,
+        #f7ff00 0%,
+        #ffbf00);
+    background: -webkit-gradient(
+        linear, left top, left bottom, 
+        from(#f7ff00),
+        to(#ffbf00));
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    border: 0px solid #000000;
+    -moz-box-shadow:
+        0px 1px 3px rgba(000,000,000,0.4),
+        inset 0px 0px 1px rgba(255,255,255,0.7);
+    -webkit-box-shadow:
+        0px 1px 3px rgba(000,000,000,0.4),
+        inset 0px 0px 1px rgba(255,255,255,0.7);
+    box-shadow:
+        0px 1px 3px rgba(000,000,000,0.4),
+        inset 0px 0px 1px rgba(255,255,255,0.7);
+    text-shadow:
+        0px -1px 0px rgba(000,000,000,0.4),
+        0px 1px 0px rgba(255,255,255,0.3);
+}
+#button_1
+{
+	position: absolute;
+	left: 100px;
+	cursor: pointer;
+}
+#button_2
+{
+	position: absolute;
+	left: 100px;
+	cursor: pointer;
+}
+#button_3
+{
+position: absolute;
+left: 98px;
+cursor: pointer;
+
+
+}
+#button_4
+{
+	position: absolute;
+	left: 100px;
+	cursor: pointer;
+}
+
+.buttonPrompt
+{
+position: absolute;
+top: 106px;
+left: 110px;
+width: 63px;
+height: 30px;
+cursor: pointer;
+}
+#textCorrect
+{
+  position: absolute;
+top: 51px;
+left: 4px;
+font-size: 18px;
+text-align: center;
+
+}
+.textCorrect_wellDone_NLF_A
+{
+	position: absolute;
+top: 43px;
+left: 7px;
+font-size: 17px;
+text-align: center;
+	
+}
+.buttonPrompt3
+{
+	position: absolute;
+top: 301px;
+left: 143px;
+width: 58px;
+height: 34px;
+cursor: pointer;
+}
+.fraction_wellDone_NLF_Final
+{
+position: absolute;
+top: 17px;
+left: 232px;
+font-size: 14px;
+}
+.textCorrect_WellDone
+{
+position: absolute;
+top: 40px;
+left: 42px;
+font-size: 18px;
+text-align: center;
+}
+.textCorrect_WellDone_NLF_Final
+{
+position: absolute;
+top: 3px;
+left: 4px;
+font-size: 16px;
+width: 264px;
+}
+.buttonPrompt_wellDone
+{
+position: absolute;
+top: 77px;
+left: 49px;
+width: 63px;
+height: 30px;
+cursor: pointer;
+}
+.textCorrect_wellDone_LF
+{
+	position: absolute;
+top: 51px;
+left: 81px;
+font-size: 18px;
+text-align: center;
+}
+
+#textCorrect1
+{
+    position: absolute;
+top: 34px;
+left: 52px;
+font-family: Comic Sans MS;
+font-size: 19px;
+width: 165px;
+text-align: center;
+
+}
+#textCorrect2
+{
+  position: absolute;
+top: 24px;
+left: 38px;
+font-family: Comic Sans MS;
+font-size: 18px;
+width: 229px;
+text-align: center;
+}
+#textCorrect3
+{
+ position: absolute;
+top: 24px;
+left: 38px;
+font-family: Comic Sans MS;
+font-size: 18px;
+width: 229px;
+text-align: center;
+}
+.fra2
+{
+	position: absolute;
+top: 2px;
+left: 59px;
+}
+.fra4
+{
+position: absolute;
+top: 66px;
+left: 30px;
+width: 16px;
+font-size: 17px;
+}
+
+.tag2
+{
+position: absolute;
+top: 65px;
+left: 25px;
+line-height: 29px;
+width: 286px;
+font-size: 18px;
+}
+.textCorrect_wellDone_NLF
+{
+position: absolute;
+top: 25px;
+left: 50px;
+font-size: 15px;
+line-height: 29px;
+}
+
+.textCorrect_WellDone_NLF_Final4
+{
+	
+position: absolute;
+top: 3px;
+left: 4px;
+font-size: 16px;
+width: 228px;
+}
+.fraction_wellDone_NLF_Final4
+{
+position: absolute;
+top: 12px;
+left: 198px;
+font-size: 14px;
+}
+button.css3button2 {
+
+ cursor: pointer;  
+  position: absolute;
+   top: 92px;
+left: 102px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: -moz-linear-gradient(
+        top,
+        #0033ff 0%,
+        #000bd4);
+    background: -webkit-gradient(
+        linear, left top, left bottom, 
+        from(#0033ff),
+        to(#000bd4));
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    border: 3px solid #ffffff;
+    -moz-box-shadow:
+        0px 3px 12px rgba(000,000,000,0.5),
+        inset 0px 0px 1px rgba(119,130,252,1);
+    -webkit-box-shadow:
+        0px 3px 12px rgba(000,000,000,0.5),
+        inset 0px 0px 1px rgba(119,130,252,1);
+    box-shadow:
+        0px 3px 12px rgba(000,000,000,0.5),
+        inset 0px 0px 1px rgba(119,130,252,1);
+    text-shadow:
+        0px -1px 0px rgba(000,000,000,0.2),
+        0px 1px 0px rgba(255,255,255,0.3);
+}
+
+.fraction 
+{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 2px;
+    margin-right: 2px;
+    position: absolute;
+    left: 18px;
+    font-size: 20px;
+
+}
+.frac {
+    line-height: 100%;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.numerator {
+    border-bottom: 1px solid;
+}
+
+#prompts
+{
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    visibility: hidden;
+    position: absolute;
+    top: 100px;
+    left: 310px;
+}
+
+#message2
+{
+    position: absolute;
+    top: 66px;
+   left: 34px;
+ visibility: hidden;
+}
+#message3
+{
+    position: absolute;
+    top: 66px;
+   left: 34px;
+ visibility: hidden;
+}
+.equal_Questions
+{
+	position: absolute;
+	top: 22px;
+left: -18px;
+	display: inline-block;
+}
+#message4
+{
+    position: absolute;
+    top: 66px;
+   left: 34px;
+ visibility: hidden;
+}
+#message5
+{
+    position: absolute;
+    top: 66px;
+   left: 34px;
+ visibility: hidden;
+}
+#message7
+{
+    position: absolute;
+    top: 158px;
+   left: 34px;
+ visibility: hidden;
+}
+
+#showAns2
+{
+   position: absolute;
+top: 66px;
+left: -40px;
+width: 321px;
+    visibility: hidden;
+}
+#showAns3
+{
+   position: absolute;
+top: 66px;
+left: 34px;
+width: 321px;
+    visibility: hidden;
+}
+#showAns
+{
+position: absolute;
+top: 66px;
+left: -40px;
+width: 321px;
+    visibility: hidden;
+}
+#showAns4
+{
+    position: absolute;
+top: 66px;
+left: 34px;
+width: 321px;
+    visibility: hidden;
+}
+#showAns5
+{
+  position: absolute;
+top: 66px;
+left: 34px;
+width: 321px;
+    visibility: hidden;
+}
+#showAns7
+{
+    position: absolute;
+top: 66px;
+left: 34px;
+width: 321px;
+    visibility: hidden;
+}
+
+#wellDone2
+{
+  visibility: hidden;
+opacity: 1;
+width: 165px;
+height: 107px;
+}
+
+#message3
+{
+    position: absolute;
+    top: 66px;
+   left: 34px;
+}
+#showAns3
+{
+    position: absolute;
+    top: 66px;
+    left: 34px;
+}
+#wellDone
+{
+visibility: hidden;
+opacity: 1;
+width: 165px;
+height: 107px;
+}
+#wellDone3
+{
+    position: absolute;
+    top: 66px;
+    left: 34px;
+    width: 300px;
+    height: 152px;
+
+}
+#wellDone_NLF
+{
+   position: absolute;
+top: 66px;
+left: 34px;
+width: 394px;
+height: 152px;
+visibility: hidden;
+}
+
+#wellDone_NLF_A
+{
+    position: absolute;
+    top: 66px;
+    left: 34px;
+   
+    visibility: hidden;
+}
+
+#wellDone_LF   /*  CORRECT AND IN LOWEST FORM CSS */
+{
+  visibility: hidden;
+opacity: 1;
+width: 165px;
+height: 107px;
+
+}
+
+#wellDone_NLF_Final
+{
+    position: absolute;
+    top: 66px;
+    left: 34px;
+    width: 332px;
+    height: 336px;
+    visibility: hidden;
+}
+.fraction_wellDone_NLF
+{
+position: absolute;
+top: 56px;
+left: 142px;
+font-size: 14px;
+}
+.buttonPrompt2
+{
+position: absolute;
+top: 126px;
+left: 162px;
+cursor: pointer;
+}
+
+#animation
+{
+  position: absolute;
+width: 323px;
+height: 94px;
+top: 77px;
+left: 5px;
+}
+#animation2
+{
+    position: absolute;
+    /*background-color: #fff9f9;*/
+    width: 323px;
+    height: 94px;
+    opacity: 0;
+    top: 168px;
+    left: 5px;
+}
+
+#button_prompt
+{
+	cursor: pointer;
+	position: absolute;
+   top: 55px;
+left: 25px;
+}
+
+#button_prompt1
+{
+    top: 106px;
+    left: 110px;
+  cursor: pointer;
+}
+
+#button_prompt2
+{
+    position: absolute;
+    top: 290px;
+    left: 133px;
+  cursor: pointer;
+}
+#button_prompt3
+{
+    top: 44px;
+    left: 110px;
+  cursor: pointer;
+}
+
+#button_4
+{
+    position: absolute;
+    width: 93px;
+    top: -2px;
+    left: 87px;
+  cursor: pointer;
+}
+#button_5
+{
+    position: absolute;
+    width: 93px;
+    top: -2px;
+    left: 87px;
+  cursor: pointer;
+}	
+#button_6
+{
+    position: absolute;
+    width: 93px;
+    top: -2px;
+    left: 87px;
+  cursor: pointer;
+}	
+
+#firstFraction
+{
+    position: absolute;
+    top: 2px;
+left: 59px;
+    border: 1px solid red;
+    border-radius: 9px;
+
+}
+#firstFraction2
+{
+    position: absolute;
+    top: 17px;
+    left: 53px;
+    opacity: 0;
+
+
+}
+
+#secondFraction
+{
+    position: absolute;
+    top: 2px;
+    left: 125px;
+  opacity: 0;
+
+}
+#secondFraction2
+{
+    position: absolute;
+    top: 17px;
+    left: 141px;
+    opacity: 0;
+
+}
+
+#text
+{
+position: absolute;
+top: 56px;
+left: 41px;
+font-size: 16px;
+font-family: Comic Sans MS;
+
+
+}
+#actualNumber
+{
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    font-family: Comic Sans MS;
+    font-size: 18px;
+}
+#actualNumber2
+{
+    position: absolute;
+    top: 28px;
+    left: 5px;
+    font-family: Comic Sans MS;
+    font-size: 18px;
+}
+
+#smallDenom
+{
+    position: absolute;
+    font-size: 18px;
+   top: 22px;
+left: 31px;
+}
+
+#smallNum
+{
+    position: absolute;
+    font-size: 18px;
+    top: -6px;
+left: 35px;
+}
+
+#strike_upper
+{
+    position: absolute;
+    font-size: 28px;
+    font-weight: bolder;
+top: 6px;
+left: 65px;
+    opacity: 0;
+}
+#EqualTo
+{
+	position: absolute;
+top: 13px;
+left: 103px;
+}
+#EqualTo_2
+{
+	position: absolute;
+top: 28px;
+left: 115px;
+opacity: 0;
+
+}
+
+
+#strike_lower
+{
+    position: absolute;
+    font-size: 28px;
+    font-weight: bolder;
+top: 32px;
+left: 65px;
+    opacity: 0;
+}
+
+#assingment
+{
+    position: absolute;
+    top: 27px;
+    left: 117px;
+    font-size: 18px;
+    opacity: 0;
+
+}
+
+#fractionAnswer1
+{
+    position: absolute;
+    display: inline;
+    top: 3px;
+    left: 1px;
+
+    width: 76px;
+    height: 47px;
+    visibility: hidden;
+
+}
+#fractionAnswer2
+{
+    position: absolute;
+    display: inline;
+    top: 3px;
+    left: 1px;
+
+    width: 76px;
+    height: 47px;
+    visibility: hidden;
+
+}
+#fractionAnswer3  /* changed from here*/
+{
+  position: absolute;
+display: inline;
+top: 3px;
+left: -13px;
+width: 76px;
+height: 47px;
+}
+
+#fractionAnswer4
+{
+   position: absolute;
+display: inline;
+top: 3px;
+left: -19px;
+width: 76px;
+height: 47px;
+    visibility: hidden;
+}
+#fractionAnswer5
+{
+    position: absolute;
+    display: inline;
+    top: 3px;
+    left: -4px;
+
+    width: 76px;
+    height: 47px;
+    visibility: hidden;
+}
+#fractionAnswer6
+{
+    position: absolute;
+    display: inline;
+    top: 3px;
+    left: 14px;
+
+    width: 76px;
+    height: 47px;
+    visibility: hidden;
+}
+#fractionAnswer7
+{
+position: absolute;
+display: inline;
+top: -15px;
+left: 35px;
+width: 76px;
+height: 47px;
+    visibility: hidden;
+}
+#fraction6
+{
+	position: absolute;
+	top: 3px;
+	left: 3px;
+}
+#fraction7
+{
+position: absolute;
+top: 4px;
+left: -1px;
+}
+#FractionDivided
+{
+
+position: absolute;
+width: 65px;
+height: 67px;
+top: -12px;
+left: 80px;
+
+}
+
+#FractionDivided2
+{
+
+    position: absolute;
+    width: 100px;
+    height: 67px;
+    top: -12px;
+    left: 80px;
+    /*background-color: #1032ef;*/
+    visibility: hidden;
+
+}
+#FractionDivided4
+{
+position: absolute;
+width: 63px;
+height: 52px;
+top: -13px;
+left: 71px;
+padding-left: 17px;
+}
+#FractionDivided5
+{
+
+    position: absolute;
+    width: 63px;
+    height: 52px;
+    top:-13x;
+    left: 83px;
+
+}
+#FractionDivided6
+{
+
+    position: absolute;
+    width: 63px;
+    height: 52px;
+top: -12px;
+left: 64px;
+}
+#fraction_final
+{
+
+position: absolute;
+top: 1px;
+left: -5px;
+}
+#fraction_final7
+{
+
+position: absolute;
+top: -34px;
+left: 15px;
+}
+#FractionDivided7
+{
+
+    position: absolute;
+    width: 63px;
+    height: 52px;
+    top:-13px;
+    left: 83px;
+
+}
+#frac_Q5
+{
+
+position: absolute;
+top: -39px;
+left: -10px;
+
+}
+
+
+#inputField
+{
+    position: absolute;
+    top: 14px;
+    left: -1px;
+}
+
+#inputField6
+ {
+position: absolute;
+top: -1px;
+left:0px;
+}
+#inputField7
+ {
+position: absolute;
+top: -15px;
+left: 41px;
+}
+#Input_num6
+{
+	
+    width: 45px;
+    height: 30px;
+  text-align: center;
+ border-bottom: 2px solid black;
+}
+#Input_denom6
+{
+	
+    width: 45px;
+    height: 30px;
+  text-align: center;
+}
+#Input_num7
+{
+	
+    width: 45px;
+    height: 30px;
+  text-align: center;
+ border-bottom: 3px solid black;
+}
+#Input_denom7
+{
+	
+    width: 45px;
+    height: 30px;
+  text-align: center;
+}
+.sparkie
+{
+	background-image: url(../assets/sparkie.png);
+	width: 36px;
+	height: 50px;
+	position: absolute;
+	top:0px;
+	left: 3px;
+}
+#Input_num
+{
+    position: absolute;
+width: 45px;
+height: 30px;
+top: -20px;
+left: 10px;
+text-align: center;
+border-bottom: 3px solid black;
+
+}
+#Input_num3
+{
+    position: absolute;
+width: 45px;
+height: 30px;
+top: -20px;
+left: 10px;
+text-align: center;
+border-bottom: 3px solid black;
+
+}
+#Input_num4
+{
+    position: absolute;
+width: 45px;
+height: 30px;
+top: -20px;
+left: 10px;
+text-align: center;
+border-bottom: 3px solid black;
+
+}
+
+#Input_denom
+{
+    position: absolute;
+    width: 45px;
+    height: 30px;
+    top: 27px;
+    left: 10px;
+    text-align: center;
+}
+#Input_denom3
+{
+    position: absolute;
+    width: 45px;
+    height: 30px;
+    top: 27px;
+    left: 10px;
+    text-align: center;
+}
+#Input_denom4
+{
+    position: absolute;
+    width: 45px;
+    height: 30px;
+    top: 27px;
+    left: 10px;
+    text-align: center;
+}
+.fra_type1
+{
+	position: absolute;
+	top:10px;
+	left: 10px;
+}
+#Input_num5
+{
+    position: absolute;
+    width: 45px;
+    height: 30px;
+ top: -68px;
+left: 10px;
+    text-align: center;
+}
+
+#Input_denom5
+{
+    position: absolute;
+    width: 45px;
+    height: 30px;
+top: -22px;
+left: 10px;
+    text-align: center;
+}
+
+.replay
+{
+    background-image: url("../../../assets/replay.png");
+    clear: both;
+    text-align:right;	
+    position: absolute;
+    cursor: pointer;
+    top:10px;
+    left: 206px;
+    height:16px;
+    width:16px;
+    opacity: 0;
+    top: 76px;
+}
+.fraction {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.frac {
+  line-height: 100%;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.numerator {
+  border-bottom: 1px solid;
+}
+
+.upper
+{
+	position: absolute;
+display: inline-block;
+top: -10px;
+left: 82px;
+border-bottom: 1px solid black;
+width: 24px;
+text-align: center;
+}
+.lower
+{
+	position: absolute;
+display: inline-block;
+top: 12px;
+left: 79px;
+}
+.fra
+{
+	position: absolute;
+top: 2px;
+left: 59px;
+}
+.fra2
+{
+position: absolute;
+top: 1px;
+left: 115px;
+}
+.tag
+{
+	position: absolute;
+top: 45px;
+left: -20px;
+line-height: 29px;
+width: 286px;
+}
+.fraction_showAns
+{
+	
+	position: absolute;
+top: -1px;
+left: 166px;
+font-size: 18px;
+}
+#fra_wellDone_NLF_A
+{
+position: absolute;
+top: -6px;
+left: -53px;
+display: inline-block;
+}
+.loader {	
+	color:#2187e7;
+	width:800px;
+	height:600px;
+	background:#00000F;
+	font-weight:bold;
+	font-size:18px;
+	font-family:Comic Sans MS;
+	
+}
+.loading-text
+{
+	display:inline-block;
+	position:absoulte;
+	margin-top:250px;
+	background:transparent;
+	text-shadow:0px 0px 2px  #FFFFFF;
+	transition: 0.2s tex-shadow;
+}
+
+.preloader {
+	background-color: rgba(0,0,0,0);
+	border:5px solid rgba(0,183,229,0.9);
+	opacity:.9;
+	border-right:5px solid rgba(0,0,0,0);
+	border-left:5px solid rgba(0,0,0,0);
+	border-radius:50px;
+	width:50px;
+	height:50px;
+	-moz-animation:spinPulse 1s infinite ease-in-out;
+	-webkit-animation:spinPulse 1s infinite linear;
+	-ms-animation:spinPulse 1s infinite linear;
+	
+}
+.preloader1 {
+	background-color: rgba(0,0,0,0);
+	border:5px solid rgba(0,183,229,0.9);
+	opacity:.9;
+	border-left:5px solid rgba(0,0,0,0);
+	border-right:5px solid rgba(0,0,0,0);
+	border-radius:50px;
+	box-shadow: 0 0 15px #2187e7; 
+	width:30px;
+	height:30px;
+	position:relative;
+	top:-50px;
+	-moz-animation:spinoffPulse 1s infinite linear;
+	-webkit-animation:spinoffPulse 1s infinite linear;
+	-ms-animation:spinoffPulse 1s infinite linear;
+}
+@-moz-keyframes spinPulse {
+	0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #2187e7;}
+	50% { -moz-transform:rotate(145deg); opacity:1; }
+	100% { -moz-transform:rotate(-320deg); opacity:0; }
+}
+@-moz-keyframes spinoffPulse {
+	0% { -moz-transform:rotate(0deg); }
+	100% { -moz-transform:rotate(360deg);  }
+}
+@-webkit-keyframes spinPulse {
+	0% { -webkit-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #2187e7; }
+	50% { -webkit-transform:rotate(145deg); opacity:1;}
+	100% { -webkit-transform:rotate(-320deg); opacity:0; }
+}
+@-webkit-keyframes spinoffPulse {
+	0% { -webkit-transform:rotate(0deg); }
+	100% { -webkit-transform:rotate(360deg); }
+}
+@-ms-keyframes spinPulse {
+	0% { -ms-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #2187e7;}
+	50% { -ms-transform:rotate(145deg); opacity:1; }
+	100% { -ms-transform:rotate(-320deg); opacity:0; }
+}
+@-ms-keyframes spinoffPulse {
+	0% { -ms-transform:rotate(0deg); }
+	100% { -ms-transform:rotate(360deg);  }
+}

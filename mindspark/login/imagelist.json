@@ -1,0 +1,38 @@
+{
+	"default":
+	{
+		"0":
+		{
+			"1":{"image":"loginHomeAlternate1.jpg",	"link":"#"},
+			"2":{"image":"loginHomeAlternate2.jpg",	"link":"#"}
+		},
+		"1":
+		{
+			"1":{"image":"loginTalentSearchAlternate1.jpg",	"link":"http:\/\/www.ei-india.com\/asset-question-a-day-aqad\/"},
+			"2":{"image":"loginTalentSearchAlternate1.jpg",	"link":"http:\/\/www.ei-india.com\/asset-question-a-day-aqad\/"},
+			"3":{"image":"loginTalentSearchAlternate1.jpg",	"link":"http:\/\/www.ei-india.com\/asset-question-a-day-aqad\/"},
+			"4":{"image":"loginTalentSearchAlternate1.jpg",	"link":"http:\/\/www.ei-india.com\/asset-question-a-day-aqad\/"},
+			"5":{"image":"loginTalentSearchAlternate1.jpg",	"link":"http:\/\/www.ei-india.com\/asset-question-a-day-aqad\/"}
+		}
+	},
+	"2015-12-02":
+	[
+		{"image":"loginTalentSearch2016-1.jpg",	"link":"http:\/\/www.ei-india.com\/talentsearch"}
+	],
+	"2015-12-03":
+	[
+		{"image":"loginTalentSearch2016-2.jpg",	"link":"http:\/\/www.ei-india.com\/talentsearch"}
+	],
+	"2015-12-04":
+	[
+		{"image":"loginTalentSearch2016-3.jpg",	"link":"http:\/\/www.ei-india.com\/talentsearch"}
+	],
+	"2015-12-05":
+	[
+		{"image":"loginTalentSearch2016-4.jpg",	"link":"http:\/\/www.ei-india.com\/talentsearch"}
+	],
+	"2015-12-06":
+	[
+		{"image":"loginTalentSearch2016-5.jpg",	"link":"http:\/\/www.ei-india.com\/talentsearch"}
+	]
+}

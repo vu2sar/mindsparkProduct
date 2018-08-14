@@ -1,0 +1,68 @@
+#cssmenu ul,
+#cssmenu li,
+#cssmenu span,
+#cssmenu a {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#cssmenu:after,
+#cssmenu ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#cssmenu a {
+  color: #39A9E0;
+  font-size: 18px;
+  display: inline-block;
+  min-width: 45px;
+  text-align: left;
+  text-decoration: none;
+}
+#cssmenu ul {
+  list-style: none;
+}
+#cssmenu > ul > li {
+  float: left;
+}
+
+#cssmenu > ul > li a {
+	background:#FFF;
+	line-height: 34px;
+	filter: none;
+}
+
+#cssmenu .has-sub:hover ul {
+  display: block;
+}
+#cssmenu .has-sub ul {
+  display: none;
+  position: absolute;
+  top: 36px;
+  left: -1px;
+  min-width: 100%;
+  text-align: left;
+  /* IE7 */
+
+  *width: 100%;
+}
+#cssmenu .has-sub ul li {
+  text-align: left;
+}
+#cssmenu .has-sub ul li a {
+	border: 1px solid #DCDCDC;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 0 2px inset;
+	display: block;
+	top:-2px;
+	line-height: 120%;
+	padding: 9px 15px;
+	text-align: left;
+	left:80%;
+}
+
+#cssmenu .has-sub ul li a:hover {
+	border: 1px solid #DCDCDC;
+	box-shadow: 0 0 5px inset;
+}

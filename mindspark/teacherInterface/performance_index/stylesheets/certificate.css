@@ -1,0 +1,292 @@
+@font-face {
+	font-family: Univers_LT_Standard;
+	src: url("../../fonts/universefont/UniversLTStd.otf");
+}
+@page {
+	margin: 0;
+}
+body, ul {
+	margin: 0;
+}
+ul#mpi_certificates {
+	list-style: none;
+	padding-left: 0;
+	text-align: left;
+	font-family: Univers_LT_Standard, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.mpi_certificate>.front, .mpi_certificate>.back {
+	display: block;
+	background-color: rgb(240, 240, 240);
+}
+.mpi_certificate>section.front, .mpi_certificate>section.back {
+	position: relative;
+	margin: 0 auto;
+	width: 600px;
+	height: 900px;
+	padding-left: 20px;
+	padding-right: 34px;
+}
+.mpi_certificate>section.front.rendered, .mpi_certificate>section.back.rendered {
+	box-shadow: 0 0 0 1px black;
+}
+@media screen {
+	.mpi_certificate {
+		margin: 40px 0;
+	}
+	.mpi_certificate>img.front, .mpi_certificate>img.back {
+		display: none;
+	}
+}
+@media print {
+	.mpi_certificate>section.front, .mpi_certificate>section.back {
+		display: none;
+	}
+	.mpi_certificate>img.front, .mpi_certificate>img.back {
+		width: 780px;
+		page-break-after: always;
+		page-break-inside: avoid;
+	}
+}
+.mpi_certificate>.front header {
+	text-align: right;
+}
+.mpi_certificate>.front .mindspark_logo {
+	width: 46%;
+	vertical-align: middle;
+}
+.mpi_certificate>.front>.profile, .mpi_certificate>.front>.overview {
+	display: inline-block;
+	vertical-align: bottom;
+}
+.mpi_certificate>.front>.profile {
+	width: 70.5%;
+	text-transform: uppercase;
+	line-height: 1.2;
+}
+.mpi_certificate>.front>.profile>:not(.title) {
+	background-color: rgb(91, 160, 209);
+}
+.mpi_certificate>.front>.profile>.picture, .mpi_certificate>.front>.profile>.title {
+	display: inline-block;
+	vertical-align: top;
+}
+.mpi_certificate>.front>.profile>.picture {
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	width: 10%;
+	padding: 12px 76px 4px 12px;
+}
+.mpi_certificate>.front>.profile>.title {
+	margin-left: 10px;
+	margin-top: 2px;
+}
+.mpi_certificate>.front>.profile>.title>* {
+	color: rgb(91, 160, 209);
+	font-size: 17px;
+}
+.mpi_certificate>.front>.profile>.title>:nth-child(1) {
+	font-weight: 500;
+}
+.mpi_certificate>.front>.profile>.title>:nth-child(2) {
+	font-weight: 800;
+}
+.mpi_certificate>.front>.profile>.first_name, .mpi_certificate>.front>.profile>.last_name, .mpi_certificate>.front>.profile>.division {
+	padding-left: 10px;
+	color: white;
+}
+.mpi_certificate>.front>.profile>.first_name, .mpi_certificate>.front>.profile>.last_name {
+	border-bottom: 1px solid white;
+	font-size: 30px;
+	font-weight: 900;
+	overflow-x: hidden;
+}
+.mpi_certificate>.front>.profile>.first_name {
+	border-top-right-radius: 6px;
+	padding-top: 4px;
+	padding-bottom: 2px;
+}
+.mpi_certificate>.front>.profile>.last_name {
+	/* padding-top: 5px; */
+	/* padding-bottom: 5px; */
+}
+.mpi_certificate>.front>.profile>.division {
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	padding-top: 4px;
+	padding-bottom: 22px;
+	font-size: 13px;
+}
+.mpi_certificate>.front>.overview {
+	margin-left: 3%;
+	width: 25.8%;
+	padding-bottom: 2px;
+	line-height: 1.2;
+}
+.mpi_certificate>.front>.overview>.report_period {
+	margin-bottom: 32px;
+	border: 3px solid rgb(121, 188, 236);
+	border-radius: 8px;
+	padding: 1px 10px 8px 3px;
+	color: rgb(121, 188, 236);
+	font-size: 12px;
+	font-weight: 800;
+}
+.mpi_certificate>.front>.overview>.report_period .range_text {
+	width: 28%;
+	display: inline-block;
+}
+.mpi_certificate>.front>.overview>.report_period .date {
+	float: right;
+}
+.mpi_certificate>.front>.overview>.total_score {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: rgb(50, 120, 200);
+	text-align: center;
+	color: white;
+	font-size: 25px;
+	font-weight: 800;
+}
+.mpi_certificate>.front>.overview>.total_score>.note {
+	/* content: '*This is a weighted score'; */
+	border-bottom-right-radius: 5px;
+	padding: 2px 0;
+	display: block;
+	background-color: rgb(91, 160, 209);
+	color: rgb(235, 235, 235);
+	font-size: 10px;
+	font-weight: 300;
+}
+.mpi_certificate>.front>.performance, .mpi_certificate>.front>.score_guide {
+	border: 1px solid rgb(180, 180, 180);
+	border-radius: 8px;
+	background-color: rgb(250, 250, 250);
+}
+.mpi_certificate>.front>.performance {
+	margin: 12px 0;
+	padding: 0 6px 6px;
+}
+.mpi_certificate>.front>.performance>table {
+	border-spacing: 0;
+}
+.mpi_certificate>.front>.performance .weightage, .mpi_certificate>.front>.performance .score {
+	width: 20%;
+	text-align: center;
+}
+.mpi_certificate>.front>.performance .weightage {
+	background-position: center;
+	/* background-size: contain; */
+	background-repeat: no-repeat;
+	padding: 2px 0 !important;
+}
+.mpi_certificate>.front>.performance .description {
+	width: 60%;
+	padding-left: 2%;
+}
+.mpi_certificate>.front>.performance .columns>* {
+	vertical-align: bottom;
+	color: rgb(91, 160, 209);
+	font-size: 20px;
+	font-weight: 900;
+	text-transform: uppercase;
+	line-height: 1.1em;
+}
+.mpi_certificate>.front>.performance .field {
+	background-color: rgb(220, 220, 220);
+}
+.mpi_certificate>.front>.performance .field>.weightage, .mpi_certificate>.front>.performance .field>.score {
+	position: relative;
+	font-size: 18px;
+	color: rgb(70, 70, 70);
+}
+.mpi_certificate>.front>.performance .field>.weightage {
+	height: 80px;
+	padding: 0;
+	line-height: 80px;
+	font-weight: 600;
+}
+.mpi_certificate>.front>.performance .field>.description>.name {
+	font-size: 18px;
+	font-weight: 700;
+}
+.mpi_certificate>.front>.performance .field>.description>.details {
+	color: rgb(140, 140, 140);
+	font-size: 14px;
+}
+.mpi_certificate>.front>.score_guide {
+	padding: 0.5% 0 0 2.5%;
+	line-height: 1.2;
+}
+.mpi_certificate>.front>.score_guide>h3 {
+	margin: 2px 0;
+	padding-left: 32%;
+	font-size: 18px;
+	font-weight: 700;
+}
+.mpi_certificate>.front>.score_guide>ul {
+	list-style: none;
+	padding-left: 0;
+	font-weight: 600;
+}
+.mpi_certificate>.front>.score_guide .field {
+	margin-bottom: 10px;
+}
+.mpi_certificate>.front>.score_guide .field>* {
+	display: inline-block;
+	vertical-align: middle;
+}
+.mpi_certificate>.front>.score_guide .field:first-child>.plus_sign {
+	color: transparent;
+}
+.mpi_certificate>.front>.score_guide .field>.formula {
+	width: 36%;
+	font-size: 11px;
+}
+.mpi_certificate>.front>.score_guide .field>.long_hyphen {
+	margin: 0 1.8%;
+	width: 7%;
+	height: 2px;
+	background-color: black;
+	font-size: 0;
+}
+.mpi_certificate>.front>.score_guide .field>.description {
+	width: 48.2%;
+	color: rgb(91, 160, 209);
+	font-size: 10px;
+}
+.mpi_certificate>.front>.flip_instruction {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 8px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+}
+.mpi_certificate>.back {
+	background-image: url("../../assets/ei_math_symbols.png");
+	background-repeat: no-repeat;
+	background-size: 12%;
+	background-position: 520px 680px;
+}
+.mpi_certificate>.back>dl {
+	position: relative;
+	top: 2%;
+}
+.mpi_certificate>.back .query {
+	margin-top: 20px;
+	font-size: 15.5px;
+	font-weight: 600;
+}
+.mpi_certificate>.back .response {
+	margin-left: 0;
+	margin-top: 8px;
+	font-size: 12px;
+	text-align: justify;
+}
+.mpi_certificate>.back .response>.score_formula {
+	margin-top: 22px;
+	font-size: 11px;
+}

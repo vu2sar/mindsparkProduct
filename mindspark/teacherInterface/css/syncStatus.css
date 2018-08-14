@@ -1,0 +1,93 @@
+
+.syncStatusMsg{
+
+	margin-top: 1%;
+	font-size: 14px;
+	margin-left:3%;
+	color:#0C6691;
+	font-weight: bold;
+}	
+
+.imageContainer{
+	margin-left:7%;
+}
+
+.left
+{
+	float:left;
+}
+
+.hor-zebra {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    width: 480px;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 20px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.hor-zebra th {
+    font-size: 13px;
+    font-weight: normal;
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;
+    border-bottom: 1px solid #fff;
+    color: #039;
+    padding: 8px;
+}
+
+.hor-zebra td {
+    
+    border-bottom: 2px solid #fff;
+    color: rgba(50, 50, 50, 0.8);
+    border-top: 1px solid transparent;
+    padding: 8px;
+}
+
+.hor-zebra tr:hover td {
+    background: #d0dafd;
+    color: #339;
+}
+
+.hor-zebra-b {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    width: 480px;
+    text-align: center;
+    border-collapse: collapse;
+    border-top: 7px solid #9baff1;
+    border-bottom: 7px solid #9baff1;
+    margin: 20px;
+}
+
+.hor-zebra-b th {
+    font-size: 13px;
+    font-weight: normal;
+    background: #e8edff;
+    border-right: 1px solid #9baff1;
+    border-left: 1px solid #9baff1;
+    color: #039;
+    padding: 8px;
+}
+
+.hor-zebra-b td {
+    
+    border-right: 1px solid #aabcfe;
+    border-left: 1px solid #aabcfe;
+    color: #669;
+    padding: 8px;
+}
+
+.even {
+background: #e8edff;
+}
+
+.odd {
+	background: white;
+}
+
+#localLiveSync{
+	display:none;
+}

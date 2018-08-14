@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application name="percentage">
+<english>
+
+	<questions>
+	</questions>
+	 
+	<prompts>
+		<prompt name="prompt0" text="OK" page="" voice=""/>
+		<prompt name="prompt1" text="Well done!" page="" voice=""/>
+		<prompt name="prompt2" text="Think again! Is #frac1# = #frac2#?" page="" voice=""/>
+		<prompt name="prompt3" text="Oops! That's incorrect! &lt;br/&gt; The next few hint questions will help you!" page="" voice=""/>
+		<prompt name="prompt4" text="John and Pam had two identical chocolates." page="" voice=""/>
+		<prompt name="prompt5" text="John ate #frac# of a chocolate." page="" voice=""/>
+		<prompt name="prompt6" text="Pam's chocolate is divided into #n# equal pieces." page="" voice=""/>
+		<prompt name="prompt7" text="She wants to eat the same amount of chocolate as John." page="" voice=""/>
+		<prompt name="prompt8" text="How many pieces of her chocolate should she eat?" page="" voice=""/>
+		<prompt name="prompt9" text="John's" page="" voice=""/>
+		<prompt name="prompt10" text="Pam's" page="" voice=""/>
+		<prompt name="prompt11" text="Pam wants to eat the same amount of chocolate as John. &lt;br/&gt; See the figure carefully and try again!" page="" voice=""/>
+		<prompt name="prompt12" text="Pam should eat #part1# pieces of her chocolate &lt;br/&gt; to have the same amount of chocolate as &lt;br/&gt; John.&lt;br/&gt;Can you now try to write a fraction &lt;br/&gt; equal to #fraction#?" page="" voice=""/>
+		<prompt name="prompt13" text="&lt;b&gt;Oops! That's incorrect! See the explanation carefully!&lt;/b&gt;" page="" voice=""/>
+		<prompt name="prompt14" text="&lt;font color='#0066ff' &gt; &lt;b&gt; #frac1# : &lt;/b&gt;&lt;/font&gt; #choc1# &lt;b&gt; &lt;font color='#0066ff' &gt; Here, the shaded part is #n1# out of #d1#, or #fraction1#. &lt;/b&gt; &lt;/font&gt; &lt;br/&gt; &lt;font color='#0066ff' &gt; &lt;b&gt; #frac2# : &lt;/font&gt; &lt;/b&gt; #choc2# &lt;font color='#0066ff'&gt; &lt;b&gt; Here, the shaded part is #n2# out of #d2#, or #fraction2#. &lt;/b&gt; &lt;/font&gt; " page="" voice=""/>
+		<prompt name="prompt15" text="&lt;br/&gt;&lt;font color='#0066ff' &gt; &lt;b&gt; So, #frac1# = #frac2#.&lt;/font&gt; &lt;/b&gt;" page="" voice=""/>
+		<prompt name="prompt16" text="That's right! &lt;br/&gt; Can you now try to write the equivalent &lt;br/&gt; fraction of #frac1#?" page="" voice=""/>
+		<prompt name="prompt17" text="Oops! That’s incorrect! &lt;br/&gt; &lt;br/&gt; You can find a fraction equivalent to a fraction by &lt;br/&gt;multiplying its numerator and denominator by the &lt;br/&gt; same number. &lt;br/&gt; &lt;br/&gt; Try again!" page="" voice=""/>
+		<prompt name="prompt18" text="You multiplied the denominator #d# with #n#. &lt;br/&gt; So, you should multiply the numerator &lt;br/&gt; too with the same number, #n#. &lt;br/&gt; Did you do that? Try again! " page="" voice=""/>
+		<prompt name="prompt19" text="Oops! That’s incorrect! &lt;br/&gt; You have to multiply the numerator also with #n#. &lt;br/&gt; Now try again! &lt;br/&gt; &lt;br/&gt; #frac1#=#frac2#=#frac3#." page="" voice=""/>
+		<prompt name="prompt20" text="Please type your answer and press enter." page="" voice=""/>
+		<prompt name="prompt21" text="Oops! That’s incorrect! &lt;br/&gt; &lt;br/&gt; We multiply both the numerator and denominator with #n# to get #frac#. &lt;br/&gt; #frac1# = #frac2# = #frac3#.&lt;br/&gt; So, #frac4# is equivalent to #frac5#." page="" voice=""/>
+		<prompt name="prompt22" text="Oops! That’s incorrect! &lt;br/&gt; &lt;br/&gt; You can find a fraction equivalent to a fraction by &lt;br/&gt;multiplying its numerator and denominator by the&lt;br/&gt;same number. &lt;br/&gt; &lt;br/&gt; Try again!" page="" voice=""/>
+		<prompt name="prompt23" text="Oops! That’s incorrect! &lt;br/&gt; &lt;br/&gt; Multiply the numerator and the denominator of #frac# &lt;br/&gt; with the same number to find its equivalent fraction. &lt;br/&gt; &lt;br/&gt; For e.g. #frac1# = #frac2#." page="" voice=""/>
+		<prompt name="prompt24" text="Oops! That’s incorrect! &lt;br/&gt; &lt;br/&gt; Multiply the numerator and the denominator of #frac# &lt;br/&gt; with the same number to find its equivalent fraction. &lt;br/&gt; &lt;br/&gt; For e.g. #frac1# = #frac2# = #frac3#. &lt;br/&gt; &lt;br/&gt; So, #frac4#  is equivalent to  #frac5#. &lt;br/&gt; &lt;br/&gt; Similarly #frac6# is equivalent to #frac7#." page="" voice=""/>
+		<prompt name="prompt25" text="You have written the same fraction. &lt;br/&gt; &lt;br/&gt; Please enter a fraction which is equivalent to #frac#." page="" voice=""/>
+		<prompt name="prompt26" text="Oops! That’s incorrect! &lt;br/&gt; &lt;br/&gt; Multiply the numerator and the denominator &lt;br/&gt; by the same number to find the equivalent fraction. &lt;br/&gt; &lt;br/&gt;For example, multiply 2 in the numerator and the denominator. &lt;br/&gt; &lt;br/&gt; so, #frac1#=#frac2#." page="" voice=""/>
+		<prompt name="prompt27" text="Oops! That’s incorrect! &lt;br/&gt; &lt;br/&gt; Multiply the numerator and the denominator &lt;br/&gt; by the same number to find the equivalent fraction. &lt;br/&gt; &lt;br/&gt;For example, here we multiply 2 in the numerator &lt;br/&gt; and the denominator to get #frac#.&lt;br/&gt; &lt;br/&gt; so, #frac1#=#frac2#=#frac3#.&lt;br/&gt;So, #frac4# is equivalent to #frac5#." page="" voice=""/>
+		<prompt name="prompt28" text="Oops! That's incorrect!" page="" voice=""/>
+		<prompt name="prompt29" text="Try multiplying numerator and &lt;br/&gt; denominator of #frac# by the same number." page="" voice=""/>
+		<prompt name="prompt30" text="Oops! That's incorrect! &lt;br/&gt;We know, #frac1# = #frac2# = #frac3# = #frac4# =… and so on. &lt;br/&gt; Note, #frac5#=#frac6# &lt;br/&gt; where #frac7#=#frac8#." page="" voice=""/>
+		<prompt name="prompt31" text="Oops! That's incorrect! #frac1# is not equal to #frac2#." page="" voice=""/>
+		<prompt name="prompt32" text="Oops! That's incorrect! #frac1# is not the same as #frac2#.&lt;br/&gt;We multiply both the numerator and &lt;br/&gt; denominator with the same number &lt;br/&gt; to get a fraction equivalent to #frac#. &lt;br/&gt; Look for such an option!" page="" voice=""/>
+		<prompt name="prompt33" text="Oops! That's incorrect!&lt;br/&gt;Is #frac1# = #frac2#? &lt;br/&gt; Check again!" page="" voice=""/>
+		<prompt name="prompt34" text="Oops! That's incorrect! &lt;br/&gt;&lt;br/&gt; Do you see that the denominator #n# is multiplied with #n1# to get #n2#? &lt;br/&gt; The numerator #n3# is NOT multiplied with #n1#.&lt;br/&gt;To find an equivalent fraction, both the numerator and &lt;br/&gt; denominator of the given fraction &lt;br/&gt; should be multiplied with the same number.&lt;br/&gt;&lt;br/&gt; Look for such an option!" page="" voice=""/>
+		<prompt name="prompt35" text="Oops! That's incorrect! &lt;br/&gt;&lt;br/&gt;Do you see that the numerator #n# is multiplied with #n1# to get #n2#? &lt;br/&gt; The denominator #n3# is NOT multiplied with #n1#.&lt;br/&gt;To find an equivalent fraction, both the numerator and &lt;br/&gt; denominator should be multiplied with the same number.&lt;br/&gt; Look for such an option!" page="" voice=""/>
+		<prompt name="prompt36" text="The denominator of the fraction &lt;br/&gt; cannot be multiplied with 0." page="" voice=""/>
+		<prompt name="prompt37" text="The numerator of the fraction &lt;br/&gt; cannot be multiplied with 0." page="" voice=""/>
+		<prompt name="prompt38" text="Oops! That's incorrect! &lt;br/&gt;#frac1#=#frac2#=#frac3#" page="" voice=""/>
+	</prompts>
+	
+	<instructions>
+		<instruction name="inst1" text="Write the numerator of the fraction in the blank to make the two fractions equal." page="" voice=""/>
+		<instruction name="inst2" text="Here, #frac1# and #frac2# are called &lt;span id='a'&gt;&lt;b&gt; equivalent fractions. &lt;/span &gt;&lt;/b&gt; " page="" voice=""/>
+		<!-- <instruction name="inst3" text="equivalent fractions." page="" voice=""/> -->
+		<instruction name="inst4" text="Write an equivalent fraction for the given fraction." page="" voice=""/>
+		<instruction name="inst5" text="#frac1# is a fraction in reduced form. Which of the following is equivalent to #frac2#" page="" voice=""/>
+	</instructions>
+	
+	<miscellaneous>
+		<misc name="next" text="Next" page="" voice=""/>
+	</miscellaneous>
+	
+</english>
+
+<hindi>
+		
+</hindi>
+
+<gujarati>		
+
+<questions>
+</questions>
+
+<prompts>
+<prompt name="prompt0" text="ઓકે" page="" voice=""/>
+<prompt name="prompt1" text="ખૂબ સરસ!" page="" voice=""/>
+<prompt name="prompt2" text="ફરી વિચારો! શું #frac1# = #frac2#?" page="" voice=""/>
+<prompt name="prompt3" text="અરે! આ ખોટું છે! &lt;br/&gt; પછીના કેટલાક પ્રશ્ન તમને મદદ કરશે." page="" voice=""/>
+<prompt name="prompt4" text="જયેશ અને પરેશા પાસે એકસમાન ચોકલેટ હતી." page="" voice=""/>
+<prompt name="prompt5" text="જયેશે ચોકલેટનો #frac# ભાગ ખાધો." page="" voice=""/>
+<prompt name="prompt6" text=" પરેશાની ચોકલેટને #n# સરખા ભાગમાં વહેંચવામાં આવી." page="" voice=""/>
+<prompt name="prompt7" text="તે જયેશ પાસે જેટલી ચોકલેટ છે તેટલી જ ખાવા માંગતી હતી," page="" voice=""/>
+<prompt name="prompt8" text="તેણે તેની ચોકલેટના કેટલા ટુકડા ખાવા જોઈએ?" page="" voice=""/>
+<prompt name="prompt9" text="જયેશ" page="" voice=""/>
+<prompt name="prompt10" text="પરેશા" page="" voice=""/>
+<prompt name="prompt11" text=" તે જયેશ પાસે જેટલી ચોકલેટ છે તેટલી જ ખાવા માંગતી હતી &lt;br/&gt; આકૃતિને બરાબર જુઓ અને ફરી પ્રયત્ન કરો.!" page="" voice=""/>
+<prompt name="prompt12" text="&lt;br/&gt; જયેશ પાસે જેટલી ચોકલેટ છે તેટલી જ ચોકલેટ ખાવા &lt;br/&gt; માટે.&lt;br/&gt; પરેશાએ તેની ચોકલેટના #part1# ટુકડા ખાવા જોઈએ. શું હવે તમે  &lt;br/&gt; #fraction# ના બરાબર અપૂર્ણાંક લખવા પ્રયત્ન કરી શકો?" page="" voice=""/>
+<prompt name="prompt13" text="&lt;b&gt;અરે! આ ખોટું છે.! બરાબર સમજૂતી જુઓ!&lt;/b&gt;" page="" voice=""/>
+<prompt name="prompt14" text="&lt;font color='#0066ff' &gt; &lt;b&gt; #frac1# : &lt;/b&gt;&lt;/font&gt; #choc1# &lt;b&gt; &lt;font color='#0066ff' &gt; અહીં, #d1# માંથી #n1# ભાગ રંગીન છે. અથવા #fraction1#. &lt;/b&gt; &lt;/font&gt; &lt;br/&gt; &lt;font color='#0066ff' &gt; &lt;b&gt; #frac2# : &lt;/font&gt; &lt;/b&gt; #choc2# &lt;font color='#0066ff'&gt; &lt;b&gt; અહીં, #d2# માંથી #n2# ભાગ રંગીન છે. અથવા #fraction2#. &lt;/b&gt; &lt;/font&gt; " page="" voice=""/>
+<prompt name="prompt15" text="&lt;br/&gt;&lt;font color='#0066ff' &gt; &lt;b&gt; તેથી, #frac1# = #frac2#.&lt;/font&gt; &lt;/b&gt;" page="" voice=""/>
+<prompt name="prompt16" text="આ સાચું છે! &lt;br/&gt; શું તમે હવે #frac1# નો સમઅપૂર્ણાંક &lt;br/&gt; લખવાનો પ્રયત્ન કરી શકો?" page="" voice=""/>
+<prompt name="prompt17" text="અરે! આ ખોટું છે! &lt;br/&gt; &lt;br/&gt; તમે આપેલા અપૂર્ણાંકનો સમઅપૂર્ણાંક &lt;br/&gt;અંશ અને છેદને એક સરખી સંખ્યા વડે &lt;br/&gt; ગુણીને મેળવી શકો. &lt;br/&gt; &lt;br/&gt; ફરી પ્રયત્ન કરો!" page="" voice=""/>
+<prompt name="prompt18" text="તમે છેદ #d# નો #n# ની સાથે ગુણાકાર કર્યો. &lt;br/&gt; તેથી, તમારે અંશને પણ &lt;br/&gt; તે જ સંખ્યા #n# વડે ગુણવા પડે. &lt;br/&gt; શું તમે આ કર્યું? ફરી પ્રયત્ન કરો. " page="" voice=""/>
+<prompt name="prompt19" text="અરે! આ ખોટું છે! &lt;br/&gt; તમારે અંશને પણ #n# વડે ગુણવા પડે. &lt;br/&gt; હવે ફરી પ્રયત્ન કરો! &lt;br/&gt; &lt;br/&gt; #frac1#=#frac2#=#frac3#." page="" voice=""/>
+<prompt name="prompt20" text="તમારો જવાબ લખો અને Enter દબાવો." page="" voice=""/>
+<prompt name="prompt21" text=" અરે! આ ખોટું છે!&lt;br/&gt; &lt;br/&gt; આપણે #frac# મેળવવા અંશ અને છેદ બંનેને #n# વડે ગુણીએ. &lt;br/&gt; #frac1# = #frac2# = #frac3#.&lt;br/&gt; તેથી, #frac4# એ #frac5# નો સમઅપૂર્ણાંક છે." page="" voice=""/>
+<prompt name="prompt22" text=" અરે! આ ખોટું છે! &lt;br/&gt; &lt;br/&gt; તમે અપૂર્ણાંકનો સમઅપૂર્ણાંક &lt;br/&gt; તેના અંશ અને છેદ બંનેને &lt;br/&gt; એકસરખી સંખ્યા વડે ગુણીને મેળવી શકો. &lt;br/&gt; &lt;br/&gt; ફરી પ્રયત્ન કરો!" page="" voice=""/>
+<prompt name="prompt23" text=" અરે! આ ખોટું છે! &lt;br/&gt; &lt;br/&gt; #frac# નો સમઅપૂર્ણાંક મેળવવા તેના અંશ અને છેદ બંનેને &lt;br/&gt; એકસરખી સંખ્યા વડે ગુણો. &lt;br/&gt; &lt;br/&gt; દા.ત. #frac1# = #frac2#." page="" voice=""/>
+<prompt name="prompt24" text=" અરે! આ ખોટું છે! &lt;br/&gt; &lt;br/&gt;#frac# નો સમઅપૂર્ણાંક મેળવવા તેના અંશ અને છેદ બંનેને &lt;br/&gt; એકસરખી સંખ્યા વડે ગુણો. &lt;br/&gt; &lt;br/&gt; દા.ત. #frac1# = #frac2# = #frac3#. &lt;br/&gt; &lt;br/&gt; તેથી, #frac4# એ #frac5# નો સમઅપૂર્ણાંક છે. &lt;br/&gt; &lt;br/&gt; તેજ રીતે #frac6# એ #frac7# નો સમઅપૂર્ણાંક છે." page="" voice=""/>
+<prompt name="prompt25" text="તમે એ જ અપૂર્ણાંક લખ્યો છે.&lt;br/&gt; &lt;br/&gt; એવો અપૂર્ણાંક લખો કે જે #frac# નો સમઅપૂર્ણાંક હોય." page="" voice=""/>
+<prompt name="prompt26" text=" અરે! આ ખોટું છે!&lt;br/&gt; &lt;br/&gt; સમઅપૂર્ણાંક મેળવવા અંશ અને છેદ બંનેને &lt;br/&gt; એકસરખી સંખ્યા વડે ગુણો. &lt;br/&gt; &lt;br/&gt;દાખલા તરીકે, અંશ અને છેદ બંનેને 2 વડે ગુણો. &lt;br/&gt; &lt;br/&gt; તેથી, #frac1#=#frac2#." page="" voice=""/>
+<prompt name="prompt27" text=" અરે! આ ખોટું છે! &lt;br/&gt; &lt;br/&gt; સમઅપૂર્ણાંક મેળવવા અંશ અને છેદ બંનેને &lt;br/&gt; એકસરખી સંખ્યા વડે ગુણો. &lt;br/&gt; &lt;br/&gt; દાખલા તરીકે, અહીં આપણે #frac# મેળવવા માટે અંશ અને છેદ બંનેને 2 વડે ગુણ્યા &lt;br/&gt; &lt;br/&gt; &lt;br/&gt; તેથી, #frac1#=#frac2#=#frac3#.&lt;br/&gt;તેથી, #frac4# એ #frac5# નો સમઅપૂર્ણાંક છે." page="" voice=""/>
+<prompt name="prompt28" text="અરે! આ ખોટું છે!" page="" voice=""/>
+<prompt name="prompt29" text="#frac# ના અંશ અને છેદ બંનેને&lt;br/&gt; એક સરખી સંખ્યા વડે ગુણવાનો પ્રયત્ન કરો." page="" voice=""/>
+<prompt name="prompt30" text=" અરે! આ ખોટું છે!&lt;br/&gt;આપણે જાણીએ છીએ કે, #frac1# = #frac2# = #frac3# = #frac4# =… અને આ જ રીતે આગળ. &lt;br/&gt; નોંધ: #frac5#=#frac6# &lt;br/&gt; કે જ્યાં #frac7#=#frac8#." page="" voice=""/>
+<prompt name="prompt31" text=" અરે! આ ખોટું છે! #frac1# એ #frac2# ને બરાબર નથી." page="" voice=""/>
+<prompt name="prompt32" text="અરે! આ ખોટું છે! #frac1# એ #frac2# ને બરાબર નથી.&lt;br/&gt; #frac# નો સમઅપૂર્ણાંક મેળવવા માટે આપણે અંશ અને છેદ બંનેને એક સરખી સંખ્યા વડે ગુણીએ.&lt;br/&gt; &lt;br/&gt; &lt;br/&gt; આ પ્રકારનો વિકલ્પ શોધો!" page="" voice=""/>
+<prompt name="prompt33" text="અરે! આ ખોટું છે!&lt;br/&gt; શું #frac1# = #frac2#? &lt;br/&gt; ફરી તપાસો!" page="" voice=""/>
+<prompt name="prompt34" text="અરે! આ ખોટું છે! &lt;br/&gt;&lt;br/&gt; #n2# ને મેળવવા માટે અંશ #n# ને #n1#  વડે ગુણવામાં આવ્યા? &lt;br/&gt; અંશ #n3# ને #n1# વડે નથી ગુણ્યા.&lt;br/&gt; સમઅપૂર્ણાંક મેળવવા માટે આપણે અંશ અને છેદ &lt;br/&gt; બંનેને એક સરખી સંખ્યા વડે &lt;br/&gt; ગુણવા જોઈએ.&lt;br/&gt;&lt;br/&gt; આ પ્રકારનો વિકલ્પ શોધો!" page="" voice=""/>
+<prompt name="prompt35" text="અરે! આ ખોટું છે! &lt;br/&gt;&lt;br/&gt; #n2# ને મેળવવા માટે અંશ #n# ને #n1#  વડે ગુણવામાં આવ્યા? &lt;br/&gt; અંશ #n3# ને #n1# વડે નથી ગુણ્યા.&lt;br/&gt; સમઅપૂર્ણાંક મેળવવા માટે આપણે અંશ અને છેદ &lt;br/&gt; બંનેને એક સરખી સંખ્યા વડે &lt;br/&gt; ગુણવા જોઈએ.&lt;br/&gt;&lt;br/&gt; આ પ્રકારનો વિકલ્પ શોધો!" page="" voice=""/>
+<prompt name="prompt36" text="અપૂર્ણાંકના છેદને &lt;br/&gt; 0 વડે ગુણી ના શકાય." page="" voice=""/>
+<prompt name="prompt37" text="અપૂર્ણાંકના અંશને &lt;br/&gt; 0 વડે ગુણી ના શકાય." page="" voice=""/>
+<prompt name="prompt38" text="અરે! આ ખોટું છે! &lt;br/&gt;#frac1#=#frac2#=#frac3#" page="" voice=""/>
+</prompts>
+
+<instructions>
+<instruction name="inst1" text="આપેલા બે અપૂર્ણાંકને સરખા બનાવવા માટે ખાનામાં અપૂર્ણાંકનો અંશ લખો." page="" voice=""/>
+<instruction name="inst2" text="અહીં, #frac1# અને #frac2# ને &lt;span id='a'&gt;&lt;b&gt; સમઅપૂર્ણાંક &lt;/span &gt;&lt;/b&gt; કહે છે. " page="" voice=""/>
+<!-- <instruction name="inst3" text="સમઅપૂર્ણાંક" page="" voice=""/> -->
+<instruction name="inst4" text="આપેલા અપૂર્ણાંકનો સમઅપૂર્ણાંક લખો." page="" voice=""/>
+<instruction name="inst5" text="#frac1# એ અપૂર્ણાંકનું અતિસંક્ષિપ્ત રૂપ છે. નીચેનામાંથી #frac2# નો સમઅપૂર્ણાંક કયો છે?" page="" voice=""/>
+</instructions>
+
+<miscellaneous>
+	<misc name="next" text="આગળ" page="" voice=""/>
+</miscellaneous>
+
+
+</gujarati>
+
+</application>

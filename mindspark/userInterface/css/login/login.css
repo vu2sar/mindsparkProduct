@@ -1,0 +1,459 @@
+@font-face {
+    font-family: 'Conv_HelveticaLTStd-Light';
+    src: url('../../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.eot');
+    src: local('?'), url('../../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.woff') format('woff'), url('../../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.ttf') format('truetype'), url('../../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conv_HelveticaLTStd-Cond';
+    src: url('../../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.eot');
+    src: local('?'), url('../../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.woff') format('woff'), url('../../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.ttf') format('truetype'), url('../../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conv_HelveticaLTStd-BoldCond';
+    src: url('../../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.eot');
+    src: local('?'), url('../../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.woff') format('woff'), url('../../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.ttf') format('truetype'), url('../../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conv_HelveticaLTStd-Blk';
+    src: url('../../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.eot');
+    src: local('?'), url('../../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.woff') format('woff'), url('../../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.ttf') format('truetype'), url('../../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conv_HelveticaLTStd-Roman';
+    src: url('../../fonts/HelveticaLTStd-Roman/fonts/HelveticaLTStd-Roman.eot');
+    src: local('?'), url('../../fonts/HelveticaLTStd-Roman/fonts/HelveticaLTStd-Roman.woff') format('woff'), url('../../fonts/HelveticaLTStd-Roman/fonts/HelveticaLTStd-Roman.ttf') format('truetype'), url('../../fonts/HelveticaLTStd-Roman/fonts/HelveticaLTStd-Roman.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conv_HelveticaLTStd-LightCond';
+    src: url('../../fonts/HelveticaLTStd-LightCond/fonts/HelveticaLTStd-LightCond.eot');
+    src: local('?'), url('../../fonts/HelveticaLTStd-LightCond/fonts/HelveticaLTStd-LightCond.woff') format('woff'), url('../../fonts/HelveticaLTStd-LightCond/fonts/HelveticaLTStd-LightCond.ttf') format('truetype'), url('../../fonts/HelveticaLTStd-LightCond/fonts/HelveticaLTStd-LightCond.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+#blue {
+    background: #e75903;
+    height: 5px;
+    width: 25%;
+    float: left;
+}
+
+#green {
+    background: #9ec956;
+    height: 5px;
+    width: 25%;
+    float: left;
+}
+
+#orange {
+    background: #2f99cb;
+    height: 5px;
+    width: 25%;
+    float: left;
+}
+
+#yellow {
+    background: #fbd212;
+    height: 5px;
+    width: 25%;
+    float: left;
+}
+
+#header {
+    padding-bottom: 10px;
+}
+
+#head {
+    height: 50px;
+}
+
+.msblog {
+    width: 350px;
+    height: 265px;
+    background-size: 100% 100%;
+    display: block;
+}
+
+#leftDiv {
+    margin-left: 6%;
+    width: 360px;
+    /*float:left;*/
+    margin-bottom: 5%;
+    height: 330px;
+    background-size: 100% 100%;
+}
+
+#sparkieChamps {
+    font-family: 'Conv_HelveticaLTStd-Roman';
+    width: 100%;
+    /*width: 25%*/
+    margin-bottom: 10%;
+    padding-left: 20px;
+    padding-top: 10px!important;
+    /*float:left;*/
+}
+#sparkieChamp {
+    font-family: 'Conv_HelveticaLTStd-Roman';
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#sparkieChampInner
+{
+    overflow: hidden;
+    height: 370px;
+    margin-top: 50px;
+}
+#sparkieChampNote {
+    line-height: 1.2;
+}
+
+#help {
+    /*margin-left: 83%;*/
+    cursor: pointer;
+    background: url(../../assets/login/Help_Icon_Black.png) no-repeat 0 0;
+    height: 50px;
+    width: 50px;
+    float:right;
+    margin-right: 12%;
+
+}
+
+#rightDiv {
+    /*float: right;*/
+    /*width: 25%;*/
+    max-height: 509px !important;
+    height: auto;
+    /*margin-right: -60px;*/
+    max-width: 327px;
+    width: auto;
+    margin-top: 10px;
+    border: 1px solid #e5e5e5;
+    padding-left: 25px;
+    -webkit-box-shadow: 0 0 5px 2px rgb(124, 116, 102);
+    -moz-box-shadow: 0 0 5px 2px rgb(124, 116, 102);
+    box-shadow: 0 0 5px 2px rgb(124, 116, 102);
+}
+
+#tab {
+    float: left;
+}
+
+
+
+
+
+.login {
+    position: relative;
+    /*margin: 0 auto;*/
+    padding: 20px 20px 20px;
+    width: 310px;
+    margin-left: 5%;
+}
+
+
+input[type=submit]:active {
+    background: #cde5ef;
+    border-color: #9eb9c2 #b3c0c8 #b4ccce;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+input[type=submit]:active {
+    background: #cde5ef;
+    border-color: #9eb9c2 #b3c0c8 #b4ccce;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+
+input[type=submit] {
+    padding: 0 18px;
+    height: 29px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #527881;
+    text-shadow: 0 1px #e3f1f1;
+    background: #e75903;
+    border: 1px solid;
+    border-color: #b4ccce #b3c0c8 #9eb9c2;
+    border-radius: 16px;
+    outline: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
+    background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
+    background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
+    background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
+    -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.login-parent {
+    font-size: 14px;
+    /*margin-bottom: 10px;*/
+    padding-left: 20px;
+    font-family: 'Conv_HelveticaLTStd-Roman';
+}
+
+.login-openid {
+    font-size: 14px;
+    /* padding-left: 10px; */
+    margin-bottom: 20px;
+    font-family: 'Conv_HelveticaLTStd-Roman';
+    text-align: center;
+}
+
+.login-help {
+    /* margin: 20px 0;*/
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 15px;
+    /*text-align: center;*/
+    font-family: 'Conv_HelveticaLTStd-Roman';
+}
+
+.login-help a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.login-help a:hover {
+    text-decoration: underline;
+}
+
+
+#logo {
+    background: url(../../assets/login/logo_header.png) no-repeat 0 0;
+    width: 213px;
+    height: 40px;
+    float: left;
+    margin-left: 30px;
+    padding-bottom: 20px;
+}
+
+#loginHeading {
+    margin-top: 30px;
+    font-size: 1.8em;
+    font-family: 'Conv_HelveticaLTStd-LightCond';
+    text-align: center;
+}
+
+.champ {
+    background: url(../../assets/login/champ.jpg) no-repeat;
+    width: 275px;
+    height: 40px;
+    background-size: 100% 100%;
+    display: block;
+    margin-bottom: 1%;
+    position: absolute;
+    margin-top: -5px;
+}
+
+#loginContainer {
+    margin-top: 10%;
+    font-family: 'Conv_HelveticaLTStd-LightCond';
+    font-size: 1.8em;
+    margin-left: 25px;
+}
+
+.loginButton {
+    width: 130px;
+    height: 50px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #FFF;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+#login {
+    background: #9EC956;
+    font-size: 0.8em;
+}
+
+#forgot {
+    background: #FAAD1C;
+    font-size: 0.7em;
+}
+
+#error {
+    background: #E55C25;
+}
+
+#loginContainer {
+    color: #616161;
+    font-size: 1.6em;
+}
+
+.input_box {
+    width: 80%;
+    height: 45px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #E0E0E0;
+    font-size: 1em;
+    border: 0px solid;
+    outline: 0;
+}
+
+#mindsparkInfo {
+    margin-top: 25px;
+    padding: 15px;
+    max-width: 30%;
+    padding-bottom: 0px;
+    min-height: 450px;
+}
+
+#sparkieChampHeading {
+    color: #3099CB;
+    font-size: 1.6em;
+    padding-bottom: 15px;
+    font-family: 'Conv_HelveticaLTStd-BoldCond';
+    width: 230px;
+    height: 50px;
+    padding-left: 50px;
+}
+
+.classSlot {
+    color: #3099CB;
+    font-size: 1.25em;
+    font-family: 'Conv_HelveticaLTStd-BoldCond';
+}
+
+table#containerTable td {
+    height: 450px;
+}
+
+
+#copyright {
+    margin-left: 2%;
+    margin-bottom: 4px;
+    text-align: right;
+    font-size: 0.8em;
+    font-family: 'Conv_HelveticaLTStd-Cond';
+}
+
+#rowErrMsg {
+    font-size: 14px;
+    color: red;
+    font-family: 'Conv_HelveticaLTStd-Roman';
+}
+
+#redBorder {
+    border: 1px 0px 0px 1px solid #E55C25;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: -15px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.login-help {
+    font-size: 14px;
+}
+
+body {
+    margin: 0px;
+}
+
+.sparkietext {
+    width: 90%;
+}
+
+#imgdiv{
+    height: auto;
+                width:auto;
+                margin-top: 5px;
+}
+
+
+@media (max-width: 1024px) {
+
+/*    .login-openid {
+    padding-left: 5px;    
+}*/
+
+    #sparkieChamps {
+        margin-right: 3%;
+        padding-left: 5px;
+    }
+
+    #sparkieChampInner {
+        margin-top: 38px;
+    }
+    
+    #rightDiv {
+        /*margin-right: 20px;*/
+        margin-right: auto!important;
+        /*height: 532px;*/
+        max-height: 532px !important;
+    height: auto;
+        padding-left: 0px;
+    }
+
+    .login-help {
+        font-size: 13px;
+        margin-left: 10px;
+    }
+
+    #rowErrMsg {
+        font-size: 13px;
+        font-family: 'Conv_HelveticaLTStd-Roman';
+    }
+
+    .champ {
+        width: 250px;
+    }
+
+    #leftDiv {
+        margin-left: 2%;
+        width: 300px;
+    }
+
+    #break {
+        display: none;
+    }
+
+    #copyright {
+        /* position: absolute;
+         bottom: 0px;*/
+    }
+
+    #help {
+        /*margin-left: 92%;*/
+    }
+}
+
+img {
+    height: auto;
+    max-width:100%;
+}

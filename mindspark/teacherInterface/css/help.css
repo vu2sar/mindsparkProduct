@@ -1,0 +1,260 @@
+#home{
+	border-bottom: 1px solid #2f99cb;
+}
+
+#sideBar #home{
+	margin-top: 30%;
+}
+
+#container{
+	/*position: relative;
+	width:72.5%;*/
+	min-height:475px;
+	/*margin-left:27%;*/
+	border-top:1px solid #2f99cb;
+	border-bottom:1px solid #2f99cb;
+	border-left:1px solid #2f99cb;
+}
+
+#innerContainer{
+	margin-top: 2%;
+	position: relative;
+	margin-left: 0%;
+	width:95%;
+	height:17.7%;
+	margin-left: 5%;
+	/*border:1px solid #2f99cb;*/
+}
+
+#containerHead{
+	font-size:1.3em;
+	margin-top: 1.5%;
+
+	/*border-bottom:1px solid #2f99cb;*/
+	padding-bottom: 1%;
+	display: block;
+	padding-left: 50%;
+	color: red;
+	
+}
+
+
+.menuContainer{
+	width:95%;
+	margin:10px;
+	height: 121px;
+	padding:5px;
+	position: relative;
+}
+
+.iconsNew{
+	float:left;
+	width: 100px;
+	height: 121px;
+	cursor:pointer;
+}
+
+.messages{
+	padding:15px;
+	font-size:1.2em;
+	border:2px solid black;
+	margin:9px;
+	height: 70px;
+	margin-left:110px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+#faq{
+	background: url('../assets/help/faq_icon.png') no-repeat 0 0;
+	background-size: 100px;	
+}
+.faqText
+{	
+    position: absolute;
+    top: 90px;
+    text-align: center;
+    width: 100px;
+	font-size: 16px; 
+	font-weight: bold;   
+}
+.previewText
+{	
+    position: absolute;
+    top: 90px;
+    text-align: center;
+    width: 100px;
+	font-size: 16px; 
+	font-weight: bold;   
+}
+.manualText
+{	
+    position: absolute;
+    top: 80px;
+    text-align: center;
+    width: 100px;
+	font-size: 16px;
+	font-weight: bold;    
+}
+.moduleText
+{	
+    position: absolute;
+    top: 80px;
+    text-align: center;
+    width: 100px;
+	font-size: 16px;
+	font-weight: bold;    
+}
+#tutorial{
+	background: url('../assets/help/fullPreviw_icon.png') no-repeat 0 0;
+	background-size: 100px;
+}
+
+#teacherVideos{
+	background: url('../assets/help/teacherVideos.png') no-repeat 0 0;	
+}
+
+#teacherManual{
+	background: url('../assets/help/teacherManual_icon.png') no-repeat 0 0;
+	background-size: 100px;
+}
+#trainingModule
+{
+	background: url('../assets/help/trainingModule_icon.png') no-repeat 0 0;
+	background-size: 100px;
+}
+#containerBody{
+	font-size:1.3em;
+
+	margin-top: 1.5%;
+	display: block;
+	height: 100%;
+}
+#childDetails{
+	font-size:1.3em;
+	width:92%;
+	padding-top:3px;
+	padding-bottom:3px;
+	color:#7E7E7E;
+	margin-left:40px;
+	float:left;
+}
+.smallCircle{
+	width:10px;
+	height:10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+	border-radius: 5px;
+	background-color:white;
+	border:1px solid black;
+	float:left;
+	margin-left:-4px;
+	margin-top:-11px;
+}
+
+.red{
+	background-color:#E75903;
+	width:12px;
+	height:12px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius:6px;
+	border-radius: 6px;
+	margin-top:-13px;
+}
+
+.textRed{
+	color:#E75903;
+	font-weight:bold;
+}
+
+.pointer{
+	cursor:pointer;
+}
+
+.setPosition{
+	width: 160px;
+	margin-left: 25px;
+	margin-top: 8px;
+}
+
+#setHeight{
+	height:30px;
+}
+
+@media (max-width: 1024px){
+	.setPosition {
+		width: 135px;
+		font-size: 0.8em;
+		margin-left: 18px;
+		margin-top: 8px;
+	}
+}
+.trainingModule .leftPane
+{
+	float: left;	
+	width: 20%;
+    padding: 10px;
+}
+.trainingModule .leftPane .nav li
+{
+	width: 100%;
+	float: left;
+}
+.trainingModule .rightPane
+{
+	width: 70%;
+	float: left;
+	padding: 10px;
+	text-align: center;
+}
+.trainingModule li .trainingOptions
+{
+	color: #FFF;
+    background-color: #0095ff;        
+    padding: 15px 0px;
+    font-size: 14px;
+    margin: 10px 0px;    
+    border-radius: 8px;
+    text-align: center;
+    box-shadow:0px 5px 5px #999;
+    cursor: pointer;
+    float: left;
+    width: 100%;
+    text-decoration: none;
+}
+
+.trainingModule li .trainingOptions:hover
+{
+    color: rgba(255,255,255,0.9);
+    background-color: #07c;    
+    box-shadow: inset 0 1px 0 #3af;
+    text-decoration: underline;
+    box-shadow:0px 5px 5px #999
+}
+.trainingModule li .trainingOptions.active
+{
+	background-color: #9ec956;
+}
+.trainingModule .nav
+{
+	padding: 0;	
+	list-style: none;
+	float: left;
+	width: 100%;
+	margin-top: 0;
+}
+.trainingModule .tab-content iframe
+{
+	border: 3px solid #000000;
+}
+.trainingModule .errorMessage
+{
+	color: red;
+	font-size: 16px;	
+}
+
+
+	
+	

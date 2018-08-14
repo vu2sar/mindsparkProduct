@@ -1,0 +1,129 @@
+body{	
+	
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b1d8f5+0,bee4f8+25,c8eefb+46,e1ffff+70,e1ffff+70,ffffff+78,ffffff+78,fdffff+93,ffffff+93 */
+background: rgba(177, 216, 245, 0.3);
+background-color: -moz-linear-gradient(top,  #b1d8f5 0%, #bee4f8 25%, #c8eefb 46%, #e1ffff 70%, #e1ffff 70%, #ffffff 78%, #ffffff 78%, #fdffff 93%, #ffffff 93%); /* FF3.6-15 */
+background-color: -webkit-linear-gradient(top,  #b1d8f5 0%,#bee4f8 25%,#c8eefb 46%,#e1ffff 70%,#e1ffff 70%,#ffffff 78%,#ffffff 78%,#fdffff 93%,#ffffff 93%); /* Chrome10-25,Safari5.1-6 */
+background-color: linear-gradient(to bottom,  #b1d8f5 0%,#bee4f8 25%,#c8eefb 46%,#e1ffff 70%,#e1ffff 70%,#ffffff 78%,#ffffff 78%,#fdffff 93%,#ffffff 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1d8f5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+ageTransform.Microsoft.gradient( startColorstr='#b1d8f5', endColorstr='#fdffff',GradientType=0 ); /* IE6-9 */
+
+background-image: none!important;
+}
+
+
+#viewAllDivLowerClass{
+	background-color: transparent;
+    height: 80px;
+    margin-top: 35px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    /* border-top: 1px solid #033342; */
+     -webkit-box-shadow: none !important; 
+    -moz-box-shadow: none !important;
+     box-shadow: none !important; 
+}
+
+#container1{
+	
+background-image: url(../../../assets/rewards/themeRepublicDay/plane.gif), url(../../../assets/rewards/themeRepublicDay/cloudBack.png), url(../../../assets/rewards/themeRepublicDay/grass.png),url(../../../assets/rewards/themeRepublicDay/cloudFront.png);
+background-image:none\9;
+background-repeat: no-repeat,no-repeat,repeat-x,no-repeat;
+background-position: 600px 150px, 200px 80px, 700px 420px,400px 40px;
+
+/*height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+width: 100%;*/
+z-index:1;
+-webkit-animation: snow 20s linear infinite;
+-moz-animation: snow 20s linear infinite;
+-ms-animation: snow 20s linear infinite;
+animation: snow 20s linear infinite;
+}
+@keyframes snow {
+ 0% {background-position: 0px 200px, 1000px 80px, 1000px 420px, 800px 40px ;}
+ 25% {background-position: 200px 250px, 700px 80px, 700px 420px, 700px 40px;}
+ 50% {background-position: 300px 200px, 400px 80px, 500px 420px, 500px 40px;}
+ 75% {background-position: 600px 150px, 200px 80px, 200px 420px,400px 40px;}
+ 100% {background-position: 1200px 200px, 0px 80px, 0px 420px, 100px 40px;}
+
+
+}
+@-moz-keyframes snow {
+ 0% {background-position: 0px 200px, 1000px 80px, 1000px 420px, 800px 40px ;}
+ 25% {background-position: 200px 250px, 700px 80px, 700px 420px, 700px 40px;}
+ 50% {background-position: 300px 200px, 400px 80px, 500px 420px, 500px 40px;}
+ 75% {background-position: 600px 150px, 200px 80px, 200px 420px,400px 40px;}
+ 100% {background-position: 1200px 200px, 0px 80px, 0px 100%, 100px 40px;}
+}
+ @-webkit-keyframes snow  {
+ 0% {background-position: 0px 200px, 1000px 80px, 1000px 420px, 800px 40px ;}
+ 25% {background-position: 200px 250px, 700px 80px, 700px 420px, 700px 40px;}
+ 50% {background-position: 300px 200px, 400px 80px, 500px 420px, 500px 40px;}
+ 75% {background-position: 600px 150px, 200px 80px, 200px 420px,400px 40px;}
+ 100% {background-position: 1200px 200px, 0px 80px, 0px 100%, 100px 40px;}
+}
+ @-ms-keyframes snow {
+ 0% {background-position: 0px 200px, 1000px 80px, 1000px 420px, 800px 40px ;}
+ 25% {background-position: 200px 250px, 700px 80px, 700px 420px, 700px 40px;}
+ 50% {background-position: 300px 200px, 400px 80px, 500px 420px, 500px 40px;}
+ 75% {background-position: 600px 150px, 200px 80px, 200px 420px,400px 40px;}
+ 100% {background-position: 1200px 200px, 0px 80px, 0px 100%, 100px 40px;}
+
+}
+
+#topicProgressDiv {
+	background-color: rgba(255, 255, 255, 0)!important;
+}
+.topicProgressInnerDiv {
+	background-color: transparent !important;
+}
+#leftInfo {
+	background-color: transparent !important;
+}
+
+/*#sideBar{
+	background-color: #646464;
+}*/
+#main_bar{
+	background-color: transparent !important;
+	box-shadow: none!important;
+}
+
+
+#studentInfoLowerClass {
+border-bottom: 1px solid black;
+}
+/*
+#drawer6Icon {
+	background: url('../../../assets/rewards/themeRepublicDay/tri-color.jpg') no-repeat scroll 0% 65% 0 0 !important; 
+	margin-top: -20px !important;
+	/*height: 52px !important;*/
+
+
+#drawer5Icon {
+	background: url('../../../assets/rewards/themeRepublicDay/tri-color.jpg') no-repeat scroll 40% 65% !important; //rewards sparkie
+}
+
+/*#drawer4Icon {
+	background: url('../../../assets/rewards/themeRepublicDay/chakra.png') no-repeat 0 0 !important; //exploreZone 
+}*/
+
+#drawer3Icon {
+	background: url('../../../assets/rewards/themeRepublicDay/swachBharat.png') no-repeat 0 0 !important; //dashboard 
+	margin-top: -18px !important;
+	margin-left: -55px !important;
+	width:80px !important;
+}
+
+#drawer2Icon {
+	background: url('../../../assets/rewards/themeRepublicDay/chakra.png') no-repeat 0 14px !important; //exam-corner 
+}
+
+#drawer1Icon {
+	background: url('../../../assets/rewards/themeRepublicDay/emblem.png') no-repeat 0 0 !important; //activities 
+	margin-left: -43px !important;
+}

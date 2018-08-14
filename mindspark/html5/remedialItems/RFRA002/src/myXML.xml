@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application name="percentage">
+<english>		
+
+	<questions>
+	</questions>
+	 
+	<prompts>
+		<prompt name="next" text="Next" page="" voice=""/>
+		<prompt name="prompt0" text="OK" page="" voice=""/>
+		<prompt name="prompt1" text="Well done!" page="" voice=""/>
+		<prompt name="prompt2" text="Think again! Is #frac1#=#frac2#?" page="" voice=""/>
+		<prompt name="prompt3" text="In the same way, #frac1#=#frac2#=#frac3#=#frac4#=#frac5# ..." page="" voice=""/>
+		<prompt name="prompt4" text="We say #frac# is in the simplest form since the numerator and denominator don't have any common factor." page="" voice=""/>
+		<prompt name="prompt5" text="Oops! That's incorrect! &lt;br/&gt; The next few hint questions will help you!" page="" voice=""/>
+		<prompt name="prompt6" text="John and Pam had two identical chocolates." page="" voice=""/>
+		<prompt name="prompt7" text="John ate #frac# of a chocolate." page="" voice=""/>
+		<prompt name="prompt8" text="Pam's chocolate is divided into #no# equal pieces." page="" voice=""/>
+		<prompt name="prompt9" text="She wants to eat the same amount of chocolate as John." page="" voice=""/>
+		<prompt name="prompt10" text="How many pieces of her chocolate should she eat?" page="" voice=""/>
+		<prompt name="prompt11" text="Pam wants to eat the same &lt;br/&gt; amount of chocolate as John. &lt;br/&gt; See the figure carefully and try again." page="" voice=""/>
+		<prompt name="prompt12" text="Pam should eat #no# pieces of her chocolate to have &lt;br/&gt; the same amount of chocolate as John. &lt;br/&gt; Can you now try to write a fraction &lt;br/&gt; equal to #frac# ?" page="" voice=""/>
+		<prompt name="prompt13" text="Oops! That's incorrect! See the explanation carefully!" page="" voice=""/>
+		<prompt name="prompt14" text="&lt;b&gt; &lt;br/&gt; &lt;font color='#0066ff'&gt; #frac1# = #choc1# Here, the shaded part is #no1# out of #no2#, or #frac2#. &lt;/font&gt; &lt;b/&gt;" page="" voice=""/>
+		<prompt name="prompt15" text="&lt;b&gt; &lt;br/&gt; &lt;font color='#0066ff'&gt; #frac3# = #choc2# Here, the shaded part is #no3# out of #no4#, or #frac4#. &lt;/font&gt; &lt;b/&gt;" page="" voice=""/>
+		<prompt name="prompt16" text="&lt;br/&gt; &lt;br/&gt; &lt;b&gt; &lt;font color='#0066ff'&gt; So, #frac5# = #frac6# &lt;font color='#0066ff'&gt; &lt;b/&gt;." page="" voice=""/>
+		<prompt name="prompt17" text="That's right! &lt;br/&gt; Can you now try to write the equivalent &lt;br/&gt; fraction of #frac#?" page="" voice=""/>
+		<prompt name="prompt18" text="John's" page="" voice=""/>
+		<prompt name="prompt19" text="Pam's" page="" voice=""/>
+		<prompt name="prompt20" text="Which of the following is the lowest form of #frac#?" page="" voice=""/> 
+		<prompt name="prompt21" text="Hmm... You are on the right track. &lt;br/&gt; But, is #frac# in the lowest form? &lt;br/&gt; Can you not find a factor common to both #ctx1# and #ctx2#?  &lt;br/&gt; Think and try again!" page="" voice=""/>
+		<prompt name="prompt22" text="To reduce #frac#, lets divide both the numerator &lt;br/&gt; and denominator by a common factor." page="" voice=""/>
+		<prompt name="prompt23" text="Dividing #no1# and #no2# by #n1# gives:" page="" voice=""/>
+		<prompt name="prompt24" text="We can divide #num1# and #num2# by their common factor #n2# to get:" page="" voice=""/>
+		<prompt name="prompt25" text="#frac5# can't be reduced further." page="" voice=""/>
+		<prompt name="prompt26" text="#frac1# = #frac2# = #frac3#" page="" voice=""/>
+		<prompt name="prompt27" text="Oops! That's incorrect! &lt;br/&gt; You can reduce #frac# by dividing both&lt;br/&gt;the numerator and denominator&lt;br/&gt;by #n# to get #frac1#. &lt;br/&gt; See the explanation carefully." page="" voice=""/>
+		<prompt name="prompt28" text="Oops! That's incorrect!&lt;br/&gt;Is #frac1#=#frac2#?&lt;br/&gt;You have to choose a fraction equal to #frac2#,&lt;br/&gt; such that its numerator and denominator &lt;br/&gt; don't have any common factor. &lt;br/&gt;Try again! " page="" voice=""/>
+		<prompt name="prompt29" text="Pam wants to eat the same amount &lt;br/&gt; of chocolate as John. &lt;br/&gt; See the figure carefully and try again. " page="" voice=""/>
+		<prompt name="prompt30" text="Please type your answer and press enter." page="" voice=""/>
+		<prompt name="prompt31" text="Write the given fraction in the lowest form." page="" voice=""/>
+		<prompt name="prompt32" text="#frac1# is equivalent to #frac2#&lt;br/&gt;Are you sure #frac1# is in the lowest form?&lt;br/&gt;Can you reduce #frac1# any further?&lt;br/&gt;Think and try again!" page="" voice=""/>
+		<prompt name="prompt33" text="Oops! That's incorrect!&lt;br/&gt;Let's find a common factor of #no1# and #no2#.&lt;br/&gt;Divide the numerator and denominator of #frac#&lt;br/&gt;by a common factor." page="" voice=""/>
+		<prompt name="prompt34" text="(Write a common factor of #no1# and #no2# in the blank.)" page="" voice=""/>
+		<prompt name="prompt35" text="If you divide a number by 1&lt;br/&gt;you get the same number back.&lt;br/&gt;Think of a number&lt;br/&gt;which divides both #no1# and #no2#" page="" voice=""/>
+		<prompt name="prompt36" text="#frac1#=#frac2#=#frac3#" page="" voice=""/>
+		<prompt name="prompt37" text="Oops! That's incorrect!&lt;br/&gt;Let's find a common factor of #no1# and #no2#&lt;br/&gt;Divide the numerator and denominator of #frac#&lt;br/&gt;by a common factor." page="" voice=""/>
+		<prompt name="prompt38" text="We know, #no3# divides both #no2# and #no1#.&lt;br/&gt;Let's divide #no2# and #no1# by #no3#." page="" voice=""/>
+		<prompt name="prompt39" text="Correct! Go ahead!" page="" voice=""/>
+		<prompt name="prompt40" text="If you write different numbers&lt;br/&gt;in numerator and denominator,&lt;br/&gt;the fraction will change.It has&lt;br/&gt;to be the same number." page="" voice=""/>
+		<prompt name="prompt41" text="You are half way there!&lt;br/&gt;You can reduce #frac#." page="" voice=""/>
+		<prompt name="prompt42" text="Oops! That's incorrect!&lt;br/&gt;The greatest common factor of #n1# and #n2# is #gcd#.&lt;br/&gt;Dividing #n1# and #n2# by #gcd# gives &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color='0066FF'&gt;              #fracn#  &lt;span id='eq6'&gt;=&lt;/span&gt;  #fracm#&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;" page="" voice=""/>
+		<prompt name="prompt43" text="Here #frac12# and #frac5# are called &lt;b&gt; equivalent fractions. &lt;/b&gt;" page="" voice=""/>
+		<prompt name="prompt44" text="Oops! That's incorrect!&lt;br/&gt; Let's find a common factor of #num1# and #num2#.&lt;br/&gt; Divide the numerator and denominator of #frac# &lt;br/&gt;by a common factor." page="" voice=""/>
+		<prompt name="prompt45" text="If you divide the numerator and denominator&lt;br/&gt; by different numbers, the fraction will change.&lt;br/&gt; Write the same numbers in the blank." page="" voice=""/>
+		<prompt name="prompt46" text="Oops! That's incorrect! &lt;br/&gt; You can further reduce #frac# by dividing both&lt;br/&gt;the numerator and denominator&lt;br/&gt;by #n# to get #frac1#. &lt;br/&gt; See the explanation carefully." page="" voice=""/>
+		<prompt name="prompt47" text="You have written #frac# again! &lt;br/&gt; You have to write #frac# in the reduced form. &lt;br/&gt; Try again!" page="" voice=""/>
+		<prompt name="prompt48" text="Have you divided both the numerator &lt;br/&gt; and the denominator by the same number? &lt;br/&gt;&lt;br/&gt; Check and try again! " page="" voice=""/>
+		<prompt name="prompt49" text="If you divide the number by 1. You get the same number back. &lt;br/&gt;Think of the greatest number which divides #n1# and #n2#" page="" voice=""/>
+		<prompt name="prompt50" text="There cannot be any fraction with denominator 0.&lt;br/&gt;Try again!" page="" voice=""/>
+		<prompt name="prompt51" text="Have you divided both the numerator &lt;br/&gt; and denominator by the same number.&lt;br/&gt;Check and try again!" page="" voice=""/>
+		<prompt name="prompt52" text="Oops! That's incorrect!&lt;br/&gt;Let's find a common factor of #n1# and #n2#.&lt;br/&gt;Divide the numerator and denominator of #frac# &lt;br/&gt; by a common factor." page="" voice=""/>
+		<prompt name="prompt53" text="The numerator and denominator of a fraction &lt;br/&gt;in the lowest form don't have any common factor.&lt;br/&gt;Try dividing both #n1# and #n2# by their highest common factor." page="" voice=""/>
+		<prompt name="prompt54" text="#n1# is indeed a common factor of #a# and #b#.&lt;br/&gt;But it is not the greatest number which divides both #a# and #b#.&lt;br/&gt; Now reduce #frac# further to get the lowest fraction &lt;br/&gt; by finding common factor of #no1# and #no2#." page="" voice=""/>
+		<prompt name="prompt55" text="If you divide the number by 1, you get the same number back.&lt;br/&gt;Think of the greatest number which divides both #no1# and #no2#." page="" voice=""/>
+		<prompt name="prompt56" text="#n1# is not a common factor of #n2# and #n3#.&lt;br/&gt;The common factors of #n2# and #n3# are #string#" page="" voice=""/>
+		<prompt name="prompt57" text="Write the greatest number which divides both #n1# and #n2#." page="" voice=""/>
+		<prompt name="prompt58" text="Write a common factor of #n1# and #n2# in the blank." page="" voice=""/>
+		<prompt name="prompt59" text="#frac1# is the lowest form of #frac2# as #n1# and #n2# don't have any common factor other than 1 &lt;br/&gt; and hence cannot be reduced further." page="" voice=""/>
+	</prompts> 
+	
+	<instructions>                    
+		<instruction name="inst1" text="Write the numerator of the fraction in the blank to make the two fractions equal." page="" voice=""/>
+		<instruction name="inst2" text="Here, #frac1# and #frac2# are called " page="" voice=""/>
+		<instruction name="inst3" text="equivalent fractions" page="" voice=""/>
+		<instruction name="inst4" text="Write an equivalent fraction for the given fraction" page="" voice=""/>
+		<instruction name="inst5" text="#frac1# is a fraction in reduced form. Which of the following is equivalent to #frac2#" page="" voice=""/>
+	</instructions>
+	
+	<miscellaneous>
+	</miscellaneous>
+	
+	</english>
+
+<hindi>						<questions>
+</questions>
+
+<prompts>
+<prompt name="next" text="आगे" page="" voice=""/>
+<prompt name="prompt0" text="OK" page="" voice=""/>
+<prompt name="prompt1" text="बहुत बढ़िया!" page="" voice=""/>
+<prompt name="prompt2" text="फिर से विचार करें! क्या #frac1#=#frac2# है?" page="" voice=""/>
+<prompt name="prompt3" text="इसी तरह,  #frac1#=#frac2#=#frac3#=#frac4#=#frac5# ..." page="" voice=""/>
+<prompt name="prompt4" text="अगर #frac# के अंश और हर में कोई सार्व गुणनखंड नहीं है तो वह, अपने सरलतम रूप में है|" page="" voice=""/>
+<prompt name="prompt5" text="अरे! यह गलत है! &lt;br/&gt; आगे की कुछ प्रश्न आपकी मदद करेंगे!" page="" voice=""/>
+<prompt name="prompt6" text="जयेश और प्रिया के पास एकसमान चॉकलेट थी|" page="" voice=""/>
+<prompt name="prompt7" text="जयेश ने चॉकलेट का #frac# भाग खाया।" page="" voice=""/>
+<prompt name="prompt8" text="प्रिया ने चॉकलेट के #no# समान भाग किए |" page="" voice=""/>
+<prompt name="prompt9" text="वह, जयेश के जीतनी ही चॉकलेट खाना चाहती है|" page="" voice=""/>
+<prompt name="prompt10" text="प्रिया को अपनी चॉकलेट के कितने भाग खाने चाहिए?" page="" voice=""/>
+<prompt name="prompt11" text="प्रिया, जयेश के जीतनी ही &lt;br/&gt; चॉकलेट खाना चाहती है| &lt;br/&gt; आकृति  को ध्यान से देखें और फिर कोशिश करें! " page="" voice=""/>
+<prompt name="prompt12" text="प्रिया को, जयेश के जीतनी ही चॉकलेट खानी हो &lt;br/&gt;तो, उसे चॉकलेट के #no# भाग खाने चाहिए| &lt;br/&gt; क्या अब आप  #frac# के बराबर भिन्न  बता सकते हैं?" page="" voice=""/>
+<prompt name="prompt13" text="अरे! यह गलत है! स्पष्टीकरण ध्यान से देखें!" page="" voice=""/>
+<prompt name="prompt14" text="&lt;b&gt; &lt;br/&gt; &lt;font color='#0066ff'&gt; #frac1# = #choc1# यहाँ , छायांकित  भाग #no2# में से #no1# या #frac2# है| &lt;/font&gt; &lt;b/&gt;" page="" voice=""/>
+<prompt name="prompt15" text="&lt;b&gt; &lt;br/&gt; &lt;font color='#0066ff'&gt; #frac3# = #choc2# यहाँ , छायांकित  भाग #no4# में से #no3# या #frac4# है| &lt;/font&gt; &lt;b/&gt;" page="" voice=""/>
+<prompt name="prompt16" text="&lt;br/&gt; &lt;br/&gt; &lt;b&gt; &lt;font color='#0066ff'&gt; तो, #frac5# = #frac6# &lt;font color='#0066ff'&gt; &lt;b/&gt;." page="" voice=""/>
+<prompt name="prompt17" text="यह सही है! &lt;br/&gt; क्या अब आप  #frac# के समतुल्य भिन्न &lt;br/&gt; बता सकते हैं?" page="" voice=""/>
+<prompt name="prompt18" text="जयेश " page="" voice=""/>
+<prompt name="prompt19" text="प्रिया " page="" voice=""/>
+<prompt name="prompt20" text="नीचे दिए गए भिन्नों में से  कौन-सा #frac# का सरलतम रूप है??" page="" voice=""/> 
+<prompt name="prompt21" text="आप सही जा रहे हैं ! &lt;br/&gt; पर, क्या #frac# सरलतम रूप में है? &lt;br/&gt; क्या आप #ctx1# और #ctx2# का साझा गुणनखंड  ढूँढ सकते हैं? &lt;br/&gt; Think and try again!" page="" voice=""/>
+<prompt name="prompt22" text="#frac# को सरलतम बनाने के लिए , अंश और हर को&lt;br/&gt; उनके साझा गुणनखंड से भाग करते हैं|" page="" voice=""/>
+<prompt name="prompt23" text="#no1# और #no2# का भाग #n1# से करने से :" page="" voice=""/>
+<prompt name="prompt24" text="#num1# और #num2# को  उनके  साझा गुणनखंड  #n2# से घटाने से " page="" voice=""/>
+<prompt name="prompt25" text="#frac5# का इससे सरलतम रूप नहीं मिल सकता|" page="" voice=""/>
+<prompt name="prompt26" text="#frac1# = #frac2# = #frac3#" page="" voice=""/>
+<prompt name="prompt27" text="अरे! यह गलत है! &lt;br/&gt;#frac# को सरलतम रूप के लिए &lt;br/&gt; आप अंश और हर का #n# से भाग कर सकते हैं| &lt;br/&gt; स्पष्टीकरण ध्यान से पढ़ें|" page="" voice=""/>
+<prompt name="prompt28" text="अरे! यह गलत है!&lt;br/&gt;क्या #frac1#=#frac2# है?&lt;br/&gt; आपको #frac2# के बराबर ऐसा भिन्न चुनना है,&lt;br/&gt; जिसके  अंश और हर  का कोई &lt;br/&gt; सार्व (साझा) गुणनखंड नहीं हो| &lt;br/&gt; फिर से कोशिश करें! " page="" voice=""/>
+<prompt name="prompt29" text="प्रिया, जयेश के जितनी ही &lt;br/&gt; चॉकलेट खाना चाहती हैl  &lt;br/&gt; आकृति ध्यान से देखें और फिर कोशिश करें!  " page="" voice=""/>
+<prompt name="prompt30" text="अपना उत्तर लिखिए और ENTER दबाईए| " page="" voice=""/>
+<prompt name="prompt31" text="दिए गए भिन्न  को सरलतम रूप में  लिखिए |" page="" voice=""/>
+<prompt name="prompt32" text="#frac1# और #frac2# समतुल्य  है|lt;br/&gt;क्या आपको यकीन है कि #frac1# अपने सरलतम रूप में है? &lt;br/&gt; क्या #frac1# को और सरलतमरूप  में लाया जा सकता है? &lt;br/&gt;सोचें और फिर से कोशिश करें!" page="" voice=""/>
+<prompt name="prompt33" text="अरे! यह गलत है! &lt;br/&gt; #no1# और  #no2# का सार्व  (साझा ) गुणनखंड निकालें| &lt;br/&gt;और  #frac# के अंश और हर को सार्व  (साझा ) गुणनखंड से &lt;br/&gt; विभाजित करें| " page="" voice=""/>
+<prompt name="prompt34" text="(#no1# और  #no2# का सार्व  (साझा ) गुणनखंड खाली जगह में लिखें|)" page="" voice=""/>
+<prompt name="prompt35" text="अगर आप संख्या को  1&lt;br/&gt; से विभाजित करें तो आपको वही संख्या मिलेगी|&lt;br/&gt;ऐसी संख्या सोचिए &lt;br/&gt; जो #no1# और #no2# दोनों को विभाजित करें|" page="" voice=""/>
+<prompt name="prompt36" text="#frac1#=#frac2#=#frac3#" page="" voice=""/>
+<prompt name="prompt37" text="अरे! यह गलत है!!&lt;br/&gt;#no1# और #no2# का सार्व  (साझा ) गुणनखंड निकालें|&lt;br/&gt;#frac# के अंश और हर को सार्व  (साझा ) गुणनखंड से &lt;br/&gt; विभाजित करें|" page="" voice=""/>
+<prompt name="prompt38" text="हम जानते हैं कि संख्या #no3#, दोनों  #no2# और  #no1# को विभाजित करती है|&lt;br/&gt; चलो संख्या #no2# और  #no1# को  #no3# से विभाजित करें|" page="" voice=""/>
+<prompt name="prompt39" text="सही! आगे बढ़ें!" page="" voice=""/>
+<prompt name="prompt40" text="अगर आप  अंश और हर में  &lt;br/&gt; अलग -अलग संख्याएँ लिखेंगे तो,&lt;br/&gt; the fraction will change.It has&lt;br/&gt;to be the same number." page="" voice=""/>
+<prompt name="prompt41" text="आप सही कर रहे हैं!&lt;br/&gt; आप #frac#को सरलतम रूप में ला सकते हैं|" page="" voice=""/>
+<prompt name="prompt42" text="अरे! यह गलत है!!&lt;br/&gt; संख्या #n1# और #n2# का महत्तम समापवर्तक #gcd# है| &lt;br/&gt; #n1# और #n2# को #gcd# से विभाजित करने से  यह मिलेगा:&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color='0066FF'&gt;            #fracn#  &lt;span id='eq6'&gt;=&lt;/span&gt;  #fracm#&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;" page="" voice=""/>
+<prompt name="prompt43" text="यहाँ #frac12# और #frac5# &lt;b&gt; समतुल्य भिन्न है| &lt;/b&gt;" page="" voice=""/>
+<prompt name="prompt44" text="अरे! यह गलत है!!&lt;br/&gt; चलो #num1# और #num2# का सार्व (साझा) गुणनखंड निकालें!&lt;br/&gt; #frac# के अंश और हर को  सार्व (साझा) गुणनखंड &lt;br/&gt; से विभाजित करें! " page="" voice=""/>
+<prompt name="prompt45" text="अगर आप अंश और हर को अलग- अलग संख्या से &lt;br/&gt; विभाजित करें, तो भिन्न का मान बदल जाएगा| &lt;br/&gt; खाली जगह में सामान अंक लिखें|" page="" voice=""/>
+<prompt name="prompt46" text="अरे! यह गलत है! &lt;br/&gt; #frac# के अंश और हर को #n# से &lt;br/&gt; विभाजित करने से &lt;br/&gt; #frac1# मिल सकता है| &lt;br/&gt; स्पष्टीकरण ध्यान से पढ़ें!" page="" voice=""/>
+<prompt name="prompt47" text="आपने #frac# ही फिर से लिखा है! &lt;br/&gt; आपको #frac# को सरलतम रूपमें लिखना है | &lt;br/&gt; Try again!" page="" voice=""/>
+<prompt name="prompt48" text="क्या आपने अंश और हर को एक ही संख्या से &lt;br/&gt; विभाजित किया है? &lt;br/&gt;&lt;br/&gt; जाँचिए और फिर से कोशिश कीजिए!" page="" voice=""/>
+<prompt name="prompt49" text="अगर आप संख्या को  1 से विभाजित करें तो आपको वही संख्या मिलेगी| &lt;br/&gt; ऐसी सबसे बड़ी संख्या सोचिए जो #n1# और  #n2# दोनों को विभाजित करती हो!" page="" voice=""/>
+<prompt name="prompt50" text="किसी भी भिन्न का हर 0 नहीं हो सकता| &lt;br/&gt; फिर से कोशिश करें! " page="" voice=""/>
+<prompt name="prompt51" text="क्या आपने अंश और हर को एक ही संख्या से &lt;br/&gt; विभाजित किया है? &lt;br/&gt;जाँचिए और फिर से कोशिश कीजिए!" page="" voice=""/>
+<prompt name="prompt52" text="अरे! यह गलत है! &lt;br/&gt; चलो  #n1# और #n2# का सार्व (साझा) गुणनखंड निकालें! &lt;br/&gt;#frac# के अंश और हर को  सार्व (साझा) गुणनखंड &lt;br/&gt; से विभाजित करें!" page="" voice=""/>
+<prompt name="prompt53" text="भिन्न के सरलतमरूप में  उसके अंश और हर में कोई &lt;br/&gt; सार्व (साझा) गुणनखंड नहीं होता| &lt;br/&gt;संख्या #n1# और #n2# को उनके महत्तम समापवर्तक से विभाजित करें |" page="" voice=""/>
+<prompt name="prompt54" text="#n1#, संख्या  #a# और #b# का गुणनखंड तो है! &lt;br/&gt; लेकिन वह ऐसी सबसे बड़ी संख्या नहीं है जो  #a# और #b# को विभाजित कर सकें! &lt;br/&gt; अब , #no1# और #no2# सार्व गुणनखंड निकालें और  &lt;br/&gt;  #frac# को सरलतम रूप में  लाएँ! " page="" voice=""/>
+<prompt name="prompt55" text="अगर आप संख्या को  1 से विभाजित करें तो आपको वही संख्या मिलेगी| &lt;br/&gt; ऐसी सबसे बड़ी संख्या सोचिए जो #n1# और  #n2# दोनों को विभाजित करती हो!" page="" voice=""/>
+<prompt name="prompt56" text="#n1#, संख्या  #n2# और #n3# का सार्व गुणनखंड नहीं है |&lt;br/&gt;संख्या #n2# और #n3# के  सार्व गुणनखंड हैं: #string#." page="" voice=""/>
+<prompt name="prompt57" text="ऐसी सबसे बड़ी संख्या लिखिए जो  #n1# और #n2# दोनों को विभाजित करती हो|" page="" voice=""/>
+<prompt name="prompt58" text="#n1# और #n2# का सार्व गुणनखंड खाली जगह में लिखें| " page="" voice=""/>
+<prompt name="prompt59" text="#frac1#, भिन्न #frac2# का सरलतम रूप है, क्योंकि  #n1# और #n2# का &lt;br/&gt; 1 के आलावा कोई सार्व (साझा) गुणनखंड नहीं है  इसलिए उसे और सरल रूपमें नहीं लाया जा सकता है |" page="" voice=""/>
+</prompts> 
+
+<instructions> 
+<instruction name="inst1" text="दोनों भिन्न को समान करने के लिए खाली जगह में भिन्न का अंश लिखें| " page="" voice=""/>
+<instruction name="inst2" text="यहाँ, #frac1# और #frac2# " page="" voice=""/>
+<instruction name="inst3" text="समतुल्य भिन्न हैं|" page="" voice=""/>
+<instruction name="inst4" text="दिए गए भिन्न के समतुल्य भिन्न लिखें|" page="" voice=""/>
+<instruction name="inst5" text="#frac1# सरलतम रूप में है | दिए गए में से कौन-सा #frac2# का समतुल्य है?" page="" voice=""/>
+</instructions>
+
+<miscellaneous>
+</miscellaneous>
+		
+			</hindi>
+
+<gujarati>				
+
+<questions>
+</questions>
+
+<prompts>
+<prompt name="next" text="આગળ" page="" voice=""/>
+<prompt name="prompt0" text="ઓકે" page="" voice=""/>
+<prompt name="prompt1" text="ખૂબ સરસ!" page="" voice=""/>
+<prompt name="prompt2" text=" ફરી વિચારો! શું #frac1#=#frac2#?" page="" voice=""/>
+<prompt name="prompt3" text="આજ રીતે, #frac1#=#frac2#=#frac3#=#frac4#=#frac5# ..." page="" voice=""/>
+<prompt name="prompt4" text="જ્યારે #frac# ના અંશ અને છેદને કોઈ સામાન્ય અવયવ ના હોય ત્યારે તે તેના અતિસંક્ષિપ્ત  રૂપમાં છે એમ કહી શકાય." page="" voice=""/>
+<prompt name="prompt5" text=" અરે! આ ખોટું છે! &lt;br/&gt; પછીના કેટલાક પ્રશ્ન તમને મદદ કરશે!" page="" voice=""/>
+<prompt name="prompt6" text=" જયેશ અને પરેશા પાસે એકસમાન ચોકલેટ હતી." page="" voice=""/>
+<prompt name="prompt7" text=" જયેશે ચોકલેટનો #frac# ભાગ ખાધો." page="" voice=""/>
+<prompt name="prompt8" text=" પરેશાની ચોકલેટને #no# સરખા ભાગમાં વહેંચવામાં આવી." page="" voice=""/>
+<prompt name="prompt9" text=" તે જયેશ પાસે જેટલી ચોકલેટ છે તેટલી જ ખાવા માંગતી હતી." page="" voice=""/>
+<prompt name="prompt10" text=" તેણે તેની ચોકલેટના કેટલા ટુકડા ખાવા જોઈએ?" page="" voice=""/>
+<prompt name="prompt11" text=" પરેશા જયેશ જેટલી જ &lt;br/&gt; ચોકલેટ ખાવા માંગતી હતી. &lt;br/&gt; આકૃતિને ધ્યાનથી જુઓ અને ફરી પ્રયત્ન કરો." page="" voice=""/>
+<prompt name="prompt12" text="જયેશ જેટલી જ ચોકલેટ ખાવા માટે, &lt;br/&gt; પરેશાએ તેની ચોકલેટના #no# ટુકડા ખાવા જોઈએ.. &lt;br/&gt; શું હવે તમે &lt;br/&gt; #frac# ને બરાબર હોય તેવો અપૂર્ણાંક લખવા પ્રયત્ન કરી શકો?" page="" voice=""/>
+<prompt name="prompt13" text=" અરે! આ ખોટું છે.!સમજૂતી બરાબર જુઓ!" page="" voice=""/>
+<prompt name="prompt14" text="&lt;b&gt; &lt;br/&gt; &lt;font color='#0066ff'&gt; #frac1# = #choc1# અહીં #no2# માંથી  #no1#  ભાગ રંગીન છે. અથવા #frac2#. &lt;/font&gt; &lt;b/&gt;" page="" voice=""/>
+<prompt name="prompt15" text="&lt;b&gt; &lt;br/&gt; &lt;font color='#0066ff'&gt; #frac3# = #choc2# અહીં #no4# માંથી  #no3# ભાગ રંગીન છે. અથવા #frac4#. &lt;/font&gt; &lt;b/&gt;" page="" voice=""/>
+<prompt name="prompt16" text="&lt;br/&gt; &lt;br/&gt; &lt;b&gt; &lt;font color='#0066ff'&gt; તેથી, #frac5# = #frac6# &lt;font color='#0066ff'&gt; &lt;b/&gt;." page="" voice=""/>
+<prompt name="prompt17" text=" આ સાચું છે! &lt;br/&gt; શું તમે હવે &lt;br/&gt; #frac# નો સમઅપૂર્ણાંક લખવાનો પ્રયત્ન કરી શકો?" page="" voice=""/>
+<prompt name="prompt18" text="જયેશ " page="" voice=""/>
+<prompt name="prompt19" text="પરેશા " page="" voice=""/>
+<prompt name="prompt20" text="નીચેનામાંથી #frac# નું અતિસંક્ષિપ્ત રૂપ કયુ છે?" page="" voice=""/> 
+<prompt name="prompt21" text="હમમમ... તમે સાચી દિશામાં કરી રહ્યા છો. &lt;br/&gt; પણ શું #frac# તેના અતિસંક્ષિપ્ત રૂપમાં છે? &lt;br/&gt; શું તમે #ctx1# અને #ctx2# બંનેના સામાન્ય અવયવ નથી શોધી શકતા? &lt;br/&gt; વિચારો અને ફરી પ્રયત્ન કરો!" page="" voice=""/>
+<prompt name="prompt22" text="#frac# ને અતિસંક્ષિપ્ત રૂપમાં ફેરવવા માટે, અંશ અને છેદ બંનેને &lt;br/&gt; સામાન્ય અવયવ વડે ભાગીએ." page="" voice=""/>
+<prompt name="prompt23" text="#no1# અને #no2# ને #n1# વડે ભાગવાથી મળે:" page="" voice=""/>
+<prompt name="prompt24" text=" #num1# અને #num2# ને તેમના સામાન્ય અવયવ #n2# વડે ભાગીને આપણે મેળવી શકીએ:" page="" voice=""/>
+<prompt name="prompt25" text="#frac5# નું હવે આગળ સંક્ષિપ્ત રૂપ આપી શકાય નહીં." page="" voice=""/>
+<prompt name="prompt26" text="#frac1# = #frac2# = #frac3#" page="" voice=""/>
+<prompt name="prompt27" text="અરે! આ ખોટું છે! &lt;br/&gt; #frac1# મેળવવા માટે, તમે #frac# ના અંશ અને છેદ બંનેને &lt;br/&gt; #n# વડે ભાગી શકો.&lt;br/&gt; &lt;br/&gt; ધ્યાનપૂર્વક સમજૂતી જુઓ." page="" voice=""/>
+<prompt name="prompt28" text=" અરે! આ ખોટું છે!&lt;br/&gt;શું #frac1#=#frac2#?&lt;br/&gt; તમારે #frac2# ને બરાબર હોય તેવો અપૂર્ણાંક પસંદ કરવો જોઈએ,&lt;br/&gt; કે જેથી તેના અંશ અને છેદને &lt;br/&gt; કોઈ સામાન્ય અવયવ ના હોય. &lt;br/&gt; ફરી પ્રયત્ન કરો! " page="" voice=""/>
+<prompt name="prompt29" text=" પરેશા જયેશ જેટલી જ &lt;br/&gt; ચોકલેટ ખાવા માંગે છે. &lt;br/&gt; આકૃતિને ધ્યાનથી જુઓ અને ફરી પ્રયત્ન કરો. " page="" voice=""/>
+<prompt name="prompt30" text=" તમારો જવાબ લખો અને Enter દબાવો." page="" voice=""/>
+<prompt name="prompt31" text="આપેલા અપૂર્ણાંકને અતિસંક્ષિપ્ત રૂપમાં લખો." page="" voice=""/>
+<prompt name="prompt32" text="#frac1# એ #frac2# નો સમઅપૂર્ણાંક છે. &lt;br/&gt; શું તમે ચોક્કસ છો કે #frac1# એ તેના સંક્ષિપ્ત રૂપમાં છે? &lt;br/&gt; શું તમે #frac1# નું હજી વધારે સંક્ષિપ્ત રૂપ આપી શકો?&lt;br/&gt;વિચારો અને ફરી પ્રયત્ન કરો!" page="" voice=""/>
+<prompt name="prompt33" text="અરે! આ ખોટું છે.!&lt;br/&gt; ચાલો, #no1# અને #no2# ના સામાન્ય અવયવો શોધીએ..&lt;br/&gt; #frac# ના અંશ અને છેદને &lt;br/&gt; સામાન્ય અવયવ વડે ભાગો." page="" voice=""/>
+<prompt name="prompt34" text="(ખાલી જગ્યામાં #no1# અને #no2# ના સામાન્ય અવયવ લખો.)" page="" voice=""/>
+<prompt name="prompt35" text="જો તમે સંખ્યાને 1 વડે ભાગશો તો &lt;br/&gt; તમને એ જ સંખ્યા પાછી મળશે.&lt;br/&gt; એવી સંખ્યા વિચારો કે જે &lt;br/&gt; #no1# અને  #no2# બંનેને ભાગે" page="" voice=""/>
+<prompt name="prompt36" text="#frac1#=#frac2#=#frac3#" page="" voice=""/>
+<prompt name="prompt37" text="અરે! આ ખોટું છે.&lt;br/&gt; ચાલો, #no1# અને #no2# ના સામાન્ય અવયવો શોધીએ. &lt;br/&gt; #frac# ના અંશ અને છેદને &lt;br/&gt; સામાન્ય અવયવ વડે ભાગો." page="" voice=""/>
+<prompt name="prompt38" text="આપણે જાણીએ છીએ કે, #no3# એ #no2# અને #no1# બંનેને ભાગે છે.&lt;br/&gt;ચાલો, #no2# અને #no1# ને #no3# વડે ભાગીએ." page="" voice=""/>
+<prompt name="prompt39" text="સાચું! આગળ કરો!" page="" voice=""/>
+<prompt name="prompt40" text="જો તમે અંશ અને છેદમાં &lt;br/&gt;જુદી જુદી સંખ્યા લખશો તો,&lt;br/&gt; અપૂર્ણાંક બદલાઈ જશે.&lt;br/&gt; સંખ્યા સરખી જ હોવી જોઈએ." page="" voice=""/>
+<prompt name="prompt41" text="તમે અડધે સુધી કરી લીધું છે.!&lt;br/&gt; તમે #frac# ને સંક્ષિપ્ત રૂપમાં ફેરવી શકો છો.." page="" voice=""/>
+<prompt name="prompt42" text="અરે! આ ખોટું છે!&lt;br/&gt; #n1# અને #n2# નો ગુ.સા.અ. #gcd# છે.&lt;br/&gt;#n1# અને #n2# ને #gcd# વડે ભાગવાથી મળે. &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color='0066FF'&gt;              #fracn#  &lt;span id='eq6'&gt;=&lt;/span&gt;  #fracm#&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;" page="" voice=""/>
+<prompt name="prompt43" text="અહીં #frac12# અને #frac5# ને સમઅપૂર્ણાંક કહે છે. &lt;b&gt;  &lt;/b&gt;" page="" voice=""/>
+<prompt name="prompt44" text="અરે! આ ખોટું છે.!&lt;br/&gt; ચાલો, #num1# અને #num2# ના સામાન્ય અવયવ શોધીએ.&lt;br/&gt; #frac# ના અંશ અને છેદને &lt;br/&gt; સામાન્ય અવયવ વડે ભાગો." page="" voice=""/>
+<prompt name="prompt45" text=" જો તમે અંશ અને છેદમાં &lt;br/&gt;જુદી જુદી સંખ્યા લખશો તો,&lt;br/&gt; અપૂર્ણાંક બદલાઈ જશે.&lt;br/&gt; ખાલી ખાનામાં સરખી સંખ્યા લખો." page="" voice=""/>
+<prompt name="prompt46" text=" અરે! આ ખોટું છે! &lt;br/&gt; તમે #frac# ના અંશ અને છેદ બંનેને&lt;br/&gt; #n# વડે ભાગીને &lt;br/&gt; #frac1# મેળવી શકો. &lt;br/&gt; ધ્યાનપૂર્વક સમજૂતી જુઓ." page="" voice=""/>
+<prompt name="prompt47" text="તમે ફરીથી #frac# લખ્યા! &lt;br/&gt; તમારે #frac# ને સંક્ષિપ્ત રૂપમાં લખવાના છે. &lt;br/&gt; ફરી પ્રયત્ન કરો!" page="" voice=""/>
+<prompt name="prompt48" text="શું તમે અંશ અને છેદ બંનેને &lt;br/&gt; એક જ સંખ્યા વડે ભાગ્યા? &lt;br/&gt;&lt;br/&gt; તપાસો અને ફરી કરો. " page="" voice=""/>
+<prompt name="prompt49" text=" જો તમે સંખ્યાને 1 વડે ભાગશો તો &lt;br/&gt; તમને એ જ સંખ્યા પાછી મળશે.&lt;br/&gt; એવી સંખ્યા વિચારો કે જે &lt;br/&gt; #n1# અને #n2# બંનેને ભાગે." page="" voice=""/>
+<prompt name="prompt50" text="0 છેદ હોય તેવો એક પણ અપૂર્ણાંક નથી..&lt;br/&gt;ફરી પ્રયત્ન કરો!" page="" voice=""/>
+<prompt name="prompt51" text=" શું તમે અંશ અને છેદ બંનેને &lt;br/&gt; એક જ સંખ્યા વડે ભાગ્યા? &lt;br/&gt; તપાસો અને ફરી કરો." page="" voice=""/>
+<prompt name="prompt52" text="અરે! આ ખોટું છે.&lt;br/&gt; ચાલો, #n1# અને #n2# ના સામાન્ય અવયવો શોધીએ.&lt;br/&gt; #frac# ના અંશ અને છેદને &lt;br/&gt; સામાન્ય અવયવ વડે ભાગો." page="" voice=""/>
+<prompt name="prompt53" text="અતિસંક્ષિપ્ત રૂપે રહેલા અપૂર્ણાંકના અંશ અને છેદને કોઈ સામાન્ય અવયવ હોતા નથી.&lt;br/&gt; &lt;br/&gt; #n1# અને #n2# બંનેને તેમના સૌથી મોટા સામાન્ય અવયવ વડે ભાગવાનો પ્રયત્ન કરો." page="" voice=""/>
+<prompt name="prompt54" text="#n1# એ ખરેખર #a# અને #b# નો સામાન્ય અવયવ છે.&lt;br/&gt;પણ તે સૌથી મોટી સંખ્યા નથી કે જેના વડે #a# અને #b# ને ભાગી શકાય.&lt;br/&gt; #no1# અને #no2# ના સામાન્ય અવયવ શોધીને #frac# અપૂર્ણાંકનું આગળ સંક્ષિપ્ત રૂપ આપો. &lt;br/&gt;" page="" voice=""/>
+<prompt name="prompt55" text=" જો તમે સંખ્યાને 1 વડે ભાગશો તો, તમને એ જ સંખ્યા પાછી મળશે.&lt;br/&gt; એવી સૌથી મોટી સંખ્યા સંખ્યા વિચારો કે જે #no1# અને #no2# બંનેને ભાગે." page="" voice=""/>
+<prompt name="prompt56" text="#n1# એ #n2# અને  #n3# નો સામાન્ય અવયવ નથી.&lt;br/&gt; #n2# અને #n3# ના સામાન્ય અવયવો #string# છે." page="" voice=""/>
+<prompt name="prompt57" text="#n1# અને #n2# બંનેને ભાગી શકાય તેવી મોટામાં મોટી સંખ્યા લખો." page="" voice=""/>
+<prompt name="prompt58" text=" #n1# અને #n2# ના સામાન્ય અવયવો ખાનામાં લખો." page="" voice=""/>
+<prompt name="prompt59" text="#frac1# એ #frac2# નું અતિસંક્ષિપ્ત રૂપ છે. કેમકે #n1# અને #n2# ના 1 સિવાય કોઈ સામાન્ય અવયવ નથી.&lt;br/&gt; અને તેથી વધારે સંક્ષિપ્ત રૂપ આપી શકાય નહીં." page="" voice=""/>
+</prompts> 
+
+<instructions> 
+<instruction name="inst1" text=" આપેલા બે અપૂર્ણાંકને સરખા બનાવવા માટે ખાનામાં અપૂર્ણાંકનો અંશ લખો." page="" voice=""/>
+<instruction name="inst2" text="અહીં, #frac1# અને #frac2#  ને કહેવાય: " page="" voice=""/>
+<instruction name="inst3" text="સમઅપૂર્ણાંક" page="" voice=""/>
+<instruction name="inst4" text=" આપેલા અપૂર્ણાંકનો સમઅપૂર્ણાંક લખો " page="" voice=""/>
+<instruction name="inst5" text="#frac1# એ અપૂર્ણાંકનું અતિસંક્ષિપ્ત રૂપ છે. નીચેનામાંથી #frac2# નો સમઅપૂર્ણાંક કયો છે?" page="" voice=""/>
+</instructions>
+
+<miscellaneous>
+</miscellaneous>
+
+
+
+		</gujarati>
+
+</application>

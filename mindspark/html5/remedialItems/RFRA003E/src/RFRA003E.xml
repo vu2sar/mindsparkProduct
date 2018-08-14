@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application name="AreaModelRemediation">
+<english>
+	<questions>
+		<que name="q101" text="Write the given fraction as a decimal and press Enter." page="" voice=""/>
+	</questions>
+	<prompts>
+		<prompt name="p101" text="Please type your answer and press enter." page="page1" voice=""/>
+		<prompt name="p102" text="Well Done!!" page="page1" voice=""/>
+		<prompt name="p103" text="Please give your answer as a decimal number." page="page1" voice=""/>
+		<prompt name="p104" text="You are almost there.&lt;br&gt;Please give your answer upto 2 decimal places." page="page1" voice=""/>
+		<prompt name="p105" text="You are almost there.&lt;br&gt;Please check your answer and try again!" page="page1" voice=""/>
+		<prompt name="p106" text="Check you answer again!&lt;br&gt;Have you placed the decimal point correctly?&lt;br&gt;Try again!" page="page1" voice=""/>
+		<prompt name="p107" text="Oops! That's not correct!&lt;br&gt;&lt;br&gt;The next few questions will help you solve the problem." page="page1" voice=""/>
+		<prompt name="p108" text="Hmm.. that's not correct!&lt;br&gt;&lt;br&gt;Let us try to solve the problem again." page="page1" voice=""/>
+		<prompt name="p109" text="Good! Now move ahead." page="page1" voice=""/>
+		<prompt name="p110" text="No, you seem to have made a mistake.&lt;br&gt;&lt;&lt;br&gt;&lt;Think carefully and enter the dividend again." page="page1" voice=""/>
+		<prompt name="p111" text="Oops! That's incorrect!&lt;br&gt;#correctAnsFrac# = #Xval#" page="page1" voice=""/>
+	</prompts>
+	<instructions>	
+	</instructions>
+	<miscellaneous>
+		<misc name="next" text="Next"/>
+		<misc name="ok" text="OK"/>
+		<misc name="game" text="Game Over !!"/>
+		<misc name="check" text="Check"/>
+	</miscellaneous>
+</english>
+<hindi>
+	<questions>
+	</questions>
+	<prompts>
+	</prompts>
+	<instructions>
+	</instructions>
+	<miscellaneous>
+	</miscellaneous>
+
+</hindi>
+<gujarati>		
+<questions>
+<que name="q101" text="આપેલ અપૂર્ણાંકને દશાંશમાં લખો અને Enter દબાવો." page="" voice=""/>
+</questions>
+<prompts>
+<prompt name="p101" text="તમારો જવાબ લખો અને enter દબાવો." page="page1" voice=""/>
+<prompt name="p102" text="ખૂબ સરસ!!" page="page1" voice=""/>
+<prompt name="p103" text="તમારો જવાબ દશાંશ સંખ્યામાં આપો. " page="page1" voice=""/>
+<prompt name="p104" text="તમે જવાબની બહુ નજીક છો.&lt;br&gt; તમારો જવાબ 2 દશાંશસ્થળ સુધી આપો." page="page1" voice=""/>
+<prompt name="p105" text=" તમે જવાબની બહુ નજીક છો.&lt;br&gt;તમારો જવાબ ચકાસો અને ફરી કરો!" page="page1" voice=""/>
+<prompt name="p106" text="તમારો જવાબ ફરી ચકાસો!&lt;br&gt; શું તમે યોગ્ય જગ્યાએ દશાંશચિહ્નને મૂક્યું છે?&lt;br&gt; ફરી કરો!" page="page1" voice=""/>
+<prompt name="p107" text="અરે! આ સાચું નથી!&lt;br&gt;&lt;br&gt;આ દાખલો સાચી રીતે કરવા માટે આગળના થોડાક સવાલ તમને મદદ કરશે." page="page1" voice=""/>
+<prompt name="p108" text="હમ્મ....આ સાચું નથી!&lt;br&gt;&lt;br&gt;ચાલો ફરી કરીએ." page="page1" voice=""/>
+<prompt name="p109" text="સરસ! હવે આગળ કરો." page="page1" voice=""/>
+<prompt name="p110" text="ના, લાગે છે કે તમે ભૂલ કરી છે.&lt;br&gt;&lt;&lt;br&gt;&lt; વિચારો અને ફરીથી ભાજ્ય લખો." page="page1" voice=""/>
+<prompt name="p111" text="અરે! આ ખોટું છે!&lt;br&gt;#correctAnsFrac# = #Xval#" page="page1" voice=""/>
+</prompts>
+<instructions> 
+</instructions>
+<miscellaneous>
+<misc name="next" text="આગળ"/>
+<misc name="ok" text="ઓકે"/>
+<misc name="game" text="રમત સમાપ્ત!"/>
+<misc name="check" text="તપાસો"/>
+</miscellaneous>
+
+</gujarati>
+</application>

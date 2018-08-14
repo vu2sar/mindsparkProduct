@@ -1,0 +1,225 @@
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-Light';
+	src: url('../../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.eot');
+	src: local('☺'), url('../../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.woff') format('woff'), url('../../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.ttf') format('truetype'), url('../../fonts/HelveticaLTStd-Light/fonts/HelveticaLTStd-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-Cond';
+	src: url('../../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.eot');
+	src: local('☺'), url('../../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.woff') format('woff'), url('../../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.ttf') format('truetype'), url('../../fonts/HelveticaLTStd-Cond/fonts/HelveticaLTStd-Cond.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-BoldCond';
+	src: url('../../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.eot');
+	src: local('☺'), url('../../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.woff') format('woff'), url('../../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.ttf') format('truetype'), url('../../fonts/HelveticaLTStd-BoldCond/fonts/HelveticaLTStd-BoldCond.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-Blk';
+	src: url('../../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.eot');
+	src: local('☺'), url('../../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.woff') format('woff'), url('../../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.ttf') format('truetype'), url('../../fonts/HelveticaLTStd-Blk/fonts/HelveticaLTStd-Blk.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-Roman';
+	src: url('../../fonts/HelveticaLTStd-Roman/fonts/HelveticaLTStd-Roman.eot');
+	src: local('☺'), url('../../fonts/HelveticaLTStd-Roman/fonts/HelveticaLTStd-Roman.woff') format('woff'), url('../../fonts/HelveticaLTStd-Roman/fonts/HelveticaLTStd-Roman.ttf') format('truetype'), url('../../fonts/HelveticaLTStd-Roman/fonts/HelveticaLTStd-Roman.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HelveticaLTStd-LightCond';
+	src: url('../../fonts/HelveticaLTStd-LightCond/fonts/HelveticaLTStd-LightCond.eot');
+	src: local('☺'), url('../../fonts/HelveticaLTStd-LightCond/fonts/HelveticaLTStd-LightCond.woff') format('woff'), url('../../fonts/HelveticaLTStd-LightCond/fonts/HelveticaLTStd-LightCond.ttf') format('truetype'), url('../../fonts/HelveticaLTStd-LightCond/fonts/HelveticaLTStd-LightCond.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	margin:0px;
+}
+
+#sparkieChamps {
+	font-family: 'Conv_HelveticaLTStd-Roman';
+}
+
+#logo {
+	background:url(../../assets/logo_header.png) no-repeat 0 0;
+	width:213px;
+	height:37px;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+#blue {
+	background:#e75903;
+	height:5px;
+	width:25%;
+	float:left;
+}
+
+#green {
+	background:#9ec956;
+	height:5px;
+	width:25%;
+	float:left;
+}
+
+#orange {
+	background:#2f99cb;
+	height:5px;
+	width:25%;
+	float:left;
+}
+
+#yellow {
+	background:#fbd212;
+	height:5px;
+	width:25%;
+	float:left;
+}
+
+#leftDiv {
+	width:50%;
+	float:left;
+	margin-left:5%;
+}
+
+#rightDiv {
+	width:35%;
+	float:right;
+}
+
+#loginHeading {
+	margin-top:30px;
+	font-size:1.6em;
+	font-family: 'Conv_HelveticaLTStd-LightCond';
+	margin-left:50px;
+}
+
+#loginContainer {
+	margin-top:50px;
+	font-family: 'Conv_HelveticaLTStd-LightCond';
+	font-size:1.6em;
+}
+
+.loginButton {
+	width:190px;
+	height:60px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	color:#FFF;
+	
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	
+}
+
+#login {
+	
+	background:#9EC956;
+	font-size:1em;
+	
+}
+#forgot {
+	background:#FAAD1C;
+	font-size:0.7em;
+}
+#error {
+	background:#E55C25;
+}
+#loginContainer {
+	color:#616161;
+	font-size:1.6em;
+}
+.input_box {
+	width:290px;
+	height:45px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background:#E0E0E0;
+	font-size:1em;
+	border:0px solid;
+	outline: 0;
+}
+
+#mindsparkInfo {
+	margin-top:25px;
+	width:85%;
+	padding:15px;
+	max-width:400px;
+	padding-bottom:0px;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	min-height:400px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#sparkieChampHeading {
+	color:#3099CB;
+	font-size:1.6em;
+	padding-bottom:15px;
+	font-family: 'Conv_HelveticaLTStd-BoldCond';
+}
+
+.classSlot {
+	color:#3099CB;
+	font-size:1.25em;
+	font-family: 'Conv_HelveticaLTStd-BoldCond';
+}
+
+.clear {
+	clear:both;
+}
+
+#bottom_bar {
+	position:absolute;
+	bottom:1px;
+	right:1px;
+}
+#copyright {
+	text-align:right;
+	font-size:1.2em;
+	font-family: 'Conv_HelveticaLTStd-Cond';
+}
+
+.msblog {
+	background:url(../../assets/generic/Euler.png) no-repeat;
+	width	:400px;
+	height	:265px;
+	background-size: 100% 100%;
+	display	:block;
+	border	:solid 0px;
+}
+#redBorder {
+	border:1px 0px 0px 1px solid #E55C25;
+	width:200px;
+	height:200px;
+	position:absolute;
+	margin-top:-15px;
+	margin-left:-15px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}

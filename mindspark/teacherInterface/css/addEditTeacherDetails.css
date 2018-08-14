@@ -1,0 +1,139 @@
+#home{
+	border-bottom: 1px solid #2f99cb;
+}
+
+#sideBar #home{
+	margin-top: 30%;
+}
+
+#container{
+	/*position: relative;
+	width:72.5%;*/
+	min-height:475px;
+	/*margin-left:27%;*/
+	border-top:1px solid #2f99cb;
+	border-bottom:1px solid #2f99cb;
+	border-left:1px solid #2f99cb;
+}
+
+#innerContainer{
+	margin-top: 2%;
+	position: relative;
+	margin-left: 0%;
+	width:95%;
+	height:17.7%;
+	margin-left: 5%;
+	/*border:1px solid #2f99cb;*/
+}
+
+#containerHead{
+	font-size:1.3em;
+	margin-top: 1.5%;
+
+	border-bottom:1px solid #2f99cb;
+	padding-bottom: 1%;
+	display: block;
+	
+}
+
+#triangle{
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	margin-top: 0.3%;
+	float: left;
+	border-left: 6px solid black;
+	margin-right: 1.5%;
+}
+
+#containerBody{
+	font-size:1.3em;
+
+	margin-top: 1%;
+	display: block;
+	;
+}	
+
+
+table.tblContent {
+    background      :   #E6E6E6;
+    padding         :   0px;
+    font-size		: 	15px;
+	margin-top		:   3%;
+	margin-bottom		:   3%;
+	font-family: 'Conv_HelveticaLTStd-Roman';
+}
+
+table.tblContent tr th, table.tblContent tr td {
+    border-width    :   1px;
+    border-style    :   solid;
+    border-color    :   white;
+    border-spacing  :   0px;
+    color           :   black;
+    font-weight     :   bold;
+}
+
+table.tblContent tr td {
+    font-weight     :   normal;
+}	
+
+.buttons{
+	
+	background-color: #2f99cb;
+	width: 20%;
+	height: 40px;
+	color: #FFFFFF;
+	font-size: 15px;
+	margin-bottom: 3%;
+	
+}
+	
+table#mainContent td{
+/*width:60%;*/
+width:50%;
+}
+
+table#mainContent #tblClassMapping td{
+width:0%;
+
+}
+table#tblClassMapping{
+	padding-left: 5%;
+	padding-top: 5%;
+	padding-right: 5%;
+}
+
+
+.space{
+	height: 15px;
+}
+
+#buttonSection{
+	margin-top: 2%;
+	margin-left: 23%;
+}
+
+.mappedClass{
+	width:0%;
+}
+
+.buttons{
+	
+	background-color: #2f99cb;
+	width: 15%;
+	height: 38px;
+	color: #FFFFFF;
+	font-size: 15px;
+	margin-bottom: 3%;
+	
+}
+
+.addMore{
+	background-color: #2f99cb;
+	width: 70%;
+	height: 30px;
+	color: #FFFFFF;
+	font-size: 15px;
+	margin-bottom: 3%;
+}

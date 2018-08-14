@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<application name="Light The Bulb">
+	<english>
+
+		<questions>
+			
+		</questions>
+		
+		<prompts>
+			<prompt name="prompt_incorrect1" text="Oops! That's not correct!&lt;br&gt;The next few questions will help you solve the problem."/>
+			<prompt name="prompt_incorrect2" text="Oops! That's not correct!&lt;br&gt;#fractionQuestion# = #correctAnswer#."/>
+
+			<prompt name="incorrectCarry1" text=" Is #currentValue# = #dividend#? Try again."/>
+			<prompt name="incorrectCarry2" text=" We need to add a 0 to the number so that the value remains the same.&lt;br&gt; #currentValue# = #dividend#"/>
+			<prompt name="title" voice="" page="page1" text="Dividing Decimals"></prompt>
+			<prompt name="mainQ" voice="" page="page1" text="Solve and write the answer."></prompt>
+			<prompt name="prompt1" voice="" page="page1" text="Please specify your answer !"></prompt>
+			<prompt name="prompt2" voice="" page="page1" text="Incorrect!&lt;br /&gt;The following example will help you."></prompt>
+			<prompt name="prompt3" voice="" page="page1" text="That's Correct! Move Ahead."></prompt>
+			<prompt name="prompt4" voice="" page="page1" text="Incorrect!&lt;br /&gt; #dividend# needs to be multiplied by the same number as #divisor#."></prompt>
+            <prompt name="prompt5" voice="" page="page1" text="Incorrect!&lt;br /&gt; The correct answer is #multiplicationFactor#."></prompt>
+            <prompt name="prompt6" voice="" page="page1" text="So dividing #dividend# by #divisor# is same as dividing "></prompt>
+            <prompt name="prompt7" voice="" page="page1" text="Incorrect ! &lt;br /&gt; The correct answer is #dividend# &#215; #multiplicationFactor# = "></prompt>
+            <prompt name="prompt8" voice="" page="page1" text="See the equation above and try again."></prompt>
+            <prompt name="prompt9" voice="" page="page1" text="Incorrect!&lt;br /&gt;The correct answer is "></prompt>
+            <prompt name="incorrectLine1" voice="" page="page1" text="Dividing a decimal number by another becomes easier if we convert the denominator to a whole number."></prompt>
+			<prompt name="incorrectLine2" voice="" page="page1" text="Let's see an example."></prompt>
+			<prompt name="incorrectLine3" voice="" page="page1" text="We will convert #temp2# into #temp4#. &lt;br /&gt; For this we need to multiply #temp2# by #multiplicationFactor#."></prompt>
+			<prompt name="incorrectLine4" voice="" page="page1" text="But to keep the number unchanged, we need to multiply the numerator also by #multiplicationFactor#."></prompt>
+			<prompt name="incorrectLine5" voice="" page="page1" text="It is easier to solve this expression."></prompt>
+			<prompt name="cong" voice="" page="page1" text="You have successfully cleared level"></prompt>
+			<prompt name="lvl" voice="" page="page1" text="LEVEL"></prompt>
+			<prompt name="clr" voice="" page="page1" text="You have already cleared this level."></prompt>
+			<prompt name="nxttxt" voice="" page="page1" text="Click to move ahead"></prompt>
+			<prompt name="sbmt1" voice="" page="page1" text="Submit"></prompt>
+			<prompt name="nxt11" voice="" page="page1" text="START"></prompt>
+			<prompt name="tryAgain" voice="" page="page1" text="Hmm… You are on the right track."></prompt>
+			<prompt name="tryAgain1" voice="" page="page1" text="Observe that the sum of the cards is given to you!"></prompt>
+			<prompt name="tryAgain2" voice="" page="page1" text="Press OK and try again!"></prompt>
+			<prompt name="gameOver" voice="" page="page1" text="To clear a level you have to score at least 50 points within the time limits"></prompt>
+			<prompt name="levelComplete" voice="" page="page1" text="You have completed this level"></prompt>
+			<prompt name="idle" voice="" page="page1" text="Write the values of the cards in the blanks given. Press enter to submit your answer."></prompt>
+			<prompt name="over" voice="" page="page1" text="Congrats you have completed the Game!"></prompt>
+			<prompt name="highlightText1" voice="" page="page1" text="Which card should be found first?"></prompt>
+			<prompt name="highlightText2" voice="" page="page1" text="Press OK to try again!"></prompt>
+			<prompt name="highlightText3" voice="" page="page1" text="We find the value of "></prompt>
+			<prompt name="highlightText4" voice="" page="page1" text="first. "></prompt>
+			<prompt name="highlightText5" voice="" page="page1" text="It can be solved using only one equation."></prompt>
+			<prompt name="highlightText6" voice="" page="page1" text="Press OK and try again!"></prompt>
+			<prompt name="highlightText7" voice="" page="page1" text="Oops! That’s incorrect!"></prompt>
+			<prompt name="highlightText8" voice="" page="page1" text="Now find value of other card(s)!"></prompt>
+			<prompt name="tryAgain1" voice="" page="page1" text="Observe that the sum of the cards is given to you!"></prompt>
+			<prompt name="tryAgain2" voice="" page="page1" text="Press OK and try again!"></prompt>
+            <prompt name="guess1" voice="" page="page1" text="You seem to be only guessing!"></prompt>
+            <prompt name="guess2" voice="" page="page1" text="Try to reason out your answer instead."></prompt>
+            <prompt name="guess3" voice="" page="page1" text="Start again. Press OK to move on."></prompt>
+            <prompt name="cannotComplete" voice="" page="page1" text="Oops! You failed in level "></prompt>
+            <prompt name="subText1" voice="" page="page1" text="The symbol "></prompt>
+            <prompt name="subText2" voice="" page="page1" text=" is replaced by its value!"></prompt>
+            <prompt name="subText3" voice="" page="page1" text="Now try again! "></prompt>
+            <prompt name="subText4" voice="" page="page1" text="Press OK to proceed."></prompt>
+            <prompt name="subText5" voice="" page="page1" text="We substitute the value of "></prompt>
+            <prompt name="subText6" voice="" page="page1" text="in equation below to get :!"></prompt>
+		    <prompt name="mainMessage"                  text="Which of the following would be the correct step to follow now."/>
+		    <prompt name="tryAnswering"	voice=""	page="page1"	text="Try answering the below question!"/>
+
+            <prompt name="sparkiePrompt1" text="Write the correct number in the correct position."/>
+			<prompt name="sparkiePrompt2" text="Now enter the quotient in the space provided."/>
+			<prompt name="sparkie_digitPlace_incorrect" text="Read Carefully!"/>
+			<prompt name="digitPlace_incorrect_1"         text="You should place the decimal point now, As the whole number part of the dividend is less than the divisor.&lt;br&gt;Try Again."/>
+			<prompt name="digitPlace_incorrect_2"         text="This is the correct place for the decimal point."/>
+
+			<prompt name="wrong_quotient_less" text="Does #divisor# divide #currentDividend# only #enteredValue# time(s)?"/>
+			<prompt name="wrong_quotient_more" text="Does #divisor# divide #currentDividend#, #enteredValue# time(s)?"/>
+			<prompt name="answerQuestion" text="Answer the question!"/>
+			<prompt name="multiply" text="Multiply"/>
+			
+			<prompt  name="multiplyWrongProduct"	text="Multiply #convertedDivisor# with #enteredInput# and enter your answer in the correct position."/>
+				
+			<!-- Click on decimal Point button -->
+			<prompt name="decimal_incorrect1" text="You can put the decimal point after dividing the whole number part of the dividend.&lt;br&gt;Try again."/>
+			<prompt name="decimal_incorrect2" text="This is not the correct place for decimal point. Enter the next digit of the quotient."/>
+
+
+			<!-- Click on the place digit button -->
+
+			<prompt name="digit_incorrect1" text="You can put the decimal point now, as the whole number part of the dividend is divided.&lt;br&gt;Try again."/>
+			<prompt name="digit_incorrect2" text="This is the correct place for decimal point."/>			
+			 
+			<prompt name="wrong_quotient_1" text="Hey! Are you entering the answer in the correct position?"/>
+			<prompt name="wrong_quotient_yes" text=" Check again! You are entering the answer in the wrong position."/>
+			<prompt name="wrong_quotient_2" text=" Let us understand how we find the correct position for the first digit.&lt;br&gt;&lt;br&gt; #number1# &lt; #number2#. So, we consider the next digit."/>
+			<prompt name="wrong_quotient_3" text="&lt;br&gt; #number1#  &gt; #number2#. So, we have to write the first digit here."/>
+
+			<!-- Spakie messages  -->
+			<prompt name="readCareFully" text="Read carefully!"/>
+			<prompt name="enterQuotient" text="Now start entering the quotient."/>
+			
+			<prompt name="tablePanel1" text="#num3# x #num5# = #num6# is greater than #_number1#. And #num3# x #num7# = #num8# is smaller than #_number1#. Since #num3# x #bestAnswer# = #promptCorrectAnswer#, #bestAnswer# is the right answer."/>
+			<prompt name="tablePanel2" text="#num3# x #num4# = #num9# is greater than #_number1#. Therefore, #num4# will not work. Which number would you like to try next?"/>
+			<prompt name="tablePanel3" text="#num3# x #num4# = #num9# is lesser than #_number1#. But are we sure that a number greater than #num4# will not work? Try a higher number."/>
+			<prompt name="tablePanel4" text="You have to try with a number lesser than #num4#"/>
+			<prompt name="tablePanel5" text="You have to try with a number greater than #num4#"/>
+			<prompt name="tablePanel6" text="You have already tried with this number."/>
+			<prompt name="tablePanel7" text="Lets try with #bestNextAnswer#. &lt;br&gt; Click ok to continue."/>
+			<prompt name="tablePanel8" text="Lets try with #bestNextAnswer#. &lt;br&gt; Click ok to continue."/>
+			<prompt name="whatDigitCanBePlacedHere" text="What digit can be placed here without changing the value of the dividend?"/>
+			<prompt name="bringDown" text="Now bring down the next digit of the dividend and press enter."/>
+			<prompt name="bringDown2" text="That is incorrect. The correct digit will be entered for you."/>
+			<prompt name="nowEnterNextQuotient" text=" Good! Now enter the next digit of the quotient and press enter."/>
+			<prompt name="nowEnterAnswer" text="Good! Now enter your final answer in the space provided above."/>
+			<prompt name="giveValidInput" text="Please enter a valid digit in the text box."/>
+			<prompt name="writeDifference" text="Correct! Now enter the difference and press enter."/>
+			<prompt name="writeProduct" text="Now enter the product and press enter."/>
+			<prompt name="startQuotient" text="Now start entering the quotient."/>
+			
+			<prompt name="tablePanelWrong1" text="Check your multiplication!"/>
+			<prompt name="tablePanelWrong2" text="Your product is still incorrect. Try multiplying again!"/>
+			<prompt name="tablePanelWrong3" text="That is not correct. Check your multiplication again!"/>
+        </prompts>
+		
+		<instructions>
+			
+		</instructions>
+		
+		<miscellaneous>
+		    <misc name="ok" text="OK"/>
+			<misc name="placeDecimal" text="Place the decimal point"/>
+			<misc name="placeDigit" text="Enter the next digit of quotient"/>
+			<misc name="yes" text="Yes"/>
+			<misc name="no" text="No"/>
+			<misc name="notsure" text="Not Sure"/>
+			<misc name="checkAnswer" text="Check your answer"/>
+			<misc name="okToContinue" text="Click on OK to continue"/>
+			<misc name="checkToContinue" text="Click on Check to continue"/>
+        </miscellaneous>		
+
+	</english>
+
+</application>
+

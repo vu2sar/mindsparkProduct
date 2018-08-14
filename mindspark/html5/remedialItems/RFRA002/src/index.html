@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />	
+	<title>RFRA002</title>	
+	<link href="../css/style.css" rel="stylesheet" type="text/css" />
+	<script src="../../../libs/jquery-1.7.1.min.js"></script>
+	<script src="../../../libs/jquery_ui.js"></script>
+	<script src="../../../libs/jquery_ui_touch.js"></script>
+	<script src="../../../libs/common.js"></script>
+	<script src="../../../libs/loadxmldoc.js"></script>
+	<script src="../../../libs/parameterPassing.js"></script>
+	<script src="../../../libs/PxLoader.js"></script>
+	<script src="../../../libs/PxLoaderImage.js"></script>
+	<script src="../libs/script.js"></script>
+	<script>
+	var getParameters = getURLParameters();	
+	var filename="myXML.xml";
+	$(function()
+		{
+			interactiveObj = new questionInteractive();
+			var imageArray = new Array('background.png','hand.png','sparkie.png');
+			var loader = new PxLoader(); 
+	        $.each(imageArray,function(key,value)
+			{
+	    	    var pxImage = new PxLoaderImage('../assets/'+value); 
+	        	loader.add(pxImage); 
+			});
+			loader.start();
+			loader.addCompletionListener(function() 
+			{ 
+				loadXML(filename, function(){interactiveObj.init();});
+	        }); 
+		});
+	</script>
+</head> 
+ <body onresize="containerResize()" onload="containerResize()">
+<div id="container">
+<div id="loader" align="center">Loading...<img  src="../../../assets/loader.gif" /></div>
+</div>
+</body>
+</html>	

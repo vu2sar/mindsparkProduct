@@ -1,0 +1,96 @@
+#home{
+	border-bottom: 1px solid #2f99cb;
+}
+
+#sideBar #home{
+	margin-top: 30%;
+}
+
+#container{
+	/*position: relative;
+	width:72.5%;*/
+	min-height:475px;
+	/*margin-left:27%;*/
+	border-top:1px solid #2f99cb;
+	border-bottom:1px solid #2f99cb;
+	border-left:1px solid #2f99cb;
+}
+
+#innerContainer{
+	margin-top: 2%;
+	position: relative;
+	margin-left: 0%;
+	width:95%;
+	height:14.3%;
+	margin-left: 5%;
+	/*border:1px solid #2f99cb;*/
+}
+
+#containerHead{
+	font-size:1.3em;
+	margin-top: 1.5%;
+
+	border-bottom:1px solid #2f99cb;
+	padding-bottom: 1%;
+	display: block;
+	
+}
+
+#triangle{
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	margin-top: 0.3%;
+	float: left;
+	border-left: 6px solid black;
+	margin-right: 1.5%;
+}
+
+#containerBody{
+	font-size:1.3em;
+
+	margin-top: 1.5%;
+	display: block;
+	height: 100%;
+}	
+
+
+
+#innerContent{
+	border-top: 1px solid black;
+	padding-top:5%;
+}
+
+table.tblContent {
+    background      :   #E6E6E6;
+    padding         :   0px;
+    font-size		: 	15px;
+}
+
+table.tblContent tr th, table.tblContent tr td {
+    border-width    :   1px;
+    border-style    :   solid;
+    border-color    :   white;
+    border-spacing  :   0px;
+    color           :   black;
+    font-weight     :   bold;
+	
+}
+
+table.tblContent tr td {
+    font-weight     :   normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

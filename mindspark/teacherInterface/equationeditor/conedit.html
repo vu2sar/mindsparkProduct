@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>contentEditable</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script src="rangy-core.js"></script>
+<script src="rangy-textrange.js"></script>
+<script>
+window.onload = function () {
+	if (self.initButtons)
+		initButtons();
+        try {
+	document.designMode = 'On'; 		// Moz, Op, Saf
+	document.body.contentEditable = true;	// Op, IE, Saf
+        }catch(err){};
+	//document.onkeyup=oKeyUp;
+/*	document.execCommand("styleWithCSS",false,false); */ // makes Moz use tags instead of style
+}
+function inBetween(command,bool,value) {
+	var returnValue = document.execCommand(command,bool,value);
+	if (returnValue) return returnValue;
+}
+	var re00 = /<i>/ig;
+	var re01 = /<\/i>/ig;
+	var re1 = /<span class=['"][a-z]+['"]>/ig;
+	var re11 = /<span>/ig;
+	var re2 = /<\/span>/ig;
+	var re3 = /(^|[^a-z])([a-z])((?![a-z]))/ig;
+	//var re21 = /(^|<\span>)(.+)((?!<\/span))/ig;
+	var re4 = / /g;
+	var re5 = /&nbsp;/ig;
+	var re6 = /([a-z]|span>)([0-9])((?![0-9]))/ig;
+	var re7 = /([a-z0-9>]+[^<])\/((?=[a-z0-9<]+))/ig;
+	
+	var re8 = /<pre class=['"][a-z]+['"]>([^()]*)<\/pre>/ig;
+	var re9 = /\[tab\]/g;
+	var re100 = /<p>/ig;
+	var re101 = /<\/p>/ig;
+	var re99 = /<font size=['"]2['"]>([^()]*)<\/font>/ig;
+function fracConvert(fracStr)
+	{
+		fracString=fracStr;
+		var fracArr=new Array();
+		//fracString = fracString.replace(re5," ");
+		
+		fracString = fracString.replace(re00, "");
+		fracString = fracString.replace(re01, "");
+		
+		fracString = fracString.replace(re1, "");
+		fracString = fracString.replace(re11, "");
+		fracString = fracString.replace(re2, "");
+		
+		fracString = fracString.replace(re100, "");
+		fracString = fracString.replace(re101, "");
+		fracString = fracString.replace(re99, "$1");
+		fracString=fracString.replace(/(^|[^A-z])([A-z])([0-9])/g,"$1$2<sup>$3</sup>&nbsp;");
+		//fracString = fracString.replace(re8, "[tab]");
+		
+		fracString = fracString.replace("\\","/");
+		fracString=fracString.replace(/\(([^()]*)\)\/\(([^()]*)\)/g,"<table border=\"0\" class=\"fraction\"><tbody><tr class=\"num\"><td class=\"num\">($1)</td></tr><tr class=\"den\"><td class=\"den\">($2)</td></tr></tbody></table>&nbsp;");
+		fracString=fracString.replace(/\(([^()]*)\)\/([A-z0-9]+)/g,"<table border=\"0\" class=\"fraction\"><tbody><tr class=\"num\"><td class=\"num\">($1)</td></tr><tr class=\"den\"><td class=\"den\">$2</td></tr></tbody></table>&nbsp;");
+		fracString=fracString.replace(/([A-z0-9]+)\/\(([^()]*)\)/g,"<table border=\"0\" class=\"fraction\"><tbody><tr class=\"num\"><td class=\"num\">$1</td></tr><tr class=\"den\"><td class=\"den\">($2)</td></tr></tbody></table>&nbsp;");
+		fracString=fracString.replace(/([A-z0-9]+)\/([A-z0-9]+)/g,"<table border=\"0\" class=\"fraction\"><tbody><tr class=\"num\"><td class=\"num\">$1</td></tr><tr class=\"den\"><td class=\"den\">$2</td></tr></tbody></table>&nbsp;");
+	
+		fracString=fracString.replace(/([A-z0-9)]+)\^([A-z0-9]+)/g,"$1<sup>$2</sup>&nbsp;");
+		fracString=fracString.replace(/([A-z0-9)]+)\^\(([^()]*)\)/g,"$1<sup>$2</sup>&nbsp;");
+		
+		fracString=fracString.replace(/([A-z0-9)]+)\_([A-z0-9]+)/g,"$1<sub>$2</sub>&nbsp;");
+		fracString=fracString.replace(/([A-z0-9)]+)\_\(([^()]*)\)/g,"$1<sub>$2</sub>&nbsp;");
+		
+		fracRet=fracString.replace(re9, '<pre class="pre">&#009</pre>&nbsp;');
+		fracRet=fracString.replace(re3, '$1<span class="var">$2</span>$3');
+		//fracRet=fracString.replace(re21, "$1<span>$2</span>$3");
+		
+		return fracRet;
+	}
+function replaceC()	{
+		var content=document.body.innerHTML;//alert(content.length+"\n"+content);
+		
+		var el = document.body;
+		userInput = el.textContent || el.innerText; 
+		sel = rangy.getSelection();
+    	var range = sel.getRangeAt(0);
+  		// Get the text preceding the selection boundaries and then remove whitespace to get the character offsets
+    	var rangePrecedingBoundary = range.cloneRange();
+    	rangePrecedingBoundary.setStart(el, 0);
+    	var selEndOffset = rangePrecedingBoundary.text().length;
+    	rangePrecedingBoundary.setEnd(range.startContainer, range.startOffset);
+    	var selStartOffset = rangePrecedingBoundary.text().length;
+    	rangePrecedingBoundary.detach();
+		
+		content1=fracConvert(content);//alert(content1.length+"\n"+content1);
+		
+		el.innerHTML = fracRet;
+		
+    	range.selectCharacters(el, selStartOffset, selEndOffset);
+    	sel.setSingleRange(range);
+		/*console.log("userInput:"+userInput);
+		console.log("selStartOffset:"+selStartOffset);
+		console.log("selEndOffset:"+selEndOffset);*/
+	}
+
+</script>
+<link href="divst.css" rel="stylesheet" type="text/css">
+<style>
+body{
+	font-family:serif;
+}
+div#header {
+	top: 0;
+	position: absolute;
+	padding-left: 0;
+}
+span#cursor {
+	display: inline-block;
+	width: 2px;
+	background-color: #000000;
+}
+
+</style>
+</head>
+<body >
+</body>
+</html>

@@ -1,0 +1,275 @@
+#sparkieContainer{
+	display:none;
+}
+#top_bar{
+	position: fixed;
+	top:0;
+	z-index:10;
+}
+#table_head{
+	margin-top:-85px;
+    z-index: 10;
+    position: fixed;
+    margin-left: 5%;
+    
+    
+}
+.logout:hover{
+	transform:scale(1.1);
+}
+
+
+#info_bar{
+	position: fixed;
+	top: 80px;
+	background-color: white;
+	z-index:100;
+	height:52px;
+	width:100%;
+	-webkit-box-shadow: 0px 3px 2px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    0px 3px 2px rgba(50, 50, 50, 0.2);
+	box-shadow:         0px 3px 2px rgba(50, 50, 50, 0.2);
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+#dataTableDiv{
+	margin-top:195px;
+}
+
+#session {
+	margin-left:7%;
+	padding-top:5px;
+	float:left;
+	font-size:1.2em;
+}
+#duration {
+	margin-left:7%;
+	padding-top:5px;
+	float:left;
+	font-size:1.2em;
+}
+#sparkieInfo {
+	margin-right:33%;
+	padding-top:5px;
+	float:right;
+	font-size:1.2em;
+} 
+#dataTableDiv a{
+	background-color: #9ec956;
+	opacity:0.8;
+	color:black;
+	padding:7px;
+	padding-left: 30px;
+	padding-right: 30px;
+	text-decoration: none!important;
+}
+#dataTableDiv a:hover{
+	opacity:1;
+	
+}
+#topic{
+	width:60%;
+	height:98px;
+	float   :left;
+	margin-left:7%;
+	margin-top:12px;
+	 padding: 0px 2px 2px 3px;    
+   /*	border-width: 1px;
+   border-bottom-width:1px;
+   border-bottom-color:#e75903;
+   border-bottom-style: solid;
+   border-left-width:8px;
+   border-left-color:#e75903;
+   border-left-style: solid;*/
+}
+
+#homeText > span:hover {
+	border-bottom: 4px solid #e75903;
+
+	
+	cursor:pointer;
+}
+#homeText a:hover {
+	
+	border-bottom : 4px solid #606062;
+}
+#homeIcon {
+	background: url('../../assets/Home_red.png') no-repeat 0 0;
+	width: 50px;
+	/*height: 43px;*/
+	cursor:pointer;
+}
+#homeText{
+	font-size:1.8em;
+	color:#e75903;
+	font-family: 'Conv_HelveticaLTStd-BoldCond';
+	
+}
+
+.icon_text{
+	position: relative;
+	font-size:1em;
+	width: 45px;
+	text-align:center;
+	margin-top:35px;
+}
+#endSession{
+	background: url('../../assets/EndSession.png') no-repeat 0 -82px;
+	width: 36px;
+	height: 31px;
+	margin-right:-190px;
+	float: right;
+	margin-top:50px;
+}
+
+.icon_text1{
+	position: relative;
+	font-size:1.8em;
+	width:178px;
+	text-align:center;
+	margin-top:45px;
+	color:#e75903;
+}
+
+#topic_name{
+	font-size:1.8em;
+	width:50%;
+	color:#606062;
+	float:left;
+	margin-left:8%;
+	margin-top:20px;
+}
+
+#totalQuestion{
+	padding-top:10px;
+	float: left;
+}
+
+#challengeQues,#totalQuestionCorrect{
+	padding-top:10px;
+	float: right;
+}
+#totalQuestionCorrect {
+	margin-right:5%;
+}
+#totalQuestionText,#totalQuestionCorrectText,#challengeQuesText,#challengeQuesAttemptedText,#challengeQuesCorrectText {
+	font-size:1.25em;
+	color:#606062;
+}
+#totalQuestionDigit,#totalQuestionCorrectDigit,#challengeQuesAttemptedDigit,#challengeQuesCorrectDigit {
+	font-size:1.25em;
+	color:#e75903;
+}
+
+#activitiesContainer{
+	overflow-y: scroll;
+	width:100%;
+	height: 415px;
+}
+
+#clickText{
+	font-size:1.25em;
+	color:#000000;
+	margin-left:7%;
+	margin-top:10px;
+}
+
+
+#studentInfo {
+	float:right;
+	width:30%;
+}
+
+#endSessionDataDivMain {
+	/*height:390px;
+	overflow-y: scroll;*/
+}
+
+.endSessionTbl {
+	font-family: 'Conv_HelveticaLTStd-Light';
+	text-align:center;
+	border-spacing:22px;
+ 	border-collapse:seperate;
+}
+
+.endSessionTbl td {
+	padding:3px;
+	font-size:1.2em;
+}
+
+.colorClass {
+	background:rgb(47,153,203);
+	height:40px;
+	color:#000;
+	font-size:1.1em;
+}
+#totalTime {
+	font-family: 'Conv_HelveticaLTStd-Cond';
+	font-size:1.5em;
+	color:#e75903;
+}
+#currentSession {
+	float:left;
+}
+
+.wrongAnsIcon {
+	background: url(../../assets/endSession/result.png) no-repeat 0 0;
+	width: 15px;
+	height: 20px;
+}
+.correctAnsIcon {
+	background: url(../../assets/endSession/result.png) no-repeat 0 -20px;
+	width: 15px;
+	height: 20px;
+}
+.timdTestDispDiv,.activityDispDiv {
+	background:#c3d3ed;	
+	padding-left:9%;
+	padding-right:1%;
+	text-align:left;
+}
+.timdTestLevel,.activityLevel {
+	float:left;
+}
+.timdTestTimeTaken,.activityTimeTaken {
+	float:right;
+}
+
+#bottom_bar{opacity:0;
+
+}
+@media (max-width: 1024px)
+{
+#info_bar{
+	top:60px;
+
+}
+#homeText{
+	font-size: 1.7em;
+}
+#table_head{
+	margin-top:-76px;
+	
+}
+#dataTableDiv{
+	margin-top: 159px;
+}
+#dataTableDiv a{
+padding-left: 12px;
+	padding-right: 12px;
+}
+}
+/*
+.blue{
+	color:white;
+	background-color:#9ec956;
+	padding:7px;
+	padding-left: 47px;
+	padding-right: 47px;
+
+
+}
+.blue:hover{
+	transform:scale(1.1);
+}
+*/

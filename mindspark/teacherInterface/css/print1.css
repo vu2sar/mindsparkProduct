@@ -1,0 +1,63 @@
+#container{
+	width: 100%;
+	margin-left: 0%;
+	border-left: 0px solid rgb(250, 172, 27);
+}
+
+#fixedSideBar {
+    display: none;
+}
+
+#sideBar {
+    display: none;
+}
+
+#headerBar {
+    display: none;
+}
+
+#topicDetails {
+    display: none;
+}
+
+#generateTable {
+    display: none;
+}
+
+#pagingTableSection {
+    display: none;
+}
+
+#topBar {
+    display: none;
+}
+
+#hrline{
+    display: none;
+}
+
+#main{
+	width: 100%;
+	
+}
+
+#header{
+	display:none;
+}
+
+#footer{
+	display:none;
+}
+
+.page-break  { display:block; page-break-after:always; }
+
+.contentSection{        
+	page-break-after: always;
+        page-break-inside: avoid;
+}
+#endOfReport {
+    display:none;
+}
+#copyright{
+    display:none;
+}

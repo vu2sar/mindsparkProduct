@@ -1,0 +1,72 @@
+#childDetails{
+    font-size:1.3em;
+    width:92%;
+    padding-top:3px;
+    padding-bottom:23px;
+    color:#7E7E7E;
+    margin-left:40px;
+}
+#generateTable{
+    font-size:1.1em;
+    width:60%;
+    border-bottom:1px solid #626161;
+    border-top:1px solid #626161;
+    padding-top:3px;
+    padding-bottom:3px;
+    color:#626161;
+    margin-left:40px;
+}
+#divNote{
+    margin-left:40px;
+}
+#summaryNote{
+    margin-left:40px;
+    margin-top:40px;
+    font-size:1.1em;
+    font-weight:bold;
+}
+#timeSpentSummary{
+    font-weight:bold;
+}
+#timeSpentDisplay{
+    font-weight:normal;
+}
+#note{
+    font-size:1.4em;
+    color: #7E7E7E;
+}
+.smallCircle{
+    width:10px;
+    height:10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius:5px;
+    border-radius: 5px;
+    background-color:white;
+    border:1px solid black;
+    float:left;
+    margin-left:-4px;
+    margin-top:-11px;
+}
+.heading{
+    font-size:1.4em;
+    margin-top:10px;
+    padding-bottom:10px;
+    margin-left:1%;
+    border-bottom :1px solid black;
+}
+.red{
+    background-color:#E75903;
+    width:12px;
+    height:12px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius:6px;
+    border-radius: 6px;
+    margin-top:-13px;
+}
+.textRed{
+    color:#E75903;
+    font-weight:bold;
+}
+.pointer{
+    cursor:pointer;
+}

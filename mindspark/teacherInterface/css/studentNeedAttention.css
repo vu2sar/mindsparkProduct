@@ -1,0 +1,324 @@
+#home {
+	border-bottom: 1px solid #E75903;
+	margin-top:53px;
+}
+
+#container {
+	border-top: 1px solid #E75903;
+	border-bottom: 1px solid #E75903;
+	border-left: 1px solid #E75903;
+}
+
+#headerBar{
+	width:100%;
+	border-bottom:1px solid #E75903;
+	height: 84px;
+}
+
+.arrow-green {
+	width: 0; 
+	height: 0;
+	margin-top: 36px;
+	margin-left: 4px;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 6px solid #22B573;
+	float:left;
+}
+
+.arrow-black1 {
+	width: 0; 
+	height: 0;
+	margin-top:25px;
+	margin-left:14%;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 6px solid #626161;
+	float:left;
+}
+
+#pageText{
+	font-size:1.4em;
+	height:30px;
+	margin-top: 30px;
+	color:#22B573;
+	float:left;
+	font-weight:bold;
+}
+
+#classText {
+	font-size:1.35em;
+	height:30px;
+	margin-top:32px;
+	color:#E75903;
+	margin-left:10px;
+	float:left;
+	font-weight:bold;
+}
+
+
+#trailContainer{
+	min-height:475px;
+	overflow-y:auto;
+	width:100%;
+}
+#dataContainer {
+	background-color:#E6E6E6;
+	margin-top:67px;
+	margin-left:40px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	width:95%;
+}
+
+#childDetails{
+	font-size:1.3em;
+	width:92%;
+	border-bottom:1px solid #626161;
+	padding-top:3px;
+	padding-bottom:3px;
+	color:#7E7E7E;
+	margin-left:40px;
+	float:left;
+}
+
+
+#pagingTable{
+	position:relative;
+	font-size:1.4em;
+	width:95%;
+	border-bottom:1px solid #626161;
+	padding-top:3px;
+	padding-bottom:3px;
+	font-weight:bold;
+	color:#626161;
+	margin-left:40px;
+	float:left;
+}
+
+
+#pagingCircleLeft,#pagingCircleRight {
+	border: 1px solid #000;
+	-moz-border-radius: 20px;
+	-webkit-border-radius:20px;
+	border-radius: 20px;
+	width: 25px;
+	height: 25px;
+	float: right;
+	font-size: 1.2em;
+	text-align: center;
+	margin-top:5px;
+	cursor: pointer;
+}
+.pagingNos {
+	float: right;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	text-align: center;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+#pagingDiv{
+	margin-top:-10px;
+}
+
+
+.desk_block{
+	margin-left:5%;
+	font-size:1.2em;
+	color:#626161;
+}
+.question{
+	font-size:1.3em;
+	margin-left:1%;
+	margin-right:1%;
+	background-color:white;
+	-webkit-box-shadow: 0px 3px 2px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    0px 3px 2px rgba(50, 50, 50, 0.2);
+	box-shadow:         0px 3px 2px rgba(50, 50, 50, 0.2);
+	border-bottom:1px solid black;
+	margin-top:30px;
+	padding-bottom:20px;
+}
+
+
+.option{
+	width: 25px;
+	text-align: center;
+	font-weight:bold;
+	height: 22px;
+	border: 1px solid black;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	padding-top:3px;
+	color:black;
+	font-weight:bold;
+	float:left;
+}
+
+.optionCorrect{
+	background-color:#616063;
+	color:white;
+}
+
+.optionIncorrect{
+	background-color:#E75903;
+	color:white;
+}
+
+.title{
+	float: left;
+	padding-top:2px;
+	padding-right:10px;
+}
+
+.title1{
+	float: left;
+	padding-left:10%;
+	padding-right:10px;
+}
+
+.title2{
+	float: left;
+	padding-right:10px;
+}
+
+.block_header{
+	margin-top:20px;
+}
+
+.correctMark{
+	float:right;
+	background: url('../assets/studentTrail/response_correct.png') no-repeat 0 -1px;
+	width: 32px;
+	height: 31px;
+	margin:5px;
+}
+
+.smallCircle{
+	width:10px;
+	height:10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+	border-radius: 5px;
+	background-color:white;
+	border:1px solid black;
+	float:left;
+	margin-left:-4px;
+	margin-top:-11px;
+}
+
+.red{
+	background-color:#E75903;
+	width:12px;
+	height:12px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius:6px;
+	border-radius: 6px;
+	margin-top:-13px;
+}
+
+.textRed{
+	color:#E75903;
+	font-weight:bold;
+}
+
+.pointer{
+	cursor:pointer;
+}
+
+table.optionTable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 2px;
+	border-color: #000000;
+	border-collapse: collapse;
+}
+table.optionTable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #000000;
+	font-weight:bold;
+}
+table.optionTable td {
+	border-width: 2px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #000000;
+}
+
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 2px;
+	border-color: #FFFFFF;
+	border-collapse: collapse;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	background-color: #E6E6E6;
+	font-weight:bold;
+}
+table.gridtable td {
+	border-width: 2px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	background-color: #E6E6E6;
+}
+
+.gridtable{
+	background-color:#E6E6E6;
+	margin-left:40px;
+	width:92%;
+}
+
+.classTab{
+	height: 80px;
+	width: 4%;
+	border: 2px solid #22B573;
+	background-color: #22B573;
+	float: left;
+	overflow: hidden;
+}
+
+#circle {
+	border-radius: 50%;
+	width: 16px;
+	height: 16px; 
+	margin-left: 20%;
+	margin-top: 30px;
+	border:2px solid white;
+	/* width and height can be anything, as long as they're equal */
+}
+#triangle{
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	margin-top: 1.5%;
+	border-left: 6px solid black;
+	float: left;
+	margin-left:35%;margin-top: 10%;border-left: 6px solid white;
+}
+
+.classTabTriangle{
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	margin-top: 36px;
+	border-left: 6px solid black;
+	float: left;
+	border-left: 6px solid #22B573;
+	margin-right: 2%;
+}

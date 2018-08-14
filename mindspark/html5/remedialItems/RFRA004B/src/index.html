@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />	
+	<title>RFRA004B</title>	
+	<link href="../css/style.css" rel="stylesheet" type="text/css"></link>
+	<script src="../../../libs/jquery-1.7.1.min.js"></script>
+	<script src="../../../libs/ui.js"></script>
+	<script src="../../../libs/jquery_ui_touch.js"></script>
+	
+	<script src="../../../libs/common.js"></script>
+	<script src="../../../libs/parameterPassing.js"></script>
+	<script src="../../../libs/loadxmldoc.js"></script>
+    <script src="../libs/script.js"></script>	
+	<script>
+	var getParameters = getURLParameters();
+	var languageXml = 'xml.xml';
+	$(function()
+	{
+		gameObj= new gameInteractive();
+		loadXML(languageXml,function(){gameObj.init();});  		
+		
+	});
+	</script>	
+	
+</head> 
+ <body onresize="containerResize();" onload="containerResize();">
+ 
+<div id="container">
+	<div class="loader" align="center"><div class="loading-text">Loading...</div><div class="preloader"></div><div class="preloader1"></div></div>
+	
+</div>
+</body>
+</html>	

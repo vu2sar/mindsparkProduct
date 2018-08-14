@@ -1,0 +1,540 @@
+html,body
+{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	/*min-width:1024px;*/
+	overflow:hidden;
+}
+@media (max-width: 1024px){
+	#container
+	{
+		min-height: 88%;
+		height: auto;
+		position: absolute;
+		top:70px;
+		overflow-x:hidden;
+		overflow-y:auto;
+	}
+	#progressData
+	{
+		display: inline-block;
+	    position: relative;
+	    top: -110px;
+	    left: 142px;
+	    font-size: 1.2em;
+	    color: #aaa9a9;
+	}
+	#doughNutInner
+	{
+		position: relative;
+	    top: 38px;
+	    left: 35px;
+	    width: 70px;
+	    text-align: center;
+	    color: #2f99cb;
+	}
+	#chartArea
+	{
+		position: relative;
+	    top: -40px;
+	    left: -40px;
+	}
+	#doughNutAccuPer
+	{
+		font-size: 1.8em;
+		margin-bottom: -5px;
+	}
+	.partHeaderIcon
+	{
+		display: block;
+	    width: 5%;
+	    height: 35px;
+	    border: 1px solid #c3c3c3;
+	    border-radius: 5px;
+	    margin-top: 12px;
+	    position: absolute;
+	}
+}
+@media (min-width: 1025px){
+	#container
+	{
+		min-height: 83%;
+		height: auto;
+		position: absolute;
+		top:90px;
+		overflow-x:hidden;
+		overflow-y:auto;
+	}
+	#progressData
+	{
+		display: inline-block;
+	    position: relative;
+	    top: -150px;
+	    left: 200px;
+	    font-size: 1.2em;
+	    color: #aaa9a9;
+	}
+	#doughNutInner
+	{
+		position: relative;
+	    top: 35px;
+	    left: 20%;
+	    width: 70px;
+	    text-align: center;
+	    color: #2f99cb;
+	}
+	#chartArea
+	{
+		position: relative;
+	    top: -55px;
+	    left: -58px;
+	}
+	#doughNutAccuPer
+	{
+		font-size: 2em;
+	}
+	.partHeaderIcon
+	{
+		display: block;
+	    width: 5%;
+	    height: 45px;
+	    border: 1px solid #c3c3c3;
+	    border-radius: 5px;
+	    margin-top: 7px;
+	    position: absolute;
+	}
+}
+#leftPart
+{
+	position: absolute;
+	width: 35%;
+	left: 0px;
+	background-color: #f7f7f7;
+}
+#rightPart
+{
+	position: absolute;
+	width: 65%;
+	left: 35%;
+	background-color: white;
+}
+#home {
+    position: absolute;
+    background: url('../../assets/Home_red.png') no-repeat 0 0;
+    width: 35px;
+    margin-left: 10px;
+    height: 40px;
+    cursor: pointer;
+    background-size: 100%;
+}
+#homeText{
+	font-family: 'Conv_HelveticaLTStd-BoldCond';
+	font-size:1.5em;
+	color:#606062;
+}
+#homeTextInner
+{
+	margin-left: 54px;
+    position: relative;
+    top: 5px;
+}
+.pointerClass
+{
+	cursor:pointer;
+}
+#info_bar{
+	position: relative;
+	height:60px;
+	width:100%;
+	left: 10px;
+}
+.Name
+{
+	margin-top: 25px;
+}
+.class
+{
+	margin-top: 27px;
+}
+#topicName
+{
+	margin-left: 5%;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#doughNutDiv
+{
+	width: 85%;
+    margin-left: 15%;
+    border-top: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#topicProgressText
+{
+	text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #000000;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+#doughNutChart
+{
+	width: 100%;
+	height: 150px;
+}
+#canvasHolder
+{
+	width: 75%;
+	display: inline-block;
+	height: 100%;
+}
+#chartInfo
+{
+	width: 30%;
+	display: inline-block;
+	height: 100%;
+}
+#topicInfo
+{
+	width: 85%;
+    margin-left: 15%;
+    border-bottom: 1px solid #cdcdcd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #aaa9a9;
+    font-size: 1.2em;
+}
+#topicInfoTitle
+{
+	color: black;
+	font-size: 1.1em;
+	font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+#topicInfoText
+{
+	padding-left: 2%;
+	padding-right: 5%;
+}
+#questionTrail
+{
+	width: 85%;
+    margin-left: 15%;
+    border-bottom: 1px solid #cdcdcd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #aaa9a9;
+    font-size: 1.2em;
+}
+#trailTitle
+{
+	color: black;
+	font-size: 1.1em;
+    text-transform: uppercase;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#trailLink a
+{
+	color: #aaa9a9;
+}
+.partHeader
+{
+	width: 95%;
+    height: 60px;
+    padding-left: 5%;
+    padding-right: 1%;
+    display: table;
+}
+.upperPartHeaderIcon
+{
+	background: url("../../assets/learn_icon_topicpage.png") no-repeat;
+    background-size: 100% 100%;
+}
+.lowerPartHeaderIcon
+{
+	background: url("../../assets/Practice_topicpage.png") no-repeat;
+	background-size: 100% 95%;
+}
+.partHeaderText
+{
+	display: table-cell;
+    width: 67%;
+    height: 60px;
+    font-size: 2em;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden;
+    vertical-align: middle;
+    position: absolute;
+    left: 90px;
+    color: #7f7f7f;
+}
+.partActionBtn
+{
+	position: absolute;
+    width: 140px;
+    height: 35px;
+    background: #2f99cb;
+    border-radius: 31px;
+    right: 15px;
+    top: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    line-height: 2;
+    /*font-weight: bold;*/
+    cursor: pointer;
+    z-index: 10;
+}
+.partContent
+{
+	width: 95%;
+    padding-left: 5%;
+    padding-top: 2%;
+    height: auto;
+    padding-bottom: 2%;
+}
+.topicCluster
+{
+	width: 80%;
+    margin-left: 8%;
+    height: 115px;
+    background-color: white;
+    border-bottom: 1px solid #aaa9a9;
+}
+.progressIndicatorDiv
+{
+	width: 5%;
+    height: 115px;
+    display: inline-block;
+    position: absolute;
+}
+.lineFirstCluster
+{
+    height: 75% !important;
+    top: 25px !important;
+}
+.progressIndicatorDiv div.circle
+{
+	width: 12px;
+    height: 12px;
+    border-radius: 20px;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    background-color: white;
+    z-index: 1;
+}
+.progressIndicatorDiv div.line
+{
+	width: 0px;
+    height: 97%;
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    z-index: 0;
+}
+.progressIndicatorDiv div.lineLastCluster
+{
+	height: 10%;
+}
+.clusterDetailDiv
+{
+	width: 93%;
+    height: 90px;
+    margin-left: 7%;
+    padding-top: 10px;
+}
+.practiceClusterDetailDiv
+{
+	width: 50%;
+    height: 105px;
+    margin-left: 7%;
+    padding-top: 10px;
+    position: absolute;
+}
+.clusterName
+{
+	font-size: 1.6em;
+    width: 95%;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.practiceClusterName
+{
+	font-size: 1.6em;
+    width: 100%;
+    max-height: 47px;
+    overflow: hidden;
+    margin-bottom: 3px;
+}
+.practiceClusterInstr
+{
+	width: 100%;
+	max-height: 30px;
+	overflow: hidden;
+}
+.practiceClusterStatus
+{
+	width: 100%;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+.practiceActionBtnDiv
+{
+	width: 25%;
+    height: 100%;
+    display: inline-block;
+    margin-left: 75%;
+}
+.practiceActionBtn
+{
+	width: 140px;
+    height: 35px;
+    border: 1px solid #03A9F4;
+    border-radius: 20px;
+    position: relative;
+    top: 39px;
+    left: 20px;
+    cursor: pointer;
+    color: blue;
+    font-size: 1.7em;
+    text-align: center;
+    padding-left: 0px;
+    line-height: 1.7;
+}
+.locked
+{
+	background: url("../../assets/lock_icon.png") no-repeat;
+    background-size: 22% 81%;
+    background-position: 50px 3px;
+    cursor: no-drop;
+}
+.clusterDivs
+{
+	display: inline-block;
+    height: 20px;
+    min-width: 10%;
+    position: absolute;
+    margin-right: 25px;
+}
+.sdlDiv
+{
+	width: 95%;
+    height: 30px;
+}
+.clusterSDLs
+{
+	display: inline-block;
+    height: 20px;
+    min-width: 10%;
+    margin-right: 25px;
+}
+.sdl
+{
+	width: 12px;
+    height: 13px;
+    margin-left: 1px;
+    display: inline-block;
+}
+.sdlNotAttempted
+{
+	background-color: #aaa9a9;
+}
+.sdlPassed
+{
+	background-color: #2f99cb;
+}
+.sdlFailed
+{
+	background-color: #e75903;
+}
+.clusterStatus
+{
+	display: inline-block;
+    font-size: 1.1em;
+    position: absolute;
+    margin-top: -2px;
+}
+.lastCluster
+{
+	border:0px;
+}
+#lowerPart
+{
+	border-top: 1px solid #aaa9a9;
+    margin-top: -18px;
+}
+.blueText
+{
+	color: #2f99cb;
+}
+.greyText
+{
+	color: #aaa9a9;
+}
+.greenCircle
+{
+	border: 4px solid #9ec956;
+}
+.redCircle
+{
+	border: 4px solid #e75903;
+}
+.yellowCircle
+{
+	border: 4px solid #fbd212;
+}
+.greyCircle
+{
+	border: 4px solid #c3c3c3;
+}
+.greenLine
+{
+	border: 2px solid #9ec956;
+}
+.redLine
+{
+	border: 2px solid #e75903;
+}
+.yellowLine
+{
+	border: 2px solid #fbd212;
+}
+.greyLine
+{
+	border: 2px solid #c3c3c3;
+}
+#copyright
+{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+.disabled
+{
+	opacity: 0.5;
+}
+.tpNum
+{
+	width: 38px;
+	display: inline-block;
+	margin-right: 5px;
+}
+.tpTxt
+{
+	display: inline-block;
+}

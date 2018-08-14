@@ -1,0 +1,79 @@
+
+CREATE TABLE IF NOT EXISTS `api_access` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `key` varchar(40) NOT NULL DEFAULT '',
+  `controller` varchar(50) NOT NULL DEFAULT '',
+  `date_created` datetime DEFAULT NULL,
+  `date_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table api.access: ~1 rows (approximately)
+/*!40000 ALTER TABLE `api_access` DISABLE KEYS */;
+INSERT INTO `api_access` (`id`, `key`, `controller`, `date_created`, `date_modified`) VALUES
+	(1, '6d9f729b765aae27f45e5ef9150fa073f8a61b94', 'key', '2014-03-03 04:04:07', '2014-03-03 19:00:57');
+/*!40000 ALTER TABLE `api_access` ENABLE KEYS */;
+
+
+
+CREATE TABLE IF NOT EXISTS `api_keys` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `key` varchar(40) NOT NULL,
+  `level` int(2) NOT NULL,
+  `ignore_limits` tinyint(1) NOT NULL DEFAULT '0',
+  `is_private_key` tinyint(1) NOT NULL DEFAULT '0',
+  `ip_addresses` text,
+  `date_created` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table api.api_keys: ~45 rows (approximately)
+/*!40000 ALTER TABLE `api_keys` DISABLE KEYS */;
+INSERT INTO `api_keys` (`id`, `key`, `level`, `ignore_limits`, `is_private_key`, `ip_addresses`, `date_created`) VALUES
+	(1, '6d9f729b765aae27f45e5ef9150fa073f8a61b94', 3, 0, 0, NULL, 1423123855);
+/*!40000 ALTER TABLE `api_keys` ENABLE KEYS */;
+
+
+CREATE TABLE IF NOT EXISTS `api_limits` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uri` varchar(255) NOT NULL,
+  `count` int(10) NOT NULL,
+  `hour_started` int(11) NOT NULL,
+  `api_key` varchar(40) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Dumping data for table api.limits: ~32 rows (approximately)
+/*!40000 ALTER TABLE `limits` DISABLE KEYS */;
+/*!40000 ALTER TABLE `limits` ENABLE KEYS */;
+
+
+
+CREATE TABLE IF NOT EXISTS `api_logs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uri` varchar(255) NOT NULL,
+  `method` varchar(6) NOT NULL,
+  `params` text,
+  `api_key` varchar(40) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `time` int(11) NOT NULL,
+  `rtime` float DEFAULT NULL,
+  `authorized` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Dumping data for table api.logs: ~36 rows (approximately)
+/*!40000 ALTER TABLE `logs` DISABLE KEYS */;
+/*!40000 ALTER TABLE `logs` ENABLE KEYS */;
+
+
+CREATE TABLE IF NOT EXISTS `api_accesstoken` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userID` varchar(30) NOT NULL,
+  `accesstoken` varchar(255) NOT NULL,
+  `dtCreated` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Dumping data for table api.accesstoken: ~0 rows (approximately)
+

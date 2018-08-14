@@ -1,0 +1,591 @@
+#home {
+	border-bottom: 1px solid #FAAC1B;
+}
+
+#container {
+	border-top: 1px solid #FAAC1B;
+	border-bottom: 1px solid #FAAC1B;
+	border-left: 1px solid #FAAC1B;
+}
+
+#headerBar{
+	width:92%;
+	border-bottom:1px solid #626161;
+	height: 50px;
+	margin-left: 40px;
+}
+#headerBar2 {
+  width: 92%;
+  border-bottom: 1px solid #626161;
+  height: 50px;
+  margin-left: 40px;
+}
+#classReportMenu {
+  color: #FAAC1B;
+  font-size: 1.4em;
+  height: 40px;
+  width: 33%;
+  border-right: 1px solid #FAAC1B;
+  padding-top: 10px;
+  float: left;
+  font-weight: bold;
+}
+.editDetails {
+  background: url('../assets/common/editdetails.png') no-repeat -2px 0px;
+  width: 25px;
+  height: 27px;
+  margin-left: 10%;
+  padding-right: 10px;
+  float: left;
+}
+#individualBoard {
+  color: #f16321;
+  font-size: 1.4em;
+  height: 40px;
+  width: 33%;
+  border-right: 1px solid #FAAC1B;
+  padding-top: 10px;
+  float: left;
+  font-weight: bold;
+}
+.noticeBoard {
+  background: url('../assets/common/noticeboard.png') no-repeat -2px -2px;
+  width: 25px;
+  height: 25px;
+  margin-left: 10%;
+  padding-right: 10px;
+  float: left;
+}
+.classReport {
+  background: url('../assets/common/class-report-icon.png') no-repeat -2px -2px;
+  width: 30px;
+  height: 30px;
+  margin-left: 10%;
+  padding-right: 10px;
+  float: left;
+}
+
+#studentWiseUsageReportMenu {
+  color: #FAAC1B;
+  font-size: 1.4em;
+  height: 40px;
+  width: 33%;
+  padding-top: 10px;
+  float: left;
+  font-weight: bold;
+  border-right: 1px solid #FAAC1B;
+}
+
+#pageText{
+	font-size:1.4em;
+	height:30px;
+	margin-top:20px;
+	color:#626161;
+	margin-left:10px;
+	float:left;
+	font-weight:bold;
+}
+
+.arrow-black {
+	width: 0; 
+	height: 0;
+	margin-top:25px;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 6px solid #626161;
+	float:left;
+}
+.arrow-black1 {
+	width: 0; 
+	height: 0;
+	margin-top:25px;
+	margin-left:14%;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 6px solid #626161;
+	float:left;
+}
+
+#classText{
+	font-size:1.35em;
+	height:30px;
+	margin-top:20px;
+	color:#7E7E7E;
+	margin-left:10px;
+	float:left;
+	font-weight:bold;
+}
+
+
+#topicDetails{
+	font-size:1.2em;
+	width:92%;
+	border-bottom:1px solid #626161;
+	padding-top:3px;
+	padding-bottom:3px;
+	color:#626161;
+	margin-left:40px;
+}
+
+#trailContainer{
+	min-height:530px;
+	/*overflow-y:auto;*/
+	width:100%;
+}
+
+#btnGenerate{
+	width:100px;
+	color:#626161;
+}
+
+
+#pagingTable{
+	position:relative;
+	font-size:1.4em;
+	width:95%;
+	border-bottom:1px solid #626161;
+	padding-top:3px;
+	padding-bottom:3px;
+	font-weight:bold;
+	color:#626161;
+	margin-left:40px;
+}
+
+
+#pagingDiv{
+	margin-top:-10px;
+}
+
+.textRed{
+	color:#E75903;
+	font-weight:bold;
+	font-size: 0.8em;
+	float:left;
+	margin-top:10px;
+}
+
+.textRed1{
+	color:#E75903;
+	font-weight:bold;
+	font-size: 1em;
+	float:left;
+	margin-left:40px;
+	margin-top:10px;
+}
+
+.pointer{
+	cursor:pointer;
+}
+
+.textBlue{
+	color:#2F99CB;
+	font-weight:bold;
+	font-size: 0.8em;
+	float:right;
+}
+
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 0px;
+	border-color: #FFFFFF;
+	border-collapse: collapse;
+	width:100%;
+}
+.header {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	background-color: #E6E6E6;
+	font-weight:bold;
+}
+table.gridtable td {
+	border-width: 2px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	background-color: #E6E6E6;
+}
+
+.gridtable{
+	background-color:#E6E6E6;
+	/*margin-left:40px;*/
+}
+
+.classTabTriangle {
+width: 0;
+height: 0;
+border-top: 8px solid transparent;
+border-bottom: 8px solid transparent;
+margin-top: -0.5%;
+border-left: 6px solid black;
+float: left;
+border-left: 8px solid #626161;
+margin-right: 2%;
+}
+
+.classTab {
+position: absolute;
+height: 30px;
+width: 46px;
+border: 2px solid #626161;
+background-color: #626161;
+float: left;
+overflow: hidden;
+margin-top: -10px;
+margin-left: -50px;
+}
+
+#squarePurple{
+	width:20px;
+	height:20px;
+	background-color:purple;
+	float:left;
+	margin-right:10px;
+}
+
+.purple{
+	color:purple;
+	font-weight:bold;
+}
+
+
+.textPurpleBelow{
+	float:right;
+	font-size:1.2em;
+	color:purple;
+	margin-top:10px;
+}
+
+.highest {color:#000000; background-color:#00FF00 !important; font-weight:bold;}
+.lowest {color:#FFFFFF; background-color:#FF0000 !important; font-weight:bold;}
+
+#noRecords{
+	font-size: 2em;
+	color: #626161;
+	float: left;
+	margin-top: 10%;
+	margin-left: 40%;
+}
+
+#download{
+	font-size:0.8em;
+	float: right;
+	margin-right:30px;
+	margin-top:5px;
+}
+
+#downloadImage{
+	float: right;
+	margin-right:5px;
+	background: url('../assets/common/view.png') no-repeat 1px 1px;
+	width: 28px;
+	height: 28px;
+}
+
+.calenderImage{
+	background: url('../assets/common/dob.png') no-repeat -2px -2px;
+	width: 20px;
+	height: 20px;
+	margin-top:2px;
+	margin-left:4px;
+	float: left;
+}
+
+.floatLeft{
+	float:left;
+}
+
+#generateTable{
+	font-size:1.2em;
+	width:92%;
+	border-bottom:1px solid #626161;
+	padding-top:3px;
+	padding-bottom:3px;
+	color:#626161;
+	margin-left:40px;
+	float:left;
+}
+
+.topicProgress {
+	float:left;
+}
+
+div.progress-container {
+  border: 1px solid #ccc;
+  width: 102px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  float: left;
+  background: white;
+}
+
+div.green {
+  background-color: #32CD32;
+  height: 20px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  float: left;
+}
+div.red {
+  background-color: #FF0000;
+  height: 20px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  float: left;
+}
+
+@media (max-width: 1024px){
+	.topicProgress {
+		width: 105px;
+	}
+}
+.ui-datepicker
+{
+z-index: 1000!important;
+}
+.tabContainertop
+{
+	width:98%;
+	/*border:2px solid #ccc;*/
+	height:auto;
+	/*margin-left:15px;*/
+}
+.profileContainer
+{
+ width:100%;
+ height:220px;	
+ padding-bottom: 10px;
+}
+.profilepictab
+{
+width:25%;
+float:left;
+height:175px;
+}
+.profilepictab2
+{
+width:31%;
+text-align: center;
+float:left;
+height:175px;
+}
+.profilepictab2 div
+{
+display:table-cell;
+vertical-align: middle;
+margin:0px auto;
+text-align: center;
+height:245px;
+line-height: 25px;
+font-size: 13px;
+}
+.tabContainerTopBar
+{
+line-height: 25px;
+text-align: center;
+}
+
+.tabContainerTopBar span
+{
+text-align: center;
+display: inline-block;
+vertical-align: middle;
+color:#d71410;
+}
+.plowerContainer
+{
+min-height:330px;
+border-top:2px solid #ccc;
+}
+.leftplower
+{
+float:left;
+height:auto;
+ min-height:330px;
+ width:50%;	
+ border-right:2px solid #ccc;
+}
+.rightplower
+{
+	display: inline;
+float:left;
+ min-height:330px;
+ width:31%;	
+}
+.leftplower label
+{
+	font-size: 14px;
+}
+.profilepictab div
+{
+	text-align: center;
+	vertical-align: middle;	
+	width:150px;
+}
+.profiletab3
+{
+height:200px;
+width:21%;
+float:left;
+}
+.profiletab4
+{
+height:200px;
+width:19%;
+float:left;
+}
+.profiletab3 div {
+    font-size: 13px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.profiletab4 div {
+    font-size: 13px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.great {
+	color: #b2d460;
+}
+
+.good {
+color: #3aa6de;
+}
+
+.average {
+color: #fbd211;
+}
+
+.low {
+color: #f16321;
+}
+
+.zero {
+color: #4c4c4e;
+}
+
+.notEnoughUsage {
+color: #999;
+}	
+/*Begining of css for tabbing interface */
+.container{
+			width: 92%;
+			margin: 0 auto;
+}
+		ul.tabs{
+			/*margin: 10px 0px 0px 0px;
+			padding: 0px;
+			list-style: none;*/
+			 border-bottom: 1px solid #cecece;
+
+			 display: block;
+    		 list-style-type: none;
+    		 margin: 10px 0px 0px 0px;
+    		 padding: 0;
+    		 position: relative;
+    		 z-index: 1;
+		}
+
+		ul.tabs li{
+			background: none;
+			color: #222;
+			display: inline-block;
+			padding: 12px 25px 11px;
+			cursor: pointer;
+			border:1px solid #cecece;
+			border-bottom:1px solid #fff;
+			cursor: pointer;
+		}
+
+		ul.tabs li.current{
+			background: #e6e6e6 none repeat scroll 0 0;
+    		
+   			border-top: 1px solid #d71410;
+   			border-left:1px solid #cecece;
+    		border-right:1px solid #cecece;
+    		border-bottom:1px solid #fff;
+    		color: #d71410;
+   			margin-top: 0;
+    		padding: 12px 25px 11px;
+    		top: 1px;
+    		cursor:inherit;
+    		
+		}
+
+		.tab-content{
+			display: none;
+			background: #fff;
+			padding-top: 15px;
+		}
+
+		.tab-content.current{
+			display: inherit;
+		}
+
+.ionTabs__body {
+    background: #fff none repeat scroll 0 0;
+    margin-bottom:20px;
+  
+}
+.grid_header_top{
+	background-color:#ccc;
+	padding:10px;
+}
+#img_ajax img{
+
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 15px;
+}
+
+.image_ajax_load
+{
+	height:200px;
+	width:97%;
+}
+#img_ajax2 img{
+
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 15px;
+}
+.labeltool
+{
+	background-color: #000;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    left: 31px;
+    position: absolute;
+    top: 0px;
+    width: auto;
+    color:#fff;
+   
+    z-index: 100;
+     white-space: pre;
+}
+
+
+ #yaxisLabel {
+    bottom: 3px;
+    left: 0;
+    right: 0;
+    top:145px !important;
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+}
+
+
+@media (max-width: 1024px){
+	.leftplower {
+		width: 64%;
+	}
+}
+
+/*end  of css for tabbing interface */

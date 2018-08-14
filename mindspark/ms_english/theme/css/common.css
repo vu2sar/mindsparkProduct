@@ -1,0 +1,213 @@
+/* 
+    Document   : common
+    Created on : Jan 4, 2014, 9:25:48 AM
+    Author     : ravija.php
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.form-control{
+    color: #222222 !important;
+}
+root{
+    display: block;
+}
+.errorMsg, .errorMsg p{
+    color:#D52F2B !important;
+    font-size: 12px !important;
+    font-weight:bold;
+    /*padding-bottom:7px;*/
+    margin: 0px;
+    text-align:left !important;
+}
+.successMsg{
+    color:#347235;
+    font:12px;
+    font-weight:bold;
+}
+
+.med-text{
+    font-size: 11px;
+}
+.small-text{
+    font-size: 10px;
+}
+.x-small-text{
+    font-size: 9px;
+}
+
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.u{
+    text-decoration: underline;
+}
+.panel-heading{
+    font-size: 12px;
+}
+.btn_group{
+    /*text-align: center;*/
+}
+.btn_group button{
+    margin-right:10px;
+    margin-bottom:10px;
+}
+
+
+.studentCnt .terques {
+    background: none repeat scroll 0 0 #53C2DE !important;
+}
+.studentCnt .terques h2{
+    color: #000;
+}
+.student{
+    background: none repeat scroll 0 0 #53C2DE;
+    color: #000;
+}
+.panel-student{
+    border-color:#53C2DE;
+}
+.student-bg{
+    background: none repeat scroll 0 0 #1F3D45;
+}
+.student-btn{
+    background: none repeat scroll 0 0 #53C2DE;
+    box-shadow: 0 4px #268196;
+}
+/*.student-btn.active {
+    border : 4px solid #268196 !important;
+}*/
+.student-btn.active {
+    background:#2290AC !important;
+    color:#FFF !important;
+    box-shadow: 0 4px #005267 !important;
+}
+.studentcnt h1{
+    color: #53C2DE;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 10px 0px;
+}
+
+.schools{
+    background: none repeat scroll 0 0 #F74C6E;
+    color: #000;
+}
+.panel-schools{
+    border-color:#F74C6E;
+}
+.schools_bg{
+    background: none repeat scroll 0 0 #4B1C24;
+}
+.schools-btn{
+    background: none repeat scroll 0 0 #F74C6E;
+    box-shadow: 0 4px #C1475E;
+}
+/*.schools-btn.active {
+    border : 4px solid #C1475E !important;
+}*/
+.schools-btn.active {
+    background:#bf2e49 !important;
+    box-shadow: 0 4px #a5132f !important;
+    color:#FFF !important;
+}
+
+.teacher{
+    background: none repeat scroll 0 0 #15D3C3;
+    color: #000;
+}
+.panel-teacher{
+    border-color:#15D3C3;
+}
+.teacher-btn{
+    background: none repeat scroll 0 0 #15D3C3;
+    box-shadow: 0 4px #0C514B;
+}
+/*.teacher-btn.active {
+    border : 4px solid #0C514B !important;
+}*/
+.teacher-btn.active {
+    background:#00887C  !important;
+    box-shadow: 0 4px #004C43 !important;
+    color:#FFF !important;
+}
+.personal{
+    background: none repeat scroll 0 0 #47D26F;
+    color: #000;
+}
+.panel-personal{
+    border-color:#47D26F;
+}
+.personal-bg{
+    background: none repeat scroll 0 0 #1B4227;
+}
+.personal-btn{
+    background: none repeat scroll 0 0 #47D26F;
+    box-shadow: 0 4px #0DA737;
+}
+
+.scrollable{
+    padding:20px;
+    height:135px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+ul.notices > li{
+    line-height: 25px;
+    font-size: 12px;
+    padding:5px;
+}
+ul.notices > li > span{
+    font-size: 24px;
+    margin-right:15px;
+}
+
+footer a{
+    color: #D1D2D7;
+            /*F1F2F7*/
+}
+footer a:hover{
+    color: #FAFCFE;
+}
+
+
+/*  Denish START    */
+
+.panel-body-zapp {
+    padding: 2px 15px 0;
+}
+.panel-body-zapp2 {
+    padding:0px 15px 0;
+}
+.fl{float:left !important;}
+.fr{float:right !important;}
+.time_bound{ float:left; margin-left:10px; width:auto;}
+.time_bound input{ width:40%;}
+.font_normal{font-weight:normal !important;}
+.select_img{ margin:24px 0 0 10px;}
+.line34{line-height:34px;}
+
+.pad-top-4 { padding-top: 4px;}
+
+/*  Denish END  */
+
+.btn-big { margin: 5px; width: 300px; height: 50px; }
+
+/*mahapal 7-2-2014*/
+.book_name{color:#494949;font:12px;font-weight:bold;font-size:12px;display:block;}
+.book_name2{color:#494949;font:13px;font-weight:normal !important;font-size:12px;}
+
+
+input[type=checkbox] { margin-right: 5px;  }
+.radioLabel {   margin-right: 15px; }
+
+.zapp-heading { height: 35px;}
+.field-astric { color: red; line-height: 18px;}
+.zapp-panel-pad { padding: 0 15px 0 0;}
+
+.delete-warning { font-weight: bold; color: #FF0000 !important; }
+
+.panel { margin-bottom: 8px; }

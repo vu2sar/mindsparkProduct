@@ -1,0 +1,275 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* display Background */
+#tableBggrad {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	/* fallback */
+	background-color: #B20000;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B20000), to(#FF6900));	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-linear-gradient(top, #B20000, #FF6900);/* Safari 5.1, Chrome 10+ */
+	background: -moz-linear-gradient(top, #B20000, #FF6900); /* Firefox 3.6+ */
+	background: -ms-linear-gradient(top, #B20000, #FF6900); /* IE 10 */
+	background: -o-linear-gradient(top, #B20000, #FF6900); /* Opera 11.10+ */
+}
+
+#clock {
+	background-image:url(../../assets/clockV3.png);
+	width:140px;
+	height:140px;
+}
+#clockHand {
+	background-image:url(../../assets/clockHandV3.png);
+	width:140px;
+	height:140px;
+}
+
+#dispDiscription {
+	font-family: arial;
+    font-size: 40px;
+    color: #FFFBFB;
+    text-align: center;
+	min-height:40px;
+}
+#dispHint {
+	font-family: arial;
+    font-size: 30px;
+    color: #FFFBFB;
+    text-align: center;
+	min-height:40px;
+}
+/* display question */
+#outerQuesDiv
+{
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	background-color: #A00000;
+/*	height: 270px; */
+	min-height: 270px;
+  	width: 774px; 
+	height: 100%;
+	padding: 12px;
+}
+
+#innerQuesDiv
+{
+	background-color: #FFFFFF;
+    border: 12px solid #B3B3B3;
+/*  height: 246px; */
+	min-height: 246px;
+	height: 90%;
+    width: 750px;
+	-moz-border-radius: 35px;
+	border-radius: 35px;
+	font-family: arial;
+    font-size: 40px;
+}
+
+#innerQuesDiv input[type='text'] {
+	background-color: #F2F9FF;
+	border: 2px solid #57A5F7;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	font-family: arial;
+	outline: none;
+    text-align: center;
+    vertical-align: middle;
+} 
+
+#outerScoreDiv {
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	border: 3px solid #FFFFFF;
+	background-color: #240700;
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#240700), to(#8A3426));
+	
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #240700, #8A3426);
+	
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, #490102, #802601);
+	
+	/* IE 10 */
+	background: -ms-linear-gradient(top, #240700, #8A3426);
+	
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, #240700, #8A3426);
+	height: 274px;
+	width: 774px;
+	padding: 12px;
+}
+
+
+#divUserResponse {
+	background-color: #992C01;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#992C01), to(#871401));
+	
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(left, #992C01, #871401);
+	
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(left, #992C01, #871401);
+	
+	/* IE 10 */
+	background: -ms-linear-gradient(left, #992C01, #871401);
+	
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(left, #992C01, #871401);
+	font-size: 18px;
+	font-family: arial;
+	color: #FFFFFF;
+	height: 250px;
+	width: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#divUserResponse input[type='text'] {
+	background-color: #F2F9FF;
+	border: 1px solid #57A5F7;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	font-size: 18px;
+	font-family: arial;
+    height: 25px;
+    text-align: center;
+    vertical-align: middle;
+    width: 35px;
+} 
+
+#btnContinue {
+	background:url(../../assets/timedTest/continue.PNG) no-repeat;
+	cursor:pointer;
+	width: 298px;
+	height: 78px;
+	border: none;
+}
+
+#dispScore {
+	color: #CFB0AB;
+	font-family: arial;
+	font-size: 40px;
+}
+#dispScoreTemp {
+	color: #CFB0AB;
+	font-family: arial;
+	font-size: 20px;
+}
+
+#userScore {
+	color: #FEFFFF;
+	font-family: arial;
+	font-size: 40px;
+}
+
+#progressTableBggrad {
+	 /* fallback */
+  background-color: #593C00;
+   
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#593C00), to(#400000));
+  
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(left, #593C00, #400000);
+  
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, #593C00, #400000);
+  
+  /* IE 10 */
+  background: -ms-linear-gradient(left, #593C00, #400000);
+  
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, #593C00, #400000);
+  width: 100%;
+  height: 175px;
+}
+
+#progressOuterDiv
+{
+	background-color: #240700;
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#240700), to(#8A3426));
+	
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #240700, #8A3426);
+	
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, #240700, #8A3426);
+	
+	/* IE 10 */
+	background: -ms-linear-gradient(top, #240700, #8A3426);
+	
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, #240700, #8A3426);
+	text-align: left;
+	float:left;
+	height: 84px;
+	width: 480px;
+	position: relative;
+}
+#progressBarDiv {
+	width:0px; 
+	height:60px;
+	float:left;
+	margin-bottom: 12px;
+    margin-top: 12px;
+    margin-left: 0px;
+	position:absolute; 
+	/* background-color:#32CD32;  */
+	background-image: url("../../assets/timedTest/progress.png");
+}
+
+.quesBord {
+	width:1px;
+	height:84px;
+	float:left;
+	position:absolute;
+	background-color:white;
+}
+
+#dispQuesNo {
+	height: 30px;
+    width: 480px;
+    float:left;
+    color: #FFFFFF;
+    font-family: arial;
+    font-size: 18px;
+    text-align: left;
+    position: relative;
+}
+
+.quesBordDisp {
+	width:16px;
+	height:84px;
+	float:left;
+	position:absolute;
+}
+
+#progressCorrectDiv {
+	height: 175px;
+    width: 130px;
+    color: #FFFFFF;
+    font-family: arial;
+    font-size: 40px;
+    background-image: url("../../assets/timedTest/timeTestCorrect.png");
+}
+#totalQuesDiv {
+	height: 80px;
+    width: 80px;
+    color: #000000;
+    font-family: arial;
+    font-size: 40px;
+    background-image: url("../../assets/timedTest/totalQues.png");
+}
+#sparkieMsg {
+	font-family: arial;
+	font-size:18px;
+	color:#FFFFFF;
+	float:none;
+}

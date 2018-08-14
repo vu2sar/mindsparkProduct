@@ -1,0 +1,721 @@
+body {
+	/*min-width:1024px;*/
+	overflow:hidden;
+	background-color: #fafafa !important;
+}
+#container
+{
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+#copyright
+{
+	position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+#sparkieContainer{
+	display:none;
+}
+tr td
+{
+	width: 50%;
+}
+#info_bar{
+	position: relative;
+	height:60px;
+	width:100%;
+	-webkit-box-shadow: 0px 3px 2px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    0px 3px 2px rgba(50, 50, 50, 0.2);
+	box-shadow:         0px 3px 2px rgba(50, 50, 50, 0.2);
+	overflow-x: hidden;
+	overflow-y: hidden;
+	background-color: white;
+}
+
+#topic{
+	width:25%;
+	height:98px;
+	float   :left;
+	margin-left:7%;
+	margin-top:15px;
+	 padding: 0px 2px 2px 3px;    
+   	border-width: 1px;
+   border-bottom-width:1px;
+   border-bottom-color:#e52e00;
+   border-bottom-style: solid;
+   border-left-width:8px;
+   border-left-color:#e52e00;
+   border-left-style: solid;
+}
+#homeText{
+	font-family: 'Conv_HelveticaLTStd-BoldCond';
+	font-size:1.8em;
+	color:#e52e00;
+}
+.pointerClass
+{
+	cursor:pointer;
+}
+
+#topicInfoContainer, #topicInfoContainerOther {
+	/*height:500px;*/
+	overflow-y:auto;
+}
+#topicInfoContainerOther{
+	margin-top: 35px;
+}
+#topicBasicInfo {
+	margin-left:7%;
+}
+
+#conceptClearText {
+	float:left;
+	width:250px;
+	height:45px;
+	border:1px solid #e52e00;
+	color:#e52e00;
+	font-size:1.8em;
+	padding-left:10px;
+	padding-top:15px;
+}
+#conceptClearData {
+	float:left;
+	width:445px;
+	height:55px;
+	border-top:1px solid #e52e00;
+	border-right:1px solid #e52e00;
+	border-bottom:1px solid #e52e00;
+	font-size:1.3em;
+	padding-left:5px;
+	padding-top:5px;
+}
+#conceptAttentionText {
+	float:left;
+	width:250px;
+	height:45px;
+	border-bottom:1px solid #e52e00;
+	border-left:1px solid #e52e00;
+	border-right:1px solid #e52e00;
+	color:#e52e00;
+	font-size:1.8em;
+	padding-left:10px;
+	padding-top:15px;
+}
+#conceptAttentionData {
+	float:left;
+	width:445px;
+	height:55px;
+	font-size:1.3em;
+	padding-left:5px;
+	padding-top:5px;
+	border-right:1px solid #e52e00;
+	border-bottom:1px solid #e52e00;
+}
+#quesTrailDiv {
+	padding-top:20px;
+	font-size:1.3em;
+	margin-top:10px;
+}
+#quesNoDiv {
+	margin-left:3%;
+	float:left;	
+}
+#quesNo {
+	width: 25px;
+	text-align: center;
+	left: 80px;
+	float: left;
+	height: 22px;
+	border: 1px solid #2f99cb;
+	-moz-border-radius: 13px;
+	-webkit-border-radius: 13px;
+	border-radius: 13px;
+	padding-top:3px;
+	color:#e52e00;
+}
+
+#quesTextDiv {
+	float:left;
+	margin-left:25px;
+	width:90%;
+	border-bottom:1px solid #2f99cb;
+	padding-bottom:5px;
+}
+
+#optionDiv {
+	padding-top:10px;
+}
+.floatLeft {
+	float:left;
+}
+
+.option {
+	width: 25px;
+	text-align: center;
+	left: 80px;
+	float: left;
+	height: 22px;
+	border: 1px solid #2f99cb;
+	-moz-border-radius: 13px;
+	-webkit-border-radius: 13px;
+	border-radius: 13px;
+	padding-top:3px;
+}
+.optionCorrect {
+	width: 25px;
+	text-align: center;
+	left: 80px;
+	float: left;
+	height: 22px;
+	background: #2f99cb;
+	border: 1px solid #2f99cb;
+	-moz-border-radius: 13px;
+	-webkit-border-radius: 13px;
+	border-radius: 13px;
+	padding-top:3px;
+	color:#FFF;
+}
+
+#optAText,#optBText,#optCText,#optDText {
+	margin-left:15px;
+}
+#optionAdiv,#optionBdiv,#optionCdiv,#optionDdiv {
+	min-width:200px;
+	padding-right:50px;
+	padding-bottom:30px;
+}
+
+#userResponseText,#userResponse,#correctAnsText,#correctAns {
+	float:left;
+}
+#correctAnsText {
+	margin-left:20px;
+}
+#userResponse,#correctAns {
+	margin-left:5px;
+}
+
+#activatedAtHome {
+	background:#666666;
+	color:#FFF;
+	font-size:1.4em;
+	width:420px;
+	height:24px;
+	margin-top:5px;
+}
+
+#activatedAtHomeIcon {
+	background: url('../../assets/mindsparkathome.png') no-repeat 0 0;
+	width: 28px;
+	height: 22px;
+	float:left;
+}
+#activatedAtHomeText {
+	float:left;
+	margin-left:5px;
+}
+
+/*topic progress*/
+
+.endSessionTbl {
+	font-family: 'Conv_HelveticaLTStd-Light';
+	text-align:center;
+	border-spacing:7px;
+ 	border-collapse:seperate;
+}
+.endSessionTbl td {
+	padding:3px;
+}
+
+.ulDeactive {
+    background-color: #CCCCCC;
+}
+.ulDeactive:after,
+.ulDeactive:after {
+    border-bottom: solid 6px #CCCCCC;
+}
+#tableContainer
+{
+	overflow: auto;
+	height: 500px;
+}
+#tableContainerMain, #tableContainerOther {
+	/*margin-left: 3.5%;*/
+    width: 100%;
+}
+#hideShowBar {
+	font-size:3em;
+	box-shadow: 0 3px 2px rgba(50, 50, 50, 0.2);
+	width:30px;
+	text-align:center;
+	margin-top:-10px;
+	background:#FFF;
+	cursor:pointer;
+	color:#e75903;
+	position:absolute;
+	margin-right:60%;
+	margin-left: 85%;
+	z-index: 1000;
+}
+
+@media (max-width: 1024px){
+		#hideShowBar {
+			margin-top:-25px;
+		}
+		.td1 {
+			width: 57px;
+			font-size:1em;
+		}
+		.td2 {
+			width: 47px;
+			font-size:1em;	
+		}
+		.td3 {
+			width: 63px;
+			font-size:1em;	
+		}
+		.td4 {
+			width: 59px;
+			font-size:0.8em;
+		}
+		#menuPadding{
+			width:495px;
+		}
+}
+
+
+/* css for practise page starts here.*/
+/*#tableContainerMain {
+	min-height: 500px;
+}*/
+/*#tableContainerMain  a{
+	color : black;
+}
+#tableContainerMain .Heading {
+	border-bottom: 1px solid red;
+	float: left;
+	font-size: 1.5em;
+	padding: 10px;
+	width: 95%;
+}
+
+#tableContainerMain .practise-elements {
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#tableContainerMain .elements {
+    font-size: 1.4em;
+    margin: 0 auto;
+    width: 720px;
+}
+
+#tableContainerMain .status-icon {
+    float: left;
+    padding-top: 10px;
+}
+
+#tableContainerMain .status-icon  img{
+	float: left;
+    width: 30px;
+}
+#tableContainerMain .element-bunddle {
+    border: 1px solid gray;
+    float: left;
+    padding: 10px;
+    width: 90%;
+}
+
+#tableContainerMain .index-count {
+    float: left;
+    margin-right: 10px;
+}
+
+#tableContainerMain .topic-name {
+    float: left;
+    width: 440px;
+}
+
+#tableContainerMain .dd-completion-status {
+    float: left;
+}
+#tableContainerMain .replay-span{
+	float: left;
+    margin-left: 20px;
+    width: 50px;
+}
+#tableContainerMain .replay-span img{
+	float: left;
+    width: 48px;
+}
+#tableContainerMain  .lined-practise-count{
+    background: red none repeat scroll 0 0;
+    border: 1px solid red;
+    border-radius: 10px;
+    color: white;
+    float: left;
+    margin-left: -10px;
+    position: absolute;
+    text-align: center;
+    width: 20px;
+}*/
+
+.studentDashboardTopicHeaderBg
+{
+    background-color: #fafafa;	
+}
+#topicHeaderTextOther
+{
+	width: 215px;
+}
+.disabled
+{
+	cursor: default;
+	opacity: 0.5;
+}
+#topicTable td.firstCol, #topicTableOther td.firstCol
+{
+	background-color: #545965;
+    border-radius: 5px 0px 0px 5px;
+    cursor: pointer;
+}
+#topicTable td.secondCol, #topicTableOther td.secondCol
+{
+	background-color: #d7d7d7;
+    border-radius: 0px 5px 5px 0px;
+}
+#topicTable td.firstCol div.topicIcon, #topicTableOther td.firstCol div.topicIcon
+{
+	width: 13%;
+	height: 50px;
+	display: inline-block;
+}
+#topicTable td.firstCol div.topicName, #topicTableOther td.firstCol div.topicName
+{
+	display: inline-block;
+    width: 43%;
+    height: 50px;
+    position: absolute;
+    color: white;
+}
+#topicTable td.firstCol div.topicName div.topicNameInnerDiv1, #topicTableOther td.firstCol div.topicName div.topicNameInnerDiv1
+{
+	display: table;
+	height: 100%;
+}
+@media (max-width: 1024px){
+	#topicTable td.firstCol div.topicName p.topicNameInnerP, #topicTableOther td.firstCol div.topicName p.topicNameInnerP
+	{	
+		/*display: table-cell;*/
+		/*vertical-align: middle;*/
+		height: 38px;
+		overflow: hidden;
+		font-size: 1.25em;
+		margin-top: 7px;
+	}
+	.twoLines
+	{
+		margin-top: -3px !important;
+	}
+	#sessionWiseReport
+	{
+		border: 1px solid #e52e00;
+	    color: #573bc7;
+	    width: 165px;
+	    height: 30px;
+	    -moz-border-radius: 20px;
+	    -webkit-border-radius: 20px;
+	    border-radius: 20px;
+	    float: right;
+	    font-size: 1.3em;
+	    font-weight: bold;
+	    margin-top: -105px;
+	    margin-right: 280px;
+	    padding-top: 6px;
+	    text-align: center;
+	    cursor: pointer;
+	    text-transform: inherit;
+	}
+	.Name
+	{
+		margin-top: 17px !important;
+	}
+	.squaredOne
+	{
+		width: 250px;
+	    height: 35px;
+	    -o-border-radius: 20px;
+	    -khtml-border-radius: 20px;
+	    -moz-border-radius: 20px;
+	    -webkit-border-radius: 20px;
+	    border-radius: 20px;
+	    float: right;
+	    font-size: 1.2em;
+	    margin-top: -100px;
+	    margin-right: 465px;
+	    padding-top: 5px;
+	    text-align: center;
+	}
+	#topicTable td.firstCol div.learnIcon, #topicTableOther td.firstCol div.learnIcon
+	{
+		background: url("../../assets/learn_icon_dashboard.png") no-repeat;
+		background-size: 65% 65%;
+		background-position: 10px 12px;
+	}
+	#topicTable td.firstCol div.trophyIcon, #topicTableOther td.firstCol div.trophyIcon
+	{
+		background: url("../../assets/trophy_icon_dashboard.png") no-repeat;
+		background-size: 90% 80%;
+		background-position: 5px 9px;
+	}
+	#topicHeaderUpperBorder, #topicHeaderUpperBorderOther
+	{
+		position: relative;
+	    width: 69.5%;
+	    height: 20px;
+	    left: 150px;
+	    top: 0px;
+	    border-top: 1px solid rgba(128,128,128,0.4);
+	    border-left: 1px solid rgba(128,128,128,0.4);
+	    z-index: 1;
+	}
+	#topicHeaderLowerBorder, #topicHeaderLowerBorder
+	{
+		position: relative;
+	    width: 70%;
+	    height: 20px;
+	    left: 170px;
+	    top: 0px;
+	    border-bottom: 1px solid rgba(128,128,128,0.4);
+	    border-right: 1px solid rgba(128,128,128,0.4);
+	    z-index: 1;
+	}
+	#topicHeaderText, #topicHeaderTextOther
+	{
+		position: relative;
+	    font-size: 1.7em;
+	    font-weight: bold;
+	    font-family: 'Conv_HelveticaLTStd-BoldCond';
+	    color: grey;
+	    text-transform: uppercase;
+	    width: 65px;
+	    top: 5px;
+	    left: 235px;
+	    text-align: center;
+	    z-index: 2;
+	}
+	#topicHeaderTextOther
+	{
+		width: 230px !important;
+	}
+	#topicTable, #topicTableOther 
+	{
+		width: 68%;
+	    position: relative;
+	    left: 170px;
+	    border-collapse: seperate;
+	    border-spacing: 0px 10px;
+	}
+}
+@media (min-width: 1025px){
+	#topicTable td.firstCol div.topicName p.topicNameInnerP, #topicTableOther td.firstCol div.topicName p.topicNameInnerP
+	{	
+		/*display: table-cell;
+		vertical-align: middle;*/
+		height: 38px;
+		overflow: hidden;
+		font-size: 1.25em;
+		margin-top: 7px;
+	}
+	.twoLines
+	{
+		margin-top: -3px !important;
+	}
+	#sessionWiseReport 
+	{
+		border: 1px solid #e52e00;
+	    color: #573bc7;
+	    width: 165px;
+	    height: 27px;
+	    -moz-border-radius: 20px;
+	    -webkit-border-radius: 20px;
+	    border-radius: 20px;
+	    float: right;
+	    margin-top: -103px;
+	    margin-right: 300px;
+	    padding-top: 3px;
+	    text-align: center;
+	    cursor: pointer;
+	    text-transform: inherit;
+	    font-size: 1.5em;
+	    font-weight: bold;
+	}
+	.squaredOne
+	{
+		width: 270px;
+	    height: 35px;
+	    -o-border-radius: 20px;
+	    -khtml-border-radius: 20px;
+	    -moz-border-radius: 20px;
+	    -webkit-border-radius: 20px;
+	    border-radius: 20px;
+	    float: right;
+	    font-size: 1.2em;
+	    margin-top: -100px;
+	    margin-right: 609px;
+	    padding-top: 5px;
+	    text-align: center;
+	}
+	#topicTable td.firstCol div.learnIcon, #topicTableOther td.firstCol div.learnIcon
+	{
+		background: url("../../assets/learn_icon_dashboard.png") no-repeat;
+		background-size: 65% 75%;
+		background-position: 10px 10px;
+	}
+	#topicTable td.firstCol div.trophyIcon, #topicTableOther td.firstCol div.trophyIcon
+	{
+		background: url("../../assets/trophy_icon_dashboard.png") no-repeat;
+		background-size: 90% 90%;
+		background-position: 5px 5px;
+	}
+	#topicHeaderUpperBorder, #topicHeaderUpperBorderOther
+	{
+		position: relative;
+	    width: 69.5%;
+	    height: 20px;
+	    left: 200px;
+	    top: 0px;
+	    border-top: 1px solid rgba(128,128,128,0.4);
+	    border-left: 1px solid rgba(128,128,128,0.4);
+	    z-index: 1;
+	}
+	#topicHeaderLowerBorder, #topicHeaderLowerBorder
+	{
+		position: relative;
+	    width: 70%;
+	    height: 20px;
+	    left: 220px;
+	    top: 0px;
+	    border-bottom: 1px solid rgba(128,128,128,0.4);
+	    border-right: 1px solid rgba(128,128,128,0.4);
+	    z-index: 1;
+	}
+	#topicHeaderText, #topicHeaderTextOther
+	{
+		position: relative;
+	    font-size: 1.7em;
+	    font-weight: bold;
+	    font-family: 'Conv_HelveticaLTStd-BoldCond';
+	    color: grey;
+	    text-transform: uppercase;
+	    width: 65px;
+	    top: 5px;
+	    left: 285px;
+	    text-align: center;
+	    z-index: 2;
+	}
+	#topicHeaderTextOther
+	{
+		width: 215px !important;
+	}
+	#topicTable, #topicTableOther 
+	{
+		width: 68%;
+	    position: relative;
+	    left: 220px;
+	    border-collapse: seperate;
+	    border-spacing: 0px 10px;
+	}
+}
+#topicTable td.secondCol div.newProgressBarDiv, #topicTableOther td.secondCol div.newProgressBarDiv
+{
+	position: relative;
+    display: inline-block;
+    width: 70%;
+    height: 55px;
+    top: 0px;
+    cursor: pointer;
+}
+#topicTable td.secondCol div.actionBtnDiv, #topicTableOther td.secondCol div.actionBtnDiv
+{
+	position: relative;
+    display: inline-block;
+    width: 29%;
+    height: 55px;
+    top: 1px;
+}
+#topicTable td.secondCol div.newProgressBarDiv div.progressText, #topicTableOther td.secondCol div.newProgressBarDiv div.progressText
+{
+	position: absolute;
+    width: 100%;
+    font-size: 1.2em;
+    color: #3193ba;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 7px;
+}
+#topicTable td.secondCol div.newProgressBarDiv div.newProgressBar, #topicTableOther td.secondCol div.newProgressBarDiv div.newProgressBar
+{
+	width: 92%;
+    height: 30px;
+    position: absolute;
+    top: 25px;
+    left: 10px;
+}
+#topicTable td.secondCol div.newProgressBarDiv div.newProgressBar div.newProgressBarLower, #topicTableOther td.secondCol div.newProgressBarDiv div.newProgressBar div.newProgressBarLower
+{
+	width: 100%;
+    height: 10px;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    top: 5px;
+}
+#topicTable td.secondCol div.newProgressBarDiv div.newProgressBar div.newProgressBarUpper, #topicTableOther td.secondCol div.newProgressBarDiv div.newProgressBar div.newProgressBarUpper
+{
+    height: 10px;
+    position: absolute;
+    background-color: #3193ba;
+    border-radius: 5px;
+    top: 5px;
+}
+#topicTable td.secondCol div.actionBtn, #topicTableOther td.secondCol div.actionBtn
+{
+	position: absolute;
+    background: #9ec955;
+    width: 90%;
+    height: 25px;
+    left: 0%;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 13px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+#squaredOne
+{
+	display: none;
+}
+.chkLbl .chkBox
+{
+	width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.chkLbl .chkBox.checked
+{
+	background-color: rgba(84, 89, 101, 0.5);
+}
+.chkLbl .chkText
+{
+	position: relative;
+    top: -3px;
+    left: 5px;
+}

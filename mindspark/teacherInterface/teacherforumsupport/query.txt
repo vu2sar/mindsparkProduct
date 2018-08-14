@@ -1,0 +1,11 @@
+
+INSERT INTO courses (name, location, gid)
+SELECT name, location, 1
+FROM   courses
+WHERE  cid = 2
+insert into teacherForum.forum_member (username,password,confirmed,joinTime,lastActionTime,preferences)
+select username,password,1,UNIX_TIMESTAMP(now()),UNIX_TIMESTAMP(now()),'613A333A7B733A31363A22656D61696C2E70726976617465416464223B623A313B733A31303A22656D61696C2E706F7374223B623A313B733A31313A22737461724F6E5265706C79223B623A303B7D' from educatio_adepts.adepts_userDetails where category IN ('School Admin','TEACHER') and schoolCode in (207093,23246,365439,348782,3181488,420525,522044,651378,11215,359413,57910,33367,650967,1752,370457,2528645,384445,208013,525210,2474876,205449,173767);
+
+
+insert into teacherForum.forum_member (username,password,confirmed,joinTime,lastActionTime,preferences)
+select username,password,1,UNIX_TIMESTAMP(now()),UNIX_TIMESTAMP(now()),'613A333A7B733A31363A22656D61696C2E70726976617465416464223B623A313B733A31303A22656D61696C2E706F7374223B623A313B733A31313A22737461724F6E5265706C79223B623A303B7D' from educatio_adepts.adepts_userDetails where category IN ('School Admin','TEACHER') and schoolCode in (207093);
